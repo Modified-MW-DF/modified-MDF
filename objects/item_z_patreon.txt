@@ -1,0 +1,45 @@
+item_z_patreon
+
+YES_PATRON_CONTENT[OBJECT:ITEM]
+
+[ITEM_WEAPON:ITEM_WEAPON_GLAIVE_SAMI]
+	[NAME:samis glaive:samis glaives]
+	[SIZE:600]
+	[SKILL:PIKE]
+	[TWO_HANDED:75000]
+	[MINIMUM_SIZE:35000]
+	[MATERIAL_SIZE:6]
+	[ATTACK:EDGE:500:14000:slash:slashes:NO_SUB:4300]
+		[ATTACK_PREPARE_AND_RECOVER:1:7]
+	[ATTACK:EDGE:500:14000:slash:slashes:NO_SUB:4300]
+		[ATTACK_PREPARE_AND_RECOVER:1:7]
+	[ATTACK:EDGE:14:9000:stab:stabs:NO_SUB:420]
+		[ATTACK_PREPARE_AND_RECOVER:1:5]
+	[ATTACK:BLUNT:80:0:bash:bashes:shaft:3000]
+		[ATTACK_PREPARE_AND_RECOVER:4:3]
+	[ATTACK:BLUNT:55:0:strike:strikes:butt:2200]
+		[ATTACK_PREPARE_AND_RECOVER:3:4]
+		
+
+		
+Churchwarden pipe
+
+[ITEM_TOOL:ITEM_TOOL_PIPE]
+[NAME:churchwarden pipe:churchwarden pipes]
+	[DESCRIPTION:A pipe for smoking pipe-weed made from sweet galena or deep galena plants.]
+[VALUE:5]
+[METAL_MAT]
+[WOOD_MAT]
+[TILE:'/']
+[SIZE:40]
+[MATERIAL_SIZE:3]
+
+[ITEM_TOOL:ITEM_TOOL_ANTI]
+[NAME:antikythera mechanism:antikythera mechanisms]
+	[DESCRIPTION:An intricate bronze calendar used in the orrery workshop.]
+[VALUE:500]
+[METAL_MAT]
+[TILE:128]
+[SIZE:40]
+[MATERIAL_SIZE:12]
+

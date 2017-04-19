@@ -1,0 +1,46 @@
+item_ammo
+
+!YES_GRIM_WEAPON!OBJECT:ITEM]
+╔═╗ ╔╗  ╦ ╔╦╗ ╦   ╔═╗ ╔═╗ ║╔═ ╔═╗ ╗ ╔═╗   ╗ ╔ ╦ ╔═╗ ╔╦╗ ╔═╗ ╔╗  ╦ ╔═╗   ╔═╗ ╔╗  ╔╦╗ ╔═╗    ╔╗   ╔═╗ ╔╗  ╔╦╗ ╔═╗ ╔╗ 
+║╠╗ ╠╩╗ ║ ║║║ ║   ║ ║ ║   ╠╩╗ ╠╣    ╚═╗   ╠═╣ ║ ╚═╗  ║  ║ ║ ╠╩╗ ║ ║     ╠═╣ ╠╩╗ ║║║ ╚═╗   ╔╩╣   ╠═╣ ╠╩╗ ║║║ ║ ║ ╠╩╗
+╚═╝ ║ ║ ╩ ║╩║ ╚═╝ ╚═╝ ╚═╝ ║ ║ ╚═╝   ╚═╝   ╝ ╚ ╩ ╚═╝  ║  ╚═╝ ║ ║ ╩ ╚═╝   ║ ║ ║ ║ ║╩║ ╚═╝   ╚═╬   ║ ║ ║ ║ ║╩║ ╚═╝ ║ ║
+Revision 4c
+
+Bay12 forum thread: http://www.bay12forums.com/smf/index.php?topic=146737.0
+
+
+[ITEM_AMMO:ITEM_AMMO_BOLTS_HEAVY]
+	[NAME:heavy bolt:heavy bolts]
+	[CLASS:BOLT]
+	[SIZE:80]
+	[ATTACK:EDGE:8:3000:stab:stabs:NO_SUB:400]
+
+[ITEM_AMMO:ITEM_AMMO_ARROWS_BODKIN]
+	[NAME:bodkin arrow:bodkin arrows]
+	[CLASS:ARROW]
+	[SIZE:65]
+	[ATTACK:EDGE:9:3500:stab:stabs:NO_SUB:400]
+
+[ITEM_AMMO:ITEM_AMMO_ARROWS_TREFOIL]
+	[NAME:trefoil arrow:trefoil arrows]
+	[CLASS:ARROW]
+	[SIZE:70]
+	[ATTACK:EDGE:14:6000:stab:stabs:NO_SUB:400]
+
+[ITEM_AMMO:ITEM_AMMO_ARROWS_LEAF]
+	[NAME:leaf arrow:leaf arrows]
+	[CLASS:ARROW]
+	[SIZE:70]
+	[ATTACK:EDGE:18:7000:stab:stabs:NO_SUB:400]
+
+[ITEM_AMMO:ITEM_AMMO_ARROWS_SWALLOWTAIL]
+	[NAME:swallowtail arrow:swallowtail arrows]
+	[CLASS:ARROW]
+	[SIZE:73]
+	[ATTACK:EDGE:26:10000:stab:stabs:NO_SUB:400]
+
+[ITEM_AMMO:ITEM_AMMO_ARROWS_FORKHEAD]
+	[NAME:forkhead arrow:forkhead arrows]
+	[CLASS:ARROW]
+	[SIZE:75]
+	[ATTACK:EDGE:40:6000:stab:stabs:NO_SUB:400]
