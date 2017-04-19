@@ -1,0 +1,16 @@
+descriptor_shape_zm5
+
+[OBJECT:DESCRIPTOR_SHAPE]
+
+[SHAPE:SKULL]
+	[NAME:skull:skulls]
+	[TILE:'o']
+
+[SHAPE:PLANET]
+	[NAME:planet:planets]
+        [ADJ:yellow]
+	[ADJ:red]
+	[ADJ:blue]
+	[ADJ:gray]
+	[ADJ:gaseous]
+	[TILE:'O']
