@@ -1,0 +1,24 @@
+reaction_campfire
+
+[OBJECT:REACTION]
+
+[REACTION:START_FIRE_SMALL]
+[NAME:Start a fire]
+[DESCRIPTION:Burn one log to start a fire. If flamable objects are in this workshop they will start burning too. If lit on grass, prepare for a brush-fire.]
+[DESCRIPTION:]
+[DESCRIPTION:Uses any skill.]
+[DESCRIPTION:Produces smoke.]
+[BUILDING:CAMPFIRE:CUSTOM_S]#
+[REAGENT:A:1:WOOD:NONE:NONE:NONE][PRESERVE_REAGENT]
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:FIREWOOD:WOOD]#
+
+[REACTION:START_FIRE_LARGE]
+[NAME:Start a large fire]
+[BUILDING:CAMPFIRE:CUSTOM_L]#
+[DESCRIPTION:Burn 5 logs and a piece of fuel to start a fire that should last around 9 months. If flamable objects are in this workshop they will start burning too. If lit on grass, prepare for a brush-fire.]
+[DESCRIPTION:]
+[DESCRIPTION:Uses any skill.]
+[DESCRIPTION:Produces smoke.]
+[REAGENT:A:5:WOOD:NONE:NONE:NONE][PRESERVE_REAGENT]
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:COAL_BONFIRE]
+[FUEL]#
