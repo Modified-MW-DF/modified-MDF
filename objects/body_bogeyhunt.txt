@@ -1,0 +1,75 @@
+body_bogeyhunt
+
+Tentacles on back (writhing)
+Faceless
+Headless
+Face is a mouth (grinning/gnawing)
+Mouth on belly (gaping/maw)
+Eyes on chest
+Eye in belly
+Eyes on hands
+Eye in mouth
+Rake claws (rake)
+Reaper claws (reaper)
+Slender
+Bloated
+Hulking (hulk)
+Wings (flapping)
+Screaming/Laughing/Gibbering/Howling
+Jack
+Man
+Woman
+Bloody
+Bilious
+Festering
+Slimy
+
+Spider legs
+Tentacle legs
+Tentacle tongue
+
+Eldritch
+Squamous
+Rugose (wrinkly)
+
+[OBJECT:BODY]
+
+ [BODY:EYE_HANDS_BH]
+	[BP:HANDEYE:eye:STP][CON_CAT:HAND][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+		[DEFAULT_RELSIZE:5]
+
+ [BODY:LOWERBODY_MOUTH_BH]
+	[BP:MOUTH:mouth:STP][CONTYPE:LOWERBODY][MOUTH][SMALL][EMBEDDED][APERTURE][CATEGORY:MOUTH]
+		[DEFAULT_RELSIZE:50]
+
+ [BODY:SCYTHE_ARMS_BH]
+	[BP:RUA:right upper arm:STP][CON:UB][LIMB][RIGHT][CATEGORY:ARM_UPPER]
+		[DEFAULT_RELSIZE:200]
+	[BP:LUA:left upper arm:STP][CON:UB][LIMB][LEFT][CATEGORY:ARM_UPPER]
+		[DEFAULT_RELSIZE:200]
+	[BP:RLA:right lower arm:STP][CON:RUA][LIMB][RIGHT][CATEGORY:ARM_LOWER]
+		[DEFAULT_RELSIZE:200]
+	[BP:LLA:left lower arm:STP][CON:LUA][LIMB][LEFT][CATEGORY:ARM_LOWER]
+		[DEFAULT_RELSIZE:200]
+	[BP:RH:right scythe:STP][CON:RLA][RIGHT][CATEGORY:CLAW]
+		[DEFAULT_RELSIZE:200]
+	[BP:LH:left scythe:STP][CON:LLA][LEFT][CATEGORY:CLAW]
+		[DEFAULT_RELSIZE:200]
+
+ [BODY:LONG_TONGUE_BH]
+	[BP:TONGUE:tongue:STP][CONTYPE:HEAD][CATEGORY:TONGUE][LIMB]
+		[DEFAULT_RELSIZE:200]
+		
+ [BODY:UB_TENTACLES_BH]
+	[BP:RUT:right upper tentacle:STP][CONTYPE:UPPERBODY][LIMB][RIGHT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
+	[BP:LUT:left upper tentacle:STP][CONTYPE:UPPERBODY][LIMB][LEFT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
+	[BP:RMT:right middle tentacle:STP][CONTYPE:UPPERBODY][LIMB][RIGHT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
+	[BP:LMT:left middle tentacle:STP][CONTYPE:UPPERBODY][LIMB][LEFT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
+	[BP:RLT:right lower tentacle:STP][CONTYPE:UPPERBODY][LIMB][RIGHT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
+	[BP:LLT:left lower tentacle:STP][CONTYPE:UPPERBODY][LIMB][LEFT][CATEGORY:TENTACLE]
+		[DEFAULT_RELSIZE:400]
