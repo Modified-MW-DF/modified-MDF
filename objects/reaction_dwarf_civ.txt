@@ -4,21 +4,6 @@ reaction_dwarf_civ
 
 New vanilla workshop additions first.Then modded entries.
 
-[REACTION:MAKE_CRYSTAL_ROCK]
-[NAME:Smelt sand and lead into rough rock crystals.]
-[DESCRIPTION:Takes a bar of lead and a bag of sand to create three rough rock crystals.]
-[DESCRIPTION:]
-[DESCRIPTION:Uses smelting skill.]
-[BUILDING:SMELTER:CUSTOM_SHIFT_R]
-[REAGENT:A:150:BAR:NONE:INORGANIC:LEAD]
-	[REAGENT:sand:150:POWDER_MISC:NONE:NONE:NONE]
-		[IS_SAND_MATERIAL] 
-	[REAGENT:sand container:1:NONE:NONE:NONE:NONE]
-		[CONTAINS:sand]
-		[PRESERVE_REAGENT]
-		[DOES_NOT_DETERMINE_PRODUCT_AMOUNT]
-	[PRODUCT:100:3:ROUGH:NONE:INORGANIC:CRYSTAL_ROCK]
-	[SKILL:SMELT]
 	
 
 
@@ -6747,17 +6732,6 @@ YESARCHEOLOGIST[AUTOMATIC]
 [PRODUCT:1:1:ROUGH:NONE:GLASS_CLEAR:NONE]
 [PRODUCT:33:1:BOULDER:NONE:INORGANIC:PRAYER][PRODUCT_DIMENSION:150]
 	[SKILL:PACIFY]
-
-			
-######################################################
-#############    MILLSTONE    ########################
-######################################################
-
-
-	
-
-
-
 
 ###################################################################
 ###########   GUILDHALL     ####################################
