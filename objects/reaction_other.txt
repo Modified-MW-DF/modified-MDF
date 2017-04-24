@@ -93,6 +93,8 @@ Also changed tan a hide to accept globs
 	[PRODUCT:100:1:GLOB:NONE:GET_MATERIAL_FROM_REAGENT:seeds:NONE][PRODUCT_PASTE] makes the glob a "paste"
 	[SKILL:MILLING]
 
+	#A- even though I consolidated the other pottery reactions, I left these
+	# to be backwards compatible with the races that used them.
 [REACTION:MAKE_CLAY_JUG]
 	[NAME:make clay jug]
 	[BUILDING:KILN:CUSTOM_J]
