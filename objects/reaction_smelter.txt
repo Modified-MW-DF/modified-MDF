@@ -1,12 +1,25 @@
 reaction_smelter
 
-Changes by Meph: Alloys now in metallurgist, not the smelter. Tagged with YES_METALLURGIST
+	Changes by Meph: Alloys now in metallurgist, not the smelter. Tagged with 
+	YES_METALLURGIST; Added Peat_to_Coke and Anthracite_to_coke, two reactions
+	intended for all civs.
+	Changes by Amostubal: Moved the cold anvil iron and steel over here to keep
+	smelter reactions together, created reaction list. 
+###############################################################################
+	# smelter reactions
+	*PERMITTED_REACTION:BITUMINOUS_COAL_TO_COKE*
+	*PERMITTED_REACTION:LIGNITE_TO_COKE*
+	*PERMITTED_REACTION:PEAT_TO_COKE*
+	*PERMITTED_REACTION:ANTHRACITE_TO_COKE*
+	*PERMITTED_REACTION:ADAMANTINE_WAFERS*
+	*PERMITTED_REACTION:COLD_ANVIL_IRON*
+	*PERMITTED_REACTION:COLD_ANVIL_STEEL*
+	*PERMITTED_REACTION:MAKE_CRYSTAL_ROCK*
 
-Added Peat_to_Coke and Anthracite_to_coke, two reactions intended for all civs.
 
 [OBJECT:REACTION]
 
-
+##### SMELTER REACTIONS #######################################################
 [REACTION:BITUMINOUS_COAL_TO_COKE]
 [NAME:make coke(9) from bituminous coal]
 [BUILDING:SMELTER:CUSTOM_B]
@@ -15,9 +28,6 @@ Added Peat_to_Coke and Anthracite_to_coke, two reactions intended for all civs.
 [FUEL]
 [SKILL:SMELT]
 
-
-
-
 [REACTION:LIGNITE_TO_COKE]
 [NAME:make coke(5) from lignite]
 [BUILDING:SMELTER:CUSTOM_L]
@@ -25,7 +35,6 @@ Added Peat_to_Coke and Anthracite_to_coke, two reactions intended for all civs.
 [PRODUCT:100:5:BAR:NO_SUBTYPE:COAL:COKE][PRODUCT_DIMENSION:150]
 [FUEL]
 [SKILL:SMELT]
-
 
 [REACTION:PEAT_TO_COKE]
 [NAME:make coke(2-4) from peat]
@@ -40,7 +49,6 @@ Added Peat_to_Coke and Anthracite_to_coke, two reactions intended for all civs.
 [FUEL]
 [SKILL:SMELT]
 
-
 [REACTION:ANTHRACITE_TO_COKE]
 [NAME:Make coke(10) from anthracite]
 [BUILDING:SMELTER:CUSTOM_A]
@@ -48,6 +56,23 @@ Added Peat_to_Coke and Anthracite_to_coke, two reactions intended for all civs.
 [PRODUCT:100:10:BAR:NO_SUBTYPE:COAL:COKE][PRODUCT_DIMENSION:150]
 [FUEL]
 [SKILL:SMELT]
+
+[REACTION:COLD_ANVIL_IRON]
+	[NAME:Make iron anvil]
+	[BUILDING:SMELTER:CUSTOM_A]
+	[REAGENT:A:450:BAR:NO_SUBTYPE:INORGANIC:IRON]
+	[PRODUCT:100:1:ANVIL:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+[FUEL]
+[SKILL:SMELT]
+[REACTION:COLD_ANVIL_STEEL]
+	[NAME:Make steel anvil]
+	[BUILDING:SMELTER:CUSTOM_SHIFT_A]
+	[REAGENT:A:450:BAR:NO_SUBTYPE:INORGANIC:STEEL]
+	[PRODUCT:100:1:ANVIL:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+[FUEL]
+[SKILL:SMELT]
+
+
 
 
 
