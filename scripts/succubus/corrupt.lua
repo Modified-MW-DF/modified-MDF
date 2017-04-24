@@ -28,7 +28,7 @@ local utils = require 'utils'
 local mo = require 'makeown'
 local fov = dfhack.script_environment('modtools/fov')
 local teleport = dfhack.script_environment('teleport')
-
+local createunit = dfhack.script_environment('modtools/create-unit')
 -- The range of the check FOV
 local range = 10
 
@@ -158,20 +158,20 @@ function clearMerchant(unit)
 	local draggee
 
 	-- Free the draggee as well and makeown + tame it
-	if -1 ~= unit.relations.draggee_id then
-		dragee = utils.binsearch(df.global.world.units.active, unit.relations.draggee_id, 'id')
+	if -1 ~= unit.relationship_ids.draggee_id then
+		dragee = utils.binsearch(df.global.world.units.active, unit.relationship_ids.draggee_id, 'id')
 
 		if dragee then
 			mo.make_own(dragee)
-			dragee.relations.dragger_id = -1
+			dragee.relationship_ids.dragger_id = -1
 			dragee.flags1.tame = true
 			dragee.training_level = df.animal_training_level.Domesticated
 		end
 	end
 
-	unit.relations.draggee_id = -1
-	unit.relations.rider_mount_id = -1
-	unit.relations.mount_type = 0
+	unit.relationship_ids.draggee_id = -1
+	unit.relationship_ids.rider_mount_id = -1
+	unit.relationship_ids.mount_type = 0
 	unit.flags1.rider = 0
 end
 
@@ -207,8 +207,9 @@ function clearHostile(unit)
 	unit.flags2.calculated_bodyparts = false
 
 	unit.invasion_id = -1
-	unit.relations.group_leader_id = -1
-	unit.relations.last_attacker_id = -1
+	--acts if it doesn't exist....
+	--if unit.relationship_ids.group_leader then unit.relationship_ids.group_leader = -1 end
+	--if unit.relationship_ids.last_attacker then unit.relationship_ids.last_attacker = -1 end
 
 	unit.flags3.body_part_relsize_computed = false
 	unit.flags3.body_temp_in_range = true
@@ -232,9 +233,9 @@ function clearHostile(unit)
     unit.enemy.anon_4 = -1
     unit.enemy.anon_5 = -1
     unit.enemy.anon_6 = -1
-	unit.enemy.anon_7 = 0
-    unit.status2.unk_7c0 = -1
-    unit.enemy.unk_v40_2_count = 11
+	--unit.enemy.anon_7 = 0
+    --unit.status2.unk_7c0 = -1
+    --unit.enemy.unk_v40_2_count = 11
     --unit.unk_100 = 3
 end
 
@@ -254,17 +255,22 @@ function corrupt(unit)
 			else
 				suffix = "_FEMALE"
 			end
-
 			targetCaste = targetCaste..suffix
 			if debug then print('selected caste: '..targetCaste) end
+			local unitX, unitY, unitZ=dfhack.units.getPosition(unit)
+			-- a line from onload... to model the line below.  modtools/create-unit -race KOBOLD -caste RAT_MALE -civId \\\\LOCAL -groupId \\\\LOCAL -location [ \\LOCATION ] -name KOBOLD -age 3
+			dfhack.run_script('modtools/create-unit', '-race', targetRace, '-caste', targetCaste, '-setUnitToFort', 'TRUE', '-location','[', unitX, unitY, unitZ, ']', '-name', 'EVIL', '-nick', unit.name.first_name, '-age', '20')
+--			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
 
-			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
+			--Scuttle the unit if you made it to here... otherwise ignore it...  If you put it anywhere else, it will kill off units that don't have a targetcaste or worse who are succubus....
+			clearCage(unit)
+			unit.flags3.scuttle=true
 		end
 	end
 	
-	mo.make_own(unit)
+--[[	mo.make_own(unit)
 	mo.make_citizen(unit)
-
+	
 	-- Setting announcements
 	if unit.flags1.merchant == true then 
 		announceMerchant = true 
@@ -275,6 +281,9 @@ function corrupt(unit)
 	clearHostile(unit)
 	clearMerchant(unit)
 	clearCage(unit)
+--]]
+
+
 end
 
 --
