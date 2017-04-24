@@ -6,7 +6,7 @@ Added MATERIAL_REACTION_PRODUCT:TAN_MAT:LOCAL_CREATURE_MAT:TANNED_SCALE to SCALE
 Added reaction classes to all the named above, as well as tallow and wax. 
 Removed removed!MEAT_NAME s from body parts that appear in the butchery.
 Added changed skin/scale/chitin/shell to globs for tanning. (Unsure if it breaks shells for shell moods?)
-added [REACTION_CLASS:METAL]  to metal_template
+added REACTION_CLASS:METAL]  to metal_template
 
 [OBJECT:MATERIAL_TEMPLATE]
 

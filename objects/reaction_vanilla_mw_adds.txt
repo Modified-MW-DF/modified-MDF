@@ -1,5 +1,7 @@
 reaction_vanilla_mw_adds
 
+[OBJECT:REACTION]
+
 	#A- these are all the reactions that are functional at vanilla workshops.
 	# They may appear at other shops, but the fact that if they are permitted,
 	# they will appear in vanilla workshops is the only 'requirement' for them

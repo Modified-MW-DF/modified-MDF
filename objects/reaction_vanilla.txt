@@ -1,5 +1,7 @@
 reaction_vanilla
 
+[OBJECT:REACTION]
+
 Changes by Meph: Added COMPACT_PEAT_TO_FUEL to screw press. Intended for all civs.
 Also changed tan a hide to accept globs
 
@@ -57,8 +59,6 @@ of vanilla is attempted to be maintained here.
 	*PERMITTED_REACTION:MILL_SEEDS_NUTS_TO_PASTE*
 	*PERMITTED_REACTION:MAKE_SLURRY_FROM_PLANT*
 	#Adventure mode reactions at end of this file.
-
-[OBJECT:REACTION]
 
 #### SOAP MAKER REACTIONS #####################################################
 [REACTION:MAKE_SOAP_FROM_TALLOW]
