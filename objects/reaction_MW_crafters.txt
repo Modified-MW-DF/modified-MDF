@@ -1,4 +1,4 @@
-reaction_MW_crafters
+reaction_mw_crafters
 
 [OBJECT:REACTION]
 
