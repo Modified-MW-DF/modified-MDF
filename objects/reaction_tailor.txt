@@ -1,6 +1,6 @@
 reaction_tailor
 
-*OBJECT:REACTION*
+[OBJECT:REACTION]
 
 	#A - moved this out of dwarf reactions, its the tailor workshop in dwarf,
 	# but its other workshops in humans and kobolds, making it a PnP mod.
