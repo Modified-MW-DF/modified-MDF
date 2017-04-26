@@ -13,6 +13,9 @@ reaction_dwarf_civ
 
 ###############################################################################
 ##### Vanilla building reactions ##############################################
+	# A- any reactions in vanilla buildings that can't be found in this section
+	# exist in the following files.
+	#
 	# reaction_vanilla.txt         - location of basic DF vanilla reactions
 	# reaction_vanilla_mw_adds.txt - location of MW reactions added to vanilla
 	# reaction_smelter.txt         - location of all the smelting
@@ -20,7 +23,7 @@ reaction_dwarf_civ
 	#
 	#A- may remove mushroom dyes and mushroom cheese to a seperate file, why is
 	# it in there? most likely due to it coming from one writer.
-
+	#
 ###############################################################################
 ##### Additonal PnP Mods (sets of buildings and/or reactions ##################
 	# reaction_patron.txt       - reactions for patron buildings
@@ -43,7 +46,7 @@ reaction_dwarf_civ
 	# reaction_embroidery.txt   - reactions for the dyer and embroidery studios.
     # reaction_mw_crafters.txt  - masterwork stone, wood, gem, bone crafters
 	# reaction_poison_vat.txt   - poison vat reactions!
-	# thatchery is currently inside of reaction_kobold...it will be moved.
+	# reaction_thatchery.txt    - thatchery reactions.
 	# reaction_brickoven.txt    - brickoven reactions.
 	# reaction_siegeworks.txt   - heavy seige reactions.
 	# reaction_smith_guild.txt  - crucible, weaponry, armory, and blast furnace
@@ -85,6 +88,8 @@ reaction_dwarf_civ
 	# I hate this building, it doesn't produce enough material.  most wood
 	# plank products use 2 planks or 1 wood, making this a minor chance for 
 	# additional production, the human splitting stone produces 10 blocks.
+	# kobolds get it too.... maybe we need this and the above and few other
+	# basic small buildings reaction pushed into one callded mw_basics?
 [REACTION:SPLITTING_WOOD]
 	[NAME:Split wood into planks]
 	[BUILDING:WOOD_SPLITTING_BLOCK:CUSTOM_A]
@@ -1928,8 +1933,8 @@ reaction_dwarf_civ
 	[REAGENT:B:1:GEM:NONE:NONE:NONE]
 	[SKILL:METALCRAFT]
 
-########################################################################################
-##### PLAYROOM DWARVES #################################################################
+###############################################################################
+##### PLAYROOM DWARVES ########################################################
 	# they use dfhacks add-syndrome to add a positive thought
 [REACTION:USE_TTG]
 	[NAME:Play tabletop game]	

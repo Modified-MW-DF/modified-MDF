@@ -1369,7 +1369,6 @@ YES_CIV_ACTIVE_DWARF[OBJECT:ENTITY]
 
 ###############################################################################
 ##### Permitted Vanilla Buildings w/reactions start here ######################
-	#Vanilla Buildings/Reactions
     #A - Combined all of them here so it is easier to check
 	# Soap maker building and reactions
 [PERMITTED_BUILDING:SOAP_MAKER]
@@ -3746,20 +3745,14 @@ YES_GLASSFORGE[PERMITTED_BUILDING:GLASSFORGE]
 	[PERMITTED_REACTION:GLASS_GREEN_ITEM_TRAPCOMP_MENACINGSPIKE]
 
 ###############################################################################
-
-
-
-
-###############################################################################
+##### dwarf buildings and reactions - dwarf flavor ############################
 	# Titles on build menus 
 	#A- It wont matter where you put them in this file, their order is based on the order in the building_{alphabetically loaded}.txt
 YES_TITLES[PERMITTED_BUILDING:NEW_WORKSHOPS_DWARF2]
 YES_TITLES[PERMITTED_BUILDING:NEW_WORKSHOPS_DWARF]
 YES_TITLES[PERMITTED_BUILDING:NEW_FURNACES_DWARF]
 YES_TITLES[PERMITTED_BUILDING:NEW_FORGES_DWARF]
-
-###############################################################################
-##### dwarf buildings and reactions - dwarf flavor ############################
+	#
 YES_WEIGHTBENCH[PERMITTED_BUILDING:WEIGHT_BENCH]
 	[PERMITTED_REACTION:WORK_OUT]
 	#
