@@ -1,0 +1,12 @@
+reaction_archive
+
+[OBJECT:REACTION]
+
+[REACTION:OPEN_LEGENDS]
+	[NAME:Read the legends of this world]
+[DESCRIPTION:Opens legends mode. Press Escape to go back to Fort-mode.]
+[DESCRIPTION:]
+[DESCRIPTION:Uses any skill.]
+	[BUILDING:GREAT_ARCHIVE:CUSTOM_L]
+	[BUILDING:HERMIT_JOUNRAL:CUSTOM_L]
+	

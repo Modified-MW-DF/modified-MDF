@@ -1,0 +1,4 @@
+reaction_goblin
+
+[OBJECT:REACTION]
+
