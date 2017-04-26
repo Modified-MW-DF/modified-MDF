@@ -1,0 +1,571 @@
+Here a list of the 500+ new creatures added in the updates 1.16 and 1.17.
+
+FEAR THE NIGHT MOD 
+These are rare, high-end secrets and curses from world-gen. You only encounter them as megabeasts, or as wizards on top of their towers. You can learn their secrets too, if you defeat them.
+- demon dog
+- slasher
+- brawler
+- flaming zombie
+- infernomancer
+- summoner fiend
+- lich fiend
+- dark fiend
+- inferno fiend
+	
+WIZARDS TOWER MOD
+These are the summoned creatures from the wizards, which only appear in necromancer towers. You can learn their secrets. The creatures themselves may also appear in certain biomes, but are rare.
+- leaf man
+- hair man
+- ink man
+- flesh man
+- beer man
+- cheese man
+- egg man
+- gingerbread man
+- milk man
+- strawberry man
+- syrup man
+- spore man
+- sweat man
+- wax man
+- wolfman
+- pus man
+	
+ZM5s DRAGONSDOGMA
+These are creatures from the game of DragonsDogma, most of them rather difficult enemies.
+- garm
+- gorecyclops
+- cockatrice
+- statue
+- eliminator
+- awakened one
+- cave brute
+- gazer
+- saurian
+- sulfur saurian
+- geo saurian
+- saurian sage
+- pyre saurian
+- feral goblin
+- evil eye
+- vile eye
+- cursed dragon
+	
+ZM5s WARCRAFT 
+More creatures from the game of Warcraft.
+- drowner
+- strigoi
+- mossrova
+- treant
+- flesh eater
+- kvaldir
+- mammoth
+- shoveltusk
+- skardyn
+- meat pile
+- sleipnir* (renamed from Nightmare, because a nightmare already exists in the mod)
+- crystalline tender
+- frost sprite
+- grell
+- withered
+- cenarian
+- bog beast
+- fungal monster
+- fungal horror
+- tallstrider
+- hawkstrider
+- wyvern
+- kodo
+- puppet shambler
+- infested shambler
+- gilgoblin
+- darkhound
+- gold statue
+
+ZM5s MEGABEASTS (DragonsDogma and Warcraft)
+- magma giant
+- goliath
+- bronze dragon
+- blue dragon
+- giant cerberus
+- duke of flies
+- medusa
+- mutant
+- worg
+- devilsaur
+- arachnatid
+- jormungar
+- frostsaber
+- saber worg
+- scorpid
+- silithid
+- gronn
+- magnaron
+- observer
+- jungle stalker
+- allosaurus
+- green dragon
+- black dragon
+	
+ZM5s Undeads
+- abomination
+- plaguebearer
+- ghoul
+- geist
+- meat golem
+- nuckelavee
+- wight
+	
+MASTERWORK ANIMALS
+- sun vulture
+- longhorn cow
+- asp
+- boa
+- cobra
+- giant sand antlion
+- kodiak bear
+- snow leopard
+- caracal
+- okapi
+- serval
+- honey bear
+- wildebeest
+- zebra
+- maned wolf
+- pony
+- prairie dog
+- anteater
+- antelope
+- buffalo
+- muskrat
+- otter
+- pouched rat
+- asp viper
+- black caiman
+- coral snake
+- death adder
+- gharial
+- giant monitor
+- night adder
+- pit viper
+- giant fly
+- giant dragonfly
+- giant hornet
+- brontothere
+- giant centipede
+- giant elephant
+- colossus elephant
+- giant cougar
+- 4-tusked mastodon
+- moa
+- smilodon
+- giant snow leopard
+- tarantula
+- terror bird
+- giant warthog
+- giant white tiger
+- dire wolf
+- woolly mammoth
+	
+MASTERWORK CAVERN MONSTERS
+- bronze statue
+- animated armor
+- cave firefly
+- lava cancer
+- emerald golem
+- sapphire golem
+- topaz golem
+- black opal golem
+- ruby golem
+- diamond golem
+- deep one
+- glowfrog
+- blood elemental
+- beholder
+- giant floater
+- cave ghoul
+- illithid
+- lost adventurer
+- red frog
+- spear-nosed bat
+- umber hulk
+- mummy
+- leaper
+- nith
+- blood spider
+- cinder beast
+- shadow beast
+- sinister hierophant
+- lesser skeleton
+- greater skeleton
+- feral bone mastiff
+- gargantuan bone golem
+- vaporous blood wraith
+- transparent shylvic
+- snaer hafwa
+- dark sprite
+- faenrae
+- fire maiden
+- dusk ogre
+- beisswurm
+- marbled angiswaerd
+- cave bear
+- corpse grub
+- nith wisp
+- giant blade spider
+- merrows
+- efreet
+- giant blight bat
+- retch fiend
+- lanky grey lach
+- giant wolf spider
+- earthen construct
+- armored warklin
+- warklin mauler
+- silverfish
+- brown burrower
+- cave troll
+- basilisk
+- cerberus
+- cockatrice
+- floating brain
+- floating eye
+- slime
+- giant beetle
+- giant roach
+- giant ant
+- mud snake
+- cave crab
+- lich
+- rockwraith
+- metalwraith
+- facehugger
+- blood beast
+- drowspider
+- giant drowspider
+- drider
+- small blob
+- grand blob
+- blob
+	
+MASTERWORK FANCIFUL MYTH CREATURES
+- male dwarf with red eyes
+- welkin
+- Empath
+- Ranger
+- Barbarian
+- Warrior Mage
+- Moon Mage
+- Cleric
+- Paladin
+- Bard
+- Thief
+- hand of Armok
+- dryad
+- gorgon
+- djinn
+- sphinx
+- wight
+- wraith
+- lacerator
+- bringer of mercy
+- fat rat
+- drunken gnome
+- voice of Armok
+- monolith
+- horse spirit
+- buffalo spirit
+- bear spirit
+- wolf spirit
+- fox spirit
+- tiger spirit
+- cat spirit
+- twisted horror
+- eldritch horror
+- tendrilled horror
+- forsaken horror
+- angel
+	
+MASTERWORK FISH
+- largemouth bass
+- smallmouth bass
+- black sea bass
+- striped bass
+- bluegill
+- bream
+- catfish
+- crappie
+- walleye
+- roach fish
+- red-bellied piranha
+- black piranha
+- scup
+- zebra loach
+- mahseer
+- chub
+- dace
+- barb
+- gudgeon
+- nase
+- bleak
+- bull trout
+- dolly varden
+- lobster
+- shrimp
+- crayfish
+- conch
+	
+MASTERWORK FLIERS / BIRDS
+- gargoyle
+- giant gargoyle
+- spirit raven
+- night mare
+- flying reindeer
+- forest gryphon
+- shadow creature
+- ghoul raven
+- ghoul crow
+- firebird
+- star shambler
+- granite gargoyle
+- black marble gargoyle
+- crane
+- crane hawk
+- dodo
+- bald eagle
+- black eagle
+- golden eagle
+- steppe eagle
+- tawny eagle
+- flamingo
+- gull
+- heron
+- common kestrel
+- crested owl
+- masked owl
+- screech-owl
+- roadrunner
+- rock pigeon
+- swan
+	
+MASTERWORK HFS / DEMONS
+- greater spirit of fire
+- obsidian colossus
+- devilkin
+- hellmare
+- hell hound
+- bebilith
+- frost wraith
+- harvester
+	
+MASTERWORK MEGABEASTS
+- chromatic dragon
+- frost wyrm
+- wyvern
+- balrog
+- deep crow
+- thunderbird
+- dragon engine
+- griffon
+- cursed blacksmith
+- night maiden
+- centaur
+- metal colossus
+- sky dragon
+- water dragon
+- manticore
+- phoenix
+- behemoth
+- giant blade spider queen
+- gelv cyclops
+- rock guardian
+- forest giant
+- mountain giant
+- sky giant
+- vile plague wraith
+- winged black marble gargoyle
+- lich
+- quetzalcoatl
+	
+MASTERWORK MONSTERS
+- blink dog
+- blood goat
+- dire lion
+- faun
+- gnoll
+- goblin man
+- jackalope
+- killer rabbit
+- lightning sheep
+- lionman
+- nightcloak
+- rakshasa
+- mephit
+- dragon raptor
+- burning skull
+- frozen skull
+- undead
+- automaton
+- drow
+- rothe
+- giant lizard
+- living proof for miracles
+- fully healed creature
+- The Mountainking
+- sacrifice to Armok
+- mutating tissue
+- guardian of armok
+- balrog
+- changeling
+- shoggoth
+- spirithunter
+- white widow
+- decoy
+- necromorph
+- faedog
+- treant
+- nymph
+- barghest
+- forest imp
+- grave cat
+- leprechaun
+- brook troll
+- lasse
+- pegasus
+- raptor
+- xen
+- anubite
+- forest spider
+- sandworm
+- giant sandworm
+- sauropod
+- wind hound
+- water sprite
+- fire sprite
+- sand sprite
+- river sprite
+- blood dryad
+- deadwood dryad
+- blood nyad
+- sickly blightwater nyad
+- frostweaver
+- fendryad
+- small boggle
+- grey clay soldier
+- storm aurochs
+- grass eel
+- bloodvine
+- writhing maiden's tress
+- wormwood vine
+- morah vine
+- inkhorne
+- blood wolf
+- bone wolf
+- giant black leucro
+- hulking black barghest
+- grizzled red leucro
+- silver leucro
+- dusky scythewing moth
+- glistening scythewing larva
+- crag
+- scaly seordmaor
+- firecat
+- bone mammoth
+- frostweyr bear
+- frost angiswaerd
+- large lachmate
+- glutinous lipopod
+- carnivorous gelapod
+- grave worm
+- darvager
+- shadoweaver
+- shadow hound
+- ichor rat
+- forest geni
+- blueclaw sand crab
+- huge spider crab
+- giant salt crab
+- blight ogre
+- nightstalker
+- nightweaver
+- nightreaver
+- arbelog
+- snowbeast
+- velver
+- treehopper toad
+- heggarangi frog
+- sand spider
+- rock troll
+- icy blue ghast
+- sinuous ice adder
+- trollkin
+- small grendel
+- sluagh
+- swamp troll
+- wood troll
+- scavenger troll
+- elemental
+- holistic spawn* (Fear them)
+	
+MASTERWORK PETS
+- hawk
+- boozebelly goat
+- mastiff
+- genie
+- pekyt
+- giant pekyt
+- frill lizard
+- drake
+- cave beetle
+- cave tortoise
+- scarecrow
+- scarecrow man
+- stone decoy
+	
+MASTERWORK VERMIN / DF VERMIN
+- black widow
+- green blood worm
+- red sand leech
+- black sand leech
+- albino forest leech
+- small red blood mite
+- bog crawler
+- garter snake
+- butterfly
+- fire ant
+- army ant
+- ladybug
+- pillbug
+- scarab
+- yellowjacket
+- hornet
+- crow
+- finch
+- lark
+- shrike
+- sparrow
+- swallow
+- swift
+- turtle dove
+- frog
+- bloodfly
+- sailfin lizard
+	
+MASTERWORK/FEAR THE NIGHT WEREWOLVES
+These are Xangis werebeasts from fear the night, somewhat modified. They are extremely hard to kill.
+- werewolf
+- werewolf
+- werewolf
+- werebear
+- werebear
+- werescorpion
+- werescorpion
+- werelizard
+- werechameleon
+	
+MASTERWORK/FEAR THE NIGHT VAMPIRES
+These are Xangis vampires from fear the night, somewhat modified. They are extremely hard to kill.
+- vampire lord
+- vampire lord
+- vampire lord
+- ancient vampire

@@ -1,0 +1,7 @@
+{
+    "osx_exe": "jogg-0.0.7.jar",
+    "content_version": "2016-1",
+    "tooltip": "A Sound+Music engine for DF - it reads the gamelog, and plays appropriate sounds and seasonal music.",
+    "win_exe": "soundSense.exe",
+    "title": "Soundsense"
+}

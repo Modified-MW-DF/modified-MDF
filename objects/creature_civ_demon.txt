@@ -1,5 +1,0 @@
-creature_civ_demon
-
-[OBJECT:CREATURE]
-
-

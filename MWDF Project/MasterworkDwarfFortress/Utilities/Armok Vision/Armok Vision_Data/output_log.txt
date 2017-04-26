@@ -1,0 +1,35 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+[VRDevice] Initialization of device oculus failed.
+
+ 
+(Filename:  Line: 86)
+
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     1972 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll into Unity Child Domain
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
+Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
+- Completed reload, in  0.889 seconds
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.dll (this message is harmless)
+desktop: 2048x1152 48Hz; virtual: 2048x1152 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.

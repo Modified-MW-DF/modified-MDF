@@ -1,0 +1,4 @@
+creature_random_myth_beast_mega
+
+[OBJECT:CREATURE]
+

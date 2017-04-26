@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<growthMeshes>
+    <growthMesh file="Foliage_New.obj"
+                normal="Leaves_N.png"
+                occlusion="Leaves_O.png"
+                alpha="Leaves_A.png"
+                rotation="TreeRoundTall">
+        <growth token="*:LEAVES:*"/>
+        <growth token="*:FEATHERS:*"/>
+        <subObject file="SAPLING.obj"
+                   normal="Leaves_N.png"
+                   occlusion="Leaves_O.png"
+                   alpha="Leaves_A.png"
+                   rotation="Random">
+            <tiletype token="SAPLING:*:*:*:*"/>
+        </subObject>
+        <subObject file="BUSH.obj"
+                   normal="Leaves_N.png"
+                   occlusion="Leaves_O.png"
+                   alpha="Leaves_A.png"
+                   rotation="Random">
+            <tiletype token="SHRUB:*:*:*:*"/>
+        </subObject>
+    </growthMesh>
+    <growthMesh file="Fruit.obj"
+                normal="Flat_N.png"
+                occlusion="Flat_O.png"
+                alpha="Opaque_A.png"
+                rotation="Random90">
+            <growth token="*:CONE:*"/>
+            <growth token="*:FRUIT:*"/>
+            <growth token="*:NUT:*"/>
+            <growth token="*:POLLEN_CONE:*"/>
+            <growth token="*:SEED_CONE:*"/>
+            <growth token="*:SEED:*"/>
+    </growthMesh>
+    <growthMesh file="Palm_Leaves.obj"
+                normal="Palm_N.png"
+                occlusion="Palm_O.png"
+                alpha="Palm_A.png"
+                rotation="Random">
+        <growth token="DATE_PALM:LEAVES:*"/>
+        <growth token="PALM:LEAVES:*"/>
+        <growth token="ABACA:LEAVES:*"/>
+        <growth token="BANANA:LEAVES:*"/>
+    </growthMesh>
+    <growthMesh file="Foliage_New_Layer2.obj"
+                normal="Flowers_N.png"
+                occlusion="Flowers_O.png"
+                alpha="Flowers_A.png"
+                rotation="TreeRoundTall">
+        <growth token="*:FLOWER:*"/>
+        <growth token="*:FLOWERS:*"/>
+        <subObject file="SAPLING.obj"
+                   normal="Leaves_N.png"
+                   occlusion="Leaves_O.png"
+                   alpha="Leaves_A.png"
+                   rotation="Random">
+            <tiletype token="SAPLING:*:*:*:*"/>
+        </subObject>
+        <subObject file="BUSH.obj"
+                   normal="Leaves_N.png"
+                   occlusion="Leaves_O.png"
+                   alpha="Leaves_A.png"
+                   rotation="Random">
+            <tiletype token="SHRUB:*:*:*:*"/>
+        </subObject>
+    </growthMesh>
+
+</growthMeshes>

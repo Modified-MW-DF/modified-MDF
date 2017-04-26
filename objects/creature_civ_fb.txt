@@ -1,5 +1,0 @@
-creature_civ_fb
-
-[OBJECT:CREATURE]
-
-

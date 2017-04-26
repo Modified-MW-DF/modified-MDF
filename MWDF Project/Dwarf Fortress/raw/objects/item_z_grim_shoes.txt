@@ -1,0 +1,4 @@
+item_shoes
+
+!YES_GRIM_ARMOR!OBJECT:ITEM]
+

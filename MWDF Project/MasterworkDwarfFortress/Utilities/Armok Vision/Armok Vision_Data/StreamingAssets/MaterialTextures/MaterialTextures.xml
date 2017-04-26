@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<materialTextures>
+    <materialTexture pattern="Grey.png" specular="Matte_S.png">
+        <material token="*" />
+        <material token="*:*" />
+        <material token="*:*:*" />
+    </materialTexture>
+    <materialTexture pattern="Grey.png" specular="Mirror_S.png">
+        <material token="GLASS_GREEN" />
+        <material token="GLASS_CLEAR" />
+        <material token="GLASS_CRYSTAL" />
+    </materialTexture>
+    <materialTexture pattern="Soap.png" specular="Matte_S.png">
+        <material token="*:*:SOAP" />
+    </materialTexture>
+   <materialTexture pattern="Grey.png" specular="Matte_S.png">
+        <material token="NONE" />
+        <subObject pattern="Grey.png" specular="Matte_S.png">
+            <tiletype token="NONE" />
+            <subObject pattern="Grey.png" specular="Matte_S.png">
+                <buildingType token="Workshop_Jewelers" />
+                <subObject  pattern="Blue.png" specular="Mirror_S.png">
+                    <buildingPosition x = "1" y = "0" />
+                </subObject>
+                <subObject  pattern="Green.png" specular="Mirror_S.png">
+                    <buildingPosition x = "0" y = "1" />
+                </subObject>
+                <subObject  pattern="Jewelers_Tools.png" specular="Medium_S.png">
+                    <buildingPosition x = "2" y = "0" />
+                    <buildingPosition x = "2" y = "1" />
+                    <buildingPosition x = "2" y = "2" />
+                </subObject>
+            </subObject>
+            <subObject pattern="Blue.png" specular="Matte_S.png">
+                <buildingType token="Stockpile" />
+            </subObject>
+            <subObject pattern="Green.png" specular="Matte_S.png">
+                <buildingType token="Civzone" />
+            </subObject>
+        </subObject>
+        <subObject pattern="Leaves.png" specular="Matte_S.png">
+            <tiletype token="BRANCH:*:*:*:*" />
+            <tiletype token="TWIG:*:*:*:*" />
+            <tiletype token="SHRUB:*:*:*:*" />
+            <tiletype token="SAPLING:*:*:*:*" />
+        </subObject>
+    </materialTexture>
+    <materialTexture pattern="Grey.png" specular="Matte_S.png">
+        <material token="PLANT:*:*" />
+        <subObject pattern="Grass.png" specular="Grass_S.png">
+            <tiletype token="*:*:GRASS_LIGHT:*:*" />
+            <tiletype token="*:*:GRASS_DARK:*:*" />
+        </subObject>
+    </materialTexture>
+    <materialTexture pattern="Marble.png" specular="Medium_S.png">
+        <material token="*:MARBLE" />
+    </materialTexture>
+    <materialTexture pattern="Stone.png" specular="Stone_S.png">
+        <material token="INORGANIC:*" />
+    </materialTexture>
+    <materialTexture pattern="Wood.png" specular="Matte_S.png">
+        <material token="*:*:WOOD" />
+    </materialTexture>
+    <materialTexture pattern="Grey.png" specular="Mirror_S.png">
+        <material token="*:IRON" />
+        <material token="*:GOLD" />
+        <material token="*:SILVER" />
+        <material token="*:COPPER" />
+        <material token="*:NICKEL" />
+        <material token="*:ZINC" />
+        <material token="*:BRONZE" />
+        <material token="*:BRASS" />
+        <material token="*:STEEL" />
+        <material token="*:PIG_IRON" />
+        <material token="*:PLATINUM" />
+        <material token="*:ELECTRUM" />
+        <material token="*:TIN" />
+        <material token="*:PEWTER_FINE" />
+        <material token="*:PEWTER_TRIFLE" />
+        <material token="*:PEWTER_LAY" />
+        <material token="*:LEAD" />
+        <material token="*:ALUMINUM" />
+        <material token="*:NICKEL_SILVER" />
+        <material token="*:BILLON" />
+        <material token="*:STERLING_SILVER" />
+        <material token="*:BLACK_BRONZE" />
+        <material token="*:ROSE_GOLD" />
+        <material token="*:BISMUTH" />
+        <material token="*:BISMUTH_BRONZE" />
+        <material token="*:ADAMANTINE" />
+    </materialTexture>
+</materialTextures>
