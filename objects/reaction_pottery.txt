@@ -13,7 +13,7 @@ reaction_pottery
 *PERMITTED_BUILDING:POTTERY*				# Dwarf Potter
 *PERMITTED_BUILDING:BRICKOVEN_KOBOLD*		# Kobold Clay Shaper 
 *PERMITTED_BUILDING:WORKSHOP_KOBOLD*		# Human foreign workshop - kobold 
-*PERMITTED_BUILDING:MUCKRAKER_GHETTO_ORC*	# Orc - goblin Muckraker shop (why isn't this a kobold shop?)
+*PERMITTED_BUILDING:MUCKRAKER_GHETTO_ORC*	# Orc - Kobold Muckraker shop
 	*PERMITTED_REACTION:CLEAN_SANDY_CLAY_LOAM*
 	*PERMITTED_REACTION:CLEAN_SILTY_CLAY_LOAM*
 	*PERMITTED_REACTION:CLEAN_SANDY_LOAM*
@@ -215,11 +215,8 @@ reaction_pottery
 	#A- We really should be able to glaze other things.... or maybe copy these
 	# over. its been awhile... are we able to select the "glaze" used?
 	#
-	#A+ I added the muckraker from orcs.... I think it should be a kobold shop
-	# could be switched easily with the kobold thief... who snatches people....
-	# In orcs I killed the previous reactions there involving clay making. This
-	# reduces their fuel costs for creating clay items.  Once the building is
-	# converted to kobolds... it would all make sense...
+	#A+ I added the muckraker from orcs. I switched the shop to Kobold.
+
 ###############################################################################
 	# Clean the clay reactions:
 [REACTION:CLEAN_SANDY_CLAY_LOAM]

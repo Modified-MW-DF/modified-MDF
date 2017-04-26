@@ -1691,7 +1691,7 @@ YES_LIBRARY_HUMAN[PERMITTED_BUILDING:LIBRARY_OF_PHILOSOPHY]
 		[PERMITTED_REACTION:FF_COPPER_HELM]
 		[PERMITTED_REACTION:FF_COPPER_LSWORD]
 		[PERMITTED_REACTION:FF_COPPER_MACE]
-		[PERMITTED_REACTION:FF4_COPPER_MORNINGSTAR]
+		[PERMITTED_REACTION:FF_COPPER_MORNINGSTAR]
 		[PERMITTED_REACTION:FF_COPPER_PICK]
 		[PERMITTED_REACTION:FF_COPPER_PIKE]
 		[PERMITTED_REACTION:FF_COPPER_SSWORD]
@@ -3434,7 +3434,7 @@ YES_LIBRARY_HUMAN[PERMITTED_BUILDING:LIBRARY_OF_PHILOSOPHY]
 	# the kiln.
 	# Step 2. is to clean the clay, this is accomplished at a seive workshop,
 	# Like these buildings and these reactions:
-*PERMITTED_BUILDING:WORKSHOP_KOBOLD*		# Human foreign workshop - kobold 
++HUMAN_WORKSHOP_UPGRADE:WORKSHOP_KOBOLD+		# Human foreign workshop - kobold 
 	# since the building isn't built as a stand alone, but as a reaction in
 	# another building, this builing doesn't need to be permitted for the rest
 	to work.
@@ -3938,3 +3938,12 @@ YES_LIBRARY_HUMAN[PERMITTED_BUILDING:LIBRARY_OF_PHILOSOPHY]
 ###############################################################################
 ###############################################################################
 ###############################################################################
+
+
+
+
+
+
+
+
+
