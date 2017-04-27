@@ -1843,13 +1843,13 @@ YES_DISPLAYCASE[PERMITTED_BUILDING:DISPLAY_CASE]
 ##### TRADING MOD #############################################################
 	# These are the dwarven trade reactions in the TRADING MOD
 	# all the non used reactions are removed from this set to avoid confusion
-[PERMITTED_BUILDING:TRADING]							# Dwarf - building menu title
-[PERMITTED_BUILDING:FOOD_MERCHANTS_STALL]				# Dwarf - Olon's Culinary Wonders
-	[PERMITTED_REACTION:TRADE_OLON_TITLE]				# Dwarf title for Olon's
-[PERMITTED_BUILDING:BASIC_MERCHANTS_STALL]				# Dwarf - Bomrek's Bargains
-	[PERMITTED_REACTION:TRADE_BASIC_MERCHANTS_STALL]	# Dwarf Title for Bomrek's
-[PERMITTED_BUILDING:RARE_MERCHANTS_STALL]				# Dwarf - Teduk's Fine Goods
-	[PERMITTED_REACTION:TRADE_RARE_MERCHANTS_STALL]		# Dwarf Title for Teduk's
+YES_MERCHANTS_DWARF[PERMITTED_BUILDING:TRADING]               # Dwarf - building menu title
+YES_MERCHANTS_DWARF[PERMITTED_BUILDING:FOOD_MERCHANTS_STALL]  # Dwarf - Olon's Culinary Wonders
+	[PERMITTED_REACTION:TRADE_OLON_TITLE]                     # Dwarf title for Olon's
+YES_MERCHANTS_DWARF[PERMITTED_BUILDING:BASIC_MERCHANTS_STALL] # Dwarf - Bomrek's Bargains
+	[PERMITTED_REACTION:TRADE_BASIC_MERCHANTS_STALL]          # Dwarf Title for Bomrek's
+YES_MERCHANTS_DWARF[PERMITTED_BUILDING:RARE_MERCHANTS_STALL]  # Dwarf - Teduk's Fine Goods
+	[PERMITTED_REACTION:TRADE_RARE_MERCHANTS_STALL]	          # Dwarf Title for Teduk's
 	[PERMITTED_REACTION:TRADE_FOOD_TITLE]
 		[PERMITTED_REACTION:TRADE_MEAT_BUY]
 		[PERMITTED_REACTION:TRADE_MEAT_SELL]

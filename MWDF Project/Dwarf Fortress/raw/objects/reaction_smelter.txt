@@ -1,5 +1,7 @@
 reaction_smelter
 
+[OBJECT:REACTION]
+
 	Changes by Meph: Alloys now in metallurgist, not the smelter. Added 
 	Peat_to_Coke and Anthracite_to_coke, to reactions -	intended for all civs.
 	Changes by Amostubal: Moved the cold anvil iron and steel over here to keep
@@ -37,8 +39,6 @@ reaction_smelter
 	*PERMITTED_REACTION:STERLING_SILVER_MAKING*
 	*PERMITTED_REACTION:ROSE_GOLD_MAKING*
 	*PERMITTED_REACTION:BISMUTH_BRONZE_MAKING*
-
-[OBJECT:REACTION]
 
 ##### SMELTER REACTIONS #######################################################
 [REACTION:BITUMINOUS_COAL_TO_COKE]

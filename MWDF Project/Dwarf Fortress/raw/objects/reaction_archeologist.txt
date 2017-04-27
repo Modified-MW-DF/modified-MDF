@@ -1,6 +1,6 @@
 reaction_archeologist
 
-	[OBJECT:REACTION]
+[OBJECT:REACTION]
 	
 	#A- a wonderful shop provided to most races to turn fossils, relics, and
 	# treasures discovered into useful items.
