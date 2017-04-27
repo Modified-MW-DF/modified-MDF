@@ -1,0 +1,7 @@
+{
+    "tooltip": "Makes managing your dwarves' jobs and psychology easy! (NB - DFHack \"autolabor\" must be disabled).",
+    "content_version": "v43.5.1",
+    "readme": "doc/Dwarf Therapist.pdf",
+    "win_exe": "DwarfTherapist.exe",
+    "title": "Dwarf Therapist x64"
+}

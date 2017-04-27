@@ -1,0 +1,52 @@
+Movement keys :
+---------------
+Directional keys or keypad : move around (keep <Shift> pressed to speed up)
+<PageUp> / <+> : move up a z-level
+<PageDown> / <-> : move down a z-level
+<Insert> : peek at the upper level (while pressed)
+<Delete> : peek at the lower level (while pressed)
+
+Actions :
+---------
+<Return> / <Enter> : begin selection / apply action
+<Escape> : cancel selection
+<Ctrl-Z> : undo
+<Ctrl-Y> : redo
+<Ctrl-X> : cut
+<Ctrl-C> : copy
+<Ctrl-V> : paste
+
+Selection modes :
+-----------------
+<Shift-R> : full rectangle mode
+<Shift-C> : empty rectangle mode
+<Shift-E> : full ellipse mode
+<Shift-O> : one tile mode
+<Shift-P> : protect mode (dig without clearing stairs, etc)
+
+Modes :
+-------
+(dig > items > stockpiles > adjust > dig)
+<Shift-M> : next mode
+<Shift-N> : previous mode
+
+Files :
+-------
+<Ctrl-N> : new file
+<Ctrl-S> : save file
+<Ctrl-L> : load file
+<Ctrl-Shift-L> : insert file at cursor
+<Ctrl-Q> : quit
+
+Miscellaneous :
+---------------
+<Shift-H> : show / hide crosshairs
+<Shift-G> : show / hide ghost levels
+<Shift-X> : define the blueprint start point
+<Shift-W> : show / hide the start point
+
+Other :
+-------
+The coordinates are displayed at the bottom right :
+Position : P: (X,Y,Z)
+Selection : S: (X,Y,Z) -- C: tiles

@@ -1,0 +1,6 @@
+{
+    "content_version": "1.1c",
+    "tooltip": "A window for announcements, with customisable colours and filters.",
+    "win_exe": "AnnouncementWindow.exe",
+    "title": "Announcement Window"
+}

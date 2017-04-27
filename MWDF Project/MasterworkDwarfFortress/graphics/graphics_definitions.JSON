@@ -1,0 +1,217 @@
+[
+	{
+		"Name":"Aesomatica - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Afro - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"SPACEFOX"
+	},
+	{
+		"Name":"ASCII - 8x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"VANILLA"
+	},
+	{
+		"Name":"ASCII - Square - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"VANILLA"
+	},
+	{
+		"Name":"AutoReiv - 8x8",
+		"TilesetType":"ASCII",
+		"ColorScheme":"JADE"
+	},
+	{
+		"Name":"Bisasam - 20x20",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"BRK - 24x24",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Cheepicus - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"CLA - 18x18",
+		"TilesetType":"ASCII",
+		"ColorScheme":"CLA"
+	},
+	{
+		"Name":"Crazy88 - 8x8",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"CRTMonitor - 8x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"MATRIX"
+	},
+	{
+		"Name":"DawnFortress - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DAWNFORTRESS"
+	},
+	{
+		"Name":"Dirt - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DIRT"
+	},
+	{
+		"Name":"Duerer - 15x15",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DUERER"
+	},
+	{
+		"Name":"DungeonSet - 24x24",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DUNGEON"
+	},
+	{
+		"Name":"Fnordset - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"FNORDSET"
+	},
+	{
+		"Name":"GemSet - 24x24",
+		"TilesetType":"ASCII",
+		"ColorScheme":"GEMSET"
+	},
+	{
+		"Name":"Goofy - 12x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Grimdark - 12x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Humble - 20x20",
+		"TilesetType":"ASCII",
+		"ColorScheme":"HUMBLE"
+	},
+	{
+		"Name":"Ironhand - 18x18",
+		"TilesetType":"IRONHAND",
+		"ColorScheme":"IRONHAND"
+	},
+	{
+		"Name":"Jolly - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"JOLLYWARM"
+	},
+	{
+		"Name":"Matrix - 10x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"MATRIX"
+	},
+	{
+		"Name":"Mayday - 16x16",
+		"TilesetType":"MAYDAY",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Meph - 32x32",
+		"TilesetType":"MDF",
+		"ColorScheme":"MEPH"
+	},
+	{
+		"Name":"Mushroom - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"NES"
+	},
+	{
+		"Name":"Nordic - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Obsidian Soul - 16x16",
+		"TilesetType":"OBSIDIAN",
+		"ColorScheme":"OBSIDIAN"
+	},
+	{
+		"Name":"OldSchool - 16x32",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},	
+	{
+		"Name":"Phoebus - 16x16",
+		"TilesetType":"PHOEBUS",
+		"ColorScheme":"PHOEBUS"
+	},
+	{
+		"Name":"RallyHo - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"RALLYHO"
+	},
+	{
+		"Name":"RogueYun - 12x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"SimpleMood - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"SirHenry - 32x32",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Spacefox - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"SPACEFOX"
+	},
+	{
+		"Name":"StorytellerGothic - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Taffer - 10x10",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Terbert - 7x7",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Tergel - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"TERGEL"
+	},
+	{
+		"Name":"Toy CGA - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Vherid - 12x12",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	},
+	{
+		"Name":"Wanderlust - 16x16",
+		"TilesetType":"ASCII",
+		"ColorScheme":"WANDERLUST"
+	},
+	{
+		"Name":"Wiggly - 16x32",
+		"TilesetType":"ASCII",
+		"ColorScheme":"DEFAULTPLUS"
+	}
+]

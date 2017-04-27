@@ -1,3 +1,0 @@
-item_pants
-
-!YES_GRIM_ARMOR!OBJECT:ITEM]

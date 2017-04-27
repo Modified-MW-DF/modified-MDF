@@ -1,0 +1,10 @@
+item_z_naga
+
+[OBJECT:ITEM]
+
+[ITEM_TOOL:ITEM_TOOL_NAGA_EGG]
+[NAME:clutch:clutches]
+	[DESCRIPTION:Description.]
+[TILE:248]
+[UNIMPROVABLE][SIZE:100]
+[MATERIAL_SIZE:1]

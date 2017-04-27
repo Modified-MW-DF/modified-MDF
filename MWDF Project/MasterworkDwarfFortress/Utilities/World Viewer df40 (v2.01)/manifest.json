@@ -1,0 +1,6 @@
+{
+    "content_version": "2.1.4",
+    "tooltip": "Another third-party legends viewer, which takes advantage of extras from DFHack \"exportlegends\".  (64bit)",
+    "win_exe": "DFWV.exe",
+    "title": "World Viewer"
+}

@@ -1,0 +1,5 @@
+building_necromancer
+
+[OBJECT:BUILDING]
+
+

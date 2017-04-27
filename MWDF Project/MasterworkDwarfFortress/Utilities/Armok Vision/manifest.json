@@ -1,0 +1,7 @@
+{
+    "title": "Armok Vision",
+    "content_version": "v0.9.1",
+    "tooltip": "A full 3D visualiser - shows off Dwarf Fortress with unprecedented detail and beauty.  (64bit)",
+    "win_exe": "Armok Vision.exe",
+    "needs_dfhack": true
+}

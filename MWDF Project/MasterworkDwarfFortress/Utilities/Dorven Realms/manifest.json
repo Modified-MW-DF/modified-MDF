@@ -1,0 +1,6 @@
+{
+    "content_version": "R1",
+    "tooltip": "Creates a Minecraft level from exported world maps (dfhack \"exportlegends maps\" in legends mode).",
+    "win_exe": "DorvenRealms.sfx.exe",
+    "title": "Dorven Realms"
+}

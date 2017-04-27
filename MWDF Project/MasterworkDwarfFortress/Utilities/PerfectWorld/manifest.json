@@ -1,0 +1,7 @@
+{
+    "title": "PerfectWorld",
+    "content_version": "1.9",
+    "tooltip": "Advanced, precise, custom world generation tool - this is how people generate maps of real places.",
+    "readme": "PerfectWorldDF_Manual.html",
+    "win_exe": "PerfectWorldDF.exe"
+}

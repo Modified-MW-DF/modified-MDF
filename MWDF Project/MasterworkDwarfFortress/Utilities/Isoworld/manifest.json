@@ -1,0 +1,7 @@
+{
+    "title": "Isoworld",
+    "content_version": "2.1",
+    "tooltip": "Makes an isometric world map from exported detailed maps, or connects to DF for a 'detailed view' in Adventure Mode.",
+    "readme": "isoworld/Readme.txt",
+    "win_exe": "isoworld.exe"
+}
