@@ -592,5 +592,42 @@ YES_STANDARDIZED_BONE
 
 	[TISSUE_SHAPE:LAYER]
 
-YER]
+[TISSUE_TEMPLATE:BAT_SKIN_TEMPLATE]
+	[TISSUE_NAME:skin:NP]
+	[SCARS]
+	YES_STANDARDIZED_LEATHER!TISSUE_MATERIAL:LOCAL_CREATURE_MAT:BAT_SKIN]
+	YES_STANDARDIZED_LEATHER[TISSUE_MATERIAL:CREATURE_MAT:ANIMAL_LEATHER:BAT_SKIN]
+
+	[RELATIVE_THICKNESS:1]
+	Lower is faster.
+	[HEALING_RATE:100]
+
+	[VASCULAR:1]
+	[PAIN_RECEPTORS:5]
+	[CONNECTS]
+	[TISSUE_SHAPE:LAYER]
+
+[TISSUE_TEMPLATE:DRAKESCALE_TEMPLATE] /a new shearable hide for the drakes, based on the hair template to prevent it from making the creature tanky
+	[TISSUE_NAME:rough outer scale:STP]
+	
+	YES_STANDARDIZED_LEATHER!TISSUE_MATERIAL:LOCAL_CREATURE_MAT:DRAKESCALE]
+	YES_STANDARDIZED_LEATHER[TISSUE_MATERIAL:CREATURE_MAT:ANIMAL_LEATHER:DRAKESCALE]
+
+	[RELATIVE_THICKNESS:1]
+	[HEALING_RATE:100]
+	[SUBORDINATE_TO_TISSUE:SCALE]
+	[COSMETIC]
+	[TISSUE_SHAPE:SCALES]
+
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
 

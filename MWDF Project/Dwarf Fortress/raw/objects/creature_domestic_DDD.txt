@@ -465,6 +465,8 @@ creature_domestic_DDD
 	[PREFSTRING:chittering squeeks]
 	!NO_CREATURES_TRAINABLE!TRAINABLE][CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK_FLIER:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4FINGERS:4TOES:MOUTH:TONGUE:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
+[USE_MATERIAL_TEMPLATE:BAT_SKIN:BAT_SKIN_TEMPLATE]                    /adds the material for the shearable skin
+[USE_TISSUE_TEMPLATE:BAT_SKIN:BAT_SKIN_TEMPLATE]                      /adds the tissue for the shearable skin
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
@@ -478,9 +480,15 @@ creature_domestic_DDD
 	[USE_MATERIAL_TEMPLATE:NAIL:NAIL_TEMPLATE]
 	[USE_TISSUE_TEMPLATE:NAIL:NAIL_TEMPLATE]
 	[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
-	[TISSUE_LAYER_OVER:BY_CATEGORY:ARM_UPPER:SKIN]
-	[SELECT_TISSUE_LAYER:SKIN:BY_CATEGORY:ARM_UPPER]
-		[TL_RELATIVE_THICKNESS:5]
+	
+	YES_MORE_LEATHERMOD!TISSUE_LAYER_OVER:BY_CATEGORY:ARM_UPPER:SKIN]             /prevents two hides from being received upon butchering with "More leather!" turned off
+	YES_MORE_LEATHERMOD!SELECT_TISSUE_LAYER:SKIN:BY_CATEGORY:ARM_UPPER]         
+		YES_MORE_LEATHERMOD!TL_RELATIVE_THICKNESS:5]
+
+	YES_MORE_LEATHERMOD[TISSUE_LAYER_OVER:BY_CATEGORY:ARM_UPPER:BAT_SKIN]        /used to be regular SKIN, replaced with BAT_SKIN since it's serving the same role
+	YES_MORE_LEATHERMOD[SELECT_TISSUE_LAYER:BAT_SKIN:BY_CATEGORY:ARM_UPPER]      /used to be regular SKIN, replaced with BAT_SKIN since it's serving the same role
+		YES_MORE_LEATHERMOD[TL_RELATIVE_THICKNESS:5]
+
 	[SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART]
 	 [PLUS_TISSUE_LAYER:SKIN:BY_CATEGORY:THROAT]
 		[TL_MAJOR_ARTERIES]
@@ -489,7 +497,7 @@ creature_domestic_DDD
 	[LIGAMENTS:LOCAL_CREATURE_MAT:SINEW:200]
 	[HAS_NERVES]
 	[USE_MATERIAL_TEMPLATE:BLOOD:BLOOD_TEMPLATE]
-	NO_STANDARD_BLOOD[BLOOD:LOCAL_CREATURE_MAT:BLOOD:LIQUID]
+	YES_STANDARD_BLOOD[BLOOD:CREATURE_MAT:ANIMAL_BLOOD:BLOOD:LIQUID]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[GETS_WOUND_INFECTIONS]
 	[GETS_INFECTIONS_FROM_ROT]
@@ -516,22 +524,22 @@ creature_domestic_DDD
 		[FEMALE]
 	[CASTE:MALE]
 		[MALE]
-	[SELECT_CASTE:ALL]
-		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
-			[TL_COLOR_MODIFIER:MOTTLED_TAN_SLATE_GRAY:2:MOTTLED_CHARCOAL_BLACK:1:MOTTLED_GRAY_DARK_CHESTNUT:1:MOTTLED_GRAY_BROWN:1:MOTTLED_TAN_DARK_BROWN:1]
-				[TLCM_NOUN:fuzzy hair:SINGULAR]
-		[SET_TL_GROUP:BY_CATEGORY:ARM_UPPER:SKIN]
-			[TL_COLOR_MODIFIER:BROWN:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PINK:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
-				[TLCM_NOUN:leathery wings:PLURAL]
-			[TISSUE_LAYER_APPEARANCE_MODIFIER:LENGTH:0:40:80:100:120:160:200]
-				[APP_MOD_NOUN:leathery wings:PLURAL]
-				[APP_MOD_RATE:4:DAILY:0:360:0:0:NO_END]			// A growth rate of 4 per day will result in a length of 360 after 90 days.
-				[APP_MOD_DESC_RANGE:12:60:120:180:240:330]
-			[SHEARABLE_TISSUE_LAYER:LENGTH:330]				// At 300 length the tissue layer (skin) will be shearable.  With our defined growth rate, this should be once per season.
-		[SET_TL_GROUP:BY_CATEGORY:EAR:SKIN]
-			[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
-				[TLCM_NOUN:huge ears:PLURAL]
-
+	[SELECT_CASTE:ALL] /everything was tabbed to the right to fit the LEATHERMOD GUI token
+			[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
+				[TL_COLOR_MODIFIER:MOTTLED_TAN_SLATE_GRAY:2:MOTTLED_CHARCOAL_BLACK:1:MOTTLED_GRAY_DARK_CHESTNUT:1:MOTTLED_GRAY_BROWN:1:MOTTLED_TAN_DARK_BROWN:1]
+					[TLCM_NOUN:fuzzy hair:SINGULAR]
+     YES_MORE_LEATHERMOD!SET_TL_GROUP:BY_CATEGORY:ARM_UPPER:SKIN] 
+     YES_MORE_LEATHERMOD[SET_TL_GROUP:BY_CATEGORY:ARM_UPPER:BAT_SKIN]                  /used to be regular SKIN, replaced with BAT_SKIN since it's serving the same role
+				[TL_COLOR_MODIFIER:BROWN:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PINK:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
+					[TLCM_NOUN:leathery wings:PLURAL]
+				[TISSUE_LAYER_APPEARANCE_MODIFIER:LENGTH:0:40:80:100:120:160:200]
+					[APP_MOD_NOUN:leathery wings:PLURAL]
+					[APP_MOD_RATE:4:DAILY:0:360:0:0:NO_END]		// A growth rate of 4 per day will result in a length of 360 after 90 days.
+					[APP_MOD_DESC_RANGE:12:60:120:180:240:330]
+				[SHEARABLE_TISSUE_LAYER:LENGTH:330]			// At 300 length the tissue layer (skin) will be shearable.  With our defined growth rate, this should be once per season.
+			[SET_TL_GROUP:BY_CATEGORY:EAR:SKIN]
+				[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
+					[TLCM_NOUN:huge ears:PLURAL]
 [CREATURE:CAVERNKEET_BEARDED_DDD]
 	[DESCRIPTION:A small flightless bird adapted to life climbing and scrabling underground.  Its short feathers closely resemble silky colored hairs, with a thick tuft beneath its chin forming a very dwarfy beard.]
 	[NAME:bearded cavernkeet:bearded cavernkeets:cavernkeet]
@@ -1170,3 +1178,13 @@ creature_domestic_DDD
 				[APP_MOD_DESC_RANGE:55:70:99:100:130:145]55:70:99:100:130:145]
 				[APP_MOD_NOUN:tusks:PLURAL]
 				[APP_MOD_DESC_RANGE:55:70:99:100:130:145]
+
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################

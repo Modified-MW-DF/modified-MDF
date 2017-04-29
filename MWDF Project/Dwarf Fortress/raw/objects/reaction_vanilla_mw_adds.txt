@@ -91,6 +91,19 @@ reaction_vanilla_mw_adds
 	[SKILL:PRESSING]
 
 ##### TANNER MW ADDS ##########################################################
+[REACTION:TAN_A_HIDE_SHEARED] /new reaction to tan sheared fix leatherwings and drakes. Works by tanning regular hides(not globs). Disabled when "More Leather!" is turned off
+	[NAME:Tan any sheared hide]
+	[BUILDING:TANNER:CUSTOM_T]
+	[REAGENT:A:1:NONE:NONE:NONE:NONE]
+		[USE_BODY_COMPONENT]
+		[REACTION_CLASS:SKIN]
+		[REACTION_CLASS:SHEARED]
+		[UNROTTEN]
+		[HAS_MATERIAL_REACTION_PRODUCT:TAN_MAT]
+	[PRODUCT:100:1:SKIN_TANNED:NONE:GET_MATERIAL_FROM_REAGENT:A:TAN_MAT]
+	[SKILL:TANNER]
+	[AUTOMATIC]
+
 [REACTION:TAN_A_HIDE_LEATHER]
 	[NAME:harden leather]
 	[BUILDING:TANNER:CUSTOM_L]
