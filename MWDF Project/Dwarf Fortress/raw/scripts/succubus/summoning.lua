@@ -141,7 +141,7 @@ function summonCreature(unitId, unitSource, num)
 
 	for i = 1, num do
 		local casteIndex = createUnit.getRandomCasteId(raceIndex)
-		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, df.global.ui.civ_id, df.global.ui.group_id)
+		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, position, df.global.ui.civ_id, df.global.ui.group_id)
 		createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
 		
 		local newUnit = df.unit.find(newUnitIndex)
@@ -160,8 +160,8 @@ function summonCreature(unitId, unitSource, num)
 
 	  	-- Clear hostility
 	  	newUnit.civ_id = df.global.ui.civ_id
-
-  		teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
+--		no longer necessary createunitinciv now takes the position and moves it for you.
+--  	teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
 	end
 
 	df.global.window_x = camera.x
