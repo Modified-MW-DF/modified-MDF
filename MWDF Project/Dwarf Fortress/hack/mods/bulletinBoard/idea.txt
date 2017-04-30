@@ -1,0 +1,3 @@
+random units when having "idle" or "on break" could post some events to bulletin board
+it could also clear itself after a while
+could also give complained to authority figure thought

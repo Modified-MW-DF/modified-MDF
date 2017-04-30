@@ -1,0 +1,7 @@
+A collection of dwarven games:
+split workshops, that need 1+ dwarves doing jobs (todo other split workshops for epic jobs?) that give good thoughts.
+Player can join the fun by "possesing" one of the dwarves. 
+Game ideas:
+    * tacticus (dirk 5th edition - the smaller one)
+    * some simple card game (but maybe with nicer cards)
+    * maybe simplest ever-> dice (with strange dice)
