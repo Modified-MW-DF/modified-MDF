@@ -1,0 +1,38 @@
+inspired by fallout shelter
+To be played by 2+ players:
+	* vault-tech engineer
+	* overseer(s)
+
+* Stage 1: Vault-tec (player 1 / game master)
+	* build a vault. This might be done with fast dwarves and special reaction/buildings for extra fast building.
+	* stocks it up. During nuclear winter (or dwarven equivalent of that) there will be no going out. Also stuff will wear down (more)
+	* installs things. Some things are only buildable by vault-tec (e.g. vault door, reactor?)
+	* (optional) set up experiment. Probably in a form of script (e.g. after 10 years reactor fails) or limited resources?
+		- todo: how to allow for survival then?
+* Stage 2: end-of-world (player 2 from this point on)
+	* dwellers arrive (all of them in one wave)
+	* limited building/digging
+	* outside radiation increases like crazy
+	* this stage is the day-to-day living in the vault and fending off caverns creatures, etc...
+* Stage 3: post-rads
+	* expeditions into wasteland possible (todo: how to make it more interesting then "reaction that removes units for a while")
+	* radiation is still a thing, but not that insane. Units from outside will have to be cleaned not to track rads into vault
+	* allow some building outside
+	* some attacks might begin now
+* Stage 4: vault city
+	* open vault
+	* rads low/very low
+	* allow all buildings
+	* more attacks
+	* geck?
+
+Scenarios:
+	* military installation (e.g. bunker)
+	* robots
+	* nuke on vault (at stage 2)
+	* civ uprising (change civ for some part of units)
+
+Random things:
+* vault door will be iron walls + special building that would move wall in one direction if mech-power is applied
+* most of buildings will need special item that wears down in time
+* most of workshops will need power (from reactor)

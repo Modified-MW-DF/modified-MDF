@@ -1,0 +1,2 @@
+use workshop with slabs to show stuff. Also could iterpose slab vmethod itself. BUT! then it's really messy
+ (where to put it, only one methods etc...)

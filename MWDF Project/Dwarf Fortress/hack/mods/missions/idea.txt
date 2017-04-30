@@ -1,0 +1,13 @@
+-- more like styles of play, and general mandates, maybe achievements?
+1. cult
+    a. build a shrine to <god>
+    b. sacrifices
+    c. more shrines?
+    d. purge the unbelievers (your own dwarves based on belief)
+    e. build small buildings of "power" e.g. obelisks, pyramids, statues
+    
+2. tutorial
+    --just helpfull hints on what to do
+3. military instalation
+    a. build military barracks
+    b. train population

@@ -1,0 +1,24 @@
+phylactery:
+    a building that binds to unit, while building is working/functional unit will nOt DIE!!!
+    could respawn in this building (more and more undead)
+    or just raise in the spot
+    !!! could use some body part of original creature !!!
+    or blood of it...
+
+some chance to:
+    mood it (e.g. berserk)
+    undead it (zombie)
+    husk it (oh noez)
+    set on fire?
+    blast noxious fumes
+
+other ideas:
+    firemen creator (compresses lava and (something magical) into a firemen, or maybe eggs)
+    various extractors (e.g. heart? blood? and so on... used by other machines)
+    obelisk:issues jobs to nearby undead
+    golems and their controller (difference: always friendly, can have more complex control)
+    cryogenic levitation: check if its still possible to hang unit in place by setting up projectile
+    a workshop that creates a vein: maybe arming it would involve adding boulders (X boulders for X tiles to fill)
+    boosting the tree/plant growth: quick way to tree farm! (misfire: spawn a berserk ent?)
+    teleportation machine
+    

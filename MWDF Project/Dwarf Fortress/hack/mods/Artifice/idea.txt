@@ -1,0 +1,10 @@
+*powered workshops
+*manufacturing creatures
+*workshops emiting poison (use golems to work there)
+*golem control points (asign jobs for golems, binds to the burrow)
+*swapable golem ai chips (patrol,work,fight,berserk,etc...)
+*pseudo-random research stuff (populate reactions post-generation)
+*golems having to charge up
+*record keeper - ingame help and stuff
+settings:
+*include lighting settings
