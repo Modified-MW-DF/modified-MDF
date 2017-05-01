@@ -1,6 +1,6 @@
 creature_wildhunt
 
-!YES_MMM_HUNT!OBJECT:CREATURE]
+YES_MMM_HUNT[OBJECT:CREATURE]
 
 [CREATURE:CREATURE_WILDHUNT]
 	[NAME:wild hunter:wild hunters:fey]
@@ -602,4 +602,5 @@ creature_wildhunt
 ISON]
 
 ISON]
+
 

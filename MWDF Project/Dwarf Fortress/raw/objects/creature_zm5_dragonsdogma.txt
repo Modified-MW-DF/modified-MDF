@@ -1,6 +1,6 @@
 creature_dragonsdogma_zm5
 
-!YES_ZM5_DRAGONSDOGMA!OBJECT:CREATURE]
+YES_ZM5_DRAGONSDOGMA[OBJECT:CREATURE]
 
 [CREATURE:GARM]
 	[DESCRIPTION:A massive, carnivorous beast resembling a horrific, decaying wolf. It's commonly found prowling evil forests in search of prey, and is also commonly attracted by the stench of rotting bodies. It can breathe a gray gas that causes blindness.]
@@ -2966,3 +2966,4 @@ creature_dragonsdogma_zm5
 	 [PLUS_MATERIAL:PUS]
          [PLUS_MATERIAL:ICHOR]
 		[MELTING_POINT:10000]
+

@@ -2,7 +2,7 @@ entity_savage_naga
 
 
 	Toggles the civ active or inactive:
-	!NO_CIV_ACTIVE_NAGA!OBJECT:ENTITY]
+	YES_CIV_ACTIVE_NAGA[OBJECT:ENTITY]
 
 	[ENTITY:NAGA] (mdf werebeasts as opposed to the FD werewolves)
 

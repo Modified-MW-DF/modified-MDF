@@ -284,7 +284,7 @@ gui/load-screen enable
 # This file adds various things I think should be in the standard dfhack.init
 
 # TwbT multilevel view
-multilevel 5
+multilevel 10
 
 # add fertility indicator to nestboxes
 tweak eggs-fertile

@@ -1,6 +1,6 @@
 creature_phm
 
-!YES_MMM_PLUMP!OBJECT:CREATURE]
+YES_MMM_PLUMP[OBJECT:CREATURE]
 
 [CREATURE:PLUMP_HELMET_MAN_PHM]
 	[DESCRIPTION:A small humanoid resembling a walking mushroom with arms and legs.  It is prized for the delicious wine brewed from its meat.]
@@ -124,4 +124,4 @@ creature_phm
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:MUSHROOM_OUTER]
 			[TL_COLOR_MODIFIER:PURPLE:1]
-				[TLCM_NOUN:exterior:SINGULAR]]]
+				[TLCM_NOUN:exterior:SINGULAR]]]]

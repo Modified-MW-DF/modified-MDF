@@ -1,6 +1,6 @@
 creature_zm5_large_beasts
 
-!YES_ZM5_MEGABEASTS!OBJECT:CREATURE]
+YES_ZM5_MEGABEASTS[OBJECT:CREATURE]
 
 [CREATURE:MOLTENGIANT]
 	[DESCRIPTION:A giant created out of magma and molten crust by the gods in an age long forgotten. It has an intense hatred of all that lives and incinerates anything that happens to be in it's path.]
@@ -3896,4 +3896,4 @@ creature_zm5_large_beasts
 	Need to make sure blood and pus aren't solid at regular temperatures.
 	[SELECT_MATERIAL:BLOOD]
 	 [PLUS_MATERIAL:PUS]
-		[MELTING_POINT:10000]
+		[MELTING_POINT:10000]]
