@@ -1,6 +1,6 @@
 creature_deep_ones
 
-YES_MMM_CULT[OBJECT:CREATURE]
+!YES_MMM_CULT!OBJECT:CREATURE]
 
 [CREATURE:FISH_CARP_ANCIENT_DEEPONES]
 	[DESCRIPTION:While their surface-dwelling cousins have long since grown benign, these living fossils retain the sharp teeth possessed by their terrible ancestors.  Generations of living deep underground where food is scarce have only served to make them more ferocious.]

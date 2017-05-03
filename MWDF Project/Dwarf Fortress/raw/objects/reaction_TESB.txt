@@ -1,6 +1,6 @@
 reaction_TESB
 
-YES_TESB[OBJECT:REACTION]
+!YES_TESB!OBJECT:REACTION]
 
 Contents:
 Part 1. Tribute reactions

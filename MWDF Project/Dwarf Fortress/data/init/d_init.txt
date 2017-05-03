@@ -11,11 +11,11 @@ versions, but you should not copy anything else.  You should not, under any
 circumstances, unpack a new DF on top of an older one.
 [AUTOSAVE:SEASONAL]
 [AUTOBACKUP:YES]
-[AUTOSAVE_PAUSE:NO]
+[AUTOSAVE_PAUSE:YES]
 
 Set this to YES if you want it to save the game when you start a new fortress.  If AUTOBACKUP above is set to YES, it will also create a copy of this new save.
 
-[INITIAL_SAVE:NO]
+[INITIAL_SAVE:YES]
 
 Set this to NO to make Dwarf Fortress remain in the saved pause state when you load an active game.
 
@@ -307,4 +307,4 @@ Options are REPLACE_FIRST, CENTRALIZE (between first and last), REPLACE_ALL
 
 Set this number to scale how often grazing animals need to eat.  Larger numbers mean less food is necessary.  Metabolism is always set according to the 3/4ths power of size.
 
-[GRAZE_COEFFICIENT:1000]
+[GRAZE_COEFFICIENT:100]

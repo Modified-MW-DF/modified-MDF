@@ -1,6 +1,6 @@
 creature_fearthenight
 
-YES_FEAR_THE_NIGHT[OBJECT:CREATURE]
+!YES_FEAR_THE_NIGHT!OBJECT:CREATURE]
 
 -------------------------------------------------------
 //Various Demon creature types

@@ -2492,8 +2492,8 @@ YES_LIBRARY[PERMITTED_BUILDING:LIBRARY_OF_PHILOSOPHY]
 ###############################################################################
 ##### "The Earth Strikes Back" mod ############################################
 	#A- the reactions page have a tag that turns them on and off, not needed here.
-YES_TESB[PERMITTED_BUILDING:TESB_TRIBUTE]
-YES_TESB[PERMITTED_BUILDING:TESB_ALTAR]
+!YES_TESB!PERMITTED_BUILDING:TESB_TRIBUTE]
+!YES_TESB!PERMITTED_BUILDING:TESB_ALTAR]
 	[PERMITTED_REACTION:TESB_DECONSTRUCT_TRIBUTE]
 	[PERMITTED_REACTION:TESB_DECONSTRUCT_ALTAR]
 	[PERMITTED_REACTION:TESB_TRIBUTE_TO_ANDESITE]

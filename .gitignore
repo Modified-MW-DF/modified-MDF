@@ -3,4 +3,9 @@ MWDF Project/Dwarf Fortress/gamelog.txt
 MWDF Project/Dwarf Fortress/stderr.log
 MWDF Project/Dwarf Fortress/stderr.txt
 MWDF Project/Dwarf Fortress/stdout.txt
-MWDF Project/Dwarf Fortress/data/save/*.*
+MWDF Project/Dwarf Fortress/data/save/
+MWDF Project/Dwarf Fortress/dfhack.history
+MWDF Project/Dwarf Fortress/errorlog.txt
+MWDF Project/Dwarf Fortress/map_rejection_log.txt
+MWDF Project/Dwarf Fortress/dfhack.history
+MWDF Project/Dwarf Fortress/errorlog.txt
