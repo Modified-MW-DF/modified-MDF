@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings>
-  <GRAPHICS>Masterwork - Obsidian Walls</GRAPHICS>
+  <GRAPHICS>Meph - 32x32</GRAPHICS>
   <KEYBINDS>VANILLA</KEYBINDS>
   <ARENA>VANILLA</ARENA>
-  <FONTS>VANILLA</FONTS>
+  <FONTS>MASTERWORK</FONTS>
   <THEME>DEFAULT</THEME>
-  <COLORS>VANILLA</COLORS>
+  <COLORS>MEPH</COLORS>
 </Settings>

@@ -1,6 +1,6 @@
 creature_arctic
 
-!YES_ARCTIC_CREATURE!OBJECT:CREATURE]
+YES_ARCTIC_CREATURE[OBJECT:CREATURE]
 
 [CREATURE:AURORA_FAIRY]
 	[DESCRIPTION:A miniature dwarvenoid with glowing lights that function as wings.]
@@ -1990,4 +1990,4 @@ creature_arctic
 
 
 
-		
+				

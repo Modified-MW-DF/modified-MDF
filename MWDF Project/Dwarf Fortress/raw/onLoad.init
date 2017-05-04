@@ -1748,3 +1748,6 @@ modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command 
 modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
 modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
 
+]
+modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
+
