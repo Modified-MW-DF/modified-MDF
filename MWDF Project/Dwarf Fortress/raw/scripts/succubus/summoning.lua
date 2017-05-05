@@ -141,7 +141,7 @@ function summonCreature(unitId, unitSource, num)
 
 	for i = 1, num do
 		local casteIndex = createUnit.getRandomCasteId(raceIndex)
-		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, position, df.global.ui.civ_id, df.global.ui.group_id)
+		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, df.global.ui.civ_id, df.global.ui.group_id, position)
 		createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
 		
 		local newUnit = df.unit.find(newUnitIndex)
