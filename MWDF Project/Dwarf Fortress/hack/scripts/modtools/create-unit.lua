@@ -25,6 +25,7 @@ local usage = [====[
 modtools/create-unit
 ====================
 Creates a unit.  Usage::
+
     -race raceName
         specify the race of the unit to be created
         examples:
@@ -108,11 +109,11 @@ function createUnit(race_id, caste_id, location)
   gui.simulateInput(dwarfmodeScreen, 'D_LOOK_ARENA_CREATURE')
 
 -- move cursor to location instead of moving unit later, corrects issue of missing mapdata when moving the created unit.
-	if location then
-		df.global.cursor.x = tonumber(location[1])
-		df.global.cursor.y = tonumber(location[2])
-		df.global.cursor.z = tonumber(location[3])
-	end
+  if location then
+    df.global.cursor.x = tonumber(location[1])
+    df.global.cursor.y = tonumber(location[2])
+    df.global.cursor.z = tonumber(location[3])
+  end
 
   local spawnScreen = dfhack.gui.getCurViewscreen()
   if dfhack.world.isArena() then
@@ -207,11 +208,13 @@ function createFigure(trgunit,he,he_group)
   -- set values that seem related to state and do event
   --change_state(hf, dfg.ui.site_id, region_pos)
 
+
   --lets skip skills for now
   --local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
   -- ...
   -- note that innate skills are automaticaly set by DF
   hf.info.skills = {new=true}
+
 
   he.histfig_ids:insert('#', hf.id)
   he.hist_figures:insert('#', hf)
@@ -348,6 +351,7 @@ function wild(uid)
     -- region = df.global.world.map.map_blocks[df.global.world.map.x_count_block*x+y]
   end
 end
+
 
 function nameUnit(id, entityRawName, civ_id)
   --pick a random appropriate name
@@ -502,7 +506,7 @@ local unitId
 if civ_id == -1 then
     unitId = createUnit(raceIndex, casteIndex, args.location)
   else
-    unitId = createUnitInCiv(raceIndex, casteIndex, civ_id, group_id,  args.location)
+    unitId = createUnitInCiv(raceIndex, casteIndex, civ_id, group_id, args.location)
 end
 
 if civ_id then -- moved it here made more sense... why isn't this done inside of nemesis, above?
