@@ -28,7 +28,7 @@ local utils = require 'utils'
 local mo = require 'makeown'
 local fov = dfhack.script_environment('modtools/fov')
 local teleport = dfhack.script_environment('teleport')
-local createunit = dfhack.script_environment('modtools/create-unit')
+local createUnit = dfhack.script_environment('modtools/create-unit')
 -- The range of the check FOV
 local range = 10
 
@@ -239,6 +239,31 @@ function clearHostile(unit)
     --unit.unk_100 = 3
 end
 
+function findRaceAndCaste(raceRawId, casteRawId)
+  --find race
+  local race, raceIndex, casteIndex
+  for i,v in ipairs(df.global.world.raws.creatures.all) do
+    if v.creature_id == raceRawId then
+      raceIndex = i
+      race = v
+    end
+  end
+
+  -- find caste
+  if race then
+    for i,v in ipairs(race.caste) do
+      if v.caste_id == casteRawId then
+        casteIndex = i
+      end
+    end
+  else -- race failed
+    return nil, nil
+  end
+
+  return raceIndex, casteIndex
+end
+
+
 -- Change the creature race, take down hostility and  merchant flags, free cages and trading
 function corrupt(unit)
 	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
@@ -257,14 +282,121 @@ function corrupt(unit)
 			end
 			targetCaste = targetCaste..suffix
 			if debug then print('selected caste: '..targetCaste) end
-			local unitX, unitY, unitZ=dfhack.units.getPosition(unit)
-			-- a line from onload... to model the line below.  modtools/create-unit -race KOBOLD -caste RAT_MALE -civId \\\\LOCAL -groupId \\\\LOCAL -location [ \\LOCATION ] -name KOBOLD -age 3
-			dfhack.run_script('modtools/create-unit', '-race', targetRace, '-caste', targetCaste, '-setUnitToFort', 'TRUE', '-location','[', unitX, unitY, unitZ, ']', '-name', 'EVIL', '-nick', unit.name.first_name, '-age', '20')
---			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
 
-			--Scuttle the unit if you made it to here... otherwise ignore it...  If you put it anywhere else, it will kill off units that don't have a targetcaste or worse who are succubus....
-			clearCage(unit)
+			local raceIndex, casteIndex = findRaceAndCaste(targetRace, targetCaste)
+
+			if raceIndex==nil then
+				if debug then print('raceIndex returned nil') end
+				return nil
+			elseif casteIndex==nil then
+				if debug then print('raceIndex returned nil') end
+				return nil
+			end
+			
+			local position = { dfhack.units.getPosition(unit) }
+
+			local newUnitId = createUnit.createUnitInCiv(raceIndex, casteIndex, df.global.ui.civ_id, df.global.ui.group_id, position)
+--			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
+			
+			-- grab the newUnit pointer from the index above
+			local newUnit = df.unit.find(newUnitId)
+
+			newUnit.civ_id=df.global.ui.civ_id
+
+			-- hopefully will force DF to recallculate all the stuff it needs to.
+			newUnit.flags2.calculated_nerves = false
+			newUnit.flags2.calculated_bodyparts = false
+			newUnit.flags3.body_part_relsize_computed = false
+			newUnit.flags3.size_modifier_computed = false
+			newUnit.flags3.compute_health = true
+			newUnit.flags3.weight_computed = false
+
+			-- here we need to copy all the names and stuff over to this newUnit from the old unit....
+			newUnit.name.has_name = true
+			if newUnit.status.current_soul then
+				newUnit.status.current_soul.name.has_name = true
+			end
+
+		-- Assign the newUnit name according to the old Unit's name.
+			newUnit.name:assign(unit.name)
+			local newUnitHf = utils.binsearch(df.global.world.history.figures, newUnit.hist_figure_id, 'id')
+			newUnitHf.name:assign(unit.name)
+			
+ 		-- age
+			newUnit.birth_year = unit.birth_year
+			newUnit.birth_time = unit.birth_time
+			newUnit.birth_year_bias = unit.birth_year_bias
+			newUnit.birth_time_bias = unit.birth_time_bias
+		
+		--relationship_ids 
+		-- from amostubal -"Is this the way?  If I understood it correctly every pet, has its owner
+		-- as a pet. same for spouse etc. except mother and father don't have selections for children?"
+		-- might need some help with finding and setting the old part.
+			if -1 ~= unit.relationship_ids.Pet then
+				newUnit.relationship_ids.Pet = unit.relationship_ids.Pet
+				local pet = df.unit.find(unit.relationship_ids.Pet)
+				pet.relationship_ids.Pet = newUnitId
+			end
+
+			if -1 ~= unit.relationship_ids.Spouse then
+				newUnit.relationship_ids.Spouse = unit.relationship_ids.Spouse
+				local spouse = df.unit.find(unit.relationship_ids.Spouse)
+				spouse.relationship_ids.Spouse = newUnitId
+			end
+
+			if -1 ~= unit.relationship_ids.Lover then
+				newUnit.relationship_ids.Lover = unit.relationship_ids.Lover
+				local lover = df.unit.find(unit.relationship_ids.Lover)
+				lover.relationship_ids.Lover = newUnitId
+			end
+
+			if -1 ~= unit.relationship_ids.Mother then
+				newUnit.relationship_ids.Mother = unit.relationship_ids.Mother
+				local Mother = df.unit.find(unit.relationship_ids.Mother)
+				-- need to find out how to link a father to a child.
+			end
+
+			if -1 ~= unit.relationship_ids.Father then
+				newUnit.relationship_ids.Father = unit.relationship_ids.Father
+				local Father = df.unit.find(unit.relationship_ids.Father)
+				-- need to find out how to link a father to a child.
+			end
+
+			-- need to find out how children and parents work altogether.
+
+
+		-- Amostubal - I wrote this, but didn't test this, was afraid it would mess something up with the grouping.
+		--[[ steal an existing historical figure of the old unit if it exists. 
+			if unit.hist_figure_id then
+				newUnit.hist_figure_id = unit.hist_figure_id
+				hf = utils.binsearch(df.global.world.history.figures, unit.hist_figure_id, 'id')
+				hf.unit_id = newUnitId -- resets the hf to the new unit.
+				newUnit.flags1.important_historical_figure = unit.flags1.important_historical_figure
+			end
+			if unit.hist_figure_id2 then
+				newUnit.hist_figure_id2 = unit.hist_figure_id2
+				hf = utils.binsearch(df.global.world.history.figures, unit.hist_figure_id2, 'id')
+				hf.unit_id = newUnitId -- resets the hf to the new unit.
+				newUnit.flags2.important_historical_figure = unit.flags2.important_historical_figure
+			end
+
+		-- steal a soul?
+			if unit.status.current_soul then
+				newUnit.status.current_soul = unit.status.current_soul
+				unit.status.current_soul.unit_id = newUnitId
+			end
+		--]]
+
+		-- maybe need to grab their stuff?
+
+		-- can't think of anything else, but if there is it needs to go here.
+	
+
+		--Delete the old unit if you made it to here... otherwise ignore it.  If you put it anywhere else, it will kill off units that don't have a targetcaste or worse who are succubus....
+			clearCage(unit) -- have to get it out of the cage first.
+			teleport.teleport(unit, xyz2pos( 0, 0, 0 ))
 			unit.flags3.scuttle=true
+		
 		end
 	end
 	

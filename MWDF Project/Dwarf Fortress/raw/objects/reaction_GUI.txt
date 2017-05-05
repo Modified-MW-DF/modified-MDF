@@ -1,6 +1,8 @@
 reaction_GUI
 
-///These reactions are used by all civs. The default is empty and does not change any balancing. Weak adds bad metals, normal adds medium metals and strong adds good metals to the civ. This is to enable the player to choose the strength of their invaders.
+///These reactions are used by all civs. The default is empty and does not change any balancing. 
+///Weak adds bad metals, normal adds medium metals and strong adds good metals to the civ. This 
+///is to enable the player to choose the strength of their invaders.
 
 The reactions only affect worldgen and are ignored in fortress mode.
 

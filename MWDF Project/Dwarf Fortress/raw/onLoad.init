@@ -583,47 +583,47 @@ modtools/reaction-trigger -reactionName DIFFICULTY_DRAGONFRIEND -command [ modto
 #human unit spawning
 
 
-modtools/reaction-trigger -reactionName BREED_WAR_DOGS_M -command [ modtools/create-unit -race DOG -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BREED_WAR_DOGS_F -command [ modtools/create-unit -race DOG -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BREED_WAR_DOGS_M -command [ modtools/create-unit -race DOG -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BREED_WAR_DOGS_F -command [ modtools/create-unit -race DOG -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_DOG -command [ modtools/create-unit -race DOG -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_DOG -command [ modtools/create-unit -race DOG -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_DOG -command [ modtools/create-unit -race DOG -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_DOG -command [ modtools/create-unit -race DOG -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_CAT -command [ modtools/create-unit -race CAT -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_CAT -command [ modtools/create-unit -race CAT -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_CAT -command [ modtools/create-unit -race CAT -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_CAT -command [ modtools/create-unit -race CAT -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_HORSE -command [ modtools/create-unit -race HORSE -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_HORSE -command [ modtools/create-unit -race HORSE -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_HORSE -command [ modtools/create-unit -race HORSE -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_HORSE -command [ modtools/create-unit -race HORSE -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_COW -command [ modtools/create-unit -race COW -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_COW -command [ modtools/create-unit -race COW -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_COW -command [ modtools/create-unit -race COW -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_COW -command [ modtools/create-unit -race COW -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_SHEEP -command [ modtools/create-unit -race SHEEP -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_SHEEP -command [ modtools/create-unit -race SHEEP -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_SHEEP -command [ modtools/create-unit -race SHEEP -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_SHEEP -command [ modtools/create-unit -race SHEEP -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_PIG -command [ modtools/create-unit -race PIG -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_PIG -command [ modtools/create-unit -race PIG -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_PIG -command [ modtools/create-unit -race PIG -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_PIG -command [ modtools/create-unit -race PIG -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_GOAT -command [ modtools/create-unit -race GOAT -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_GOAT -command [ modtools/create-unit -race GOAT -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_GOAT -command [ modtools/create-unit -race GOAT -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_GOAT -command [ modtools/create-unit -race GOAT -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_BIRD_CHICKEN -command [ modtools/create-unit -race BIRD_CHICKEN -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_BIRD_CHICKEN -command [ modtools/create-unit -race BIRD_CHICKEN -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_BIRD_CHICKEN -command [ modtools/create-unit -race BIRD_CHICKEN -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_BIRD_CHICKEN -command [ modtools/create-unit -race BIRD_CHICKEN -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_BIRD_GOOSE -command [ modtools/create-unit -race BIRD_GOOSE -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_BIRD_GOOSE -command [ modtools/create-unit -race BIRD_GOOSE -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_BIRD_GOOSE -command [ modtools/create-unit -race BIRD_GOOSE -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_BIRD_GOOSE -command [ modtools/create-unit -race BIRD_GOOSE -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_FEMALE_RABBIT -command [ modtools/create-unit -race RABBIT -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
-modtools/reaction-trigger -reactionName BUY_MALE_RABBIT -command [ modtools/create-unit -race RABBIT -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_FEMALE_RABBIT -command [ modtools/create-unit -race RABBIT -caste FEMALE -location [ \\LOCATION ] -age 10 -domesticate ]
+modtools/reaction-trigger -reactionName BUY_MALE_RABBIT -command [ modtools/create-unit -race RABBIT -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
 
 modtools/reaction-trigger -reactionName BUY_GOBLIN_1 -command [ modtools/create-unit -race HUMAN -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 20 ]
 modtools/reaction-trigger -reactionName BUY_GOBLIN_2 -command [ modtools/create-unit -race HUMAN -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 20 ]
 
-modtools/reaction-trigger -reactionName BUY_WARLOCK_9 -command [ modtools/create-unit -race HUNGRY_HEAD -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 10 -flagSet [ tame ] ]
+modtools/reaction-trigger -reactionName BUY_WARLOCK_4 -command [ modtools/create-unit -race HUNGRY_HEAD -caste MALE -location [ \\LOCATION ] -age 10 -domesticate ]
 
-modtools/reaction-trigger -reactionName BUY_SUCCUBUS_8 -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
-modtools/reaction-trigger -reactionName BUY_SUCCUBUS_4 -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
+modtools/reaction-trigger -reactionName BUY_SUCCUBUS_6 -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
+modtools/reaction-trigger -reactionName BUY_SUCCUBUS_3 -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
 
 #hermit
 modtools/reaction-trigger -reactionName SUICIDE_ELF_FEMALE -command [ modtools/create-unit -race ELF -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name FOREST -age 25 ]
@@ -1748,6 +1748,14 @@ modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command 
 modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
 modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
 
-]
-modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
+
+
+
+
+
+
+
+
+
+
 
