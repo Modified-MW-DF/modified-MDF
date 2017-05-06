@@ -30,7 +30,7 @@ http://www.bay12forums.com/smf/index.php?topic=150776
 ]]
 
 local utils = require('utils')
-local tesb_version = "2.13"
+local tesb_version = "2.14"
 
 --[[
 Rubble Tile Material Getter DFHack Lua Module
@@ -202,6 +202,31 @@ sphere_list = { ANDESITE = {MOUNTAINS = true, VOLCANOS = true},
 	SILTSTONE = {EARTH = true, MINERALS = true},
 	SLATE = {EARTH = true, MOUNTAINS = true}}
 
+temple_list = { ANDESITE = "IGNEOUS_EXT", 
+	BASALT = "IGNEOUS_EXT", 
+	CHALK = "FLUX", 
+	CHERT = "SEDIMENTARY", 
+	CLAYSTONE = "SEDIMENTARY",
+	CONGLOMERATE = "SEDIMENTARY", 
+	DACITE = "IGNEOUS_EXT", 
+	DIORITE = "IGNEOUS_INT", 
+	DOLOMITE = "FLUX", 
+	GABBRO = "IGNEOUS_INT", 
+	GNEISS = "METAMORPHIC", 
+	GRANITE = "IGNEOUS_INT", 
+	LIMESTONE = "FLUX", 
+	MARBLE = "FLUX", 
+	MUDSTONE = "SEDIMENTARY", 
+	PHYLLITE = "METAMORPHIC", 
+	QUARTZITE = "METAMORPHIC",
+	RHYOLITE = "IGNEOUS_EXT", 
+	ROCK_SALT = "ROCK_SALT", 
+	SANDSTONE = "SEDIMENTARY", 
+	SCHIST = "METAMORPHIC", 
+	SHALE = "SEDIMENTARY", 
+	SILTSTONE = "SEDIMENTARY",
+	SLATE = "METAMORPHIC"}
+
 hiddenGem_list = {}
 caste_list = {}
 workshop_list = {}
@@ -365,8 +390,10 @@ jobCheck.onJobCompleted.tesbJobMonitor=function(job)
 				if valid == true then
 					specificAltar(workshop.id,workshop_mat) -- Valid material in an appropriate temple
 				else
-					specificAltar(workshop.id,'INACTIVE') -- Valid material not in an appropriate temple
+					specificAltar(workshop.id,'INACTIVE_'..temple_list[workshop_mat]) -- Valid material not in an appropriate temple
 				end
+			elseif workshop.custom_type == altar_type and temple_list[workshop_mat] then
+				specificAltar(workshop.id,'INACTIVE_'..temple_list[workshop_mat]) -- Valid material but not in any temple
 			elseif workshop.custom_type == altar_type then
 				specificAltar(workshop.id,'INACTIVE') -- Invalid material
 			end
@@ -374,9 +401,10 @@ jobCheck.onJobCompleted.tesbJobMonitor=function(job)
 	end
 end
 
-if grace_total <= grace_count then
-	print("Living stone base probability: " .. living_prob*100 .. "% (No grace period remaining)")
-else
-	print("Living stone base probability: " .. living_prob*100 .. "% (" .. grace_total-grace_count .. " tiles remaining in grace period)")
-end
-print("Hidden gem base probability: " .. gem_prob*100 .. "% (Current effective rate " .. 100*gem_prob*math.min(1,(grace_count/grace_total)) .. "%)")
+dfhack.run_command("tesb-info")
+dfhack.print(" ")
+dfhack.print("Use ")
+dfhack.color(10)
+dfhack.print("tesb-info")
+dfhack.color(-1)
+dfhack.println(" for current grace period and probabilities.")

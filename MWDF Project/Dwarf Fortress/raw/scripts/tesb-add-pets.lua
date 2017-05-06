@@ -1,7 +1,3 @@
--- Adds specific castes of pets to each civ of an Entity type
--- Intended for Pet Rocks, but would work on Awakened Stones as well
--- Caste is available if the civ has access to the associated layer stone
-
 -- Made by Dirst for the Earth Strikes Back mod
 -- Based on AddPetToCiv
 
@@ -113,9 +109,9 @@ for k,civ in pairs(df.global.world.entities.all) do
 			if insertPet(civ.id,args.race,pet_caste) then pet_count = pet_count + 1 end
 		end
 		if pet_count > 1 then 
-			print("Added "..pet_count.." kinds of "..racePlural.." to "..dfhack.TranslateName(df.global.world.entities.all[civ.id].name)..".")
+			print("Added "..pet_count.." kinds of "..racePlural.." to "..dfhack.df2console(dfhack.TranslateName(df.global.world.entities.all[civ.id].name)).." ("..dfhack.df2console(dfhack.TranslateName(df.global.world.entities.all[civ.id].name,true))..").")
 		elseif pet_count == 1 then
-			print("Added 1 kind of "..raceSingle.." to "..dfhack.TranslateName(df.global.world.entities.all[civ.id].name)..".")
+			print("Added 1 kind of "..raceSingle.." to "..dfhack.df2console(dfhack.TranslateName(df.global.world.entities.all[civ.id].name)).." ("..dfhack.df2console(dfhack.TranslateName(df.global.world.entities.all[civ.id].name,true))..").")
 		end
 	end
 end

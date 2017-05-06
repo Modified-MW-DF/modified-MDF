@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<creatures file="tesb_creatures.png">
+ <creature gameID="TESB_AWAKENED_STONE">
+
+ 	<variant prof="TRAINED_HUNTER" caste="BASALT" sheetIndex="0" color="named" color_name="CHARCOAL" zoom="2">
+		<subsprite sheetIndex="2" zoom="2" />
+		<subsprite sheetIndex="60" zoom="2" />
+	</variant>
+	
+	<variant prof="TRAINED_WAR" caste="BASALT" sheetIndex="0" color="named" color_name="CHARCOAL" zoom="2">
+		<subsprite sheetIndex="2" zoom="2" />
+		<subsprite sheetIndex="61" zoom="2" />
+	</variant>
+
+	<variant prof="TRAINED_HUNTER" sheetIndex="0" color="bodypart" zoom="2">
+		<subsprite sheetIndex="1" color="bodypart" bodypart="eyes" zoom="2" />
+		<subsprite sheetIndex="60" zoom="2" />
+	</variant>
+	
+	<variant prof="TRAINED_WAR" sheetIndex="0" color="bodypart" zoom="2">
+		<subsprite sheetIndex="1" color="bodypart" bodypart="eyes" zoom="2" />
+		<subsprite sheetIndex="61" zoom="2" />
+	</variant>
+
+	<variant caste="BASALT" sheetIndex="0" color="named" color_name="CHARCOAL" zoom="2">
+		<subsprite sheetIndex="2" zoom="2" />
+	</variant>
+	
+	<variant sheetIndex="0" color="bodypart" zoom="2">
+		<subsprite sheetIndex="1" color="bodypart" bodypart="eyes" zoom="2" />
+	</variant>
+	
+ </creature>
+ 
+ <creature gameID="TESB_AWAKENED_MAGMA">
+
+	<variant caste="LIMESTONE" sheetIndex="3" zoom="2">
+		<subsprite sheetIndex="4" zoom="2" color="xml" alpha="42" frames="0" />
+		<subsprite sheetIndex="5" zoom="2" color="xml" alpha="42" frames="1" />
+		<subsprite sheetIndex="6" zoom="2" color="xml" alpha="42" frames="2" />
+		<subsprite sheetIndex="7" zoom="2" color="xml" alpha="42" frames="3" />
+		<subsprite sheetIndex="8" zoom="2" color="xml" alpha="42" frames="4" />
+		<subsprite sheetIndex="9" zoom="2" color="xml" alpha="42" frames="5" />
+		<subsprite sheetIndex="2" zoom="2" />
+	</variant>
+	
+	<variant sheetIndex="3" zoom="2">
+		<subsprite sheetIndex="4" zoom="2" frames="0" />
+		<subsprite sheetIndex="5" zoom="2" frames="1" />
+		<subsprite sheetIndex="6" zoom="2" frames="2" />
+		<subsprite sheetIndex="7" zoom="2" frames="3" />
+		<subsprite sheetIndex="8" zoom="2" frames="4" />
+		<subsprite sheetIndex="9" zoom="2" frames="5" />
+		<subsprite sheetIndex="1" color="bodypart" bodypart="eyes" zoom="2" />
+	</variant>
+
+ </creature>
+
+ <creature gameID="TESB_INCANDESCENT_STONE">
+
+	<variant sheetIndex="3" zoom="2">
+		<subsprite sheetIndex="3" zoom="2" color="xml" red="255" green="250" blue="250" frames="0" />
+		<subsprite sheetIndex="3" zoom="2" color="xml" red="255" green="220" blue="220" frames="15" />
+		<subsprite sheetIndex="3" zoom="2" color="xml" red="255" green="190" blue="190" frames="24" />
+		<subsprite sheetIndex="3" zoom="2" color="xml" red="255" green="160" blue="160" frames="3" />
+		<subsprite sheetIndex="1" color="bodypart" bodypart="eyes" zoom="2" />
+	</variant>
+
+ </creature>
+ 
+ <creature gameID="TESB_PET_ROCK">
+ 
+	<variant caste="BASALT" sheetIndex="20" variations="8" color="named" color_name="CHARCOAL" zoom="2" />
+	
+	<variant sheetIndex="20" variations="8" color="bodypart" zoom="2" />
+
+ </creature>
+
+ <creature gameID="TESB_WYRM">
+
+	<variant caste="BASALT" sheetIndex="40" color="named" color_name="CHARCOAL" zoom="2">
+		<subsprite sheetIndex="41" zoom="2" />
+	</variant>
+	
+	<variant sheetIndex="40" color="bodypart" zoom="2">
+		<subsprite sheetIndex="41" color="bodypart" bodypart="eyes" zoom="2" />
+	</variant>
+
+ </creature>
+
+<creature gameID="TESB_AWAKENED_STORM">
+
+	<variant sheetIndex="42" zoom="2">
+		<subsprite sheetIndex="43" zoom="2" frames="03" />
+		<subsprite sheetIndex="44" zoom="2" frames="14" />
+		<subsprite sheetIndex="45" zoom="2" frames="25" />
+	</variant>
+
+ </creature>
+ 
+</creatures>

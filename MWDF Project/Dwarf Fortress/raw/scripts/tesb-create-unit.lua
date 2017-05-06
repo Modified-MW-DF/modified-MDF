@@ -38,6 +38,8 @@ Creates a unit.  Usage::
             FEMALE
     -domesticate
         if the unit can't learn or can't speak, make it a friendly animal
+    -setUnitToFort
+        Sets the groupId and civId to the local fort.
     -civId id
         Make the created unit a member of the specified civ
         (or none if id = -1).  If id is \\LOCAL, make it a member of the
@@ -76,7 +78,7 @@ end
 
 local utils=require 'utils'
 
-function createUnit(race_id, caste_id)
+function createUnit(race_id, caste_id, location)
   local view_x = df.global.window_x
   local view_y = df.global.window_y
   local view_z = df.global.window_z
@@ -90,23 +92,36 @@ function createUnit(race_id, caste_id)
 
   local gui = require 'gui'
 
-  df.global.world.arena_spawn.race:resize(0)
-  df.global.world.arena_spawn.race:insert(0,race_id) --df.global.ui.race_id)
+  if not dfhack.world.isArena() then
+    -- This is already populated in arena mode, so don't clear it then (#994)
+    df.global.world.arena_spawn.race:resize(0)
+    df.global.world.arena_spawn.race:insert(0,race_id)
 
-  df.global.world.arena_spawn.caste:resize(0)
-  df.global.world.arena_spawn.caste:insert(0,caste_id)
+    df.global.world.arena_spawn.caste:resize(0)
+    df.global.world.arena_spawn.caste:insert(0,caste_id)
 
-  df.global.world.arena_spawn.creature_cnt:resize(0)
-  df.global.world.arena_spawn.creature_cnt:insert(0,0)
-
-  --df.global.world.arena_spawn.equipment.skills:insert(0,99)
-  --df.global.world.arena_spawn.equipment.skill_levels:insert(0,0)
+    df.global.world.arena_spawn.creature_cnt:resize(0)
+    df.global.world.arena_spawn.creature_cnt:insert(0,0)
+  end
 
   local old_gametype = df.global.gametype
   df.global.gametype = df.game_type.DWARF_ARENA
+  gui.simulateInput(dwarfmodeScreen, 'D_LOOK_ARENA_CREATURE')
 
-  gui.simulateInput(dfhack.gui.getCurViewscreen(), 'D_LOOK_ARENA_CREATURE')
-  gui.simulateInput(dfhack.gui.getCurViewscreen(), 'SELECT')
+-- move cursor to location instead of moving unit later, corrects issue of missing mapdata when moving the created unit.
+  if location then
+    df.global.cursor.x = tonumber(location[1])
+    df.global.cursor.y = tonumber(location[2])
+    df.global.cursor.z = tonumber(location[3])
+  end
+
+  local spawnScreen = dfhack.gui.getCurViewscreen()
+  if dfhack.world.isArena() then
+    -- Just modify the current screen in arena mode (#994)
+    spawnScreen.race:insert(0, race_id)
+    spawnScreen.caste:insert(0, caste_id)
+  end
+  gui.simulateInput(spawnScreen, 'SELECT')
 
   df.global.gametype = old_gametype
 
@@ -168,14 +183,14 @@ function createFigure(trgunit,he,he_group)
   df.global.hist_figure_next_id=df.global.hist_figure_next_id+1
   hf.appeared_year = df.global.cur_year
 
-  hf.born_year = trgunit.relations.birth_year
-  hf.born_seconds = trgunit.relations.birth_time
-  hf.curse_year = trgunit.relations.curse_year
-  hf.curse_seconds = trgunit.relations.curse_time
-  hf.birth_year_bias = trgunit.relations.birth_year_bias
-  hf.birth_time_bias = trgunit.relations.birth_time_bias
-  hf.old_year = trgunit.relations.old_year
-  hf.old_seconds = trgunit.relations.old_time
+  hf.born_year = trgunit.birth_year
+  hf.born_seconds = trgunit.birth_time
+  hf.curse_year = trgunit.curse_year
+  hf.curse_seconds = trgunit.curse_time
+  hf.birth_year_bias = trgunit.birth_year_bias
+  hf.birth_time_bias = trgunit.birth_time_bias
+  hf.old_year = trgunit.old_year
+  hf.old_seconds = trgunit.old_time
   hf.died_year = -1
   hf.died_seconds = -1
   hf.name:assign(trgunit.name)
@@ -218,8 +233,8 @@ function createFigure(trgunit,he,he_group)
   --add entity event
   local hf_event_id=df.global.hist_event_next_id
   df.global.hist_event_next_id=df.global.hist_event_next_id+1
-  df.global.world.history.events:insert("#",{new=df.history_event_add_hf_entity_linkst,year=trgunit.relations.birth_year,
-  seconds=trgunit.relations.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
+  df.global.world.history.events:insert("#",{new=df.history_event_add_hf_entity_linkst,year=trgunit.birth_year,
+  seconds=trgunit.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
   return hf
 end
 
@@ -269,8 +284,8 @@ function createNemesis(trgunit,civ_id,group_id)
 end
 
 --createNemesis(u, u.civ_id,group)
-function createUnitInCiv(race_id, caste_id, civ_id, group_id)
-  local uid = createUnit(race_id, caste_id)
+function createUnitInCiv(race_id, caste_id, civ_id, group_id, location)
+  local uid = createUnit(race_id, caste_id, location)
   local unit = df.unit.find(uid)
   if ( civ_id ) then
     createNemesis(unit, civ_id, group_id)
@@ -278,12 +293,12 @@ function createUnitInCiv(race_id, caste_id, civ_id, group_id)
   return uid
 end
 
-function createUnitInFortCiv(race_id, caste_id)
-  return createUnitInCiv(race_id, caste_id, df.global.ui.civ_id)
+function createUnitInFortCiv(race_id, caste_id, location)
+  return createUnitInCiv(race_id, caste_id, df.global.ui.civ_id, 0, location)
 end
 
-function createUnitInFortCivAndGroup(race_id, caste_id)
-  return createUnitInCiv(race_id, caste_id, df.global.ui.civ_id, df.global.ui.group_id)
+function createUnitInFortCivAndGroup(race_id, caste_id, location)
+  return createUnitInCiv(race_id, caste_id, df.global.ui.civ_id, df.global.ui.group_id, location)
 end
 
 function domesticate(uid, group_id)
@@ -318,6 +333,7 @@ function domesticate(uid, group_id)
 end
 
 function wild(uid)
+  if dfhack.world.isArena() then return end
   local u = df.unit.find(uid)
   local caste=df.creature_raw.find(u.race).caste[u.caste]
   -- x = df.global.world.world_data.active_site[0].pos.x
@@ -380,27 +396,23 @@ function nameUnit(id, entityRawName, civ_id)
   name.parts_of_speech[0] = language_word_table.parts[0][lastName1]
   name.words[1] = language_word_table.words[0][lastName2]
   name.parts_of_speech[1] = language_word_table.parts[0][lastName2]
-  name.first_name = df.language_word.find(language_word_table.words[0][firstName]).forms[language_word_table.parts[0][firstName]]
+  local language = nil
+  for _, lang in pairs(df.global.world.raws.language.translations) do
+    if lang.name == entity_raw.translation then
+      language = lang
+    end
+  end
+  if language then
+    name.first_name = language.words[firstName].value
+  else
+    name.first_name = df.language_word.find(language_word_table.words[0][firstName]).forms[language_word_table.parts[0][firstName]]
+  end
   name.has_name = true
   name.language = translationIndex
-  name = unit.name
-  name.words[0] = language_word_table.words[0][lastName1]
-  name.parts_of_speech[0] = language_word_table.parts[0][lastName1]
-  name.words[1] = language_word_table.words[0][lastName2]
-  name.parts_of_speech[1] = language_word_table.parts[0][lastName2]
-  name.first_name = df.language_word.find(language_word_table.words[0][firstName]).forms[language_word_table.parts[0][firstName]]
-  name.has_name = true
-  name.language = translationIndex
+  unit.name:assign(name)
   if unit.hist_figure_id ~= -1 then
     local histfig = df.historical_figure.find(unit.hist_figure_id)
-    name = histfig.name
-    name.words[0] = language_word_table.words[0][lastName1]
-    name.parts_of_speech[0] = language_word_table.parts[0][lastName1]
-    name.words[1] = language_word_table.words[0][lastName2]
-    name.parts_of_speech[1] = language_word_table.parts[0][lastName2]
-    name.first_name = df.language_word.find(language_word_table.words[0][firstName]).forms[language_word_table.parts[0][firstName]]
-    name.has_name = true
-    name.language = translationIndex
+    histfig.name:assign(name)
   end
 end
 
@@ -416,7 +428,8 @@ validArgs = --[[validArgs or]]utils.invert({
   'name',
   'nick',
   'location',
-  'age'
+  'age',
+  'setUnitToFort' -- added by amostubal to get past an issue with \\LOCAL
 })
 
 if moduleMode then
@@ -483,11 +496,22 @@ elseif args.groupId and tonumber(args.groupId) then
   group_id = tonumber(args.groupId)
 end
 
+--eliminates the need for the "\\LOCAL" all together which is buggy in how it is to be used...
+if args.setUnitToFort then
+  civ_id = df.global.ui.civ_id
+  group_id = df.global.ui.group_id
+end
+
 local unitId
 if civ_id == -1 then
-    unitId = createUnit(raceIndex, casteIndex)
+    unitId = createUnit(raceIndex, casteIndex, args.location)
   else
-    unitId = createUnitInCiv(raceIndex, casteIndex, civ_id, group_id)
+    unitId = createUnitInCiv(raceIndex, casteIndex, civ_id, group_id, args.location)
+end
+
+if civ_id then -- moved it here made more sense... why isn't this done inside of nemesis, above?
+  local u = df.unit.find(unitId)
+  u.civ_id = civ_id
 end
 
 if args.domesticate then
@@ -508,20 +532,20 @@ u.flags3.weight_computed = false
 --TODO: if the unit is a child or baby it will still behave like an adult
 if age or age == 0 then
   if age == 0 then
-    u.relations.birth_time = df.global.cur_year_tick
+    u.birth_time = df.global.cur_year_tick
   end
   local u = df.unit.find(unitId)
-  local oldYearDelta = u.relations.old_year - u.relations.birth_year
-  u.relations.birth_year = df.global.cur_year - age
-  if u.relations.old_year ~= -1 then
-    u.relations.old_year = u.relations.birth_year + oldYearDelta
+  local oldYearDelta = u.old_year - u.birth_year
+  u.birth_year = df.global.cur_year - age
+  if u.old_year ~= -1 then
+    u.old_year = u.birth_year + oldYearDelta
   end
   if u.flags1.important_historical_figure == true and u.flags2.important_historical_figure == true then
-    local hf = df.global.world.history.figures[u.hist_figure_id]
-    hf.born_year = u.relations.birth_year
-    hf.born_seconds = u.relations.birth_time
-    hf.old_year = u.relations.old_year
-    hf.old_seconds = u.relations.old_time
+    local hf = df.historical_figure.find(u.hist_figure_id)
+    hf.born_year = u.birth_year
+    hf.born_seconds = u.birth_time
+    hf.old_year = u.old_year
+    hf.old_seconds = u.old_time
   end
 end
 
@@ -563,6 +587,7 @@ if args.name then
 else
   local unit = df.unit.find(unitId)
   unit.name.has_name = false
+  unit.name.first_name = "" -- remove the first name altogether. gets rid of units having number names.
   if unit.status.current_soul then
     unit.status.current_soul.name.has_name = false
   end
@@ -576,17 +601,3 @@ if args.nick and type(args.nick) == 'string' then
   dfhack.units.setNickname(df.unit.find(unitId), args.nick)
 end
 
-if civ_id then
-  local u = df.unit.find(unitId)
-  u.civ_id = civ_id
-end
-
-if args.location then
-  local u = df.unit.find(unitId)
-  local pos = df.coord:new()
-  pos.x = tonumber(args.location[1])
-  pos.y = tonumber(args.location[2])
-  pos.z = tonumber(args.location[3])
-  local teleport = dfhack.script_environment('teleport')
-  teleport.teleport(u, pos)
-end

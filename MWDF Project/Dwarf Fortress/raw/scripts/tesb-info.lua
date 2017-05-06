@@ -6,7 +6,8 @@ probability for Hidden Gems
 Made by Dirst for The Earth Strikes Back! mod.
 ]]
 
-local tesb_version = "2.13"
+local tesb_version = "2.14"
+dfhack.color(-1)
 
 -- Load configuration data
 --	Value is a string holding the TESB version of the data structure

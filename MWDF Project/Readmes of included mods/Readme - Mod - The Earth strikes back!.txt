@@ -2,7 +2,7 @@
 
 A mod for Dwarf Fortress v0.42 and 0.43
 
-Version 2.13
+Version 2.15
 http://dffd.bay12games.com/file.php?id=9915
 http://www.bay12forums.com/smf/index.php?topic=144831
 
@@ -105,9 +105,9 @@ Method C: If you want to use Rubble 8.2.0 or later.
 
 1. Acquire Rubble pack from DFFD at http://dffd.bay12games.com/file.php?id=11912
 
-2. Place ZIP file in Rubble's [tt]addons[/tt] folder.  Do not unzip it.
+2. Place ZIP file in Rubble's "addons" folder.  Do not unzip it.
 
-3. Check The Earth Strikes Back!.  The only prerequisite is the [tt]Base[/tt] module.  This mod is compatible with First Landing.
+3. Check The Earth Strikes Back!.  The only prerequisite is the "Base" module.  This mod is compatible with First Landing.
 
 4. This version of the mod includes several configration variables to customize your experience.
 - Creature graphics may toggled be ON or OFF
@@ -144,7 +144,7 @@ All Hidden Gems are precious (material value 40) and can be used normally for ge
     Hidden fire opal is a scarlet-colored gem found in mudstone.
     Hidden garnet is a blue-colored gem found in gneiss.
     Hidden milk opal is a cream-colored gem found in claystone.
-    Hidden onyx is a blank and white gem found in limestone.  Like normal onyx, it is colored "black" for game purposes.
+    Hidden onyx is a black and white gem found in limestone.  Like normal onyx, it is colored "black" for game purposes.
     Hidden pinfire opal is a flax-colored gem found in conglomerate.
     Hidden pyrite is a silver-colored gem found in dacite.
     Hidden pyrope is a dark-red-colored gem found in slate.  Like normal black pyrope, it is colored "black" for game purposes.
@@ -168,7 +168,7 @@ Each Hidden Gem has its attributes copied from the vanilla version of the normal
 When a tile of Living Stone is mined, the resulting boulder animates into an Awakened Stone or Wyrm.  Whether that creature is friendly or hostile depends on whether the miner performed a sacrifice at an appropriate Tribute.
 
 Technical details
-Since v1.30 there are no clusters of Living Stone the map, rather there is a small chance of spawning an Awakened Stone or Wyrm (and possibly some Pet Rocks) each time a tile of layer stone is mined.  Since v2.13 running tesb-job-monitor in the console without arguments reports the current probabilities of finding Hidden Gems or Living Stone.
+Since v1.30 there are no clusters of Living Stone the map, rather there is a small chance of spawning an Awakened Stone or Wyrm (and possibly some Pet Rocks) each time a tile of layer stone is mined.  Since v2.13 running tesb-info in the console without arguments reports the current probabilities of finding Hidden Gems or Living Stone.
 
 
 * Awakened Stones
@@ -238,11 +238,10 @@ These fast-growing beasts attack with their bites, claws and tails, and have spe
     The remaining Wyrms spit rocks quite often.
 
 Technical details
-All Wyrms are castes of the same TESB_WYRM creature.  When butchered, each eye yields a rough Hidden Gem.  The chance that an [b]Awakened Stone[/b] will turn out to be a Wyrm is the square root of the chance of a tile yielding an Awakened Stone.  At the default rate of .002 of tiles yielding Awakened Stones, 4.47% (about 1 in 22) will turn out to be Wyrms.
+All Wyrms are castes of the same TESB_WYRM creature.  When butchered, each eye yields a rough Hidden Gem.  The chance that an Awakened Stone will turn out to be a Wyrm is the square root of the chance of a tile yielding an Awakened Stone.  At the default rate of .002 of tiles yielding Awakened Stones, 4.47% (about 1 in 22) will turn out to be Wyrms.
 
 The "stagger" effect is implemented as a dizziness syndrome.  It is more severe for creatures adjacent to the Wyrm, but can affect opponents several tiles away.
 
-Like Awakened Stones, Wyrms that appear due to mining are temporarily OPPOSED_TO_LIFE.  This prevents them from immediately pathing to the edge of the map.
 
 * Awakened Storms
 An Awakened Storm is a huge, dense formation of clouds with four swirling arms around a central core.  These arms will batter and lash nearby creatures, but the lightning that surrounds them will strike any creature in the vicinity.  Lightning is far more dangerous to creatures standing in water, and that is likely because it is always raining when an Awakened Storm arrives.
@@ -359,6 +358,8 @@ stonesense/tesb/include/tesb_square.xml
 
 
 * Change log
+Version 2.15: Fixes minor glitch in creature graphics; added proper "animated" graphic for each creature
+Version 2.14: Improved feedback for inoperative Altars; Hidden Gems now work with Masterwork's Gemcutter workshop; fixed tesb-add-pets output on non-Windows machines
 Version 2.13: Fixed interopability issue with Standardized Materials; added a 250-mined-tile grace period before spawning Awakened Stones or Wyrms
 Version 2.12: Additional bugfixes to creature raws; fixed pet rocks spawning hostile; clarified installation instructions; Rubble version now generates many small text files by script
 Version 2.11: Revert to DFHack's create-unit for 0.43.03-r1 or later only; streamlined mod logic for spawning units; bugfix to creature raws; bugfix to extended item descriptions; cleared out depricated scripts

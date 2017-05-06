@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+
+
+<include file="../tesb_buildings.png" > 
+
+	<if>
+		<PositionIndex value=0 />
+		<rotate>
+			<sprite index=80 color="building" pattern_index="0" zoom="2" />
+			<sprite index=82 color="building" pattern_index="0" zoom="2" />
+			<sprite index=88 color="building" pattern_index="0" zoom="2" />
+			<sprite index=86 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=1 />
+		<rotate>
+			<sprite index=81 color="building" pattern_index="0" zoom="2" />
+			<sprite index=85 color="building" pattern_index="0" zoom="2" />
+			<sprite index=87 color="building" pattern_index="0" zoom="2" />
+			<sprite index=83 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=2 />
+		<rotate>
+			<sprite index=82 color="building" pattern_index="0" zoom="2" />
+			<sprite index=88 color="building" pattern_index="0" zoom="2" />
+			<sprite index=86 color="building" pattern_index="0" zoom="2" />
+			<sprite index=80 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=3 />
+		<rotate>
+			<sprite index=83 color="building" pattern_index="0" zoom="2" />
+			<sprite index=81 color="building" pattern_index="0" zoom="2" />
+			<sprite index=85 color="building" pattern_index="0" zoom="2" />
+			<sprite index=87 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=4 />
+		<sprite index=84 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=5 />
+		<rotate>
+			<sprite index=85 color="building" pattern_index="0" zoom="2" />
+			<sprite index=87 color="building" pattern_index="0" zoom="2" />
+			<sprite index=83 color="building" pattern_index="0" zoom="2" />
+			<sprite index=81 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=6 />
+		<rotate>
+			<sprite index=86 color="building" pattern_index="0" zoom="2" />
+			<sprite index=80 color="building" pattern_index="0" zoom="2" />
+			<sprite index=82 color="building" pattern_index="0" zoom="2" />
+			<sprite index=88 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=7 />
+		<rotate>
+			<sprite index=87 color="building" pattern_index="0" zoom="2" />
+			<sprite index=83 color="building" pattern_index="0" zoom="2" />
+			<sprite index=81 color="building" pattern_index="0" zoom="2" />
+			<sprite index=85 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	<if>
+		<PositionIndex value=8 />
+		<rotate>
+			<sprite index=88 color="building" pattern_index="0" zoom="2" />
+			<sprite index=86 color="building" pattern_index="0" zoom="2" />
+			<sprite index=80 color="building" pattern_index="0" zoom="2" />
+			<sprite index=82 color="building" pattern_index="0" zoom="2" />
+		</rotate>
+	</if>
+	
+</include> 

@@ -11,3 +11,5 @@ colors/index.txt
 Fluids/index.txt
 items/index.txt
 phoebus/index.txt
+
+tesb/index.txt
