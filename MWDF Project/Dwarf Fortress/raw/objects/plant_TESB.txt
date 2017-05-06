@@ -1,5 +1,4 @@
 plant_TESB
-
 !YES_TESB!OBJECT:PLANT]
 
 This file is intended for use with The Earth Strikes Back! mod.  See the readme file or http://www.bay12forums.com/smf/index.php?topic=144831
@@ -534,6 +533,7 @@ These plants do not exist in the wild.  Extracting a gem seed from a hidden gem 
 		[GROWTH_DROPS_OFF_NO_CLOUD]
 		[GROWTH_PRINT:18:37:7:14:1:120000:200000:3]
 		
+
 [PLANT:TESB_VINE_ONYX]
 	[NAME:onyx vine][NAME_PLURAL:onyx vines][ADJ:onyx vine]
 	[USE_MATERIAL_TEMPLATE:STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE]
@@ -1157,14 +1157,5 @@ These plants do not exist in the wild.  Extracting a gem seed from a hidden gem 
 		[GROWTH_TIMING:120000:200000]
 		[GROWTH_DROPS_OFF_NO_CLOUD]
 		[GROWTH_PRINT:18:37:4:6:1:120000:200000:3]
-
-
-
-
-
-
-
-
-
 
 
