@@ -63,6 +63,7 @@ if no argument is passed, this will produce a status of the mod.
 
 local utils = require('utils')
 local warpstone_version= "1.00"
+local debug=false
 
 function GetLayerMat(pos)
   local region_info = dfhack.maps.getRegionBiome(dfhack.maps.getTileBiomeRgn(pos))
