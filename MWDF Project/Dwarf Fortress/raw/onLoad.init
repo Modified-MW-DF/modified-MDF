@@ -83,9 +83,7 @@ modtools/reaction-trigger -reactionName BREEDING_RATS_GIANT -command [ modtools/
 modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onEquip -command [ modtools/add-syndrome -syndrome "packmaster" -resetPolicy ResetDuration -target \\UNIT_ID ]
 modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onUnequip -command [ modtools/add-syndrome -syndrome "packmaster" -erase -target \\UNIT_ID ]
 
-
-warpstone -living 0 -gem .004
-warpstone2 -living 0 -gem .1
+warpstone -layer .004 -stable 1
 
 modtools/reaction-trigger -reactionName ADAMANTINE_GOLEM -command [ modtools/create-unit -race GOLEM_ADAMANTINE -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
 modtools/reaction-trigger -reactionName ALUMINUM_GOLEM -command [ modtools/create-unit -race GOLEM_ALUMINUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
@@ -1289,67 +1287,65 @@ fix/smartpets
 # end succubus mod
 
 
-# The Earth Strikes Back! initiatization
-
-tesb-job-monitor -living .002 -gem .005
-tesb-weather -creature TESB_AWAKENED_STORM -weather rain
-tesb-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_FLUX -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_METAMORPHIC -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_ROCK_SALT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_SEDIMENTARY -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT2 -syndrome "basalt favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK -syndrome "chalk favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK2 -syndrome "chalk favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT -syndrome "chert favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT2 -syndrome "chert favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE -syndrome "claystone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE2 -syndrome "claystone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE -syndrome "conglomerate favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE2 -syndrome "conglomerate favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE -syndrome "dacite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE2 -syndrome "dacite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE -syndrome "diorite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE2 -syndrome "diorite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE -syndrome "dolomite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE2 -syndrome "dolomite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO -syndrome "gabbro favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO2 -syndrome "gabbro favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS -syndrome "gneiss favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS2 -syndrome "gneiss favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE -syndrome "granite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE2 -syndrome "granite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE -syndrome "limestone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE2 -syndrome "limestone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE -syndrome "marble favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE2 -syndrome "marble favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE -syndrome "mudstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE2 -syndrome "mudstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE -syndrome "phyllite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE2 -syndrome "phyllite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE -syndrome "quartzite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE2 -syndrome "quartzite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE -syndrome "rhyolite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE2 -syndrome "rhyolite favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT -syndrome "rock salt favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT2 -syndrome "rock salt favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE -syndrome "sandstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE2 -syndrome "sandstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST -syndrome "schist favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST2 -syndrome "schist favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE -syndrome "shale favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE2 -syndrome "shale favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE -syndrome "siltstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE2 -syndrome "siltstone favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE -syndrome "slate favor"
-modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE2 -syndrome "slate favor"
+#tesb#-job-monitor -living .002 -gem .005
+#tesb#-weather -creature TESB_AWAKENED_STORM -weather rain
+#tesb#-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_FLUX -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_METAMORPHIC -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_ROCK_SALT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_SEDIMENTARY -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT2 -syndrome "basalt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK -syndrome "chalk favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK2 -syndrome "chalk favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT -syndrome "chert favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT2 -syndrome "chert favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE -syndrome "claystone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE2 -syndrome "claystone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE -syndrome "conglomerate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE2 -syndrome "conglomerate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE -syndrome "dacite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE2 -syndrome "dacite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE -syndrome "diorite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE2 -syndrome "diorite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE -syndrome "dolomite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE2 -syndrome "dolomite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO -syndrome "gabbro favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO2 -syndrome "gabbro favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS -syndrome "gneiss favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS2 -syndrome "gneiss favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE -syndrome "granite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE2 -syndrome "granite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE -syndrome "limestone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE2 -syndrome "limestone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE -syndrome "marble favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE2 -syndrome "marble favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE -syndrome "mudstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE2 -syndrome "mudstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE -syndrome "phyllite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE2 -syndrome "phyllite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE -syndrome "quartzite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE2 -syndrome "quartzite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE -syndrome "rhyolite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE2 -syndrome "rhyolite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT -syndrome "rock salt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT2 -syndrome "rock salt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE -syndrome "sandstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE2 -syndrome "sandstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST -syndrome "schist favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST2 -syndrome "schist favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE -syndrome "shale favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE2 -syndrome "shale favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE -syndrome "siltstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE2 -syndrome "siltstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE -syndrome "slate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE2 -syndrome "slate favor"
 
 
 
@@ -1754,14 +1750,13 @@ modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command 
 modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
 modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
 
-
-
-
-
-
-
-
-
-
-
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 

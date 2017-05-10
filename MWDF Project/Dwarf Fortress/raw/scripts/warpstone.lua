@@ -207,9 +207,10 @@ jobCheck.onJobCompleted.warpstone1=function(job)
 end
 
 if not ... then
-  print('warpstone status:')
+  print('warpstone version: ', warpstone_version)
   print('  chance of warpstone gem in layer stone: ', gem_prob_layer)
   print('  chance of warpstone gem in stable warpstone: ', gem_prob_stable)
+  print(" type 'warpstone -help' for additional mod info' ") 
 end
 
 
