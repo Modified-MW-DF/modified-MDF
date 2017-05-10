@@ -1,8 +1,8 @@
 --[=[
-	Only the caste ID is required, all others have defaults (though default x,y,z exists only when cursor is visible)
-	Includes portions of Rubble's announce.lua and expwent's unit-info-viewer.lua
-	Calls create-unit.lua to spawn the actual creature
-		Runs modtools if DFHack is 0.43.03-r1 or later, otherwise mod's included version
+  Only the caste ID is required, all others have defaults (though default x,y,z exists only when cursor is visible)
+  Includes portions of Rubble's announce.lua and expwent's unit-info-viewer.lua
+  Calls create-unit.lua to spawn the actual creature
+    Runs modtools if DFHack is 0.43.03-r1 or later, otherwise mod's included version
     References to modtools/create-unit are commented out until that script is updated.
 --]=]
 
@@ -29,23 +29,23 @@ arguments:
     -caste
         Specify the type of awakened stone
         This parameter is required
-	-wyrm
-		Spawn a wyrm instead of an awakened stone
-		A "friendly" Wyrm is one that is less likely to be berserk
+  -wyrm
+    Spawn a wyrm instead of an awakened stone
+    A "friendly" Wyrm is one that is less likely to be berserk
     -location [ x y z ]
         The location to spawn the awakened stone
-		Will default to the cursor location, if the cursor is displayed
+    Will default to the cursor location, if the cursor is displayed
     -miner
         Unit ID of creature causing the spawn
-		If miner has the caste's favor syndrome, the creature spawns Tame
-		If miner is omitted, "Something" without favor awakens the creature
+    If miner has the caste's favor syndrome, the creature spawns Tame
+    If miner is omitted, "Something" without favor awakens the creature
     -friendly
         If flag is present, the awakened stone will be Tame
-	-unfriendly
-		If flag is present, the awakened stone will be a wild animal
-	-custom
-		Override DFHack version check and use tesb-create-unit
-		
+  -unfriendly
+    If flag is present, the awakened stone will be a wild animal
+  -custom
+    Override DFHack version check and use tesb-create-unit
+    
 Note: -friendly and -unfriendly override the miner's favor status 
 ]])
  return
@@ -79,38 +79,38 @@ misrepresented as being the original software.
 ]]
 
 if not dfhack.isMapLoaded() then
-	dfhack.printerr('Error: Map is not loaded.')
-	return
+  dfhack.printerr('Error: Map is not loaded.')
+  return
 end
 
 local caste_name = string.upper(string.sub(caste_id,1,1))..string.lower(string.sub(caste_id,2,-1))
 if caste_name == "Rock_salt" then -- Special handling for two-word stone
-	caste_name = "Rock Salt" 
+  caste_name = "Rock Salt" 
 end
 
 local unit_name
 if not unit_id then
-	unit_name = "Something"  -- The player activated the script in an interactive window. 
+  unit_name = "Something"  -- The player activated the script in an interactive window. 
 else
-	unit_name = dfhack.TranslateName(dfhack.units.getVisibleName(df.unit.find(unit_id)))
+  unit_name = dfhack.TranslateName(dfhack.units.getVisibleName(df.unit.find(tonumber(unit_id))))
 end
 
 if is_wyrm then
-	text = unit_name.." has released a newly-hatched "..caste_name.." Wyrm!"
-	color_id = "COLOR_RED"
+  text = unit_name.." has released a newly-hatched "..caste_name.." Wyrm!"
+  color_id = "COLOR_RED"
 else
-	if is_friendly == true then
-		text = unit_name.." has awakened a creature of Living "..caste_name 
-		color_id = "COLOR_WHITE"
-	else
-		text = unit_name.." has incurred the wrath of an Awakened "..caste_name
-		color_id = "COLOR_RED"
-	end
+  if is_friendly == true then
+    text = unit_name.." has awakened a creature of Living "..caste_name 
+    color_id = "COLOR_WHITE"
+  else
+    text = unit_name.." has incurred the wrath of an Awakened "..caste_name
+    color_id = "COLOR_RED"
+  end
 end
 
 local color = _G[color_id]
 
-if xyz then dfhack.gui.makeAnnouncement(179,{false,false,false,true},xyz2pos(xyz[1] or -3000, xyz[2] or 0, xyz[3] or 0),text, color,1)
+if xyz then dfhack.gui.makeAnnouncement(179,{false,false,false,true},xyz2pos(tonumber(xyz[1] or -3000), tonumber(xyz[2] or 0), tonumber(xyz[3] or 0)),text, color,1)
 else dfhack.gui.makeAnnouncement(179,{false,false,false,true},xyz2pos(-3000,-3000,-3000),text, color,1) end
 
 print(text)
@@ -124,24 +124,71 @@ function IsItFriendly(caste,miner,is_friendly,is_unfriendly)
 local verdict = false
 
 if is_unfriendly then -- Command line flag
-	verdict = false
+  verdict = false
 elseif is_friendly then -- Command line flag
-	verdict = true
+  verdict = true
 elseif miner then
-	local miner_unit = df.unit.find(miner)
-	local syndrome_list = miner_unit.syndromes.active
-	if caste == "ROCK_SALT" then caste = "rock salt" end -- Special handling for two-word stone
-	local favor_syndrome_name = string.lower(caste).." favor"
-	for index,syndrome in ipairs(syndrome_list) do
-		local syndrome_info = df.syndrome.find(syndrome.type)
-		if syndrome_info.syn_name == favor_syndrome_name then -- Unit has the appropriate "favor" syndrome
-			verdict = true
-			break
-		end
-	end
+  local miner_unit = df.unit.find(tonumber(miner))
+  local syndrome_list = miner_unit.syndromes.active
+  if caste == "ROCK_SALT" then caste = "rock salt" end -- Special handling for two-word stone
+  local favor_syndrome_name = string.lower(caste).." favor"
+  for index,syndrome in ipairs(syndrome_list) do
+    local syndrome_info = df.syndrome.find(syndrome.type)
+    if syndrome_info.syn_name == favor_syndrome_name then -- Unit has the appropriate "favor" syndrome
+      verdict = true
+      break
+    end
+  end
 end
 
 return verdict
+
+end
+
+function CreateUnitWrapper(RaceName, CasteName, Location, TameUnit)
+--[[
+    CreateUnit wrapper
+    Amostubal - combine the finding of race_ID and caste_ID then call the CreateUnit.
+    returns the unit Id.
+    RaceName is the race name ex. TESB_PET_ROCK
+    CasteName is past from the args and should be the caste name.
+    TameUnit is a true false expression, where true triggers running createUnit.domesticate.
+--]]
+
+  local createUnit = dfhack.script_environment('modtools/create-unit')
+  local race
+  local raceIndex
+  local casteIndex
+  local unitId
+
+  for i,v in ipairs(df.global.world.raws.creatures.all) do
+    if v.creature_id == RaceName then
+      raceIndex = i
+      race=v
+      break
+    end
+  end
+
+  for i,v in ipairs(race.caste) do
+    if v.caste_id == CasteName then
+      casteIndex = i
+      break
+    end
+  end
+
+  unitId=createUnit.createUnit(raceIndex, casteIndex, Location)
+
+  if domesticate then domesticate(unitId) end
+
+  -- cleanup its name, to get rid of units having arena numbers.
+  local unit = df.unit.find(unitId)
+  unit.name.has_name = false
+  unit.name.first_name = ""
+  if unit.status.current_soul then
+    unit.status.current_soul.name.has_name = false
+  end
+
+  return unitId
 
 end
 
@@ -151,41 +198,45 @@ argFriendly = IsItFriendly(args.caste,args.miner,args.friendly,args.unfriendly)
 
 Announce(args.caste,args.miner,argFriendly,args.wyrm,args.location)
 
-local spawnCommand
+--[[
+    Amostubal - start of my rewrite.  The old script was too verbose and used 
+    archaic calls to create units.  Switched to better calls to make the script
+    less verbose while increasing readability.
+    CreateUnitWrapper is a local function to gather the proper tags and call the
+    appropriate scripts inside of the modtools/create-unit.
+--]]
 
-if dfhack.VERSION < "0.43.03-r1" or args.custom then
-	spawnCommand = "tesb-create-unit"
-else
-	spawnCommand = "modtools/create-unit"
+-- the local holders of ID and Unit, changes with each creature created.
+local thisUnitID
+local thisUnit
+
+--[[
+    This section spawns 0 to 2 Pet Rocks alongside the Awakened Stone or Wyrm.
+    The castes of Pet Rocks are in the same order as those of large creature.
+--]]
+if math.random(0,2) == 2 then 
+  thisUnitID = CreateUnitWrapper("TESB_PET_ROCK", args.caste, args.location, true)
 end
-
-local command = "-caste "..args.caste.." -age 0"
-if args.location then
-    command = command.." -location [ "..args.location[1].." "..args.location[2].." "..args.location[3].." ]"
+if math.random(0,3) == 3 then 
+  thisUnitID = CreateUnitWrapper("TESB_PET_ROCK", args.caste, args.location, true)
 end
-local domesticate = " -domesticate -civId \\LOCAL -groupId \\LOCAL"
-
--- Spawn 0 to 2 Pet Rocks alongside the Awakened Stone or Wyrm.
--- The castes of Pet Rocks are in the same order as those of large creature.
-if math.random(0,2) == 2 then dfhack.run_command(spawnCommand.." -race TESB_PET_ROCK "..command..domesticate) end
-if math.random(0,3) == 3 then dfhack.run_command(spawnCommand.." -race TESB_PET_ROCK "..command..domesticate) end
 
 if args.wyrm then
-	dfhack.run_command(spawnCommand.." -race TESB_WYRM "..command.." -civId \\-1 -flagSet [ marauder ]")
-	local wyrm_id = df.global.unit_next_id-1
-	wyrm = df.unit.find(wyrm_id)
-	if argFriendly == false  then
-		if math.random(0,3)==3 then wyrm.mood = 7 end
-	else
-		if math.random(0,9)==9 then wyrm.mood = 7 end -- A "friendly" Wyrm is just less likely to be berserk
-	end
-else
-	if argFriendly == false then
-		dfhack.run_command(spawnCommand.." -race TESB_AWAKENED_STONE "..command.." -civId \\-1 -flagSet [ marauder ]")
-		local stone_id = df.global.unit_next_id-1
-		stone = df.unit.find(stone_id)
-		if math.random(0,9) == 9 then stone.mood = 7 end -- One in ten chance of being berserk
-	else
-		dfhack.run_command(spawnCommand.." -race TESB_AWAKENED_STONE "..command..domesticate)
-	end
+  thisUnitID = CreateUnitWrapper("TESB_WYRM", args.caste, args.location, false)  
+  thisUnit = df.unit.find(tonumber(thisUnitID))
+  thisUnit.flags1.marauder = true
+  if argFriendly then  -- A "friendly" Wyrm is just less likely to be berserk
+    if math.random(0,9)==9 then thisUnit.mood = 7 end
+  else -- not a "friendly" wyrm.
+    if math.random(0,3)==3 then thisUnit.mood = 7 end
+  end
+
+else -- its an awakened stone!
+  thisUnitID = CreateUnitWrapper("TESB_AWAKENED_STONE", args.caste, args.location, argFriendly)  
+  if not argFriendly then -- its not friendly so we need to make it mad.
+    thisUnit = df.unit.find(tonumber(thisUnitID))
+    thisUnit.flags1.marauder = true
+    if math.random(0,9) == 9 then thisUnit.mood = 7 end -- One in ten chance of being berserk
+  end
 end
+
