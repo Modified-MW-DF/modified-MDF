@@ -1,5 +1,4 @@
 descriptor_pattern_TESB
-
 [OBJECT:DESCRIPTOR_PATTERN]
 
 Blackbody color for magma at 12000 degrees Urist is close to scarlet, but the game assigns it the color orange.  This is a compromise.

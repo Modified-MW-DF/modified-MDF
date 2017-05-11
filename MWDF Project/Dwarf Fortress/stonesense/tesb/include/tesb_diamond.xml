@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+
+<include file="../tesb_buildings.png" > 
+
+	<if>
+		<PositionIndex value=0 />
+		<sprite index=42 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=1 />
+		<sprite index=43 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=2 />
+		<sprite index=42 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=3 />
+		<sprite index=43 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=4 />
+		<sprite index=44 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=5 />
+		<sprite index=43 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=6 />
+		<sprite index=42 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=7 />
+		<sprite index=43 color="building" pattern_index="0" zoom="2" />
+	</if>
+	<if>
+		<PositionIndex value=8 />
+		<sprite index=42 color="building" pattern_index="0" zoom="2" />
+	</if>
+	
+</include> 

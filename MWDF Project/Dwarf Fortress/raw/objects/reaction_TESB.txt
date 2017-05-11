@@ -13,6 +13,7 @@ Part 3. Brew gem cluster reaction
 
 These reactions allow a dwarf to sacrifice an appropriate gem to receive protection against a specific caste of Awakened Stones.  That functionality is handled by a reaction-trigger which applies a specific permanent syndrome.
 The sacrifice can be any large gem, or a regular cut gem made from the "hidden gem" associated with that stone.  For example, a tribute to granite can be a small hidden emerald or any large gem.  A hidden gem *can* be used as a large gem, but that's wasteful.
+But first, a handful of reactions to handle Tributes and Altars constructed inappropriately.
 
 [REACTION:TESB_DECONSTRUCT_TRIBUTE]
 	[NAME:deconstruct Tribute]
@@ -21,12 +22,43 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_DECONSTRUCT_ALTAR]
 	[NAME:deconstruct Altar]
-	[DESCRIPTION:Altar must be in a temple associated with an appropriate Sphere to function. Deconstruct to recover the building materials.]
+	[DESCRIPTION:Altar must be made from a layer stone and in a temple associated with an appropriate Sphere to function. Deconstruct to recover the building materials.]
 	[BUILDING:TESB_ALTAR_INACTIVE:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_FLUX]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with METALS or MINERALS. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_FLUX:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with MOUNTAINS or VOLCANOS. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_IGNEOUS_EXT:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with CAVERNS or MOUNTAINS. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_IGNEOUS_INT:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_METAMORPHIC]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with EARTH or MOUNTAINS. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_METAMORPHIC:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_ROCK_SALT]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with EARTH, MINERALS or SALT. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_ROCK_SALT:CUSTOM_SHIFT_D]
+
+[REACTION:TESB_DECONSTRUCT_ALTAR_SEDIMENTARY]
+	[NAME:deconstruct Altar]
+	[DESCRIPTION:Altar will only function in a temple associated with EARTH or MINERALS. Deconstruct to recover the building materials.]
+	[BUILDING:TESB_ALTAR_INACTIVE_SEDIMENTARY:CUSTOM_SHIFT_D]
+
 
 [REACTION:TESB_TRIBUTE_TO_ANDESITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened andesites released by this miner will be tame, and andesite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened andesites released by this miner will be tame, and andesite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_ANDESITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_ANDESITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -35,7 +67,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_ANDESITE2]
 	[NAME:sacrifice hidden quartz gem]
-	[DESCRIPTION:Awakened andesites released by this miner will be tame, and andesite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened andesites released by this miner will be tame, and andesite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_ANDESITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_ANDESITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN QUARTZ]
@@ -44,7 +76,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_BASALT]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened basalts released by this miner will be tame, and basalt wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened basalts released by this miner will be tame, and basalt wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_BASALT:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_BASALT:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -53,7 +85,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_BASALT2]
 	[NAME:sacrifice hidden sunstone gem]
-	[DESCRIPTION:Awakened basalts released by this miner will be tame, and basalt wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened basalts released by this miner will be tame, and basalt wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_BASALT:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_BASALT:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN SUNSTONE]
@@ -62,7 +94,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CHALK]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened chalks released by this miner will be tame, and chalk wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened chalks released by this miner will be tame, and chalk wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CHALK:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_CHALK:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -71,7 +103,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CHALK2]
 	[NAME:sacrifice hidden white opal gem]
-	[DESCRIPTION:Awakened chalks released by this miner will be tame, and chalk wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened chalks released by this miner will be tame, and chalk wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CHALK:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_CHALK:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN WHITE OPAL]
@@ -80,7 +112,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CHERT]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened cherts released by this miner will be tame, and chert wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened cherts released by this miner will be tame, and chert wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CHERT:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_CHERT:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -89,7 +121,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CHERT2]
 	[NAME:sacrifice hidden wax opal gem]
-	[DESCRIPTION:Awakened cherts released by this miner will be tame, and chert wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened cherts released by this miner will be tame, and chert wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CHERT:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_CHERT:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN WAX OPAL]
@@ -98,7 +130,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CLAYSTONE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened claystones released by this miner will be tame, and claystone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened claystones released by this miner will be tame, and claystone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CLAYSTONE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_CLAYSTONE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -107,7 +139,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CLAYSTONE2]
 	[NAME:sacrifice hidden milk opal gem]
-	[DESCRIPTION:Awakened claystones released by this miner will be tame, and claystone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened claystones released by this miner will be tame, and claystone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CLAYSTONE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_CLAYSTONE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN MILK OPAL]
@@ -116,7 +148,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CONGLOMERATE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened conglomerates released by this miner will be tame, and conglomerate wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened conglomerates released by this miner will be tame, and conglomerate wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CONGLOMERATE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_CONGLOMERATE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -125,7 +157,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_CONGLOMERATE2]
 	[NAME:sacrifice hidden pinfire opal gem]
-	[DESCRIPTION:Awakened conglomerates released by this miner will be tame, and conglomerate wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened conglomerates released by this miner will be tame, and conglomerate wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_CONGLOMERATE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_CONGLOMERATE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN PINFIRE OPAL]
@@ -134,7 +166,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DACITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened dacites released by this miner will be tame, and dacite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened dacites released by this miner will be tame, and dacite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DACITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_DACITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -143,7 +175,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DACITE2]
 	[NAME:sacrifice hidden pyrite gem]
-	[DESCRIPTION:Awakened dacites released by this miner will be tame, and dacite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened dacites released by this miner will be tame, and dacite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DACITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_DACITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN PYRITE]
@@ -152,7 +184,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DIORITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened diorites released by this miner will be tame, and diorite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened diorites released by this miner will be tame, and diorite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DIORITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_DIORITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -161,7 +193,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DIORITE2]
 	[NAME:sacrifice hidden spinel gem]
-	[DESCRIPTION:Awakened diorites released by this miner will be tame, and diorite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened diorites released by this miner will be tame, and diorite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DIORITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_DIORITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN SPINEL]
@@ -170,7 +202,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DOLOMITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened dolomites released by this miner will be tame, and dolomite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened dolomites released by this miner will be tame, and dolomite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DOLOMITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_DOLOMITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -179,7 +211,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_DOLOMITE2]
 	[NAME:sacrifice hidden black opal gem]
-	[DESCRIPTION:Awakened dolomites released by this miner will be tame, and dolomite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened dolomites released by this miner will be tame, and dolomite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_DOLOMITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_DOLOMITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN BLACK OPAL]
@@ -188,7 +220,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GABBRO]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened gabbros released by this miner will be tame, and gabbro wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened gabbros released by this miner will be tame, and gabbro wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GABBRO:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_GABBRO:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -197,7 +229,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GABBRO2]
 	[NAME:sacrifice hidden amethyst gem]
-	[DESCRIPTION:Awakened gabbros released by this miner will be tame, and gabbro wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened gabbros released by this miner will be tame, and gabbro wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GABBRO:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_GABBRO:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN AMETHYST]
@@ -206,7 +238,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GNEISS]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened gneisss released by this miner will be tame, and gneiss wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened gneisss released by this miner will be tame, and gneiss wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GNEISS:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_GNEISS:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -215,7 +247,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GNEISS2]
 	[NAME:sacrifice hidden garnet gem]
-	[DESCRIPTION:Awakened gneisss released by this miner will be tame, and gneiss wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened gneisss released by this miner will be tame, and gneiss wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GNEISS:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_GNEISS:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN GARNET]
@@ -224,7 +256,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GRANITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened granites released by this miner will be tame, and granite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened granites released by this miner will be tame, and granite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GRANITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_GRANITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -233,7 +265,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_GRANITE2]
 	[NAME:sacrifice hidden emerald gem]
-	[DESCRIPTION:Awakened granites released by this miner will be tame, and granite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened granites released by this miner will be tame, and granite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_GRANITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_GRANITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN EMERALD]
@@ -242,7 +274,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_LIMESTONE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened limestones released by this miner will be tame, and limestone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened limestones released by this miner will be tame, and limestone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_LIMESTONE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_LIMESTONE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -251,7 +283,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_LIMESTONE2]
 	[NAME:sacrifice hidden onyx gem]
-	[DESCRIPTION:Awakened limestones released by this miner will be tame, and limestone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened limestones released by this miner will be tame, and limestone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_LIMESTONE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_LIMESTONE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN ONYX]
@@ -260,7 +292,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_MARBLE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened marbles released by this miner will be tame, and marble wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened marbles released by this miner will be tame, and marble wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_MARBLE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_MARBLE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -269,7 +301,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_MARBLE2]
 	[NAME:sacrifice hidden beryl gem]
-	[DESCRIPTION:Awakened marbles released by this miner will be tame, and marble wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened marbles released by this miner will be tame, and marble wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_MARBLE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_MARBLE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN BERYL]
@@ -278,7 +310,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_MUDSTONE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened mudstones released by this miner will be tame, and mudstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened mudstones released by this miner will be tame, and mudstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_MUDSTONE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_MUDSTONE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -287,7 +319,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_MUDSTONE2]
 	[NAME:sacrifice hidden fire opal gem]
-	[DESCRIPTION:Awakened mudstones released by this miner will be tame, and mudstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened mudstones released by this miner will be tame, and mudstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_MUDSTONE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_MUDSTONE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN FIRE OPAL]
@@ -296,7 +328,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_PHYLLITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened phyllites released by this miner will be tame, and phyllite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened phyllites released by this miner will be tame, and phyllite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_PHYLLITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_PHYLLITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -305,7 +337,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_PHYLLITE2]
 	[NAME:sacrifice hidden zircon gem]
-	[DESCRIPTION:Awakened phyllites released by this miner will be tame, and phyllite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened phyllites released by this miner will be tame, and phyllite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_PHYLLITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_PHYLLITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN ZIRCON]
@@ -314,7 +346,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_QUARTZITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened quartzites released by this miner will be tame, and quartzite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened quartzites released by this miner will be tame, and quartzite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_QUARTZITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_QUARTZITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -323,7 +355,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_QUARTZITE2]
 	[NAME:sacrifice hidden tourmaline gem]
-	[DESCRIPTION:Awakened quartzites released by this miner will be tame, and quartzite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened quartzites released by this miner will be tame, and quartzite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_QUARTZITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_QUARTZITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN TOURMALINE]
@@ -332,7 +364,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_RHYOLITE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened rhyolites released by this miner will be tame, and rhyolite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened rhyolites released by this miner will be tame, and rhyolite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_RHYOLITE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_RHYOLITE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -341,7 +373,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_RHYOLITE2]
 	[NAME:sacrifice hidden turquoise gem]
-	[DESCRIPTION:Awakened rhyolites released by this miner will be tame, and rhyolite wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened rhyolites released by this miner will be tame, and rhyolite wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_RHYOLITE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_RHYOLITE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN TURQUOISE]
@@ -350,7 +382,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_ROCK_SALT]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened rock salts released by this miner will be tame, and rock salt wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened rock salts released by this miner will be tame, and rock salt wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_ROCK_SALT:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_ROCK_SALT:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -359,7 +391,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_ROCK_SALT2]
 	[NAME:sacrifice hidden cherry opal gem]
-	[DESCRIPTION:Awakened rock salts released by this miner will be tame, and rock salt wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened rock salts released by this miner will be tame, and rock salt wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_ROCK_SALT:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_ROCK_SALT:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN CHERRY OPAL]
@@ -368,7 +400,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SANDSTONE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened sandstones released by this miner will be tame, and sandstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened sandstones released by this miner will be tame, and sandstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SANDSTONE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_SANDSTONE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -377,7 +409,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SANDSTONE2]
 	[NAME:sacrifice hidden amber opal gem]
-	[DESCRIPTION:Awakened sandstones released by this miner will be tame, and sandstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened sandstones released by this miner will be tame, and sandstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SANDSTONE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_SANDSTONE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN AMBER OPAL]
@@ -386,7 +418,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SCHIST]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened schists released by this miner will be tame, and schist wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened schists released by this miner will be tame, and schist wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SCHIST:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_SCHIST:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -395,7 +427,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SCHIST2]
 	[NAME:sacrifice hidden aquamarine gem]
-	[DESCRIPTION:Awakened schists released by this miner will be tame, and schist wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened schists released by this miner will be tame, and schist wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SCHIST:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_SCHIST:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN AQUAMARINE]
@@ -404,7 +436,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SHALE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened shales released by this miner will be tame, and shale wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened shales released by this miner will be tame, and shale wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SHALE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_SHALE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -413,7 +445,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SHALE2]
 	[NAME:sacrifice hidden shell opal gem]
-	[DESCRIPTION:Awakened shales released by this miner will be tame, and shale wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened shales released by this miner will be tame, and shale wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SHALE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_SHALE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN SHELL OPAL]
@@ -422,7 +454,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SILTSTONE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened siltstones released by this miner will be tame, and siltstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened siltstones released by this miner will be tame, and siltstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SILTSTONE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_SILTSTONE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -431,7 +463,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SILTSTONE2]
 	[NAME:sacrifice hidden bone opal gem]
-	[DESCRIPTION:Awakened siltstones released by this miner will be tame, and siltstone wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened siltstones released by this miner will be tame, and siltstone wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SILTSTONE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_SILTSTONE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN BONE OPAL]
@@ -440,7 +472,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SLATE]
 	[NAME:sacrifice large gem]
-	[DESCRIPTION:Awakened slates released by this miner will be tame, and slate wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened slates released by this miner will be tame, and slate wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SLATE:CUSTOM_L]
 	[BUILDING:TESB_ALTAR_SLATE:CUSTOM_L]
 	[REAGENT:sacrifice:1:GEM:NONE:NONE:NONE]
@@ -449,7 +481,7 @@ The sacrifice can be any large gem, or a regular cut gem made from the "hidden g
 
 [REACTION:TESB_TRIBUTE_TO_SLATE2]
 	[NAME:sacrifice hidden pyrope gem]
-	[DESCRIPTION:Awakened slates released by this miner will be tame, and slate wyrms are less likely to be berserk.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Awakened slates released by this miner will be tame, and slate wyrms are less likely to be berserk.]
 	[BUILDING:TESB_TRIBUTE_SLATE:CUSTOM_H]
 	[BUILDING:TESB_ALTAR_SLATE:CUSTOM_H]
 	[REAGENT:sacrifice:1:SMALLGEM:NONE:INORGANIC:HIDDEN PYROPE]
@@ -464,7 +496,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_ANDESITE]
     [NAME:extract quartz seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden quartz. This will consume the hidden quartz.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden quartz. This will consume the hidden quartz.]
 	[BUILDING:TESB_TRIBUTE_ANDESITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_ANDESITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN QUARTZ]
@@ -473,7 +505,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_BASALT]
     [NAME:extract sunstone seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden sunstone. This will consume the hidden sunstone.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden sunstone. This will consume the hidden sunstone.]
 	[BUILDING:TESB_TRIBUTE_BASALT:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_BASALT:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN SUNSTONE]
@@ -482,7 +514,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_CHALK]
     [NAME:extract white opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden white opal. This will consume the hidden white opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden white opal. This will consume the hidden white opal.]
 	[BUILDING:TESB_TRIBUTE_CHALK:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_CHALK:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN WHITE OPAL]
@@ -491,7 +523,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_CHERT]
     [NAME:extract wax opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden wax opal. This will consume the hidden wax opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden wax opal. This will consume the hidden wax opal.]
 	[BUILDING:TESB_TRIBUTE_CHERT:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_CHERT:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN WAX OPAL]
@@ -500,7 +532,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_CLAYSTONE]
     [NAME:extract milk opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden milk opal. This will consume the hidden milk opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden milk opal. This will consume the hidden milk opal.]
 	[BUILDING:TESB_TRIBUTE_CLAYSTONE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_CLAYSTONE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN MILK OPAL]
@@ -509,7 +541,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_CONGLOMERATE]
     [NAME:extract pinfire opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pinfire opal. This will consume the hidden pinfire opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pinfire opal. This will consume the hidden pinfire opal.]
 	[BUILDING:TESB_TRIBUTE_CONGLOMERATE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_CONGLOMERATE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN PINFIRE OPAL]
@@ -518,7 +550,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_DACITE]
     [NAME:extract pyrite seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pyrite. This will consume the hidden pyrite.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pyrite. This will consume the hidden pyrite.]
 	[BUILDING:TESB_TRIBUTE_DACITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_DACITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN PYRITE]
@@ -527,7 +559,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_DIORITE]
     [NAME:extract spinel seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden spinel. This will consume the hidden spinel.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden spinel. This will consume the hidden spinel.]
 	[BUILDING:TESB_TRIBUTE_DIORITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_DIORITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN SPINEL]
@@ -536,7 +568,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_DOLOMITE]
     [NAME:extract black opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden black opal. This will consume the hidden black opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden black opal. This will consume the hidden black opal.]
 	[BUILDING:TESB_TRIBUTE_DOLOMITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_DOLOMITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN BLACK OPAL]
@@ -545,7 +577,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_GABBRO]
     [NAME:extract amethyst seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden amethyst. This will consume the hidden amethyst.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden amethyst. This will consume the hidden amethyst.]
 	[BUILDING:TESB_TRIBUTE_GABBRO:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_GABBRO:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN AMETHYST]
@@ -554,7 +586,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_GNEISS]
     [NAME:extract garnet seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden garnet. This will consume the hidden garnet.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden garnet. This will consume the hidden garnet.]
 	[BUILDING:TESB_TRIBUTE_GNEISS:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_GNEISS:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN GARNET]
@@ -563,7 +595,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_GRANITE]
     [NAME:extract emerald seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden emerald. This will consume the hidden emerald.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden emerald. This will consume the hidden emerald.]
 	[BUILDING:TESB_TRIBUTE_GRANITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_GRANITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN EMERALD]
@@ -572,7 +604,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_LIMESTONE]
     [NAME:extract onyx seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden onyx. This will consume the hidden onyx.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden onyx. This will consume the hidden onyx.]
 	[BUILDING:TESB_TRIBUTE_LIMESTONE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_LIMESTONE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN ONYX]
@@ -581,7 +613,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_MARBLE]
     [NAME:extract beryl seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden beryl. This will consume the hidden beryl.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden beryl. This will consume the hidden beryl.]
 	[BUILDING:TESB_TRIBUTE_MARBLE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_MARBLE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN BERYL]
@@ -590,7 +622,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_MUDSTONE]
     [NAME:extract fire opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden fire opal. This will consume the hidden fire opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden fire opal. This will consume the hidden fire opal.]
 	[BUILDING:TESB_TRIBUTE_MUDSTONE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_MUDSTONE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN FIRE OPAL]
@@ -599,7 +631,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_PHYLLITE]
     [NAME:extract zircon seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden zircon. This will consume the hidden zircon.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden zircon. This will consume the hidden zircon.]
 	[BUILDING:TESB_TRIBUTE_PHYLLITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_PHYLLITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN ZIRCON]
@@ -608,7 +640,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_QUARTZITE]
     [NAME:extract tourmaline seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden tourmaline. This will consume the hidden tourmaline.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden tourmaline. This will consume the hidden tourmaline.]
 	[BUILDING:TESB_TRIBUTE_QUARTZITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_QUARTZITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN TOURMALINE]
@@ -617,7 +649,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_RHYOLITE]
     [NAME:extract turquoise seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden turquoise. This will consume the hidden turquoise.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden turquoise. This will consume the hidden turquoise.]
 	[BUILDING:TESB_TRIBUTE_RHYOLITE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_RHYOLITE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN TURQUOISE]
@@ -626,7 +658,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_ROCK_SALT]
     [NAME:extract cherry opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden cherry opal. This will consume the hidden cherry opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden cherry opal. This will consume the hidden cherry opal.]
 	[BUILDING:TESB_TRIBUTE_ROCK_SALT:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_ROCK_SALT:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN CHERRY OPAL]
@@ -635,7 +667,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_SANDSTONE]
     [NAME:extract amber opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden amber opal. This will consume the hidden amber opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden amber opal. This will consume the hidden amber opal.]
 	[BUILDING:TESB_TRIBUTE_SANDSTONE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_SANDSTONE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN AMBER OPAL]
@@ -644,7 +676,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_SCHIST]
     [NAME:extract aquamarine seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden aquamarine. This will consume the hidden aquamarine.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden aquamarine. This will consume the hidden aquamarine.]
 	[BUILDING:TESB_TRIBUTE_SCHIST:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_SCHIST:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN AQUAMARINE]
@@ -653,7 +685,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_SHALE]
     [NAME:extract shell opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden shell opal. This will consume the hidden shell opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden shell opal. This will consume the hidden shell opal.]
 	[BUILDING:TESB_TRIBUTE_SHALE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_SHALE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN SHELL OPAL]
@@ -662,7 +694,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_SILTSTONE]
     [NAME:extract bone opal seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden bone opal. This will consume the hidden bone opal.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden bone opal. This will consume the hidden bone opal.]
 	[BUILDING:TESB_TRIBUTE_SILTSTONE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_SILTSTONE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN BONE OPAL]
@@ -671,7 +703,7 @@ These reactions let a dwarf attempt to extract a gem seed from a rough "hidden g
 
 [REACTION:TESB_EXTRACT_SEED_SLATE]
     [NAME:extract pyrope seed]
-	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pyrope. This will consume the hidden pyrope.][DESCRIPTION:][DESCRIPTION:Uses mining skill.]
+	[DESCRIPTION:Attempt to extract a gem seed from a rough hidden pyrope. This will consume the hidden pyrope.]
 	[BUILDING:TESB_TRIBUTE_SLATE:CUSTOM_X]
 	[BUILDING:TESB_ALTAR_SLATE:CUSTOM_X]
 	[REAGENT:gem:1:ROUGH:NONE:INORGANIC:HIDDEN PYROPE]
@@ -687,7 +719,7 @@ This reaction allows gem "clusters" to be processed at the still.
 [REACTION:PROCESS_GEM_CLUSTER]
 	[NAME:brew gem cluster]
 	[BUILDING:STILL:CUSTOM_G]
-	[DESCRIPTION:Brew gem cluster into spirits.][DESCRIPTION:][DESCRIPTION:Uses brewing skill.]
+	[DESCRIPTION:Brew gem cluster into spirits.]
 	[REAGENT:cluster:1:PLANT_GROWTH:NONE:NONE:NONE]
 		[HAS_MATERIAL_REACTION_PRODUCT:SPIRIT_MAT]
 		[UNROTTEN]
@@ -702,14 +734,3 @@ This reaction allows gem "clusters" to be processed at the still.
 	[PRODUCT:100:1:SEEDS:NONE:GET_MATERIAL_FROM_REAGENT:cluster:SEEDS_MAT]
 	[PRODUCT:20:1:ROUGH:NONE:GET_MATERIAL_FROM_REAGENT:cluster:GEM_MAT]
 	[SKILL:BREWING]
-
-
-
-
-
-
-
-
-
-
-

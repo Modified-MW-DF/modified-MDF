@@ -1,0 +1,417 @@
+<?xml version="1.0" ?>
+
+<!-- Sedimentary stones use the "flat" style -->
+<!-- Metamorphic stones use the "circle" style -->
+<!-- Igneous extrusive stones use the "square" style -->
+<!-- Igneous intrusive stones use the "diamond" style -->
+<!-- Flux stones use the "octagon" style -->
+
+<!-- FarmPlot building overrides Stonesense default (but includes all of its content -->
+
+<building name="Tribute to Andesite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_ANDESITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_square.xml" />
+	
+</building> 
+
+<building name="Tribute to Basalt" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_BASALT" file="tesb_buildings.png" > 
+
+	<include file="tesb_square.xml" />
+	
+</building> 
+
+<building name="Tribute to Chalk" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_CHALK" file="tesb_buildings.png" > 
+
+	<include file="tesb_octagon.xml" />
+	
+</building> 
+
+<building name="Tribute to Chert" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_CHERT" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Claystone" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_CLAYSTONE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Conglomerate" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_CONGLOMERATE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Dacite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_DACITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_square.xml" />
+	
+</building> 
+
+<building name="Tribute to Diorite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_DIORITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_diamond.xml" />
+	
+</building> 
+
+<building name="Tribute to Dolomite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_DOLOMITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_octagon.xml" />
+	
+</building> 
+
+<building name="Tribute to Gabbro" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_GABBRO" file="tesb_buildings.png" > 
+
+	<include file="tesb_diamond.xml" />
+	
+</building> 
+
+<building name="Tribute to Gneiss" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_GNEISS" file="tesb_buildings.png" > 
+
+	<include file="tesb_circle.xml" />
+	
+</building> 
+
+<building name="Tribute to Granite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_GRANITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_diamond.xml" />
+	
+</building> 
+
+<building name="Tribute to Limestone" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_LIMESTONE" file="tesb_buildings.png" > 
+
+	<include file="tesb_octagon.xml" />
+	
+</building> 
+
+<building name="Tribute to Marble" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_MARBLE" file="tesb_buildings.png" > 
+
+	<include file="tesb_octagon.xml" />
+	
+</building> 
+
+<building name="Tribute to Mudstone" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_MUDSTONE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Phyllite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_PHYLLITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_circle.xml" />
+	
+</building> 
+
+<building name="Tribute to Quartzite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_QUARTZITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_circle.xml" />
+	
+</building> 
+
+<building name="Tribute to Rhyolite" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_RHYOLITE" file="tesb_buildings.png" > 
+
+	<include file="tesb_square.xml" />
+	
+</building> 
+
+<building name="Tribute to Rock Salt" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_ROCKSALT" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Sandstone" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_SANDSTONE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Schist" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_SCHIST" file="tesb_buildings.png" > 
+
+	<include file="tesb_circle.xml" />
+	
+</building> 
+
+<building name="Tribute to Shale" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_SHALE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Siltstone" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_SILTSTONE" file="tesb_buildings.png" > 
+
+	<include file="tesb_flat.xml" />
+	
+</building> 
+
+<building name="Tribute to Slate" game_type="Workshop" game_subtype="Custom" game_custom="TESB_TRIBUTE_SLATE" file="tesb_buildings.png" > 
+
+	<include file="tesb_circle.xml" />
+	
+</building> 
+
+<building name="Farm plot" game_type="FarmPlot" >
+  <if>
+    <and>
+      <BuildingSpecial value="0" />
+      <BuildingOccupancy value="2" />
+    </and>
+    <sprite index="106" />
+  </if>
+  <else>
+    <and>
+      <BuildingSpecial value="1" />
+      <BuildingOccupancy value="2" />
+    </and>
+    <sprite index="106" />
+    <sprite index="21" file="../buildings/farm.png" />
+  </else>
+  <else>
+    <and>
+      <BuildingSpecial value="2" />
+      <BuildingOccupancy value="2" />
+    </and>
+    <sprite index="106" />
+    <if>
+      <MaterialType value="Plant" subtype="MUSHROOM_HELMET_PLUMP" pattern_index="0" />
+      <sprite index="0" file="../buildings/farm.png" />
+    </if>
+    <else>
+      <MaterialType value="Plant" subtype="GRASS_TAIL_PIG" pattern_index="0" />
+      <sprite index="1" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="GRASS_WHEAT_CAVE" pattern_index="0" />
+      <sprite index="2" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="POD_SWEET" pattern_index="0" />
+      <sprite index="3" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BUSH_QUARRY" pattern_index="0" />
+      <sprite index="4" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="ROOT_MUCK" pattern_index="0" />
+      <sprite index="5" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TUBER_BLOATED" pattern_index="0" />
+      <sprite index="6" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BULB_KOBOLD" pattern_index="0" />
+      <sprite index="7" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BERRIES_PRICKLE" pattern_index="0" />
+      <sprite index="8" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BERRIES_STRAW_WILD" pattern_index="0" />
+      <sprite index="9" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BERRIES_STRAW" pattern_index="0" />
+      <sprite index="9" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="GRASS_LONGLAND" pattern_index="0" />
+      <sprite index="10" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="HERB_VALLEY" pattern_index="0" />
+      <sprite index="11" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="WEED_RAT" pattern_index="0" />
+      <sprite index="12" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BERRIES_FISHER" pattern_index="0" />
+      <sprite index="13" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="REED_ROPE" pattern_index="0" />
+      <sprite index="14" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="MUSHROOM_CUP_DIMPLE" pattern_index="0" />
+      <sprite index="15" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="WEED_BLADE" pattern_index="0" />
+      <sprite index="16" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="ROOT_HIDE" pattern_index="0" />
+      <sprite index="17" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="SLIVER_BARB" pattern_index="0" />
+      <sprite index="18" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="BERRY_SUN" pattern_index="0" />
+      <sprite index="19" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="VINE_WHIP" pattern_index="0" />
+      <sprite index="20" file="../buildings/farm.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_AMBER_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="AMBER" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_AMETHYST" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="AMETHYST" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_AQUAMARINE" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="AQUAMARINE" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_BERYL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="GOLDEN_YELLOW" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_BLACK_OPAL" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" color="named" color_name="SLATE_GRAY" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="BLACK" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_BONE_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="BEIGE" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_CHERRY_OPAL" pattern_index="0" />
+      <sprite sheetIndex="1" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="CHESTNUT" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_EMERALD" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="EMERALD" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_FIRE_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="SCARLET" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_GARNET" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="BLUE" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_MILK_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="CREAM" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_ONYX" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="CHARCOAL" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_PINFIRE_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="FLAX" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_PYRITE" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="SILVER" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_PYROPE" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" color="named" color_name="SCARLET" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="DARK_SCARLET" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_QUARTZ" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="CREAM" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_SHELL_OPAL" pattern_index="0" />
+      <sprite sheetIndex="1" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="IVORY" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_SPINEL" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="PURPLE" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_SUNSTONE" pattern_index="0" />
+      <sprite sheetIndex="1" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" color="named" color_name="YELLOW" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="VERMILION" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_TOURMALINE" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="INDIGO" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_TURQUOISE" pattern_index="0" />
+      <sprite sheetIndex="1" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="TURQUOISE" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_WAX_OPAL" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="FLAX" file="tesb_plants.png" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_WHITE_OPAL" pattern_index="0" />
+      <sprite sheetIndex="0" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" />
+    </else>
+    <else>
+      <MaterialType value="Plant" subtype="TESB_VINE_ZIRCON" pattern_index="0" />
+      <sprite sheetIndex="2" variations="2" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="21" zoom="2" file="tesb_plants.png" />
+      <sprite sheetIndex="20" zoom="2" color="named" color_name="RED" file="tesb_plants.png" />
+    </else>
+  </else>
+  <else>
+    <BuildingOccupancy value="0" />
+    <sprite index="321" />
+  </else>
+  <else>
+    <empty />
+  </else>
+</building>

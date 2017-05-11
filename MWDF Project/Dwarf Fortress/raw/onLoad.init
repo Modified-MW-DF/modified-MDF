@@ -83,9 +83,7 @@ modtools/reaction-trigger -reactionName BREEDING_RATS_GIANT -command [ modtools/
 modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onEquip -command [ modtools/add-syndrome -syndrome "packmaster" -resetPolicy ResetDuration -target \\UNIT_ID ]
 modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onUnequip -command [ modtools/add-syndrome -syndrome "packmaster" -erase -target \\UNIT_ID ]
 
-
-warpstone -living 0 -gem .004
-warpstone2 -living 0 -gem .1
+warpstone -layer .004 -stable 1
 
 modtools/reaction-trigger -reactionName ADAMANTINE_GOLEM -command [ modtools/create-unit -race GOLEM_ADAMANTINE -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
 modtools/reaction-trigger -reactionName ALUMINUM_GOLEM -command [ modtools/create-unit -race GOLEM_ALUMINUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
@@ -1288,14 +1286,18 @@ succubus/teleportbase
 fix/smartpets
 # end succubus mod
 
-# The Earth Strikes Back! initiatization
-
 
 #tesb#-job-monitor -living .002 -gem .005
 #tesb#-weather -creature TESB_AWAKENED_STORM -weather rain
 #tesb#-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
-
-#modtools#/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ #modtools#/anonymous-script "dfhack.buildings.deconstruct(df.building.find(args[1]))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_FLUX -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_METAMORPHIC -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_ROCK_SALT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_SEDIMENTARY -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
 #modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
 #modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
 #modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
@@ -1748,14 +1750,13 @@ modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command 
 modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
 modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
 
-
-
-
-
-
-
-
-
-
-
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 

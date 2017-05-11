@@ -1,0 +1,5 @@
+# Stonesense index file for "The Earth Strikes Back" mod by Dirst
+
+tesb_creatures.xml
+tesb_buildings.xml
+tesb_plants.xml

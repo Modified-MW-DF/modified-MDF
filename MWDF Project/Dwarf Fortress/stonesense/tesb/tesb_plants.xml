@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+
+<!-- These are sprites for *wild* gem vine shrubs, which isn't possible unless you tweak the mod. -->
+
+<shrubs file="tesb_plants.png">
+ <plant gameID="TESB_VINE_AMBER_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="AMBER" />
+ </plant>
+ <plant gameID="TESB_VINE_AMETHYST" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="AMETHYST" />
+ </plant>
+ <plant gameID="TESB_VINE_AQUAMARINE" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="AQUAMARINE" />
+ </plant>
+ <plant gameID="TESB_VINE_BERYL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="GOLDEN_YELLOW" />
+ </plant>
+ <plant gameID="TESB_VINE_BLACK_OPAL" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" color="named" color_name="SLATE_GRAY" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="BLACK" />
+ </plant>
+ <plant gameID="TESB_VINE_BONE_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="BEIGE" />
+ </plant>
+ <plant gameID="TESB_VINE_CHERRY_OPAL" sheetIndex="1" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="CHESTNUT" />
+ </plant>
+ <plant gameID="TESB_VINE_EMERALD" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="EMERALD" />
+ </plant>
+ <plant gameID="TESB_VINE_FIRE_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="SCARLET" />
+ </plant>
+ <plant gameID="TESB_VINE_GARNET" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="BLUE" />
+ </plant>
+ <plant gameID="TESB_VINE_MILK_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="CREAM" />
+ </plant>
+ <plant gameID="TESB_VINE_ONYX" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="CHARCOAL" />
+ </plant>
+ <plant gameID="TESB_VINE_PINFIRE_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="FLAX" />
+ </plant>
+ <plant gameID="TESB_VINE_PYRITE" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="SILVER" />
+ </plant>
+ <plant gameID="TESB_VINE_PYROPE" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" color="named" color_name="SCARLET" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="DARK_SCARLET" />
+ </plant>
+ <plant gameID="TESB_VINE_QUARTZ" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="CREAM" />
+ </plant>
+ <plant gameID="TESB_VINE_SHELL_OPAL" sheetIndex="1" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="IVORY" />
+ </plant>
+ <plant gameID="TESB_VINE_SPINEL" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="PURPLE" />
+ </plant>
+ <plant gameID="TESB_VINE_SUNSTONE" sheetIndex="1" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" color="named" color_name="YELLOW" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="VERMILION" />
+ </plant>
+ <plant gameID="TESB_VINE_TOURMALINE" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="INDIGO" />
+ </plant>
+ <plant gameID="TESB_VINE_TURQUOISE" sheetIndex="1" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="TURQUOISE" />
+ </plant>
+ <plant gameID="TESB_VINE_WAX_OPAL" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="FLAX" />
+ </plant>
+ <plant gameID="TESB_VINE_WHITE_OPAL" sheetIndex="0" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" />
+ </plant>
+ <plant gameID="TESB_VINE_ZIRCON" sheetIndex="2" variations="2" zoom="2">
+	<subsprite sheetIndex="21" zoom="2" />
+	<subsprite sheetIndex="20" zoom="2" color="named" color_name="RED" />
+ </plant>
+</shrubs>
