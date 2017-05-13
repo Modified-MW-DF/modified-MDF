@@ -1,0 +1,355 @@
+# dwarf_script.txt
+# This file runs from the main onLoad.init, if you load an embark with Dwarves.
+# A- if its an init command that involves Dwarves add it in here.
+
+:lua print(' ')
+:lua print('You have chosen Dwarves!  Lets rebuild the great Mountain Homes!')
+
+
+
+################### Guilds and Garrisons ###################
+#:lua print(' ')
+#:lua print('Guild and garrison members learn skills at faster rates.')
+modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_FEMALE -keepInventory ]
+
+
+
+################### waterwell ###################
+#:lua print(' ')
+#:lua print('The blood and tears of Armok can be used to make everflowing magma and water.')
+modtools/reaction-trigger -reactionName WATERWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
+
+modtools/reaction-trigger -reactionName MAGMAWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
+
+modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
+modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
+
+modtools/reaction-trigger -reactionName UNLOCK_MAGMA_WORKSHOPS -command [ succubus/feature magmaWorkshops ]
+
+
+
+################### Game room ###################
+#:lua print(' ')
+#:lua print('Dwarves like to play games, too!')
+modtools/reaction-trigger -reactionName USE_PNP -command [ modtools/add-syndrome -syndrome "playing a nice round of Dungeons & Dragons" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_CCG -command [ modtools/add-syndrome -syndrome "playing a nice round of Magic the Gathering" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_TTG -command [ modtools/add-syndrome -syndrome "playnig a nice round of Warhammer" -target \\WORKER_ID ]
+
+
+
+#################### putnam item upgrades for armory/weaponry shops ####################
+#:lua print(' ')
+#:lua print("Don't forget you can improve your weapons and armors.")
+modtools/reaction-product-trigger -reactionName IMPROVE_ITEM_WEAPON_SWORD_SHORT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_PICK -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_BATTLE_PICK -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName IMPROVE_ITEM_WEAPON_AXE_BATTLE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_HAMMER_WAR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SPEAR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_MACE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_DAGGER_LARGE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_PIKE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_HALBERD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SWORD_2H -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SWORD_LONG -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_MAUL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_AXE_GREAT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_CROSSBOW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_JAVELIN_THROWER -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_GIANTAXEBLADE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_ENORMOUSCORKSCREW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_SPIKEDBALL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_LARGESERRATEDDISC -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_MENACINGSPIKE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_BARBED_WIRE_ROLL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BREASTPLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_MAIL_SHIRT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_PLATEARMOR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_HELM -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_CAP -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GAUNTLETS -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GAUNTLETS_PLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS_LOW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS_PLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GREAVES -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BUCKLER -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_TOWER_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_KITE_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+
+
+
+################### Library ###################
+#:lua print(' ')
+#:lua print('A library full of books? The hippies are going to be upset...')
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CONCENTRATION -command [ librarytrain4 \\WORKER_ID CONCENTRATION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CONSOLE -command [ librarytrain4 \\WORKER_ID CONSOLE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CONVERSATION -command [ librarytrain4 \\WORKER_ID CONVERSATION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_INTIMIDATION -command [ librarytrain4 \\WORKER_ID INTIMIDATION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_JUDGING_INTENT -command [ librarytrain4 \\WORKER_ID JUDGING_INTENT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_LEADERSHIP -command [ librarytrain4 \\WORKER_ID LEADERSHIP 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_LYING -command [ librarytrain4 \\WORKER_ID LYING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_COMEDY -command [ librarytrain4 \\WORKER_ID COMEDY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_NEGOTIATION -command [ librarytrain4 \\WORKER_ID NEGOTIATION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PACIFY -command [ librarytrain4 \\WORKER_ID PACIFY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PERSUASION -command [ librarytrain4 \\WORKER_ID PERSUASION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_FLATTERY -command [ librarytrain4 \\WORKER_ID FLATTERY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SITUATIONAL_AWARENESS -command [ librarytrain4 \\WORKER_ID SITUATIONAL_AWARENESS 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_KNOWLEDGE_ACQUISITION -command [ librarytrain4 \\WORKER_ID KNOWLEDGE_ACQUISITION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_TEACHING -command [ librarytrain4 \\WORKER_ID TEACHING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_FORGE_FURNITURE -command [ librarytrain4 \\WORKER_ID FORGE_FURNITURE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SIEGECRAFT -command [ librarytrain4 \\WORKER_ID SIEGECRAFT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_FORGE_ARMOR -command [ librarytrain4 \\WORKER_ID FORGE_ARMOR 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_FORGE_WEAPON -command [ librarytrain4 \\WORKER_ID FORGE_WEAPON 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SMELT -command [ librarytrain4 \\WORKER_ID SMELT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_OPERATE_PUMP -command [ librarytrain4 \\WORKER_ID OPERATE_PUMP 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MASONRY -command [ librarytrain4 \\WORKER_ID MASONRY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MECHANICS -command [ librarytrain4 \\WORKER_ID MECHANICS 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_METALCRAFT -command [ librarytrain4 \\WORKER_ID METALCRAFT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MINING -command [ librarytrain4 \\WORKER_ID MINING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WOOD_BURNING -command [ librarytrain4 \\WORKER_ID WOOD_BURNING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SIEGEOPERATE -command [ librarytrain4 \\WORKER_ID SIEGEOPERATE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_EXTRACT_STRAND -command [ librarytrain4 \\WORKER_ID EXTRACT_STRAND 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DETAILSTONE -command [ librarytrain4 \\WORKER_ID DETAILSTONE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_GLAZER -command [ librarytrain4 \\WORKER_ID GLAZER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BONECARVE -command [ librarytrain4 \\WORKER_ID BONECARVE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WAX_WORKING -command [ librarytrain4 \\WORKER_ID WAX_WORKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CARPENTRY -command [ librarytrain4 \\WORKER_ID CARPENTRY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BOWYER -command [ librarytrain4 \\WORKER_ID BOWYER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DYER -command [ librarytrain4 \\WORKER_ID DYER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CUTGEM -command [ librarytrain4 \\WORKER_ID CUTGEM 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ENCRUSTGEM -command [ librarytrain4 \\WORKER_ID ENCRUSTGEM 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_GLASSMAKER -command [ librarytrain4 \\WORKER_ID GLASSMAKER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_LEATHERWORK -command [ librarytrain4 \\WORKER_ID LEATHERWORK 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_STONECRAFT -command [ librarytrain4 \\WORKER_ID STONECRAFT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_TANNER -command [ librarytrain4 \\WORKER_ID TANNER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CLOTHESMAKING -command [ librarytrain4 \\WORKER_ID CLOTHESMAKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WEAVING -command [ librarytrain4 \\WORKER_ID WEAVING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WOODCRAFT -command [ librarytrain4 \\WORKER_ID WOODCRAFT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WOODCUTTING -command [ librarytrain4 \\WORKER_ID WOODCUTTING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ANIMALCARE -command [ librarytrain4 \\WORKER_ID ANIMALCARE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ANIMALTRAIN -command [ librarytrain4 \\WORKER_ID ANIMALTRAIN 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DISSECT_VERMIN -command [ librarytrain4 \\WORKER_ID DISSECT_VERMIN 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BREWING -command [ librarytrain4 \\WORKER_ID BREWING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BUTCHER -command [ librarytrain4 \\WORKER_ID BUTCHER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_COOK -command [ librarytrain4 \\WORKER_ID COOK 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CHEESEMAKING -command [ librarytrain4 \\WORKER_ID CHEESEMAKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PLANT -command [ librarytrain4 \\WORKER_ID PLANT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_FISH -command [ librarytrain4 \\WORKER_ID FISH 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DISSECT_FISH -command [ librarytrain4 \\WORKER_ID DISSECT_FISH 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PROCESSFISH -command [ librarytrain4 \\WORKER_ID PROCESSFISH 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BEEKEEPING -command [ librarytrain4 \\WORKER_ID BEEKEEPING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PRESSER -command [ librarytrain4 \\WORKER_ID PRESSER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PROCESSPLANTS -command [ librarytrain4 \\WORKER_ID PROCESSPLANTS 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_TRAPPING -command [ librarytrain4 \\WORKER_ID TRAPPING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MILK -command [ librarytrain4 \\WORKER_ID MILK 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MILLING -command [ librarytrain4 \\WORKER_ID MILLING 4 ] 
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SHEARING -command [ librarytrain4 \\WORKER_ID SHEARING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SPINNING -command [ librarytrain4 \\WORKER_ID SPINNING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SNEAK -command [ librarytrain4 \\WORKER_ID SNEAK 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_POTASH_MAKING -command [ librarytrain4 \\WORKER_ID POTASH_MAKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_APPRAISAL -command [ librarytrain4 \\WORKER_ID APPRAISAL 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DESIGNBUILDING -command [ librarytrain4 \\WORKER_ID DESIGNBUILDING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SET_BONE -command [ librarytrain4 \\WORKER_ID SET_BONE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_LYE_MAKING -command [ librarytrain4 \\WORKER_ID LYE_MAKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DIAGNOSE -command [ librarytrain4 \\WORKER_ID DIAGNOSE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SOAP_MAKING -command [ librarytrain4 \\WORKER_ID SOAP_MAKING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_HERBALISM -command [ librarytrain4 \\WORKER_ID HERBALISM 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ORGANIZATION -command [ librarytrain4 \\WORKER_ID ORGANIZATION 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_RECORD_KEEPING -command [ librarytrain4 \\WORKER_ID RECORD_KEEPING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ALCHEMY -command [ librarytrain4 \\WORKER_ID ALCHEMY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SURGERY -command [ librarytrain4 \\WORKER_ID SURGERY 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SUTURE -command [ librarytrain4 \\WORKER_ID SUTURE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DRESS_WOUNDS -command [ librarytrain4 \\WORKER_ID DRESS_WOUNDS 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WRITING -command [ librarytrain4 \\WORKER_ID WRITING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_AXE -command [ librarytrain4 \\WORKER_ID AXE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BLOWGUN -command [ librarytrain4 \\WORKER_ID BLOWGUN 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BOW -command [ librarytrain4 \\WORKER_ID BOW 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CROSSBOW -command [ librarytrain4 \\WORKER_ID CROSSBOW 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DAGGER -command [ librarytrain4 \\WORKER_ID DAGGER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_HAMMER -command [ librarytrain4 \\WORKER_ID HAMMER 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MACE -command [ librarytrain4 \\WORKER_ID MACE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_PIKE -command [ librarytrain4 \\WORKER_ID PIKE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SWORD -command [ librarytrain4 \\WORKER_ID SWORD 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SPEAR -command [ librarytrain4 \\WORKER_ID SPEAR 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_THROW -command [ librarytrain4 \\WORKER_ID THROW 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WHIP -command [ librarytrain4 \\WORKER_ID WHIP 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_WRESTLING -command [ librarytrain4 \\WORKER_ID WRESTLING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_ARMOR -command [ librarytrain4 \\WORKER_ID ARMOR 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_SHIELD -command [ librarytrain4 \\WORKER_ID SHIELD 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_MELEE_COMBAT -command [ librarytrain4 \\WORKER_ID MELEE_COMBAT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_RANGED_COMBAT -command [ librarytrain4 \\WORKER_ID RANGED_COMBAT 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_BITE -command [ librarytrain4 \\WORKER_ID BITE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_DODGING -command [ librarytrain4 \\WORKER_ID DODGING 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_STANCE_STRIKE -command [ librarytrain4 \\WORKER_ID STANCE_STRIKE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_GRASP_STRIKE -command [ librarytrain4 \\WORKER_ID GRASP_STRIKE 4 ]
+modtools/reaction-trigger -reactionName STUDY_LIBRARY_CRUTCH_WALK -command [ librarytrain4 \\WORKER_ID CRUTCH_WALK 4 ]
+
+
+
+################### Caravans ###################
+#:lua print(' ')
+#:lua print("Liason's Office can call for migrants, more workers for the mines...")
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_DWARF -command [ force \\caravan MOUNTAIN ]
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_HUMAN -command [ force \\caravan PLAINS ]
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_ELF -command [ force \\caravan FOREST ]
+modtools/reaction-trigger -reactionName FORCE_MIGRANTS_DWARF -command [ force \\migrants MOUNTAIN ]
+
+
+
+################### Golem Creation ###################
+#:lua print(' ')
+#:lua print('Only Urist knows, the devestation an army of golems can bring!')
+modtools/reaction-trigger -reactionName ADAMANTINE_GOLEM -command [ modtools/create-unit -race GOLEM_ADAMANTINE -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName ALUMINUM_GOLEM -command [ modtools/create-unit -race GOLEM_ALUMINUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName BISMUTH_GOLEM -command [ modtools/create-unit -race GOLEM_BISMUTH -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName BRASS_GOLEM -command [ modtools/create-unit -race GOLEM_BRASS -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName BLACK_BRONZE_GOLEM -command [ modtools/create-unit -race GOLEM_BLACK_BRONZE -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName BRONZE_GOLEM -command [ modtools/create-unit -race GOLEM_BRONZE -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName COBALT_GOLEM -command [ modtools/create-unit -race GOLEM_COBALT -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName COPPER_GOLEM -command [ modtools/create-unit -race GOLEM_COPPER -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName GOLD_GOLEM -command [ modtools/create-unit -race GOLEM_GOLD -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName IRON_GOLEM -command [ modtools/create-unit -race GOLEM_IRON -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName LEAD_GOLEM -command [ modtools/create-unit -race GOLEM_LEAD -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName MITHRIL_GOLEM -command [ modtools/create-unit -race GOLEM_MITHRIL -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName NICKEL_GOLEM -command [ modtools/create-unit -race GOLEM_NICKEL -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName ORICHALCUM_GOLEM -command [ modtools/create-unit -race GOLEM_ORICHALCUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName PLATINUM_GOLEM -command [ modtools/create-unit -race GOLEM_PLATINUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName ROSE_GOLD_GOLEM -command [ modtools/create-unit -race GOLEM_ROSE_GOLD -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName SILVER_GOLEM -command [ modtools/create-unit -race GOLEM_SILVER -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName STEEL_GOLEM -command [ modtools/create-unit -race GOLEM_STEEL -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName TITANIUM_GOLEM -command [ modtools/create-unit -race GOLEM_TITANIUM -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName TUNGSTEN_GOLEM -command [ modtools/create-unit -race GOLEM_TUNGSTEN -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName VOLCANIC_GOLEM -command [ modtools/create-unit -race GOLEM_VOLCANIC -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+modtools/reaction-trigger -reactionName ZINC_GOLEM -command [ modtools/create-unit -race GOLEM_ZINC -caste GOLEM -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+
+
+
+:lua print(' ')
+:lua print('Dwarf Initialization complete.  Strike the EARTH!')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
