@@ -1,0 +1,481 @@
+#################### Welcome to Masterwork Dwarf Fortress Version 1.25 ####################
+
+:lua dfhack.color(11)
+:lua dfhack.println('--------------------------------------------------')
+:lua dfhack.color(15)
+:lua dfhack.print('Welcome to ')
+:lua dfhack.color(13)
+:lua dfhack.print('Masterwork Dwarf Fortress ')
+:lua dfhack.color(15)
+:lua dfhack.print('version ')
+:lua dfhack.color(12)
+:lua dfhack.println('1.25')
+:lua dfhack.color(11)
+:lua dfhack.println('--------------------------------------------------')
+:lua dfhack.color(-1)
+
+
+:lua print(' ')
+:lua print('Running Map Initialization.')
+
+#################### SPECIAL WEAPONS AND MATERIALS ####################
+:lua print(' ')
+:lua print('preparing all those fun materials...')
+modtools/item-trigger -itemType ITEM_WEAPON_WARPFIRE_THROWER -onStrike -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location \\ATTACKER_ID -flowType MaterialGas -flowSize 1250 ]
+modtools/item-trigger -itemType ITEM_WEAPON_WARPFIRE_THROWER -onStrike -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location \\ATTACKER_ID -flowType MaterialDust -flowSize 1250 ]
+
+modtools/item-trigger -itemType ITEM_WEAPON_RATLING_GUN -onEquip -command [ modtools/add-syndrome -syndrome "ratling gun" -resetPolicy ResetDuration -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_RATLING_GUN -onUnequip -command [ modtools/add-syndrome -syndrome "ratling gun" -erase -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_WARPFIRE_THROWER -onEquip -command [ modtools/add-syndrome -syndrome "warpfire thrower" -resetPolicy ResetDuration -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_WARPFIRE_THROWER -onUnequip -command [ modtools/add-syndrome -syndrome "warpfire thrower" -erase -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_POISONED_WIND_MORTAR -onEquip -command [ modtools/add-syndrome -syndrome "poisoned wind" -resetPolicy ResetDuration -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_POISONED_WIND_MORTAR -onUnequip -command [ modtools/add-syndrome -syndrome "poisoned wind" -erase -target \\UNIT_ID ]
+
+modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onEquip -command [ modtools/add-syndrome -syndrome "packmaster" -resetPolicy ResetDuration -target \\UNIT_ID ]
+modtools/item-trigger -itemType ITEM_WEAPON_WHIP_PACKMASTER -onUnequip -command [ modtools/add-syndrome -syndrome "packmaster" -erase -target \\UNIT_ID ]
+
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_BALLISTA_GAS -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType MaterialGas -flowSize 3250 ]
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_BALLISTA_GAS -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType MaterialDust -flowSize 3250 ]
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_BALLISTA_GAS -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType Mist -flowSize 2250 ]
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_BALLISTA_FIRE -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType Dragonfire -flowSize 2250 ]
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_METAL -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType MaterialGas -flowSize 550 ]
+modtools/projectile-trigger -material INORGANIC:WARPSTONE_METAL -command [ modtools/spawn-flow -material INORGANIC:WARPSTONE_METAL -location [ \\LOCATION ] -flowType MaterialDust -flowSize 550 ]
+
+modtools/projectile-trigger -material INORGANIC:TOTEM_AMMO -command [ modtools/spawn-flow -material INORGANIC:TOTEM_AMMO -location [ \\LOCATION ] -flowType Fire -flowSize 1800 ]
+modtools/projectile-trigger -material INORGANIC:WILDFIRE -command [ modtools/spawn-flow -material INORGANIC:WILDFIRE -location [ \\LOCATION ] -flowType Dragonfire -flowSize 2250 ]
+modtools/projectile-trigger -material INORGANIC:WEB_AMMO -command [ modtools/spawn-flow -material INORGANIC:WEB_AMMO -location [ \\LOCATION ] -flowType Web -flowSize 1250 ]
+modtools/projectile-trigger -material PLANT_MAT:CORAL -command [ modtools/spawn-flow -material INORGANIC:WEB_AMMO -location [ \\LOCATION ] -flowType Web -flowSize 1250 ]
+
+warpstone -layer .004 -stable 1
+
+
+
+#################### PATRON CONTENT ####################
+:lua print(' ')
+:lua print("Initializing patron content. Don't smoke too much...")
+modtools/reaction-trigger -reactionName SMOKE_PIPE_SWEET -command [ modtools/add-syndrome -syndrome "smoking a nice pipe of sweet galena tobacco" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName SMOKE_PIPE_DEEP -command [ modtools/add-syndrome -syndrome "smoking a nice pipe of deep galena tobacco" -target \\WORKER_ID ]
+
+modtools/reaction-trigger -reactionName ORRERY_SLOWEST -command  [ timestream "0.4" ]
+modtools/reaction-trigger -reactionName ORRERY_SLOW -command  [ timestream "0.2" ]
+modtools/reaction-trigger -reactionName ORRERY_NORMAL -command  [ timestream "1" ]
+modtools/reaction-trigger -reactionName ORRERY_FAST -command  [ timestream "2" ]
+modtools/reaction-trigger -reactionName ORRERY_FASTEST -command  [ timestream "4" ]
+#archive
+modtools/reaction-trigger -reactionName OPEN_LEGENDS -command [ open-legends ]
+
+
+
+#################### THE EARTH STRIKES BACK! ####################
+:lua print(' ')
+tesb-job-monitor -living .002 -gem .005
+tesb-weather -creature TESB_AWAKENED_STORM -weather rain
+tesb-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_FLUX -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_METAMORPHIC -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_ROCK_SALT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_ALTAR_SEDIMENTARY -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT2 -syndrome "basalt favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK -syndrome "chalk favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK2 -syndrome "chalk favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT -syndrome "chert favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT2 -syndrome "chert favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE -syndrome "claystone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE2 -syndrome "claystone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE -syndrome "conglomerate favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE2 -syndrome "conglomerate favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE -syndrome "dacite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE2 -syndrome "dacite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE -syndrome "diorite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE2 -syndrome "diorite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE -syndrome "dolomite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE2 -syndrome "dolomite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO -syndrome "gabbro favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO2 -syndrome "gabbro favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS -syndrome "gneiss favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS2 -syndrome "gneiss favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE -syndrome "granite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE2 -syndrome "granite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE -syndrome "limestone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE2 -syndrome "limestone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE -syndrome "marble favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE2 -syndrome "marble favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE -syndrome "mudstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE2 -syndrome "mudstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE -syndrome "phyllite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE2 -syndrome "phyllite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE -syndrome "quartzite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE2 -syndrome "quartzite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE -syndrome "rhyolite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE2 -syndrome "rhyolite favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT -syndrome "rock salt favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT2 -syndrome "rock salt favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE -syndrome "sandstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE2 -syndrome "sandstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST -syndrome "schist favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST2 -syndrome "schist favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE -syndrome "shale favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE2 -syndrome "shale favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE -syndrome "siltstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE2 -syndrome "siltstone favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE -syndrome "slate favor"
+modtools/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE2 -syndrome "slate favor"
+
+
+#################### Meph decoration mod ####################
+:lua print(' ')
+:lua print('initializing Mephs Decorations.')
+#garden
+modtools/reaction-trigger -reactionName GARDEN_GRASS -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_GRASS ]
+modtools/reaction-trigger -reactionName GARDEN_SMALL_PLANT -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_SMALL_PLANT ]
+modtools/reaction-trigger -reactionName GARDEN_SMALL_BUSH -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_SMALL_BUSH ]
+modtools/reaction-trigger -reactionName GARDEN_MEDIUM_BUSH -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_MEDIUM_BUSH ]
+modtools/reaction-trigger -reactionName GARDEN_LEAVES -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_LEAVES ]
+modtools/reaction-trigger -reactionName GARDEN_TALL_GRASS -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_TALL_GRASS ]
+modtools/reaction-trigger -reactionName GARDEN_ROUND_BUSH -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_ROUND_BUSH ]
+modtools/reaction-trigger -reactionName GARDEN_LEAVY -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_LEAVY ]
+modtools/reaction-trigger -reactionName GARDEN_THORNS_SMALL -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_THORNS_SMALL ]
+modtools/reaction-trigger -reactionName GARDEN_THORNS_LARGE -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_THORNS_LARGE ]
+modtools/reaction-trigger -reactionName GARDEN_SAPLING -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_SAPLING ]
+modtools/reaction-trigger -reactionName GARDEN_FLOWERS_LARGE -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_FLOWERS_LARGE ]
+modtools/reaction-trigger -reactionName GARDEN_LARGE_BUSH -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_LARGE_BUSH ]
+modtools/reaction-trigger -reactionName GARDEN_FERN -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_FERN ]
+modtools/reaction-trigger -reactionName GARDEN_ORCHID -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_ORCHID ]
+modtools/reaction-trigger -reactionName GARDEN_FLOWERS_SMALL -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_FLOWERS_SMALL ]
+modtools/reaction-trigger -reactionName GARDEN_MUSHROOM -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_MUSHROOM ]
+#statues
+modtools/reaction-trigger -reactionName STATUE -command [ building/subtype-change -building \\BUILDING_ID -type STATUE ]
+modtools/reaction-trigger -reactionName STATUE_HEAD -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_HEAD ]
+modtools/reaction-trigger -reactionName STATUE_WISE -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_WISE ]
+modtools/reaction-trigger -reactionName STATUE_ARMORED -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_ARMORED ]
+modtools/reaction-trigger -reactionName STATUE_THIN -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_THIN ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_ARMOR -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_ARMOR ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_DWARF -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_DWARF ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_ELF -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_ELF ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_HUMAN -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_HUMAN ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_KOBOLD -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_KOBOLD ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_GOBLIN -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_GOBLIN ]
+modtools/reaction-trigger -reactionName STATUE_RELIEF_TROLL -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_RELIEF_TROLL ]
+modtools/reaction-trigger -reactionName STATUE_TOTEM -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_TOTEM ]
+modtools/reaction-trigger -reactionName STATUE_STELEA -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_STELEA ]
+modtools/reaction-trigger -reactionName STATUE_GRAVE -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_GRAVE ]
+modtools/reaction-trigger -reactionName STATUE_ARMOR -command [ building/subtype-change -building \\BUILDING_ID -type STATUE_ARMOR ]
+#banner
+modtools/reaction-trigger -reactionName BANNER -command [ building/subtype-change -building \\BUILDING_ID -type BANNER ] 
+modtools/reaction-trigger -reactionName BANNER_DECORATED -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_DECORATED ] 
+modtools/reaction-trigger -reactionName BANNER_WAVY -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_WAVY ] 
+modtools/reaction-trigger -reactionName BANNER_FLAME -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_FLAME ] 
+modtools/reaction-trigger -reactionName BANNER_LIGHTNING -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_LIGHTNING ] 
+modtools/reaction-trigger -reactionName BANNER_SPIRAL -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_SPIRAL ]
+modtools/reaction-trigger -reactionName BANNER_RUNE -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_RUNE ]
+#carpet
+modtools/reaction-trigger -reactionName CARPET -command [ building/subtype-change -building \\BUILDING_ID -type CARPET ]
+modtools/reaction-trigger -reactionName CARPET_N -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_N ]
+modtools/reaction-trigger -reactionName CARPET_E -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_E ]
+modtools/reaction-trigger -reactionName CARPET_S -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_S ]
+modtools/reaction-trigger -reactionName CARPET_W -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_W ]
+modtools/reaction-trigger -reactionName CARPET_NE -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_NE ]
+modtools/reaction-trigger -reactionName CARPET_SE -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_SE ]
+modtools/reaction-trigger -reactionName CARPET_SW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_SW ]
+modtools/reaction-trigger -reactionName CARPET_NW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_NW ]
+#racks
+modtools/reaction-trigger -reactionName DISPLAY_RACK -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_CROSSBOW -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_CROSSBOW ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_PICK -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_PICK ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_BATTLE_AXE -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_BATTLE_AXE ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_WAR_HAMMER -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_WAR_HAMMER ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_LONG_SWORD -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_LONG_SWORD ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_SPEAR -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_SPEAR ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_MACE -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_MACE ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_FLAIL -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_FLAIL ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_MORNINGSTAR -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_MORNINGSTAR ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_PIKE -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_PIKE ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_HALBERD -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_HALBERD ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_TWO_HANDED_SWORD -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_TWO_HANDED_SWORD ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_SHORT_SWORD -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_SHORT_SWORD ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_MAUL -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_MAUL ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_GREAT_AXE -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_GREAT_AXE ]
+modtools/reaction-trigger -reactionName DISPLAY_RACK_DAGGER -command [ building/subtype-change -building \\BUILDING_ID -type DISPLAY_RACK_DAGGER ]
+#signs
+modtools/reaction-trigger -reactionName SIGN_EMPTY -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_EMPTY ]
+modtools/reaction-trigger -reactionName SIGN_DINING -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_DINING ]
+modtools/reaction-trigger -reactionName SIGN_DRINK -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_DRINK ]
+modtools/reaction-trigger -reactionName SIGN_GEAR -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_GEAR ]
+modtools/reaction-trigger -reactionName SIGN_GEM -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_GEM ]
+modtools/reaction-trigger -reactionName SIGN_HEART -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_HEART ]
+modtools/reaction-trigger -reactionName SIGN_DANGER -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_DANGER ]
+modtools/reaction-trigger -reactionName SIGN_PLANT -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_PLANT ]
+modtools/reaction-trigger -reactionName SIGN_FISH -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_FISH ]
+modtools/reaction-trigger -reactionName SIGN_COOK -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_COOK ]
+modtools/reaction-trigger -reactionName SIGN_WATER -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_WATER ]
+modtools/reaction-trigger -reactionName SIGN_SWORD -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_SWORD ]
+modtools/reaction-trigger -reactionName SIGN_BOW -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_BOW ]
+modtools/reaction-trigger -reactionName SIGN_ARMOR -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_ARMOR ]
+modtools/reaction-trigger -reactionName SIGN_ANVIL -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_ANVIL ]
+modtools/reaction-trigger -reactionName SIGN_METAL -command [ building/subtype-change -building \\BUILDING_ID -type SIGN_METAL ]
+#icons
+modtools/reaction-trigger -reactionName ARROW_UP -command [ building/subtype-change -building \\BUILDING_ID -type ARROW_UP ]
+modtools/reaction-trigger -reactionName ARROW_RIGHT -command [ building/subtype-change -building \\BUILDING_ID -type ARROW_RIGHT ]
+modtools/reaction-trigger -reactionName ARROW_DOWN -command [ building/subtype-change -building \\BUILDING_ID -type ARROW_DOWN ]
+modtools/reaction-trigger -reactionName ARROW_LEFT -command [ building/subtype-change -building \\BUILDING_ID -type ARROW_LEFT ]
+#floor tiles
+modtools/reaction-trigger -reactionName FLOOR_WOOD -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_WOOD ]
+modtools/reaction-trigger -reactionName WOODEN_FLOOR -command [ building/subtype-change -building \\BUILDING_ID -type WOODEN_FLOOR ]
+modtools/reaction-trigger -reactionName FLOOR_DECORATED_CARPET -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_DECORATED_CARPET ]
+modtools/reaction-trigger -reactionName FLOOR_CARPET -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_CARPET ]
+modtools/reaction-trigger -reactionName FLOOR_PLATE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_PLATE ]
+modtools/reaction-trigger -reactionName FLOOR_ROCK_PARQUET -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_ROCK_PARQUET ]
+modtools/reaction-trigger -reactionName FLOOR_CHECKERED -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_CHECKERED ]
+modtools/reaction-trigger -reactionName FLOOR_SMALL_ROCK -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_SMALL_ROCK ]
+modtools/reaction-trigger -reactionName FLOOR_MEDIUM_ROCK -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_MEDIUM_ROCK ]
+modtools/reaction-trigger -reactionName FLOOR_LARGE_ROCK -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_LARGE_ROCK ]
+modtools/reaction-trigger -reactionName FLOOR_SOLID -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_SOLID ]
+modtools/reaction-trigger -reactionName FLOOR_QUARTERED -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_QUARTERED ]
+modtools/reaction-trigger -reactionName FLOOR_FRAMED -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_FRAMED ]
+modtools/reaction-trigger -reactionName FLOOR_DOUBLE_FRAMED -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_DOUBLE_FRAMED ]
+modtools/reaction-trigger -reactionName FLOOR_SKULL -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_SKULL ]
+modtools/reaction-trigger -reactionName FLOOR_MARBLE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_MARBLE ]
+modtools/reaction-trigger -reactionName FLOOR_GRAVEL -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_GRAVEL ]
+modtools/reaction-trigger -reactionName FLOOR_GOLDEN -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_GOLDEN ]
+modtools/reaction-trigger -reactionName FLOOR_OCTA -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_OCTA ]
+modtools/reaction-trigger -reactionName FLOOR_MAZE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_MAZE ]
+modtools/reaction-trigger -reactionName FLOOR_RATTAN -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_RATTAN ]
+modtools/reaction-trigger -reactionName FLOOR_WOODEN_PARQUET -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_WOODEN_PARQUET ]
+modtools/reaction-trigger -reactionName FLOOR_METAL_PLATE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_METAL_PLATE ]
+modtools/reaction-trigger -reactionName FLOOR_BRICK -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_BRICK ]
+modtools/reaction-trigger -reactionName FLOOR_LARGE_BRICK -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_LARGE_BRICK ]
+modtools/reaction-trigger -reactionName FLOOR_X -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_X ]
+modtools/reaction-trigger -reactionName FLOOR_INTRICATE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_INTRICATE ]
+modtools/reaction-trigger -reactionName FLOOR_ROUGH -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_ROUGH ]
+modtools/reaction-trigger -reactionName FLOOR_GLOWING -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_GLOWING ]
+modtools/reaction-trigger -reactionName FLOOR_CREEP -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_CREEP ]
+modtools/reaction-trigger -reactionName FLOOR_RHOMBUS -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_RHOMBUS ]
+modtools/reaction-trigger -reactionName FLOOR_MIXED -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_MIXED ]
+modtools/reaction-trigger -reactionName FLOOR_ROOF_SHINGLES -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_ROOF_SHINGLES ]
+modtools/reaction-trigger -reactionName FLOOR_DIRT -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_DIRT ]
+modtools/reaction-trigger -reactionName FLOOR_COBBLESTONE -command [ building/subtype-change -building \\BUILDING_ID -type FLOOR_COBBLESTONE ]
+#objects
+modtools/reaction-trigger -reactionName OBJECT_TEMPLATE -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_TEMPLATE ]
+modtools/reaction-trigger -reactionName OBJECT_GLOBE_LARGE -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_GLOBE_LARGE ]
+modtools/reaction-trigger -reactionName OBJECT_GLOBE_SMALL -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_GLOBE_SMALL ]
+modtools/reaction-trigger -reactionName OBJECT_TELESCOPE -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_TELESCOPE ]
+modtools/reaction-trigger -reactionName OBJECT_DWARF_ICON -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_DWARF_ICON ]
+modtools/reaction-trigger -reactionName OBJECT_ANVIL_ICON -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_ANVIL_ICON ]
+modtools/reaction-trigger -reactionName OBJECT_MELTING_POT -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_MELTING_POT ]
+modtools/reaction-trigger -reactionName OBJECT_FIGURINE -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FIGURINE ]
+modtools/reaction-trigger -reactionName OBJECT_SWORDS_AND_SHIELD -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_SWORDS_AND_SHIELD ]
+modtools/reaction-trigger -reactionName OBJECT_CLOCK -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_CLOCK ]
+modtools/reaction-trigger -reactionName OBJECT_SMALL_MIRROR -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_SMALL_MIRROR ]
+modtools/reaction-trigger -reactionName OBJECT_MEDIUM_MIRROR -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_MEDIUM_MIRROR ]
+modtools/reaction-trigger -reactionName OBJECT_LARGE_MIRROR -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_LARGE_MIRROR ]
+modtools/reaction-trigger -reactionName OBJECT_CHRISTMAS_WREATH -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_CHRISTMAS_WREATH ]
+modtools/reaction-trigger -reactionName OBJECT_TOY_HORSE -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_TOY_HORSE ]
+modtools/reaction-trigger -reactionName OBJECT_TOY_DOLL -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_TOY_DOLL ]
+modtools/reaction-trigger -reactionName OBJECT_SKULLS -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_SKULLS ]
+modtools/reaction-trigger -reactionName OBJECT_BONES -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_BONES ]
+modtools/reaction-trigger -reactionName OBJECT_HUMAN_SKELETON -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_HUMAN_SKELETON ]
+modtools/reaction-trigger -reactionName OBJECT_ANIMAL_SKELETON -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_ANIMAL_SKELETON ]
+modtools/reaction-trigger -reactionName OBJECT_TORTURE_RACK -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_TORTURE_RACK ]
+modtools/reaction-trigger -reactionName OBJECT_RESTRAINS -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_RESTRAINS ]
+modtools/reaction-trigger -reactionName OBJECT_BLOOD_TRAIL -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_BLOOD_TRAIL ]
+modtools/reaction-trigger -reactionName OBJECT_BLOOD_PRINTS -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_BLOOD_PRINTS ]
+modtools/reaction-trigger -reactionName OBJECT_FLOWERS -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FLOWERS ]
+modtools/reaction-trigger -reactionName OBJECT_ROSES -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_ROSES ]
+modtools/reaction-trigger -reactionName OBJECT_POTTED_FLOWERS -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_POTTED_FLOWERS ]
+modtools/reaction-trigger -reactionName OBJECT_FOUNTAIN -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FOUNTAIN ]
+modtools/reaction-trigger -reactionName OBJECT_OVEN -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_OVEN ]
+modtools/reaction-trigger -reactionName OBJECT_DUMMY -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_DUMMY ]
+modtools/reaction-trigger -reactionName OBJECT_FLAG_LEFT -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FLAG_LEFT ]
+modtools/reaction-trigger -reactionName OBJECT_FLAG_RIGHT -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FLAG_RIGHT ]
+modtools/reaction-trigger -reactionName OBJECT_FLAG_CENTER -command [ building/subtype-change -building \\BUILDING_ID -type OBJECT_FLAG_CENTER ]
+#lights
+modtools/reaction-trigger -reactionName LIGHTS -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS ]
+modtools/reaction-trigger -reactionName LIGHTS_PUMPKIN_LANTERN_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_PUMPKIN_LANTERN_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_PUMPKIN_LANTERN_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_PUMPKIN_LANTERN_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_LANTERN_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_LANTERN_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_LANTERN_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_LANTERN_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_TORCH_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_TORCH_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_TORCH_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_TORCH_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_BRAZIER_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_BRAZIER_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_BRAZIER_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_BRAZIER_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREBOWL_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREBOWL_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREBOWL_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREBOWL_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_ALTAR_CANDLES_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_ALTAR_CANDLES_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_ALTAR_CANDLES_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_ALTAR_CANDLES_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_TEMPLE_BRAZIER_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_TEMPLE_BRAZIER_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_TEMPLE_BRAZIER_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_TEMPLE_BRAZIER_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_SKULL_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_SKULL_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_SKULL_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_SKULL_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_CANDLESTICK_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_CANDLESTICK_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_CANDLESTICK_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_CANDLESTICK_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_SMALLBRAZIER_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_SMALLBRAZIER_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_SMALLBRAZIER_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_SMALLBRAZIER_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREPIT_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPIT_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREPIT_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPIT_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_CANDLES_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_CANDLES_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_CANDLES_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_CANDLES_ON ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREPLACE_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPLACE_OFF ]
+modtools/reaction-trigger -reactionName LIGHTS_FIREPLACE_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPLACE_ON ]
+#water
+modtools/reaction-trigger -reactionName WATER -command [ building/subtype-change -building \\BUILDING_ID -type WATER ]
+modtools/reaction-trigger -reactionName WATER_SINK_ON -command [ building/subtype-change -building \\BUILDING_ID -type WATER_SINK_ON ]
+modtools/reaction-trigger -reactionName WATER_SINK_OFF -command [ building/subtype-change -building \\BUILDING_ID -type WATER_SINK_OFF ]
+modtools/reaction-trigger -reactionName WATER_LARGE_ON -command [ building/subtype-change -building \\BUILDING_ID -type WATER_LARGE_ON ]
+modtools/reaction-trigger -reactionName WATER_LARGE_OFF -command [ building/subtype-change -building \\BUILDING_ID -type WATER_LARGE_OFF ]
+modtools/reaction-trigger -reactionName WATER_SMALL_ON -command [ building/subtype-change -building \\BUILDING_ID -type WATER_SMALL_ON ]
+modtools/reaction-trigger -reactionName WATER_SMALL_OFF -command [ building/subtype-change -building \\BUILDING_ID -type WATER_SMALL_OFF ]
+
+
+
+#################### ADDITIONS! ####################
+:lua print(' ')
+:lua print('Additional Script Support - Taxidermy, water/magma usage, teleporters, smart pets, etc.')
+#taxidermy
+modtools/reaction-product-trigger -reactionName TAXIDERMY_STATUE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
+modtools/reaction-product-trigger -reactionName TAXIDERMY_FIGURINE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
+succubus/waterwell
+succubus/power-learning
+succubus/teleportbase
+fix/smartpets
+
+
+:lua print(' ')
+:lua print('Map Initialization Complete')
+
+
+#################### Script files for each entity: ####################
+:lua print(' ')
+:lua print('Seeking to Initialize your Civilization')
+modtools/if-entity -id "MOUNTAIN" -cmd [ script "raw/dwarf_init.txt" ]
+modtools/if-entity -id "KOBOLD" -cmd [ script "raw/kobold_init.txt" ]
+modtools/if-entity -id "ORC" -cmd [ script "raw/orc_init.txt" ]
+modtools/if-entity -id "PLAINS" -cmd [ script "raw/human_init.txt" ]
+modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_init.txt" ]
+modtools/if-entity -id "HERMIT" -cmd [ script "raw/hermit_init.txt"
+
+
+#################### REMOVED CURRENTLY NOT FUNCTIONAL FOR PLAYERS ####################
+#SKAVEN
+
+######## was causing errors in the console; reactions not linked to any known active race/entity.
+#modtools/syndrome-trigger -syndrome "armor_rat" -command [ modtools/equip-item-animal -unit \\UNIT_ID -bodyPart UB -mode Worn ]
+#modtools/reaction-trigger -reactionName MUTATE_RAT_TO_GIANT -allowNonworkerTargets -command [ wrapper -unitSource \\WORKER_ID -target civ -radius [ 5 5 0 ] -maxtargets 1 -aclass SKAVEN_RAT -script [ modtools/transform-unit -unit \\TARGET -race SKAVEN_RAT_GIANT -caste MALE -suppressAnnouncement ] ] ]
+#modtools/reaction-trigger -reactionName ARMOR_RAT_U -allowNonworkerTargets -command [ wrapper -unitSource \\WORKER_ID -target civ -radius [ 5 5 0 ] -maxtargets 1 -aclass SKAVEN_RAT -script [ modtools/add-syndrome -syndrome "armor_rat" -target \\UNIT_ID ] ] ]
+#modtools/reaction-trigger -reactionName ARMOR_RAT_T -allowNonworkerTargets -command [ wrapper -unitSource \\WORKER_ID -target civ -radius [ 5 5 0 ] -maxtargets 1 -aclass SKAVEN_RAT -script [ modtools/add-syndrome -syndrome "armor_rat" -target \\TARGET_ID ] ] ]
+#modtools/reaction-trigger -reactionName ARMOR_RAT_W -allowNonworkerTargets -command [ wrapper -unitSource \\WORKER_ID -target civ -radius [ 5 5 0 ] -maxtargets 1 -aclass SKAVEN_RAT -script [ modtools/add-syndrome -syndrome "armor_rat" -target \\WORKER_ID ] ] ]
+#modtools/reaction-trigger -reactionName DODGE_1 -command [ modtools/skill-change -skill DODGING -mode add -granularity level -unit \\WORKER_ID -value 1 ]
+#
+#modtools/reaction-trigger -reactionName BREEDING_SKAVEN -syndrome -command [ empregnate \\WORKER_ID ]
+#
+#AddPetToCiv -civ SKAVEN -race SKAVEN_RAT -caste MALE
+#AddPetToCiv -civ SKAVEN -race SKAVEN_RAT -caste FEMALE
+#AddPetToCiv -civ SKAVEN -race SKAVEN_RAT_GIANT -caste MALE
+#AddPetToCiv -civ SKAVEN -race SKAVEN_RAT_GIANT -caste FEMALE
+#AddPetToCiv -civ SKAVEN -race WOLFRAT -caste MALE
+#AddPetToCiv -civ SKAVEN -race WOLFRAT -caste FEMALE
+#AddPetToCiv -civ SKAVEN -race RAT_OGRE -caste DEFAULT
+#AddPetToCiv -civ SKAVEN -race RAT_OGRE_BONEBREAKER -caste DEFAULT
+#
+#modtools/reaction-trigger -reactionName SKAVEN_CARAVAN -command [ force \\caravan SKAVEN ]
+#modtools/reaction-trigger -reactionName SKAVEN_MIGRANTS -command [ force \\migrants SKAVEN ]
+#
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_SKRYRE_JOIN -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste TINKERER -keepInventory ]
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_MOULDER_JOIN -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste PACKMASTER -keepInventory ]
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_PESTILENS_JOIN -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste PLAGUEBEARER -keepInventory ]
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_ESHIN_JOIN -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste GUTTERRUNNER -keepInventory ]
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_ESHIN -command [ strangemood -force -type fell -skill leatherworker ]
+#
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_ESHIN_ASSASSIN -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste ASSASSIN -keepInventory ]
+#modtools/reaction-trigger -reactionName SKAVEN_CLAN_MOULDER_DOC -command [ modtools/transform-unit -unit \\WORKER_ID -race SKAVEN -caste CHOPDOC -keepInventory ]
+#
+#modtools/reaction-trigger -reactionName CRAFT_RAT_OGRE -command [ modtools/transform-unit -unit \\WORKER_ID -race RAT_OGRE -caste DEFAULT -keepInventory ]
+#modtools/reaction-trigger -reactionName CRAFT_RAT_OGRE_BONEBREAKER -command [ modtools/transform-unit -unit \\WORKER_ID -race RAT_OGRE_BONEBREAKER -caste DEFAULT -keepInventory ]
+#modtools/reaction-trigger -reactionName CRAFT_RATWOLF -command [ modtools/transform-unit -unit \\WORKER_ID -race WOLFRAT -caste MALE -keepInventory ]
+#
+#modtools/reaction-trigger -reactionName BREEDING_RATS -command [ modtools/create-unit -race SKAVEN_RAT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+#modtools/reaction-trigger -reactionName BREEDING_RATS -command [ modtools/create-unit -race SKAVEN_RAT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+#modtools/reaction-trigger -reactionName BREEDING_RATS -command [ modtools/create-unit -race SKAVEN_RAT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+#modtools/reaction-trigger -reactionName BREEDING_RATS -command [ modtools/create-unit -race SKAVEN_RAT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+#modtools/reaction-trigger -reactionName BREEDING_RATS_GIANT -command [ modtools/create-unit -race SKAVEN_RAT_GIANT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+#modtools/reaction-trigger -reactionName BREEDING_RATS_GIANT -command [ modtools/create-unit -race SKAVEN_RAT_GIANT -caste MALE -domesticate -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 1 ]
+
+#entity/resource-change -civ NAGA -add -type ORGANIC:WOOD -obj CORAL:WOOD
+
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste MALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste MALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste MALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste MALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste MALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+#modtools/reaction-trigger -reactionName SPAWN_NAGA_CLUTCH -command [ modtools/create-unit -race NAGA -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name NAGA -age 1 ]
+
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MINER -command [ strangemood -force -type possessed -skill miner ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MASON -command [ strangemood -force -type possessed -skill mason ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_CARPENTER -command [ strangemood -force -type possessed -skill carpenter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_ENGRAVER -command [ strangemood -force -type possessed -skill engraver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WEAPON -command [ strangemood -force -type possessed -skill weaponsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_TANNER -command [ strangemood -force -type possessed -skill tanner ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WEAVER -command [ strangemood -force -type possessed -skill weaver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_CLOTHIER -command [ strangemood -force -type possessed -skill clothier ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_ARMOR -command [ strangemood -force -type possessed -skill armorsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_METALSMITH -command [ strangemood -force -type possessed -skill metalsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GEMCUT -command [ strangemood -force -type possessed -skill gemcutter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GEMSET -command [ strangemood -force -type possessed -skill gemsetter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WOODCRAFTER -command [ strangemood -force -type possessed -skill woodcrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_STONECRAFTER -command [ strangemood -force -type possessed -skill stonecrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_METALCRAFTER -command [ strangemood -force -type possessed -skill metalcrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_LEATHERWORKER -command [ strangemood -force -type possessed -skill leatherworker ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_BONECARVER -command [ strangemood -force -type possessed -skill bonecarver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_BOWYER -command [ strangemood -force -type possessed -skill bowyer ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MECHANIC -command [ strangemood -force -type possessed -skill mechanic ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GLASSMAKER -command [ strangemood -force -type possessed -skill glassmaker ]
+
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_MINER -command [ strangemood -force -type fey -skill miner ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_MASON -command [ strangemood -force -type fey -skill mason ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_CARPENTER -command [ strangemood -force -type fey -skill carpenter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_ENGRAVER -command [ strangemood -force -type fey -skill engraver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_WEAPON -command [ strangemood -force -type fey -skill weaponsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_TANNER -command [ strangemood -force -type fey -skill tanner ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_WEAVER -command [ strangemood -force -type fey -skill weaver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_CLOTHIER -command [ strangemood -force -type fey -skill clothier ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_ARMOR -command [ strangemood -force -type fey -skill armorsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_METALSMITH -command [ strangemood -force -type fey -skill metalsmith ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_GEMCUT -command [ strangemood -force -type fey -skill gemcutter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_GEMSET -command [ strangemood -force -type fey -skill gemsetter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_WOODCRAFTER -command [ strangemood -force -type fey -skill woodcrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_STONECRAFTER -command [ strangemood -force -type fey -skill stonecrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_METALCRAFTER -command [ strangemood -force -type fey -skill metalcrafter ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_LEATHERWORKER -command [ strangemood -force -type fey -skill leatherworker ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_BONECARVER -command [ strangemood -force -type fey -skill bonecarver ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_BOWYER -command [ strangemood -force -type fey -skill bowyer ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_MECHANIC -command [ strangemood -force -type fey -skill mechanic ]
+#modtools/reaction-trigger -reactionName STRANGEMOOD_FEY_GLASSMAKER -command [ strangemood -force -type fey -skill glassmaker ]
+
+#modtools/reaction-trigger -reactionName REGROW_LIMBS -command [ units/wound-change -unit //WORKER_ID -regrow -remove All ]
+
+#modtools/reaction-trigger -reactionName HIRE_ETTIN -command [ modtools/create-unit -race ETTIN -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 25 ]
+
+#removed these... they threw errors not sure what they are. but they are roses scripts so I turned them off till roses updates them.
+#base/roses-init
+#base/liquid-update
+
+
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################

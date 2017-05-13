@@ -734,3 +734,5 @@ This reaction allows gem "clusters" to be processed at the still.
 	[PRODUCT:100:1:SEEDS:NONE:GET_MATERIAL_FROM_REAGENT:cluster:SEEDS_MAT]
 	[PRODUCT:20:1:ROUGH:NONE:GET_MATERIAL_FROM_REAGENT:cluster:GEM_MAT]
 	[SKILL:BREWING]
+
+

@@ -778,6 +778,7 @@ reaction_liquids
 [REACTION:UNLOCK_MAGMA_WORKSHOPS]
 	[NAME:Unlock magma workshops]
 	[BUILDING:MAGMAWELL_DWARF:CUSTOM_NONE]
+	[BUILDING:FLUIDCASTER:CUSTOM_NONE]
 	[DESCRIPTION:Adds magma workshops to the build menu.]
 	[SKILL:OPERATE_PUMP]
 

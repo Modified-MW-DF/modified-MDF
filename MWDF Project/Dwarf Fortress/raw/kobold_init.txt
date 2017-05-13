@@ -1,0 +1,68 @@
+# kobold_script.txt
+# This file runs from the main onLoad.init, if you load an embark with Kobolds.
+# A- if its an init command that involves Kobolds add it in here.
+
+:lua print(' ')
+:lua print('From the caves the Kobolds come! lets prepare the pits!')
+
+
+#################### kobold ####################
+#:lua print(' ')
+#:lua print('Breeding like rabbits...')
+modtools/reaction-trigger -reactionName BREEDING -syndrome -command [ empregnate \\WORKER_ID ]
+#:lua print(' ')
+#:lua print('Calling down the rains...')
+modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command [ weather clear ]
+modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
+modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
+modtools/reaction-trigger -reactionName REGRASS_KOBOLD -command [ regrass ]
+modtools/reaction-trigger -reactionName CLEAN_KOBOLD -command [ clean map ]
+modtools/reaction-trigger -reactionName GROW_KOBOLD -command [ grow all ]
+modtools/reaction-trigger -reactionName TOTEMPOLE_UPGRADE_1 -command [ building/subtype-change -building \\BUILDING_ID -type KOBOLD_TOTEMPOLE_2 ]
+modtools/reaction-trigger -reactionName TOTEMPOLE_UPGRADE_2 -command [ building/subtype-change -building \\BUILDING_ID -type KOBOLD_TOTEMPOLE_3 ]
+modtools/reaction-trigger -reactionName TOTEMPOLE_UPGRADE_3 -command [ building/subtype-change -building \\BUILDING_ID -type KOBOLD_TOTEMPOLE_4 ]
+modtools/reaction-trigger -reactionName TOTEMPOLE_UPGRADE_4 -command [ building/subtype-change -building \\BUILDING_ID -type KOBOLD_TOTEMPOLE_5 ]
+modtools/reaction-trigger -reactionName TOTEMPOLE_UPGRADE_5 -command [ building/subtype-change -building \\BUILDING_ID -type KOBOLD_TOTEMPOLE_6 ]
+#:lua print(' ')
+#:lua print('Reinforcing bad habits...')
+modtools/reaction-trigger -reactionName KOBOLD_SHISHA_MUSHROOM -command [ modtools/add-syndrome -syndrome "eating a maybe hallucinogenic mushroom" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName KOBOLD_SHISHA_LEAVES -command [ modtools/add-syndrome -syndrome "smoking some maybe hallucinogenic leaves" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName KOBOLD_SHISHA_WOOD -command [ modtools/add-syndrome -syndrome "inhaling some maybe hallucinogenic vapors" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName KOBOLD_SHISHA_BULB -command [ modtools/add-syndrome -syndrome "biting on some maybe hallucinogenic bulbs" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName KOBOLD_SHISHA_HERB -command [ modtools/add-syndrome -syndrome "chewing some maybe hallucinogenic herbs" -target \\WORKER_ID ]
+#:lua print(' ')
+#:lua print('Possessed with strange moods...')
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MINER_KOBOLD -command [ strangemood -force -type possessed -skill miner ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MASON_KOBOLD -command [ strangemood -force -type possessed -skill mason ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_CARPENTER_KOBOLD -command [ strangemood -force -type possessed -skill carpenter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_ENGRAVER_KOBOLD -command [ strangemood -force -type possessed -skill engraver ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WEAPON_KOBOLD -command [ strangemood -force -type possessed -skill weaponsmith ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_TANNER_KOBOLD -command [ strangemood -force -type possessed -skill tanner ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WEAVER_KOBOLD -command [ strangemood -force -type possessed -skill weaver ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_CLOTHIER_KOBOLD -command [ strangemood -force -type possessed -skill clothier ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_ARMOR_KOBOLD -command [ strangemood -force -type possessed -skill armorsmith ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_METALSMITH_KOBOLD -command [ strangemood -force -type possessed -skill metalsmith ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GEMCUT_KOBOLD -command [ strangemood -force -type possessed -skill gemcutter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GEMSET_KOBOLD -command [ strangemood -force -type possessed -skill gemsetter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_WOODCRAFTER_KOBOLD -command [ strangemood -force -type possessed -skill woodcrafter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_STONECRAFTER_KOBOLD -command [ strangemood -force -type possessed -skill stonecrafter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_METALCRAFTER_KOBOLD -command [ strangemood -force -type possessed -skill metalcrafter ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_LEATHERWORKER_KOBOLD -command [ strangemood -force -type possessed -skill leatherworker ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_BONECARVER_KOBOLD -command [ strangemood -force -type possessed -skill bonecarver ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_BOWYER_KOBOLD -command [ strangemood -force -type possessed -skill bowyer ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_MECHANIC_KOBOLD -command [ strangemood -force -type possessed -skill mechanic ]
+modtools/reaction-trigger -reactionName STRANGEMOOD_POSSESSED_GLASSMAKER_KOBOLD -command [ strangemood -force -type possessed -skill glassmaker ]
+#:lua print(' ')
+#:lua print("Don't forget the chew toys...")
+modtools/reaction-trigger -reactionName USE_CHEWTOY -command [ modtools/add-syndrome -syndrome "chewing on a chewy chew-toy nicknamed chewy" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_DOLL -command [ modtools/add-syndrome -syndrome "playing make-believe with the favourite doll" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_SPINNING_TOP -command [ modtools/add-syndrome -syndrome "watching a spinning top go round and round and round" -target \\WORKER_ID ]
+#:lua print(' ')
+#:lua print('Wake up! were almost done...')
+modtools/reaction-trigger -reactionName KOBOLD_SIREN -command [ siren ]
+
+
+:lua print(' ')
+:lua print('Kobold initialization complete!  Watch out for the elephants!')
+
+

@@ -1,0 +1,131 @@
+# succubus_script.txt
+# This file runs from the main onLoad.init, if you load an embark with Succubus.
+# A- if its an init command that involves Succubus add it in here.
+
+:lua print(' ')
+:lua print('From hell the Sucubbi writhe, twisted with lust and hatred...')
+
+
+
+################### waterwell ###################
+#:lua print(' ')
+#:lua print('We can get you hot and wet...with magma and water of course...')
+modtools/reaction-trigger -reactionName WATERWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 ]
+modtools/reaction-trigger -reactionName WATERWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 ]
+modtools/reaction-trigger -reactionName WATERWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName WATERWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
+
+modtools/reaction-trigger -reactionName MAGMAWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 -magma ]
+modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
+modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
+
+modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
+modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
+
+
+
+################### playroom ###################
+#:lua print(' ')
+#:lua print('Sticks and stones may break your bones, but cuffs and whips..')
+modtools/reaction-trigger -reactionName USE_HANDCUFFS -command [ modtools/add-syndrome -syndrome "being handcuffed in the pleasure room" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_BLINDFOLD -command [ modtools/add-syndrome -syndrome "waiting blindfolded for what will come next" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_FLOGGING_WHIP -command [ modtools/add-syndrome -syndrome "the sweet sensation of pain from flogging" -target \\WORKER_ID ]
+
+
+
+################### summoning ###################
+#:lua print(' ')
+#:lua print('Do you need a tentacle monster?  We have 20...')
+modtools/reaction-trigger -reactionName SUMMONING_NAHASH -command [ succubus/summoning -source \\WORKER_ID -race NAHASH ]
+modtools/reaction-trigger -reactionName SUMMONING_ORTHUS -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
+modtools/reaction-trigger -reactionName SUMMONING_NIGHTMARE -command [ succubus/summoning -source \\WORKER_ID -race NIGHTMARE ]
+modtools/reaction-trigger -reactionName SUMMONING_ELEMENTAL_PAIN -command [ succubus/summoning -source \\WORKER_ID -race ELEMENTAL_PAIN ]
+modtools/reaction-trigger -reactionName SUMMONING_IMP_FIRE -command [ succubus/summoning -source \\WORKER_ID -race IMP_FIRE ]
+modtools/reaction-trigger -reactionName SUMMONING_FROG_DEMON -command [ succubus/summoning -source \\WORKER_ID -race FROG_DEMON ]
+modtools/reaction-trigger -reactionName SUMMONING_TENTACLE_MONSTER -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
+modtools/reaction-trigger -reactionName SUMMONING_BRUTE_DECAY -command [ succubus/summoning -source \\WORKER_ID -race BRUTE_DECAY ]
+modtools/reaction-trigger -reactionName SUMMONING_SPIRIT_OF_FIRE -command [ succubus/summoning -source \\WORKER_ID -race SPIRIT_OF_FIRE ]
+modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summoning -source \\WORKER_ID -race HFS ]
+
+
+
+################### succubus extras ###################
+#:lua print(' ')
+#:lua print('would you like us to corrupt you, make you ours? we can do that...')
+modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
+
+#:lua print(' ')
+#:lua print('We think your forge is getting hot... real hot... We think you can forge that blade now...')
+modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
+modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 1 1/1/0 ]
+modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
+modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
+modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
+modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
+#:lua print(' ')
+#:lua print("Don't worry about our little friends below...")
+succubus/hfspets -civ SUCCUBUS
+
+
+#################### run the succubus/init ####################
+succubus/init
+
+:lua print(' ')
+:lua print('Succubus Initialization complete.  Turn up the heat!')

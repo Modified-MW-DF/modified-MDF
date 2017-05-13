@@ -3036,38 +3036,32 @@ Modest MOD
 [PERMITTED_REACTION:LIGHTS_FIREPLACE_ON] 
 
 #####################################################################
-//end of changes by Meph################################################
-//end of changes by Meph#############
-//end of changes by Meph################################################
-//end of changes by MephMeph###
-//end of changes by Meph################################################
-//end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph######################
-//end of changes by Mephy Mephf changes by Meph//end of changes by Mephes by Mephph#############################################
-//end of changes by Mephf changes by Mephof changes by Meph of changes by MephMephges by Mephh MephephhhhFIREPLACE_ON] 
+//end of changes by Meph
 
-#####################################################################
-//end of changes by Meph################################################
-//end of changes by Meph/end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph#################
-//end of changes by Meph#########
-//end of changes by Meph##################################
-//end of changes by Meph/end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph#################
-//end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph#################
-//end of changes by Meph#########
-//end of changes by Mephy Meph########
-//end of changes by Meph#################
-//end of changes by Meph#########
-//end of changes by Meph#########
-//end of changes by Meph#################
-//end of changes by Meph#########
-//end of changes by Mephy Meph#######
-//end of changes by Meph#########
-//end of changes by Mephy Mephy Meph
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

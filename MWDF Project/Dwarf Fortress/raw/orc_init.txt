@@ -1,0 +1,80 @@
+# orc_script.txt
+# This file runs from the main onLoad.init, if you load an embark with Orcs
+# A- if its an init command that involves Orcs add it in here.
+
+:lua print(' ')
+:lua print('The mightiest of Orcs, you will be! Ready the War Ships!')
+
+
+
+
+
+################### Outpost upgrades ###################
+#:lua print(' ')
+#:lua print('Setting up our Outposts!')
+modtools/reaction-trigger -reactionName OUTPOST_HUMAN_UPGRADE -command [ building/subtype-change -building \\BUILDING_ID -type OUTPOST_HUMAN_UPGRADE ]
+modtools/reaction-trigger -reactionName OUTPOST_DWARF_UPGRADE -command [ building/subtype-change -building \\BUILDING_ID -type OUTPOST_DWARF_UPGRADE ]
+modtools/reaction-trigger -reactionName OUTPOST_ELF_UPGRADE -command [ building/subtype-change -building \\BUILDING_ID -type OUTPOST_ELF_UPGRADE ]
+modtools/reaction-trigger -reactionName OUTPOST_ORC_UPGRADE -command [ building/subtype-change -building \\BUILDING_ID -type OUTPOST_ORC_UPGRADE ]
+
+
+
+################### fluidcaster ###################
+#:lua print(' ')
+#:lua print('Fluid casters have readied the magma for our forges!')
+modtools/reaction-trigger -reactionName WELL_MAGMA_S_ORC -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 2 2 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_MAGMA_M_ORC -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 5 5 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_MAGMA_L_ORC -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 10 10 0 ] -offset [ 0 0 \-1 ] 
+
+modtools/reaction-trigger -reactionName WELL_WATER_S_ORC -command [ succubus/eruption -type water -unit \\WORKER_ID -radius [ 2 2 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_WATER_M_ORC -command [ succubus/eruption -type water -unit \\WORKER_ID -radius [ 5 5 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_WATER_L_ORC -command [ succubus/eruption -type water -unit \\WORKER_ID -radius [ 10 10 0 ] -offset [ 0 0 \-1 ] 
+
+modtools/reaction-trigger -reactionName UNLOCK_MAGMA_WORKSHOPS -command [ succubus/feature magmaWorkshops ]
+
+
+
+################### caravan and migrant reactions ###################
+#:lua print(' ')
+#:lua print('Order civilizations to come to you!')
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_ORC -command [ force \\caravan ORC ]
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_FRN_ORC -command [ force \\caravan SUCCUBUS ]
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_FRN_ORC -command [ force \\caravan EVIL ]
+modtools/reaction-trigger -reactionName FORCE_CARAVAN_FRN_ORC -command [ force \\caravan ORC ]
+modtools/reaction-trigger -reactionName FORCE_MIGRANT_ORC -command [ force \\migrants ORC ]
+
+
+
+################### ghetto overseer ###################
+#:lua print(' ')
+#:lua print('Raid your enemies and ransom their loved ones!')
+modtools/reaction-trigger -reactionName RELEASE_KOBOLD_MIGRANTS -command [ modtools/create-unit -race KOBOLD -caste RAT_MALE -setUnitToFort -location [ \\LOCATION ] -name KOBOLD -age 3 ]
+modtools/reaction-trigger -reactionName RELEASE_GOBLIN_MIGRANTS -command [ modtools/create-unit -race GOBLIN -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]
+modtools/reaction-trigger -reactionName RELEASE_OGRE_MIGRANTS -command [ modtools/create-unit -race OGRE -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]
+modtools/reaction-trigger -reactionName RELEASE_HUMAN_MIGRANTS -command [ modtools/create-unit -race HUMAN -caste RAT_MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 3 ]
+modtools/reaction-trigger -reactionName RELEASE_ELF_MIGRANTS -command [ modtools/create-unit -race ELF -caste MALE -setUnitToFort -location [ \\LOCATION ] -name FOREST -age 20 ]
+modtools/reaction-trigger -reactionName RELEASE_DWARF_MIGRANTS -command [ modtools/create-unit -race DWARF -caste MALE -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 20 ]
+modtools/reaction-trigger -reactionName RELEASE_SUCCUBUS_MIGRANTS -command [ modtools/create-unit -race SUCCUBUS -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]
+modtools/reaction-trigger -reactionName KILL_CAPTIVE_DWARF -command [ modtools/create-unit -race FAKE_SAPIENT -caste MALE_DWARF -location [ \\LOCATION ] -age 20 -flagSet [ scuttle ] ]
+modtools/reaction-trigger -reactionName KILL_CAPTIVE_ELF -command [ modtools/create-unit -race FAKE_SAPIENT -caste MALE_ELF -location [ \\LOCATION ] -age 20 -flagSet [ scuttle ] ]
+modtools/reaction-trigger -reactionName KILL_CAPTIVE_HUMAN -command [ modtools/create-unit -race FAKE_SAPIENT -caste MALE_HUMAN -location [ \\LOCATION ] -age 20 -flagSet [ scuttle ] ]
+modtools/reaction-trigger -reactionName KILL_CAPTIVE_SUCCUBUS -command [ modtools/create-unit -race FAKE_SAPIENT -caste MALE_SUCCUBUS -location [ \\LOCATION ] -age 20 -flagSet [ scuttle ] ]
+
+
+
+################### gambling ###################
+#:lua print(' ')
+#:lua print("Orcs enjoy their gambling... don't cheat.")
+modtools/reaction-trigger -reactionName USE_BLACKJACK -command [ modtools/add-syndrome -syndrome "playing blackjack in the casino" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_ROULETTE -command [ modtools/add-syndrome -syndrome "playing a round of roulette in the casino" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName USE_POKER -command [ modtools/add-syndrome -syndrome "proving who's the most cleverestest by winning a poker match" -target \\WORKER_ID ]
+
+
+#modtools/outside-only -checkEvery 100 -type OUTSIDE_ONLY -building OUTSIDE_ONLY_ORC_RAIDERS
+
+:lua print(' ')
+:lua print('Orc initialization complete!  tear down the walls!')
+
+
+
+
