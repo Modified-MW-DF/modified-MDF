@@ -1,0 +1,1236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Data Structure Definition Syntax &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Updating DF-structures for a new DF version" href="how-to-update.html" />
+    <link rel="prev" title="DFHack Lua API" href="../../docs/Lua API.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="data-structure-definition-syntax">
+<h1><a class="toc-backref" href="#id1">Data Structure Definition Syntax</a><a class="headerlink" href="#data-structure-definition-syntax" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#data-structure-definition-syntax" id="id1">Data Structure Definition Syntax</a><ul>
+<li><a class="reference internal" href="#general-background" id="id2">General Background</a></li>
+<li><a class="reference internal" href="#xml-file-format" id="id3">XML file format</a><ul>
+<li><a class="reference internal" href="#enum-type-definition" id="id4">Enum type definition</a><ul>
+<li><a class="reference internal" href="#enum-item-attributes" id="id5">Enum item attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bitfield-type-definition" id="id6">Bitfield type definition</a></li>
+<li><a class="reference internal" href="#structure-type-definition" id="id7">Structure type definition</a><ul>
+<li><a class="reference internal" href="#common-field-properties" id="id8">Common field properties</a></li>
+<li><a class="reference internal" href="#primitive-fields" id="id9">Primitive fields</a></li>
+<li><a class="reference internal" href="#substructure-fields" id="id10">Substructure fields</a></li>
+<li><a class="reference internal" href="#enum-fields" id="id11">Enum fields</a></li>
+<li><a class="reference internal" href="#nested-bitfields" id="id12">Nested bitfields</a></li>
+<li><a class="reference internal" href="#container-fields" id="id13">Container fields</a><ul>
+<li><a class="reference internal" href="#abstract-container" id="id14">Abstract container</a></li>
+<li><a class="reference internal" href="#pointer-fields" id="id15">Pointer fields</a></li>
+<li><a class="reference internal" href="#abstract-sequence" id="id16">Abstract sequence</a></li>
+<li><a class="reference internal" href="#standard-containers" id="id17">Standard containers</a></li>
+<li><a class="reference internal" href="#df-specific-containers" id="id18">DF-specific containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-type-definition" id="id19">Class type definition</a><ul>
+<li><a class="reference internal" href="#virtual-method-definition" id="id20">Virtual method definition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-object-definition" id="id21">Global object definition</a></li>
+<li><a class="reference internal" href="#symbol-table-definition" id="id22">Symbol table definition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lisp-integration" id="id23">Lisp Integration</a><ul>
+<li><a class="reference internal" href="#reference-expressions" id="id24">Reference expressions</a><ul>
+<li><a class="reference internal" href="#dereference-syntax" id="id25">Dereference syntax</a></li>
+<li><a class="reference internal" href="#basic-properties" id="id26">Basic properties</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference-objects" id="id27">Reference objects</a><ul>
+<li><a class="reference internal" href="#primitive-types" id="id28">Primitive types</a></li>
+<li><a class="reference internal" href="#enums" id="id29">Enums</a></li>
+<li><a class="reference internal" href="#pointers" id="id30">Pointers</a></li>
+<li><a class="reference internal" href="#compounds" id="id31">Compounds</a></li>
+<li><a class="reference internal" href="#sequences" id="id32">Sequences</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code-helpers" id="id33">Code helpers</a></li>
+<li><a class="reference internal" href="#examples" id="id34">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>This document documents the XML syntax used to define
+DF data structures for use in dfhack.</p>
+<div class="section" id="general-background">
+<h2><a class="toc-backref" href="#id2">General Background</a><a class="headerlink" href="#general-background" title="Permalink to this headline">¶</a></h2>
+<p>Originally dfhack used a file called <code class="docutils literal"><span class="pre">Memory.xml</span></code>
+to describe data structures of the game. It explicitly
+listed addresses of known global variables, and offsets
+within structures to fields, not unlike the ini files
+used by Dwarf Therapist.</p>
+<p>This format is a good choice when only a small number
+of fields and objects need to be accessed, and allows
+a program to work with many different versions of DF,
+provided that the relevant fields and objects work
+in the same way.</p>
+<p>However, as the number of known fields and objects grow,
+maintaining the explicit offset lists quickly becomes
+difficult and error prone. Also, even when almost all
+fields of a structure become known, the format fails to
+represent and exploit their relative position, which in
+practice is actually more stable than the specific offset
+values.</p>
+<p>This format instead represents data structure layout
+purely via listing all fields in the correct order,
+exactly like a structure definition does in the C++
+language itself; in fact, these XML definitions are
+translated into C++ headers in a mostly straightforward
+way (the more tricky bits are things like correctly
+processing circular references, or generating metadata
+for lua). There is still a file with numeric data,
+but it only contains absolute addresses of global
+objects.</p>
+<p>As a downside, dfhack now needs to be recompiled
+every time layout of some data structure changes;
+on the other hand, accessing DF structures from C++
+plugins now has no overhead compared with DF&#8217;s
+own code. Also, practice shows that the more fields
+are known in a structure, the easier it is to spot
+what exactly has changed, and fix the exact area.</p>
+</div>
+<div class="section" id="xml-file-format">
+<h2><a class="toc-backref" href="#id3">XML file format</a><a class="headerlink" href="#xml-file-format" title="Permalink to this headline">¶</a></h2>
+<p>All XML files use <code class="docutils literal"><span class="pre">&lt;data-definition&gt;</span></code> as their root tag.</p>
+<p>They should be indented using 4 spaces per level, without tabs.</p>
+<p>Unless noted otherwise, all non-root tags allow using a
+<em>comment</em> attribute, or a <code class="docutils literal"><span class="pre">&lt;comment&gt;...&lt;/comment&gt;</span></code> subtag.
+It may be used to include a comment string that can be used
+by tools processing the xml.</p>
+<p>Excluding content of tags like <code class="docutils literal"><span class="pre">&lt;comment&gt;</span></code> or <code class="docutils literal"><span class="pre">&lt;code-helper&gt;</span></code>,
+all plain text inside tag bodies is ignored and may be freely
+used instead of XML comments.</p>
+<p><strong>NOTE:</strong> Using XML tags and/or attributes not defined in this document
+is not allowed.</p>
+<div class="section" id="enum-type-definition">
+<h3><a class="toc-backref" href="#id4">Enum type definition</a><a class="headerlink" href="#enum-type-definition" title="Permalink to this headline">¶</a></h3>
+<p>Global enum types are defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="nb">type</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span> <span class="p">[</span><span class="n">base</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="n">item</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="n">item</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;key2&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">enum</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Every enum has an integer base type, which defaults to <em>int32_t</em> if omitted.</p>
+<p>Like in C++, enum items may either explicitly specify an integer value, or
+rely on auto-increment behavior.</p>
+<p><strong>NOTE:</strong> Due to a codegen limitation, specifying value on any item other
+than the first one prevents using the attribute feature described below.</p>
+<p>As in most cases, the <em>name</em> attribute may be omitted if unknown; the code
+generator would produce a random identifier to satisfy C++ language requirements.</p>
+<div class="section" id="enum-item-attributes">
+<h4><a class="toc-backref" href="#id5">Enum item attributes</a><a class="headerlink" href="#enum-item-attributes" title="Permalink to this headline">¶</a></h4>
+<p>The XML syntax allows associating attributes with enum items,
+thus embedding lookup tables for use in C++ or lua code.</p>
+<p>Every attribute must be declared at the top level of the enum:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="n">attr</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;attr&#39;</span>
+          <span class="p">[</span><span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;primitive-or-enum&#39;</span><span class="p">]</span>
+          <span class="p">[</span><span class="n">default</span><span class="o">-</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">]</span>
+          <span class="p">[</span><span class="n">use</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;true/false&#39;</span><span class="p">]</span>
+          <span class="p">[</span><span class="ow">is</span><span class="o">-</span><span class="nb">list</span><span class="o">=</span><span class="s1">&#39;true/false&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>The declaration allows specifying a numeric, or other enum type for the
+attribute, overriding the default <code class="docutils literal"><span class="pre">const</span> <span class="pre">char*</span></code> string type.</p>
+<p>An explicit default value may also be specified; otherwise the attribute
+defaults to NULL or 0. If <code class="docutils literal"><span class="pre">use-key-name</span></code> is <em>true</em>, the corresponding
+<code class="docutils literal"><span class="pre">enum-item</span></code>&#8216;s <em>name</em> is used as the default value.</p>
+<p>Alternatively, an attribute may be declared to be a list, instead of a scalar.
+In this case, the default is an empty list.</p>
+<p><strong>NOTE:</strong> Attribute name <code class="docutils literal"><span class="pre">'key'</span></code> is reserved for a built-in string attribute
+representing the enum item key.</p>
+<p>For every declared attribute, every enum-item tag may contain an attribute
+value definition:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="n">item</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">item</span><span class="o">-</span><span class="n">attr</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;attr&#39;</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">enum</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For list attributes, multiple <code class="docutils literal"><span class="pre">item-attr</span></code> entries may be used to define the
+list contents.</p>
+</div>
+</div>
+<div class="section" id="bitfield-type-definition">
+<h3><a class="toc-backref" href="#id6">Bitfield type definition</a><a class="headerlink" href="#bitfield-type-definition" title="Permalink to this headline">¶</a></h3>
+<p>Global bitfield types are defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">bitfield</span><span class="o">-</span><span class="nb">type</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span> <span class="p">[</span><span class="n">base</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;uint32_t&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">flag</span><span class="o">-</span><span class="n">bit</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bit1&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">count</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">]</span> <span class="p">[</span><span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;enum&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">flag</span><span class="o">-</span><span class="n">bit</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bit2&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">count</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">]</span> <span class="p">[</span><span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;enum&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">bitfield</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Like enums, bitfields have an integer base type, which defaults to <em>uint32_t</em>.
+The total number of bits in the bitfield must not exceed the base type size.</p>
+<p>A bitfield item may be defined to occupy multiple bits via the <em>count</em> attribute.
+It also may have an enum type; due to compiler limitations, the base-type of the
+enum must be exactly the same as the bitfield itself.</p>
+</div>
+<div class="section" id="structure-type-definition">
+<h3><a class="toc-backref" href="#id7">Structure type definition</a><a class="headerlink" href="#structure-type-definition" title="Permalink to this headline">¶</a></h3>
+<p>Structures without virtual methods are defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">struct</span><span class="o">-</span><span class="nb">type</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span>
+            <span class="p">[</span><span class="ow">is</span><span class="o">-</span><span class="n">union</span><span class="o">=</span><span class="s1">&#39;true/false&#39;</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">inherits</span><span class="o">-</span><span class="n">from</span><span class="o">=</span><span class="s1">&#39;struct_type&#39;</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">instance</span><span class="o">-</span><span class="n">vector</span><span class="o">=</span><span class="s1">&#39;expr&#39;</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">key</span><span class="o">-</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;identifier&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="n">fields</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">struct</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The <em>instance-vector</em> attribute may be used to specify a global
+vector that canonically contains all instances of the structure.
+Code generation uses it to produce a <code class="docutils literal"><span class="pre">find</span></code> static method.
+If <em>key-field</em> is specified, this method uses binary search
+by the referred field; otherwise it just indexes the vector
+with its integer argument.</p>
+<div class="section" id="common-field-properties">
+<h4><a class="toc-backref" href="#id8">Common field properties</a><a class="headerlink" href="#common-field-properties" title="Permalink to this headline">¶</a></h4>
+<p>All fields support the following attributes:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">name</span></code></dt>
+<dd><p class="first">Specifies the identifier naming the field.</p>
+<p class="last">This attribute may be omitted, in which case
+the code generator produces a random identifier. As
+follows from the word random, such identifiers aren&#8217;t
+stable, and shouldn&#8217;t be used to access the field.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">init-value</span></code></dt>
+<dd><p class="first">Specifies the value that should be assigned to
+the field by the constructor. By default the following
+values are used:</p>
+<ul class="last simple">
+<li>For enums: the first element of the enum.</li>
+<li>For signed integer fields with <code class="docutils literal"><span class="pre">ref-target</span></code> or <code class="docutils literal"><span class="pre">refers-to</span></code>: -1.</li>
+<li>For other numeric fields, pointers and bitfields: 0.</li>
+</ul>
+</dd>
+<dt><code class="docutils literal"><span class="pre">offset</span></code>, <code class="docutils literal"><span class="pre">size</span></code>, <code class="docutils literal"><span class="pre">alignment</span></code></dt>
+<dd><p class="first">Specifies the offset, size and alignment in bytes.</p>
+<p><strong>WARNING:</strong> Although allowed for any field by the XML syntax,
+and supported by the lisp GUI tool, code generation will fail
+with these attributes except in cases specifically shown below.</p>
+<p class="last">With the above caveat, <code class="docutils literal"><span class="pre">size</span></code> and <code class="docutils literal"><span class="pre">alignment</span></code> may also
+be used on the <code class="docutils literal"><span class="pre">struct-type</span></code> tag itself.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="primitive-fields">
+<h4><a class="toc-backref" href="#id9">Primitive fields</a><a class="headerlink" href="#primitive-fields" title="Permalink to this headline">¶</a></h4>
+<p>Primitive fields can be classified as following:</p>
+<ol class="arabic">
+<li><p class="first">Unmarked area:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">padding</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;bytes&#39;</span> <span class="p">[</span><span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;1/2/4&#39;</span><span class="p">]</span> <span class="o">.../&gt;</span>
+</pre></div>
+</div>
+<p>This tag defines an area of raw bytes with unknown contents.</p>
+</li>
+<li><p class="first">Numbers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">int32_t</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">.../&gt;</span>
+</pre></div>
+</div>
+<p>Supported number types are: <code class="docutils literal"><span class="pre">int8_t</span></code>, <code class="docutils literal"><span class="pre">uint8_t</span></code>, <code class="docutils literal"><span class="pre">int16_t</span></code>,
+<code class="docutils literal"><span class="pre">uint16_t</span></code>, <code class="docutils literal"><span class="pre">int32_t</span></code>, <code class="docutils literal"><span class="pre">uint32_t</span></code>, <code class="docutils literal"><span class="pre">int64_t</span></code>, <code class="docutils literal"><span class="pre">uint64_t</span></code>,
+<code class="docutils literal"><span class="pre">s-float</span></code> (single float), <code class="docutils literal"><span class="pre">d-float</span></code> (double float).</p>
+</li>
+<li><p class="first">Boolean:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">bool</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">.../&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">String:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">static</span><span class="o">-</span><span class="n">string</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;bytes&#39;</span><span class="o">.../&gt;</span>
+<span class="o">&lt;</span><span class="n">ptr</span><span class="o">-</span><span class="n">string</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">.../&gt;</span>
+<span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">string</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">.../&gt;</span>
+</pre></div>
+</div>
+<p>These tags correspond to <code class="docutils literal"><span class="pre">char[bytes]</span></code>, <code class="docutils literal"><span class="pre">char*</span></code>, and <code class="docutils literal"><span class="pre">std::string</span></code>.</p>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p class="first">File Stream:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">fstream</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>This is not really a primitive type, but classified as such since it is
+treated as a predefined opaque object (a-la padding).</p>
+</li>
+</ol>
+<p>Primitives support the following attributes:</p>
+<p><code class="docutils literal"><span class="pre">refers-to='expr'</span></code></p>
+<blockquote>
+<div><p>Specifies a GUI hyperlink to an object returned by an arbitrary expression.</p>
+<p>The expression receives the value of the field as <code class="docutils literal"><span class="pre">$</span></code>, and the reference
+to the field as <code class="docutils literal"><span class="pre">$$</span></code>.</p>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">ref-target='type'</span></code></p>
+<blockquote>
+<div>Specifies a hyperlink to an instance of <em>type</em>, identified by the value of the field.
+The instance is retrieved via <em>instance-vector</em> and <em>key-field</em>, or
+a <code class="docutils literal"><span class="pre">&lt;code-helper</span> <span class="pre">name='find-instance'&gt;</span></code> in the target type definition.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">aux-value='expr'</span></code></p>
+<blockquote>
+<div><p>Specifies an additional value for use in the <em>find-instance</em> code helper.</p>
+<p>Unlike <em>refers-to</em>, the expression receives the <strong>reference</strong> to the field
+as <code class="docutils literal"><span class="pre">$</span></code>, and a reference to the containing structure as <code class="docutils literal"><span class="pre">$$</span></code>; i.e. the
+arguments are shifted one step toward parent. This is because the value
+of the field is already implicitly passed to <em>find-instance</em>.</p>
+<p>The <em>find-instance</em> helper receives the field value as <code class="docutils literal"><span class="pre">$</span></code>, and aux-value as <code class="docutils literal"><span class="pre">$$</span></code>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="substructure-fields">
+<h4><a class="toc-backref" href="#id10">Substructure fields</a><a class="headerlink" href="#substructure-fields" title="Permalink to this headline">¶</a></h4>
+<p>Nested structures are defined via the <code class="docutils literal"><span class="pre">compound</span></code> tag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">compound</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;struct_type&#39;</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="n">compound</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="p">[</span><span class="ow">is</span><span class="o">-</span><span class="n">union</span><span class="o">=</span><span class="s1">&#39;true/false&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">key</span><span class="o">-</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="n">field</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">compound</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>As seen above, a nested structure may either use a global type
+defined elsewhere, or define an ad-hoc structure in-place.
+In the in-place case, omitting <em>name</em> has a special meaning
+of defining an anonymous nested struct or union.</p>
+</div>
+<div class="section" id="enum-fields">
+<h4><a class="toc-backref" href="#id11">Enum fields</a><a class="headerlink" href="#enum-fields" title="Permalink to this headline">¶</a></h4>
+<p>Fields of enum types are defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">enum</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;enum_type&#39;</span> <span class="p">[</span><span class="n">base</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="n">enum</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="p">[</span><span class="n">base</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">enum</span><span class="o">-</span><span class="n">item</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;key1&#39;</span><span class="o">.../&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">enum</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Like with substructures, enums may be either referenced globals, or ad-hoc definitions.</p>
+<p>In the former case, when <em>base-type</em> of the field and the enum differ,
+a special wrapper is added to coerce the size, or, if impossible,
+the enum type is completely replaced with the <em>base-type</em>. The net
+effect is that the field <em>always</em> has the expected size and alignment.</p>
+<p>If no <em>base-type</em> is specified on the field, the one in the global type
+definition has complete precedence. This is not recommended.</p>
+</div>
+<div class="section" id="nested-bitfields">
+<h4><a class="toc-backref" href="#id12">Nested bitfields</a><a class="headerlink" href="#nested-bitfields" title="Permalink to this headline">¶</a></h4>
+<p>Ad-hoc bitfields are defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">bitfield</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="p">[</span><span class="n">base</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;uint32_t&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">flag</span><span class="o">-</span><span class="n">bit</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;key1&#39;</span><span class="o">.../&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">bitfield</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In order to reference a global type, use <code class="docutils literal"><span class="pre">&lt;compound&gt;</span></code>.</p>
+</div>
+<div class="section" id="container-fields">
+<h4><a class="toc-backref" href="#id13">Container fields</a><a class="headerlink" href="#container-fields" title="Permalink to this headline">¶</a></h4>
+<p>A number of tags fall under the &#8216;container&#8217; abstraction.
+The common element is that the fields they define reference
+objects of another type. This includes things like pointers,
+arrays or vectors.</p>
+<div class="section" id="abstract-container">
+<h5><a class="toc-backref" href="#id14">Abstract container</a><a class="headerlink" href="#abstract-container" title="Permalink to this headline">¶</a></h5>
+<p>The basic syntactic property of a container is that it requires
+exactly one nested field tag in order to specify the contained item:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">field</span> <span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>NOTE:</strong> The <code class="docutils literal"><span class="pre">container</span></code> tag is used here as a placeholder for any real
+tag following the container syntax.</p>
+<p>For convenience, the following automatic rewrite rules are applied:</p>
+<ol class="arabic">
+<li><p class="first">The <code class="docutils literal"><span class="pre">type-name</span></code> attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span> <span class="o">.../&gt;</span>
+</pre></div>
+</div>
+<p>is rewritten into:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">compound</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span> <span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>or, if <em>foo</em> is a primitive type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">foo</span> <span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">The <code class="docutils literal"><span class="pre">pointer-type</span></code> attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span> <span class="o">.../&gt;</span>
+</pre></div>
+</div>
+<p>is rewritten into:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">pointer</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span> <span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Multiple nested fields:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">field1</span> <span class="o">.../&gt;</span>
+    <span class="o">&lt;</span><span class="n">field2</span> <span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>are aggregated together:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">compound</span> <span class="o">...&gt;</span>
+        <span class="o">&lt;</span><span class="n">field1</span> <span class="o">.../&gt;</span>
+        <span class="o">&lt;</span><span class="n">field2</span> <span class="o">.../&gt;</span>
+    <span class="o">&lt;/</span><span class="n">compound</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">If no item is specified, <code class="docutils literal"><span class="pre">padding</span></code> is assumed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">padding</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>NOTE:</strong> These rules are mutually exclusive, and it is an error
+to specify both of the attributes (unless it is <code class="docutils literal"><span class="pre">type-name='pointer'</span></code>),
+or combine nested fields with any of them.</p>
+<p>When the above rewrites are applied and result in creation of a new tag,
+the following attributes are copied to it from the container tag, if
+applicable: <code class="docutils literal"><span class="pre">key-field</span></code>, <code class="docutils literal"><span class="pre">refers-to</span></code>, <code class="docutils literal"><span class="pre">ref-target</span></code>, <code class="docutils literal"><span class="pre">aux-value</span></code>.
+They otherwise have no effect on the container itself.</p>
+<p>This means that:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>eventually rewrites to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">container</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">pointer</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">int32_t</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">pointer</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Abstract containers allow the following attributes:</p>
+<p><code class="docutils literal"><span class="pre">has-bad-pointers='true'</span></code></p>
+<blockquote>
+<div>Tells the GUI tool to ignore this field in some of its memory
+scans, because this container may contain invalid pointers,
+which can confuse the analysis code.</div></blockquote>
+</div>
+<div class="section" id="pointer-fields">
+<h5><a class="toc-backref" href="#id15">Pointer fields</a><a class="headerlink" href="#pointer-fields" title="Permalink to this headline">¶</a></h5>
+<p>As seen above, the <code class="docutils literal"><span class="pre">pointer</span></code> tag is a subtype of abstract container.</p>
+<p>If the pointer refers to an array of objects, instead of one instance,
+the <em>is-array</em> attribute should be used:</p>
+<blockquote>
+<div>&lt;pointer type-name=&#8217;foo&#8217; is-array=&#8217;true&#8217;/&gt;</div></blockquote>
+<p>Currently this attribute is ignored by C++ code generation, but
+the GUI tool properly displays such fields as arrays.</p>
+</div>
+<div class="section" id="abstract-sequence">
+<h5><a class="toc-backref" href="#id16">Abstract sequence</a><a class="headerlink" href="#abstract-sequence" title="Permalink to this headline">¶</a></h5>
+<p>Containers that actually contain a sequence of objects support these
+additional attributes:</p>
+<p><code class="docutils literal"><span class="pre">index-refers-to='expr'</span></code></p>
+<blockquote>
+<div><p>Specifies a GUI hyperlink from any item in the container to the
+object returned by the expression.</p>
+<p>The expression receives the index of the item in the container
+as <code class="docutils literal"><span class="pre">$</span></code>, and a reference to the container as <code class="docutils literal"><span class="pre">$$</span></code>.</p>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">index-enum='enum_type'</span></code></p>
+<blockquote>
+<div>Associates an enum with the indices of the container. The GUI
+tries to use enum item names instead of numbers when displaying
+the items, and lua may allow using strings as indices.</div></blockquote>
+</div>
+<div class="section" id="standard-containers">
+<h5><a class="toc-backref" href="#id17">Standard containers</a><a class="headerlink" href="#standard-containers" title="Permalink to this headline">¶</a></h5>
+<p><code class="docutils literal"><span class="pre">&lt;static-array</span> <span class="pre">name='id'</span> <span class="pre">count='123'</span> <span class="pre">.../&gt;</span></code></p>
+<blockquote>
+<div>Defines a simple C++ array of the specified length.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;stl-vector</span> <span class="pre">name='id'.../&gt;</span></code></p>
+<blockquote>
+<div>Defines an <code class="docutils literal"><span class="pre">std::vector&lt;item&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;stl-deque</span> <span class="pre">name='id'.../&gt;</span></code></p>
+<blockquote>
+<div>Defines an <code class="docutils literal"><span class="pre">std::deque&lt;item&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;stl-set</span> <span class="pre">name='id'.../&gt;</span></code></p>
+<blockquote>
+<div>Defines an <code class="docutils literal"><span class="pre">std::set&lt;item&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;stl-bit-vector</span> <span class="pre">name='id'.../&gt;</span></code></p>
+<blockquote>
+<div><p>Defines an <code class="docutils literal"><span class="pre">std::vector&lt;bool&gt;</span></code> field.</p>
+<p>STL defines <code class="docutils literal"><span class="pre">vector&lt;bool&gt;</span></code> as a special type that actually contains bits.
+These XML definitions use a separate tag for it; <code class="docutils literal"><span class="pre">&lt;stl-vector</span> <span class="pre">type-name='bool'/&gt;</span></code>
+is rendered into C++ as <code class="docutils literal"><span class="pre">vector&lt;char&gt;</span></code>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="df-specific-containers">
+<h5><a class="toc-backref" href="#id18">DF-specific containers</a><a class="headerlink" href="#df-specific-containers" title="Permalink to this headline">¶</a></h5>
+<p>These are defined in df-code.lisp:</p>
+<p><code class="docutils literal"><span class="pre">&lt;df-flagarray</span> <span class="pre">name='id'</span> <span class="pre">index-enum='enum'/&gt;</span></code></p>
+<blockquote>
+<div>Defines a <code class="docutils literal"><span class="pre">BitArray&lt;enum&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;df-static-flagarray</span> <span class="pre">name='id'</span> <span class="pre">index-enum='enum'</span> <span class="pre">count='numbytes'/&gt;</span></code></p>
+<blockquote>
+<div>Defines a <code class="docutils literal"><span class="pre">StaticBitArray&lt;numbytes,enum&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;df-array</span> <span class="pre">name='id'</span> <span class="pre">.../&gt;</span></code></p>
+<blockquote>
+<div>Defines a <code class="docutils literal"><span class="pre">DfArray&lt;item&gt;</span></code> field.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">&lt;df-linked-list</span> <span class="pre">name='id'</span> <span class="pre">type-name='foo_link'/&gt;</span></code></p>
+<blockquote>
+<div><p>Defines an ad-hoc DF-style linked list. In C++ actually equivalent to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">compound</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo_link&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>but allows the GUI to display it as a list.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="class-type-definition">
+<h3><a class="toc-backref" href="#id19">Class type definition</a><a class="headerlink" href="#class-type-definition" title="Permalink to this headline">¶</a></h3>
+<p>In the context of these XML definitions, class denotes types with virtual methods:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">class</span><span class="o">-</span><span class="nb">type</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span>
+           <span class="p">[</span><span class="n">inherits</span><span class="o">-</span><span class="n">from</span><span class="o">=</span><span class="s1">&#39;class_type&#39;</span><span class="p">]</span>
+           <span class="p">[</span><span class="n">original</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;vtable_name&#39;</span><span class="p">]</span>
+           <span class="o">...&gt;</span>
+    <span class="o">...</span>
+    <span class="n">fields</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">virtual</span><span class="o">-</span><span class="n">methods</span><span class="o">&gt;</span>
+        <span class="o">...</span>
+        <span class="n">vmethods</span>
+        <span class="o">...</span>
+    <span class="o">&lt;/</span><span class="n">virtual</span><span class="o">-</span><span class="n">methods</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">class</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Classes are generally the same as <code class="docutils literal"><span class="pre">&lt;struct-type&gt;</span></code>, including support for <em>instance-vector</em>.
+Unlike <code class="docutils literal"><span class="pre">&lt;struct-type&gt;</span></code> however, they don&#8217;t allow <code class="docutils literal"><span class="pre">is-union='true'</span></code>.</p>
+<p>There may only be one table of virtual methods per class-type. In subclasses it
+should only contain items added to the table of the superclass.</p>
+<div class="section" id="virtual-method-definition">
+<h4><a class="toc-backref" href="#id20">Virtual method definition</a><a class="headerlink" href="#virtual-method-definition" title="Permalink to this headline">¶</a></h4>
+<p>Virtual method definitions are placed within the <code class="docutils literal"><span class="pre">&lt;virtual-methods&gt;</span></code>
+section of a class type. No other tag may be placed within that section,
+including <em>comment</em>.</p>
+<p>A virtual destructor is defined as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">vmethod</span> <span class="ow">is</span><span class="o">-</span><span class="n">destructor</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>Ordinary virtual methods use the following syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">vmethod</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="p">[</span><span class="n">ret</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">&lt;</span><span class="n">ret</span><span class="o">-</span><span class="nb">type</span> <span class="o">.../&gt;</span><span class="p">]</span>
+    <span class="o">&lt;</span><span class="n">field1</span><span class="o">.../&gt;</span>
+    <span class="o">&lt;</span><span class="n">field2</span><span class="o">.../&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">vmethod</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The return type may be specified either as an attribute, or via a <code class="docutils literal"><span class="pre">ret-type</span></code> sub-tag.
+The subtag syntax follows the abstract container model outlined above. The attribute is
+exactly equivalent to <code class="docutils literal"><span class="pre">&lt;ret-type</span> <span class="pre">type-name='type'/&gt;</span></code> as subtag. If the return type is
+completely omitted, it is taken to be void.</p>
+<p>Ordinary field definition tags within the vmethod tag are treated as method parameters.</p>
+<p>If the <em>name</em> attribute is omitted, the vmethod is named randomly and made protected,
+so that calling it is impossible. This is the intended way of providing placeholders
+for completely unknown slots in the vtable.</p>
+</div>
+</div>
+<div class="section" id="global-object-definition">
+<h3><a class="toc-backref" href="#id21">Global object definition</a><a class="headerlink" href="#global-object-definition" title="Permalink to this headline">¶</a></h3>
+<p>Global objects are global pointers that are initialized from symbols.xml at runtime.
+Therefore, the tag itself is identical in syntax to <code class="docutils literal"><span class="pre">&lt;pointer&gt;</span></code>, except that it
+doesn&#8217;t allow <em>is-array</em>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="k">global</span><span class="o">-</span><span class="nb">object</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="k">global</span><span class="o">-</span><span class="nb">object</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">field</span><span class="o">.../&gt;</span>
+<span class="o">&lt;/</span><span class="k">global</span><span class="o">-</span><span class="nb">object</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>C++ generation places them in the <code class="docutils literal"><span class="pre">df::global</span></code> namespace.</p>
+<p>The <em>offset</em> attribute of the <code class="docutils literal"><span class="pre">global-object</span></code> tag represents the absolute
+address. As noted above, it may only be used in files intended for the GUI.</p>
+</div>
+<div class="section" id="symbol-table-definition">
+<h3><a class="toc-backref" href="#id22">Symbol table definition</a><a class="headerlink" href="#symbol-table-definition" title="Permalink to this headline">¶</a></h3>
+<p>Symbol tables are defined in symbols.xml and loaded at runtime.
+They define locations of global objects and virtual tables.</p>
+<p>The definition syntax is as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">symbol</span><span class="o">-</span><span class="n">table</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;...&#39;</span> <span class="n">os</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">md5</span><span class="o">-</span><span class="nb">hash</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">binary</span><span class="o">-</span><span class="n">timestamp</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;0x...&#39;</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+
+    <span class="o">&lt;</span><span class="k">global</span><span class="o">-</span><span class="n">address</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;...&#39;</span> <span class="p">[</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;0x...&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+
+    <span class="o">&lt;</span><span class="n">vtable</span><span class="o">-</span><span class="n">address</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;...&#39;</span> <span class="p">[</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;0x...&#39;</span><span class="p">]</span><span class="o">/&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">symbol</span><span class="o">-</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The <em>name</em> attribute specifies an unique name of the symbol table.
+<em>os-type</em> specifies the applicable OS type, and must be one of
+<code class="docutils literal"><span class="pre">windows</span></code>, <code class="docutils literal"><span class="pre">linux</span></code>, <code class="docutils literal"><span class="pre">darwin</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">&lt;md5-hash&gt;</span></code> tag specifies the MD5 hash that is used to match
+the executable on Linux and OS/X. It will be ignored if used in a
+windows symbol table. Likewise, <code class="docutils literal"><span class="pre">&lt;binary-timestamp&gt;</span></code> is valid only
+for matching EXE files. A symbol table may contain multiple tags
+in order to match several executables; this is especially useful with
+MD5 hashes, which change with patching.</p>
+<p>Global object addresses are specified with <code class="docutils literal"><span class="pre">&lt;global-address&gt;</span></code> tags.
+Virtual method table addresses may be pre-initialized with <code class="docutils literal"><span class="pre">&lt;vtable-address&gt;</span></code> tags.</p>
+<p>It is allowed to specify addresses for objects and vtables that are otherwise
+not defined. Obviously, such values can only be used by directly quering the
+VersionInfo object in dfhack.</p>
+</div>
+</div>
+<div class="section" id="lisp-integration">
+<h2><a class="toc-backref" href="#id23">Lisp Integration</a><a class="headerlink" href="#lisp-integration" title="Permalink to this headline">¶</a></h2>
+<p>This XML file format was designed together with the <code class="docutils literal"><span class="pre">cl-linux-debug</span></code>
+Lisp tool, and has a number of aspects that closely integrate with
+its internals.</p>
+<p>For instance, when loaded by that tool, all XML tags are converted
+directly into instances of classes that exactly match the name of
+the tag, and when the documentation above mentions expressions, that
+refers to Lisp expressions within the context of that library.</p>
+<div class="section" id="reference-expressions">
+<h3><a class="toc-backref" href="#id24">Reference expressions</a><a class="headerlink" href="#reference-expressions" title="Permalink to this headline">¶</a></h3>
+<p>In order to facilitate compact representation for long chains of
+dereferences that are commonly required when dealing with the data
+structures, <code class="docutils literal"><span class="pre">cl-linux-debug</span></code> defines a reader macro (i.e. basically
+a parser plugin) that adds a custom syntax for them. This syntax is
+triggered by special characters <code class="docutils literal"><span class="pre">$</span></code> and <code class="docutils literal"><span class="pre">&#64;</span></code>.</p>
+<p>Expressions written in that syntax expand into nested chains of
+calls to two generic functions named <code class="docutils literal"><span class="pre">$</span></code> and <code class="docutils literal"><span class="pre">&#64;</span></code>, which implement
+correspondingly r-value and l-value dereference of their first
+argument using the second.</p>
+<div class="section" id="dereference-syntax">
+<h4><a class="toc-backref" href="#id25">Dereference syntax</a><a class="headerlink" href="#dereference-syntax" title="Permalink to this headline">¶</a></h4>
+<p>The reader macro understands the following syntactic patterns:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;</span></code>, <code class="docutils literal"><span class="pre">$</span></code>, <code class="docutils literal"><span class="pre">$$</span></code>, <code class="docutils literal"><span class="pre">$$$</span></code>, ...</p>
+<p>Lone <code class="docutils literal"><span class="pre">&#64;</span></code> and sequences of <code class="docutils literal"><span class="pre">$</span></code> are parsed just as the ordinary lisp
+parser would. This allows referring to the <code class="docutils literal"><span class="pre">$</span></code> and <code class="docutils literal"><span class="pre">&#64;</span></code> functions,
+and using sequences of <code class="docutils literal"><span class="pre">$</span></code> characters as implicit argument names.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo</span></code></p>
+<p>A case-sensitive identifier preceeded by the <code class="docutils literal"><span class="pre">$</span></code> character
+is interned in the <code class="docutils literal"><span class="pre">cl-linux-debug.field-names</span></code> package as-is,
+and returned as the parsing result. The identifier may consist
+of letters, numbers, and <code class="docutils literal"><span class="pre">-</span></code> or <code class="docutils literal"><span class="pre">_</span></code> characters.</p>
+<p>The symbol is exported from its package and defined as a symbol
+macro expanding to <code class="docutils literal"><span class="pre">'$foo</span></code>, and thus behaves as a case-sensitive
+keyword (which however can be used as a lexical variable name).
+All field &amp; type names and other identifiers in the XML definitions
+are loaded into memory as such symbols.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo:bar</span></code></p>
+<p>This expands into <code class="docutils literal"><span class="pre">'($foo</span> <span class="pre">.</span> <span class="pre">$bar)</span></code>; such pairs of identifiers
+are used in some special contexts.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo.bar</span></code>, <code class="docutils literal"><span class="pre">&#64;foo.bar</span></code></p>
+<p>These expressions expand to correspondingly <code class="docutils literal"><span class="pre">($</span> <span class="pre">foo</span> <span class="pre">'$bar)</span></code> and
+<code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">foo</span> <span class="pre">'$bar)</span></code>, representing thus r-value or l-value dereference
+of variable foo with literal key <code class="docutils literal"><span class="pre">$bar</span></code>.</p>
+<p>The name <code class="docutils literal"><span class="pre">foo</span></code> may only contain characters listed above, but is
+otherwise separated and parsed with the regular lisp parser.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo.*</span></code>, <code class="docutils literal"><span class="pre">$foo[*]</span></code>, <code class="docutils literal"><span class="pre">$foo.&#64;</span></code>, <code class="docutils literal"><span class="pre">$foo[&#64;]</span></code>, <code class="docutils literal"><span class="pre">&#64;foo.*</span></code> ...</p>
+<p>These expand to <code class="docutils literal"><span class="pre">($</span> <span class="pre">foo</span> <span class="pre">'*)</span></code>, <code class="docutils literal"><span class="pre">($</span> <span class="pre">foo</span> <span class="pre">'&#64;)</span></code> etc, thus effectively
+being a special case of dereference via a literal field name.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo[expr]</span></code>, <code class="docutils literal"><span class="pre">&#64;foo[expr]</span></code></p>
+<p>These expressions expand to correspondingly <code class="docutils literal"><span class="pre">($</span> <span class="pre">foo</span> <span class="pre">expr)</span></code> and <code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">foo</span> <span class="pre">expr)</span></code>,
+and are useful for accessing array elements.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$foo.xxx[yyy].zzz</span></code></p>
+<p>When dereference clauses are chained, they expand into nested calls to <code class="docutils literal"><span class="pre">$</span></code> and <code class="docutils literal"><span class="pre">&#64;</span></code>,
+with the outermost depending on the first character, and all the inner ones being <code class="docutils literal"><span class="pre">&#64;</span></code>.</p>
+<p>This example expands to: <code class="docutils literal"><span class="pre">($</span> <span class="pre">(&#64;</span> <span class="pre">(&#64;</span> <span class="pre">foo</span> <span class="pre">'$xxx)</span> <span class="pre">yyy)</span> <span class="pre">'$zzz)</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;$$foo.bar</span></code>, <code class="docutils literal"><span class="pre">$$$foo.bar</span></code></p>
+<p>When the expression contains multiple initial <code class="docutils literal"><span class="pre">$</span></code> characters, all but the first one
+are prepended to the initial variable name.</p>
+<p>These examples expand to <code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">$$foo</span> <span class="pre">'$bar)</span></code> and <code class="docutils literal"><span class="pre">($</span> <span class="pre">$$foo</span> <span class="pre">'$bar)</span></code></p>
+<p><strong>NOTE:</strong> Only the <code class="docutils literal"><span class="pre">$</span></code> character may be used in this way; <code class="docutils literal"><span class="pre">$&#64;&#64;foo.bar</span></code> is invalid.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$.foo</span></code>, <code class="docutils literal"><span class="pre">&#64;$[bar]</span></code>, ...</p>
+<p>If the expression contains no initial identifier, the initial <code class="docutils literal"><span class="pre">$</span></code> sequence is used
+as one instead (after replacing <code class="docutils literal"><span class="pre">&#64;</span></code> with <code class="docutils literal"><span class="pre">$</span></code> if necessary).</p>
+<p>These examples expand to: <code class="docutils literal"><span class="pre">($</span> <span class="pre">$</span> <span class="pre">'$foo)</span></code>, <code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">$$</span> <span class="pre">bar)</span></code>.</p>
+<p><strong>NOTE:</strong> Unlike the previous syntax pattern, this one uses <em>all</em> of the initial
+<code class="docutils literal"><span class="pre">$</span></code> and <code class="docutils literal"><span class="pre">&#64;</span></code> characters.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$(func</span> <span class="pre">arg</span> <span class="pre">arg...).bar</span></code></p>
+<p>If one initial <code class="docutils literal"><span class="pre">$</span></code> or <code class="docutils literal"><span class="pre">&#64;</span></code> is immediately followed by parentheses, the contents of said
+parentheses are parsed as ordinary lisp code and used instead of the initial variable.</p>
+<p>The example expands to: <code class="docutils literal"><span class="pre">($</span> <span class="pre">(func</span> <span class="pre">arg</span> <span class="pre">arg...)</span> <span class="pre">'$bar)</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;$(foo</span> <span class="pre">bar</span> <span class="pre">baz)</span></code></p>
+<p>If an initial <code class="docutils literal"><span class="pre">&#64;</span></code> is followed by one or more <code class="docutils literal"><span class="pre">$</span></code> characters and then parentheses,
+it is parsed as a lambda expression (anonymous function) with one argument consisting
+of those <code class="docutils literal"><span class="pre">$</span></code> characters.</p>
+<p>This example expands to: <code class="docutils literal"><span class="pre">(lambda</span> <span class="pre">($)</span> <span class="pre">(foo</span> <span class="pre">bar</span> <span class="pre">baz))</span></code></p>
+<p><strong>NOTE:</strong> it is an error to use multiple initial <code class="docutils literal"><span class="pre">$</span></code> characters without <code class="docutils literal"><span class="pre">&#64;</span></code> like
+this: <code class="docutils literal"><span class="pre">$$$(...)...</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="basic-properties">
+<h4><a class="toc-backref" href="#id26">Basic properties</a><a class="headerlink" href="#basic-properties" title="Permalink to this headline">¶</a></h4>
+<p>As described above, dereference is actually implemented by two generic functions,
+<code class="docutils literal"><span class="pre">&#64;</span></code> and <code class="docutils literal"><span class="pre">$</span></code>, which implement l-value and r-value dereference.</p>
+<p>They are defined as such:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(defgeneric @ (obj key))
+(defgeneric $ (obj key))
+(defgeneric (setf $) (obj key))
+</pre></div>
+</div>
+<p>Generally, l-value dereference returns an object that can be dereferenced further.
+R-value dereference with the same arguments may return the same object as l-value,
+or a simple scalar value, depending on the context.</p>
+<p>Perhaps oppositely to the used terms, only the r-value dereference function may be
+used as the <em>syntactic</em> target of assignment; this is because you can&#8217;t actually change
+the (conceptual) address of an object, only its contents; and l-value dereference
+returns an address. I.e. in C++ you can write <code class="docutils literal"><span class="pre">*a</span> <span class="pre">=</span> <span class="pre">...</span></code>, but can&#8217;t do <code class="docutils literal"><span class="pre">&amp;a</span> <span class="pre">=</span> <span class="pre">...</span></code>.</p>
+<p>Any of the dereference functions may return a list to represent multiple possible
+values. Array objects often define <code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">foo</span> <span class="pre">'*)</span></code> to return all of the elements.</p>
+<p>If either the obj or key argument of any of the functions is a list (including <em>NIL</em>
+as empty list), the functions loop over the list, and return a concatenation of the
+resulting return value lists. This allows using <code class="docutils literal"><span class="pre">$array.*.field</span></code> to get a list of
+all values of a field within array elements.</p>
+<p><code class="docutils literal"><span class="pre">($</span> <span class="pre">obj</span> <span class="pre">t)</span></code> is defined as the <em>natural</em> value of an object; e.g. if obj is a
+reference to a numeric field, this will be its value. By default it is equal to
+the object itself. <code class="docutils literal"><span class="pre">($</span> <span class="pre">obj</span> <span class="pre">key)</span></code> for any other key would fall back to
+<code class="docutils literal"><span class="pre">($</span> <span class="pre">(&#64;</span> <span class="pre">obj</span> <span class="pre">key)</span> <span class="pre">t)</span></code> if no special handler for <code class="docutils literal"><span class="pre">$</span></code> with that key and
+object was defined.</p>
+</div>
+</div>
+<div class="section" id="reference-objects">
+<h3><a class="toc-backref" href="#id27">Reference objects</a><a class="headerlink" href="#reference-objects" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">cl-linux-debug</span></code> library represents typed pointers to objects in memory
+as objects of the <code class="docutils literal"><span class="pre">memory-object-ref</span></code> type.</p>
+<p>Along with the expected address and type of the pointer, these objects also
+retain a history of dereferences that have led to this particular pointer,
+and define virtual fields to access this information. This history is similar
+to what the Back button in a browser uses.</p>
+<p>All references by default have the following properties:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.value</span></code></p>
+<p>By default returns ref itself. May be hidden by struct fields and index-enum keys.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref[integer]</span></code></p>
+<p>Returns a reference to address + size*int, i.e. offsets the pointer.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.*</span></code></p>
+<p>Returns a list of contained collection elements. By default empty.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.&#64;</span></code></p>
+<p>Returns a list of subfields. By default empty.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref._parent</span></code></p>
+<p>Returns the previous reference in the &#8220;back&#8221; chain.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref._global</span></code></p>
+<p>Returns the nearest reference in the &#8220;back&#8221; chain that has a globally
+named type, i.e. one defined by a <code class="docutils literal"><span class="pre">struct-type</span></code>, <code class="docutils literal"><span class="pre">class-type</span></code> etc,
+and not by any nested substructures. This may return the ref itself.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref._upglobal</span></code></p>
+<p>Exactly equivalent to <code class="docutils literal"><span class="pre">&#64;ref._parent._global</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref._address</span></code></p>
+<p>Returns the numeric address embedded in the ref.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref._size</span></code></p>
+<p>Returns the size of the object pointed to.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref._key</span></code></p>
+<p>Returns the key that was used to get this ref from the parent.
+This is not guaranteed to be precisely accurate, but e.g. for
+array elements this will be the array index.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref._type</span></code></p>
+<p>For globally named types, returns their type name.</p>
+</li>
+</ul>
+<div class="section" id="primitive-types">
+<h4><a class="toc-backref" href="#id28">Primitive types</a><a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h4>
+<p>Primitive types define the following methods:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref[t]</span></code></p>
+<p>The natural value of a primitive field is the scalar non-reference value it contains.</p>
+<p><strong>NOTE:</strong> When you write <code class="docutils literal"><span class="pre">$struct.field</span></code>, it will evaluate via <code class="docutils literal"><span class="pre">($</span> <span class="pre">&#64;struct.field</span> <span class="pre">t)</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.refers-to</span></code>, <code class="docutils literal"><span class="pre">&#64;ref.ref-target</span></code></p>
+<p>If the field has the relevant attributes, they can be dereferenced to retrieve the target objects.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="enums">
+<h4><a class="toc-backref" href="#id29">Enums</a><a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h4>
+<p>Enum fields return their value as symbols, and allow access to attributes:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref[t]</span></code></p>
+<p>Returns the symbol matching the value, unless there is none. May be assigned both as symbol or number.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref.attribute</span></code></p>
+<p>If the enum has an attribute with that name, retrieves its value for the current value of the field.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="pointers">
+<h4><a class="toc-backref" href="#id30">Pointers</a><a class="headerlink" href="#pointers" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref[t]</span></code>, <code class="docutils literal"><span class="pre">&#64;ref[t]</span></code>, <code class="docutils literal"><span class="pre">$ref._target</span></code>, <code class="docutils literal"><span class="pre">&#64;ref._target</span></code></p>
+<p>These all return the value of the pointer, i.e. a reference to the target object.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">($</span> <span class="pre">ref</span> <span class="pre">key)</span></code> -&gt; <code class="docutils literal"><span class="pre">($</span> <span class="pre">(&#64;</span> <span class="pre">ref</span> <span class="pre">t)</span> <span class="pre">key)</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">ref</span> <span class="pre">key)</span></code> -&gt; <code class="docutils literal"><span class="pre">(&#64;</span> <span class="pre">(&#64;</span> <span class="pre">ref</span> <span class="pre">t)</span> <span class="pre">key)</span></code></p>
+<p>All dereferences not explicitly supported are delegated to the target object.
+This means that for most properties pointers are completely transparent; notable
+exceptions are pointers to pointers, and pointers to primitive fields where you
+have to use e.g. <code class="docutils literal"><span class="pre">$struct.ptrfield.value</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="compounds">
+<h4><a class="toc-backref" href="#id31">Compounds</a><a class="headerlink" href="#compounds" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.field</span></code>, <code class="docutils literal"><span class="pre">&#64;ref._fields.field</span></code></p>
+<p>Returns a reference to the given field.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.*</span></code>, <code class="docutils literal"><span class="pre">&#64;ref.&#64;</span></code></p>
+<p>Returns a list of references to all fields. Note that if the object is both an
+implicit compound and a sequence, <code class="docutils literal"><span class="pre">&#64;ref.*</span></code> will returns the sequence items as
+described below.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="sequences">
+<h4><a class="toc-backref" href="#id32">Sequences</a><a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref[int]</span></code></p>
+<p>Returns a reference to the Nth item of the sequence.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref[symbol]</span></code></p>
+<p>If the sequence has an <code class="docutils literal"><span class="pre">index-enum</span></code>, its items can be accessed by symbolic names.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.*</span></code></p>
+<p>Returns a list of all items of the sequence.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref._items</span></code></p>
+<p>Returns the items of the sequence as a special lazy object, intended to optimize
+some things in the GUI.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;ref.index-refers-to[int]</span></code></p>
+<p>If the sequence has the relevant attribute, returns the target for the given index.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref.count</span></code></p>
+<p>Returns the number of items in the sequence.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$ref.has-items</span></code></p>
+<p>Checks if the sequence has any items, and returns T or NIL.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="code-helpers">
+<h3><a class="toc-backref" href="#id33">Code helpers</a><a class="headerlink" href="#code-helpers" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">&lt;code-helper&gt;</span></code> tag may be used to add lisp code fragments
+to the objects defined in the xml. The <code class="docutils literal"><span class="pre">refers-to</span></code>, <code class="docutils literal"><span class="pre">index-refers-to</span></code>
+and <code class="docutils literal"><span class="pre">ref-target</span></code> tags are also converted to code helpers internally,
+and you can use e.g. <code class="docutils literal"><span class="pre">&lt;code-helper</span> <span class="pre">name='refers-to'&gt;...&lt;/code-helper&gt;</span></code>
+instead of the attribute if your expression is too long for it.</p>
+<p>There are two features that can only be implemented via explicit
+<code class="docutils literal"><span class="pre">&lt;code-helper&gt;</span></code> tags:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&lt;code-helper</span> <span class="pre">name='describe'&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/code-helper&gt;</span></code></p>
+<p>This specifies a piece of code that is called to supply additional
+informational items for the rightmost column of the table in the GUI
+tool. The code should return a string, or a list of strings.</p>
+<p>As with <code class="docutils literal"><span class="pre">refers-to</span></code>, the code receives the value of the object
+as <code class="docutils literal"><span class="pre">$</span></code>, and the reference to the object in <code class="docutils literal"><span class="pre">$$</span></code> (i.e. <code class="docutils literal"><span class="pre">$</span></code> is
+equal to <code class="docutils literal"><span class="pre">$$[t]</span></code>).</p>
+<p>The <code class="docutils literal"><span class="pre">(describe-obj</span> <span class="pre">object)</span></code> function can be used to call the same
+describe mechanism on another object, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;code-helper name=&#39;describe&#39;&gt; (describe-obj $.name) &lt;/code-helper&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&lt;code-helper</span> <span class="pre">name='find-instance'&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/code-helper&gt;</span></code></p>
+<p>If the <code class="docutils literal"><span class="pre">instance-vector</span></code> and <code class="docutils literal"><span class="pre">key-field</span></code> attributes are not descriptive
+enough to specify how to find an instance of the object by id, you can explicitly
+define this helper to be used by <code class="docutils literal"><span class="pre">ref-target</span></code> links elsewhere.</p>
+<p>It receives the value of the <code class="docutils literal"><span class="pre">ref-target</span></code> bearing field as <code class="docutils literal"><span class="pre">$</span></code>,
+and its <code class="docutils literal"><span class="pre">aux-value</span></code> as <code class="docutils literal"><span class="pre">$$</span></code>.</p>
+<p>Other than via <code class="docutils literal"><span class="pre">ref-target</span></code>, you can invoke this mechanism explicitly using
+the <code class="docutils literal"><span class="pre">(find-instance</span> <span class="pre">class</span> <span class="pre">key</span> <span class="pre">aux-key)</span></code> function, even from a <code class="docutils literal"><span class="pre">find-instance</span></code>
+helper for another type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;code-helper name=&#39;find-instance&#39;&gt;$(find-instance $art_image_chunk $$).images[$]&lt;/code-helper&gt;
+</pre></div>
+</div>
+<p>This finds an instance of the <code class="docutils literal"><span class="pre">art_image_chunk</span></code> type using the aux-value <code class="docutils literal"><span class="pre">$$</span></code>,
+and then returns an element of its <code class="docutils literal"><span class="pre">images</span></code> sub-array using the main value <code class="docutils literal"><span class="pre">$</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3><a class="toc-backref" href="#id34">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;global.*</span></code></p>
+<p>The global variable &#8216;global&#8217; contains a special compound that contains
+all known global objects. This expressions retrieves a list of refs to
+all of them.</p>
+<p>Using <code class="docutils literal"><span class="pre">$global.*</span></code> would return values for the primitive ones instead
+of refs, and is not that useful.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">$global.world.units.all[0].id</span></code></p>
+<p>This expression is syntactically parsed into the following sequence:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tmp = global
+tmp = @tmp.world  ; the world global ref
+tmp = @tmp.units  ; the units field ref
+tmp = @tmp.all    ; the all vector ref
+tmp = @tmp[0]     ; the first unit object pointer ref
+$tmp.id
+</pre></div>
+</div>
+<p>The only non-trivial step here is the last one. The last value of
+tmp is a reference to a pointer, and as described above, it delegates
+anything it does not directly understand to its target, adding an
+implicit step at runtime:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>unit = @tmp._target
+$unit.id
+</pre></div>
+</div>
+<p>A unit object does not define <code class="docutils literal"><span class="pre">$unit.id</span></code> directly either, so the
+final step falls back to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>idref = @unit.id
+($ idref t)
+</pre></div>
+</div>
+<p>which retrieves a reference to the <code class="docutils literal"><span class="pre">id</span></code> field, and then evaluates
+its natural value.</p>
+<p>The result is that the expression returns the id value of the first
+unit in the vector as would be naturally expected.</p>
+<p>Using <code class="docutils literal"><span class="pre">&#64;global.world.units.all[0].id</span></code> would have used <code class="docutils literal"><span class="pre">&#64;tmp.id</span></code> as
+the last step, which would have skipped the <code class="docutils literal"><span class="pre">($</span> <span class="pre">idref</span> <span class="pre">t)</span></code> call and
+returned a reference to the field.</p>
+</li>
+<li><p class="first">A simple <code class="docutils literal"><span class="pre">index-refers-to</span></code> example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;created_weapons&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span>
+            <span class="n">index</span><span class="o">-</span><span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$global.world.raws.itemdefs.weapons[$]&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>This is used to define a vector with counts of created weapons.</p>
+<p>When it is displayed in the GUI, the tool evaluates the <code class="docutils literal"><span class="pre">index-refers-to</span></code>
+expression for every vector element, giving it the <em>element index</em>
+as <code class="docutils literal"><span class="pre">$</span></code>, and a reference to the vector itself as <code class="docutils literal"><span class="pre">$$</span></code> (here unused).</p>
+<p>The expression straightforwardly uses that index to access another
+global vector and return one of its elements. It is then used by the
+GUI to add additional information to the info column.</p>
+</li>
+<li><p class="first">An example of <code class="docutils literal"><span class="pre">refers-to</span></code> and <code class="docutils literal"><span class="pre">_parent</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">compound</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;burrows&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;list&#39;</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;burrow&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">int32_t</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sel_index&#39;</span> <span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent.list[$]&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">compound</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This fragment of XML defines a compound with two fields, a vector and an int,
+which has a <code class="docutils literal"><span class="pre">refers-to</span></code> attribute. When that field is displayed in the GUI,
+it evaluates the expression in the attribute, giving it the <em>integer value</em>
+as <code class="docutils literal"><span class="pre">$</span></code>, and a <em>reference</em> to the integer field as <code class="docutils literal"><span class="pre">$$</span></code>.</p>
+<p>The expression parses as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tmp = $$            ; reference to the int32_t field
+tmp = @tmp._parent
+tmp = @tmp.list
+$tmp[$]
+</pre></div>
+</div>
+<p>Since the only way the GUI could get a reference to the field was to evaluate
+<code class="docutils literal"><span class="pre">&#64;ref-to-burrows.sel_index</span></code>, that previous reference is stored in its &#8220;back&#8221;
+list, and <code class="docutils literal"><span class="pre">&#64;tmp._parent</span></code> retrieves it. After that everything is simple.</p>
+</li>
+<li><p class="first">An example of <code class="docutils literal"><span class="pre">ref-target</span></code> with <code class="docutils literal"><span class="pre">aux-value</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">int32_t</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;race&#39;</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;creature_raw&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">int16_t</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;caste&#39;</span> <span class="n">ref</span><span class="o">-</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;caste_raw&#39;</span> <span class="n">aux</span><span class="o">-</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;$$.race&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">race</span></code> field just specifies a type as <code class="docutils literal"><span class="pre">ref-target</span></code>, so the
+reference simply evaluates the <code class="docutils literal"><span class="pre">find-instance</span></code> helper of the
+<code class="docutils literal"><span class="pre">creature_raw</span></code>, passing it the race value as <code class="docutils literal"><span class="pre">$</span></code>.</p>
+<p>In order to find the caste however, you need to first find a creature,
+which requires a race value. This value is supplied via the <code class="docutils literal"><span class="pre">aux-value</span></code>
+attribute into the <code class="docutils literal"><span class="pre">$$</span></code> argument to <code class="docutils literal"><span class="pre">find-instance</span></code>.</p>
+<p>Since the value of the <code class="docutils literal"><span class="pre">caste</span></code> field will be passed through to the
+helper anyway, when evaluating <code class="docutils literal"><span class="pre">aux-value</span></code> the <code class="docutils literal"><span class="pre">$</span></code> argument is set
+to a <em>reference</em> to the holding field, and <code class="docutils literal"><span class="pre">$$</span></code> is set to its <code class="docutils literal"><span class="pre">_parent</span></code>.
+This means that <code class="docutils literal"><span class="pre">$$.race</span></code> in the context of <code class="docutils literal"><span class="pre">aux-value</span></code> is equivalent
+to <code class="docutils literal"><span class="pre">$$._parent.race</span></code> in the context of <code class="docutils literal"><span class="pre">refers-to</span></code>.</p>
+</li>
+<li><p class="first">A complex example of cross-references between arrays:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">struct</span><span class="o">-</span><span class="nb">type</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;caste_raw&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">compound</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;body_info&#39;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;body_parts&#39;</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;body_part_raw&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">compound</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">compound</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;bp_appearance&#39;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;modifiers&#39;</span> <span class="n">pointer</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;bp_appearance_modifier&#39;</span><span class="o">/&gt;</span>
+
+        <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;modifier_idx&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;int32_t&#39;</span>
+                    <span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent._parent.modifiers[$]&#39;</span>
+                    <span class="n">index</span><span class="o">-</span><span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent.part_idx[$].refers-to&#39;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;part_idx&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;int16_t&#39;</span>
+                    <span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._global.body_info.body_parts[$]&#39;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;layer_idx&#39;</span> <span class="nb">type</span><span class="o">-</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;int16_t&#39;</span>
+                    <span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent._parent.part_idx[$$._key].refers-to.layers[$]&#39;</span>
+                    <span class="n">index</span><span class="o">-</span><span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent.part_idx[$].refers-to&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="n">compound</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">struct</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In order to understand this example it is first necessary to understand
+that <code class="docutils literal"><span class="pre">refers-to</span></code> specified on a vector is actually transplanted onto the
+implicitly constructed element tag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;part_idx&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">int16_t</span> <span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._global.body_info.body_parts[$]&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">stl</span><span class="o">-</span><span class="n">vector</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Therefore, <code class="docutils literal"><span class="pre">$$</span></code> is a reference to the <code class="docutils literal"><span class="pre">&lt;int16_t&gt;</span></code> field,
+<code class="docutils literal"><span class="pre">$$._parent</span></code> is a reference to the vector, <code class="docutils literal"><span class="pre">$$._parent._parent</span></code>
+is a reference to the <code class="docutils literal"><span class="pre">bp_appearance</span></code> compound, etc.</p>
+<p>The <code class="docutils literal"><span class="pre">$$._global...</span></code> works as an abbreviation that applies <code class="docutils literal"><span class="pre">_parent</span></code>
+until it reaches a globally defined type, which in this case is the
+current instance of the <code class="docutils literal"><span class="pre">caste_raw</span></code> struct.</p>
+<p><strong>NOTE:</strong> <code class="docutils literal"><span class="pre">$$._global._global</span></code> is the same as <code class="docutils literal"><span class="pre">$$._global</span></code>, i.e.
+repeated <code class="docutils literal"><span class="pre">_global</span></code> is a no-op. The latest version supports <code class="docutils literal"><span class="pre">_upglobal</span></code>,
+which is equivalent to <code class="docutils literal"><span class="pre">_parent._global</span></code>.</p>
+<p>Thus, the <code class="docutils literal"><span class="pre">refers-to</span></code> link on the <code class="docutils literal"><span class="pre">part_idx</span></code> vector evaluates to
+the element of the <code class="docutils literal"><span class="pre">body_parts</span></code> vector, indexed by the <em>value</em> of the
+current <code class="docutils literal"><span class="pre">part_idx</span></code> vector item.</p>
+<p>Likewise, the <code class="docutils literal"><span class="pre">refers-to</span></code> link on the <code class="docutils literal"><span class="pre">modifier_idx</span></code> vector goes
+back to the <code class="docutils literal"><span class="pre">bp_appearance</span></code> compound, and descends into the <code class="docutils literal"><span class="pre">modifiers</span></code>
+vector, using the value of the current item.</p>
+<p>The <code class="docutils literal"><span class="pre">index-refers-to</span></code> link on the same <code class="docutils literal"><span class="pre">modifier_idx</span></code> vector
+highlights the shared indexing relation between the bottom vectors
+by linking to the part_idx vector via the current item <em>index</em>.
+Since this attribute is hosted by the vector itself, <code class="docutils literal"><span class="pre">$$</span></code> points
+at the vector, and only one <code class="docutils literal"><span class="pre">_parent</span></code> is needed to reach
+<code class="docutils literal"><span class="pre">bp_appearance</span></code>.</p>
+<p>This link also demonstrates how the defined relations can be reused
+in other expressions by accessing the target of the <code class="docutils literal"><span class="pre">refers-to</span></code>
+link inside <code class="docutils literal"><span class="pre">part_idx</span></code>. When the <code class="docutils literal"><span class="pre">part_idx</span></code> vector is accessed
+simply as <code class="docutils literal"><span class="pre">$xxx.part_idx[foo]</span></code>, it evaluates as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tmp = @xxx.part_idx
+tmp = @tmp[foo]
+($ tmp t)
+</pre></div>
+</div>
+<p>thus returning just an integer value. However, if an additional
+dereference step is added, it turns to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tmp = @xxx.part_idx
+tmp = @tmp[foo]
+obj = @tmp.refers-to
+($ obj t)
+</pre></div>
+</div>
+<p>which follows the <code class="docutils literal"><span class="pre">refers-to</span></code> link and evaluates its target.</p>
+<p>Finally, the <code class="docutils literal"><span class="pre">layer_idx</span></code> vector, in addition to specifying the same
+<code class="docutils literal"><span class="pre">index-refers-to</span></code> link as <code class="docutils literal"><span class="pre">modifier_idx</span></code>, uses the link in <code class="docutils literal"><span class="pre">part_idx</span></code>
+to access other objects at its end:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">refers</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;$$._parent._parent.part_idx[$$._key].refers-to.layers[$]&#39;</span>
+</pre></div>
+</div>
+<p>Note how this link has to use two <code class="docutils literal"><span class="pre">_parent</span></code> steps again due to being
+attached to the element of the vector instead of the vector itself.
+It also has to use the <code class="docutils literal"><span class="pre">_key</span></code> attribute of the vector element to
+retrieve the current index in the vector, because here <code class="docutils literal"><span class="pre">$</span></code> holds the
+element value.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../../docs/Lua API.html" title="previous chapter">DFHack Lua API</a></li>
+      <li>Next: <a href="how-to-update.html" title="next chapter">Updating DF-structures for a new DF version</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Data Structure Definition Syntax</a><ul>
+<li><a class="reference internal" href="#general-background">General Background</a></li>
+<li><a class="reference internal" href="#xml-file-format">XML file format</a><ul>
+<li><a class="reference internal" href="#enum-type-definition">Enum type definition</a><ul>
+<li><a class="reference internal" href="#enum-item-attributes">Enum item attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bitfield-type-definition">Bitfield type definition</a></li>
+<li><a class="reference internal" href="#structure-type-definition">Structure type definition</a><ul>
+<li><a class="reference internal" href="#common-field-properties">Common field properties</a></li>
+<li><a class="reference internal" href="#primitive-fields">Primitive fields</a></li>
+<li><a class="reference internal" href="#substructure-fields">Substructure fields</a></li>
+<li><a class="reference internal" href="#enum-fields">Enum fields</a></li>
+<li><a class="reference internal" href="#nested-bitfields">Nested bitfields</a></li>
+<li><a class="reference internal" href="#container-fields">Container fields</a><ul>
+<li><a class="reference internal" href="#abstract-container">Abstract container</a></li>
+<li><a class="reference internal" href="#pointer-fields">Pointer fields</a></li>
+<li><a class="reference internal" href="#abstract-sequence">Abstract sequence</a></li>
+<li><a class="reference internal" href="#standard-containers">Standard containers</a></li>
+<li><a class="reference internal" href="#df-specific-containers">DF-specific containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-type-definition">Class type definition</a><ul>
+<li><a class="reference internal" href="#virtual-method-definition">Virtual method definition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-object-definition">Global object definition</a></li>
+<li><a class="reference internal" href="#symbol-table-definition">Symbol table definition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lisp-integration">Lisp Integration</a><ul>
+<li><a class="reference internal" href="#reference-expressions">Reference expressions</a><ul>
+<li><a class="reference internal" href="#dereference-syntax">Dereference syntax</a></li>
+<li><a class="reference internal" href="#basic-properties">Basic properties</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference-objects">Reference objects</a><ul>
+<li><a class="reference internal" href="#primitive-types">Primitive types</a></li>
+<li><a class="reference internal" href="#enums">Enums</a></li>
+<li><a class="reference internal" href="#pointers">Pointers</a></li>
+<li><a class="reference internal" href="#compounds">Compounds</a></li>
+<li><a class="reference internal" href="#sequences">Sequences</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code-helpers">Code helpers</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/library/xml/SYNTAX.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -113,7 +113,7 @@ end
 
 function getitemType(item)
  if item:getSubtype() ~= -1 and dfhack.items.getSubtypeDef(item:getType(),item:getSubtype()) then
-   itemType = dfhack.items.getSubtypeDef(item:getType(),item:getSubtype()).id
+  itemType = dfhack.items.getSubtypeDef(item:getType(),item:getSubtype()).id
  else
   itemType = df.item_type[item:getType()]
  end
@@ -122,7 +122,6 @@ end
 
 function handler(table)
  local itemMat = dfhack.matinfo.decode(table.item)
- if itemMat then
  local itemMatStr = itemMat:getToken()
  local itemType = getitemType(table.item)
  table.itemMat = itemMat
@@ -155,9 +154,6 @@ function handler(table)
   end
   table.contaminantMat = nil
  end
- else
-  print("itemMat returned nil for ",table.item)
- end
 end
 
 function equipHandler(unit, item, isEquip)
@@ -167,7 +163,7 @@ function equipHandler(unit, item, isEquip)
  table.mode = mode
  table.item = df.item.find(item)
  table.unit = df.unit.find(unit)
- if table.item and table.unit then -- they must both be not nil or errors will occur after this point.
+ if table.item and table.unit then -- they must both be not nil or errors will occur after this point with instant reactions.
   handler(table)
  end
 end

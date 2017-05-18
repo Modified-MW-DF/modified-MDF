@@ -31,13 +31,12 @@ function addEmotionToUnit(unit,thought,emotion,severity,strength,subthought)
         end
     end
     emotions:insert('#',{new=df.unit_personality.T_emotions,
-    type=emotion,
+    type=tonumber(emotion),
     unk2=1,
-    strength=strength,
-    thought=thought,
-    subthought=subthought,
-    severity=severity,
-    flags=0,
+    strength=tonumber(strength),
+    thought=tonumber(thought),
+    subthought=tonumber(subthought),
+    severity=tonumber(severity),
     unk7=0,
     year=df.global.cur_year,
     year_tick=df.global.cur_year_tick

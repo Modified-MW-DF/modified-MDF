@@ -635,6 +635,8 @@ function df_shortcut_var(k)
         return dfhack.gui.getSelectedWorkshopJob()
     elseif k == 'unit' then
         return dfhack.gui.getSelectedUnit()
+    elseif k == 'plant' then
+        return dfhack.gui.getSelectedPlant()
     else
         for g in pairs(df.global) do
             if g == k then
@@ -657,15 +659,17 @@ df_env = df_shortcut_env()
 function df_expr_to_ref(expr)
     expr = expr:gsub('%["(.-)"%]', function(field) return '.' .. field end)
         :gsub('%[\'(.-)\'%]', function(field) return '.' .. field end)
+        :gsub('%[(%d+)]', function(field) return '.' .. field end)
     local parts = split_string(expr, '%.')
     local obj = df_env[parts[1]]
     for i = 2, #parts do
-        local cur = obj[parts[i]]
+        local key = tonumber(parts[i]) or parts[i]
+        local cur = obj[key]
         if i == #parts and ((type(cur) ~= 'userdata') or
                 type(cur) == 'userdata' and getmetatable(cur) == nil) then
-            obj = obj:_field(parts[i])
+            obj = obj:_field(key)
         else
-            obj = obj[parts[i]]
+            obj = obj[key]
         end
     end
     return obj

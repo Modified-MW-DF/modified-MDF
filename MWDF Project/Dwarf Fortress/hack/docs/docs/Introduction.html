@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction and Overview &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DFHack Core" href="Core.html" />
+    <link rel="prev" title="Welcome to DFHack’s documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction-and-overview">
+<span id="introduction"></span><h1><a class="toc-backref" href="#id2">Introduction and Overview</a><a class="headerlink" href="#introduction-and-overview" title="Permalink to this headline">¶</a></h1>
+<p>DFHack is a Dwarf Fortress memory access library, distributed with
+a wide variety of useful scripts and plugins.</p>
+<p>The project is currently hosted at <a class="reference external" href="https://www.github.com/DFHack/dfhack">https://www.github.com/DFHack/dfhack</a>,
+and can be downloaded from <a class="reference external" href="http://github.com/DFHack/dfhack/releases">the releases page</a>.</p>
+<p>All new releases are announced in <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=139553">the bay12 forums thread</a>,
+which is also a good place for discussion and questions.</p>
+<p>For users, it provides a significant suite of bugfixes and interface
+enhancements by default, and more can be enabled.  There are also many tools
+(such as <a class="reference internal" href="Plugins.html#workflow"><span class="std std-ref">workflow</span></a> or <a class="reference internal" href="Plugins.html#autodump"><span class="std std-ref">autodump</span></a>) which can make life easier.
+You can even add third-party scripts and plugins to do almost anything!</p>
+<p>For modders, DFHack makes many things possible.  Custom reactions, new
+interactions, magic creature abilities, and more can be set through <a class="reference internal" href="_auto/modtools.html#modtools"><span class="std std-ref">Scripts for Modders</span></a>
+and custom raws.  Non-standard DFHack scripts and inits can be stored in the
+raw directory, making raws or saves fully self-contained for distribution -
+or for coexistence in a single DF install, even with incompatible components.</p>
+<p>For developers, DFHack unites the various ways tools access DF memory and
+allows easier development of new tools.  As an open-source project under
+<a class="reference internal" href="../LICENSE.html#license"><span class="std std-ref">various copyleft licences</span></a>, contributions are welcome.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction-and-overview" id="id2">Introduction and Overview</a><ul>
+<li><a class="reference internal" href="#installing-dfhack" id="id3">Installing DFHack</a></li>
+<li><a class="reference internal" href="#getting-started" id="id4">Getting started</a></li>
+<li><a class="reference internal" href="#troubleshooting" id="id5">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="installing-dfhack">
+<span id="installing"></span><h2><a class="toc-backref" href="#id3">Installing DFHack</a><a class="headerlink" href="#installing-dfhack" title="Permalink to this headline">¶</a></h2>
+<p>DFHack is available for the SDL version of Dwarf Fortress on Windows,
+any modern Linux distribution, and Mac OS X (10.6.8 and later).
+It is possible to use Windows DF+DFHack under Wine on Linux or OS X.</p>
+<p>Most releases only support the version of DF mentioned in their title - for
+example, DFHack 0.40.24-r2 only supports DF 0.40.24 - but some releases
+support earlier DF versions as well.  Wherever possible, use the latest version
+of DFHack built for the target version of DF.</p>
+<p>Installing DFhack involves copying files from a release archive
+into your DF folder, so that:</p>
+<ul class="simple">
+<li>On Windows, <code class="docutils literal"><span class="pre">SDL.dll</span></code> is replaced</li>
+<li>On Linux or OS X, the <code class="docutils literal"><span class="pre">dfhack</span></code> script is placed in the same folder as the <code class="docutils literal"><span class="pre">df</span></code> script</li>
+</ul>
+<p>Uninstalling is basically the same, in reverse:</p>
+<ul class="simple">
+<li>On Windows, replace <code class="docutils literal"><span class="pre">SDL.dll</span></code> with <code class="docutils literal"><span class="pre">SDLreal.dll</span></code>, then remove the DFHack files.</li>
+<li>On Linux or OS X, remove the DFHack files.</li>
+</ul>
+<p>New players may wish to <a class="reference external" href="http://dwarffortresswiki.org/Utility:Lazy_Newb_Pack">get a pack</a>
+with DFHack preinstalled.</p>
+</div>
+<div class="section" id="getting-started">
+<h2><a class="toc-backref" href="#id4">Getting started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>DFHack basically extends DF with something similar to the
+console found in many PC games.</p>
+<p>If DFHack is installed correctly, it will automatically pop up a console
+window once DF is started as usual on Windows. Linux and Mac OS X require
+running the dfhack script from the terminal, and will use that terminal for
+the console.</p>
+<ul class="simple">
+<li>Basic interaction with dfhack involves entering commands into the console.
+To learn what commands are available, you can keep reading this documentation
+or skip ahead and use the <a class="reference internal" href="Core.html#ls"><span class="std std-ref">ls</span></a> and <a class="reference internal" href="Core.html#help"><span class="std std-ref">help</span></a> commands.</li>
+<li>Another way to interact with DFHack is to set in-game <a class="reference internal" href="Core.html#keybinding"><span class="std std-ref">keybindings</span></a>
+for certain commands.  Many of the newer and user-friendly tools are designed
+to be used this way.</li>
+<li>Commands can also run at startup via <a class="reference internal" href="Core.html#init-files"><span class="std std-ref">init files</span></a>,
+on in batches at other times with the <a class="reference internal" href="Core.html#script"><span class="std std-ref">script</span></a> command.</li>
+<li>Finally, some commands are persistent once enabled, and will sit in the
+background managing or changing some aspect of the game if you <a class="reference internal" href="Core.html#enable"><span class="std std-ref">enable</span></a> them.</li>
+</ul>
+</div>
+<div class="section" id="troubleshooting">
+<span id="id1"></span><h2><a class="toc-backref" href="#id5">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Don&#8217;t panic!  Even if you need this section, it&#8217;ll be OK :)</p>
+<p>If something goes wrong, check the log files in DF&#8217;s folder
+(<code class="docutils literal"><span class="pre">stderr.log</span></code> and <code class="docutils literal"><span class="pre">stdout.log</span></code>). Looking at these might help you -
+or someone else - solve the problem.  Take screenshots of any weird
+error messages, and take notes on what you did to cause them.</p>
+<p>If  the search function in this documentation isn&#8217;t enough and
+<a class="reference external" href="http://dwarffortresswiki.org/">the DF Wiki</a> hasn&#8217;t helped, try asking in:</p>
+<ul class="simple">
+<li>the <a class="reference external" href="https://webchat.freenode.net/?channels=dfhack">#dfhack IRC channel on freenode</a></li>
+<li>the <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=139553">Bay12 DFHack thread</a></li>
+<li>the <a class="reference external" href="https://dwarffortress.reddit.com">/r/dwarffortress</a> questions thread</li>
+<li>the thread for the mod or Starter Pack you&#8217;re using (if any)</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to DFHack&#8217;s documentation!</a></li>
+      <li>Next: <a href="Core.html" title="next chapter">DFHack Core</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction and Overview</a><ul>
+<li><a class="reference internal" href="#installing-dfhack">Installing DFHack</a></li>
+<li><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/docs/Introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

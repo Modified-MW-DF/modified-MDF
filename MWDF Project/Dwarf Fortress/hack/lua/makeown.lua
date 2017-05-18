@@ -146,10 +146,10 @@ function make_citizen(unit)
         hf.appeared_year = dfg.cur_year
         hf.born_year = unit.birth_year
         hf.born_seconds = unit.birth_time
-		hf.birth_year_bias=unit.bias_birth_bias
-		hf.bias_birth_bias=unit.bias_birth_bias
         hf.curse_year = unit.curse_year
         hf.curse_seconds = unit.curse_time
+        hf.birth_year_bias=unit.bias_birth_bias
+        hf.birth_time_bias=unit.birth_time_bias
         hf.old_year = unit.old_year
         hf.old_seconds = unit.old_time
         hf.died_year = -1

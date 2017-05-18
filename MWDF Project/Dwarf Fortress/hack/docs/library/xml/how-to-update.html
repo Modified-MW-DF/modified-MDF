@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Updating DF-structures for a new DF version &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Patching the DF binary" href="../../docs/Binpatches.html" />
+    <link rel="prev" title="Data Structure Definition Syntax" href="SYNTAX.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="updating-df-structures-for-a-new-df-version">
+<h1><a class="toc-backref" href="#id1">Updating DF-structures for a new DF version</a><a class="headerlink" href="#updating-df-structures-for-a-new-df-version" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#updating-df-structures-for-a-new-df-version" id="id1">Updating DF-structures for a new DF version</a><ul>
+<li><a class="reference internal" href="#general-process" id="id2">General Process</a></li>
+<li><a class="reference internal" href="#running-dwarf-fortress" id="id3">Running Dwarf Fortress</a></li>
+<li><a class="reference internal" href="#available-scripts" id="id4">Available Scripts</a></li>
+<li><a class="reference internal" href="#stage-1-linux-compound-globals" id="id5">STAGE 1. Linux compound globals</a></li>
+<li><a class="reference internal" href="#stage-2-old-way-to-find-linux-compound-globals" id="id6">STAGE 2. Old way to find Linux compound globals</a></li>
+<li><a class="reference internal" href="#stage-3-linux-primitive-globals" id="id7">STAGE 3. Linux primitive globals</a></li>
+<li><a class="reference internal" href="#stage-4-primary-windows-compound-globals" id="id8">STAGE 4. Primary windows compound globals</a></li>
+<li><a class="reference internal" href="#stage-5-secondary-windows-compound-globals" id="id9">STAGE 5. Secondary windows compound globals</a></li>
+<li><a class="reference internal" href="#stage-6-windows-primitive-globals" id="id10">STAGE 6. Windows primitive globals</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general-process">
+<h2><a class="toc-backref" href="#id2">General Process</a><a class="headerlink" href="#general-process" title="Permalink to this headline">¶</a></h2>
+<p>Download the new versions. The scripts expect the following
+directory layout:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">userhome</span><span class="o">/</span>
+    <span class="n">Games</span><span class="o">/</span>
+        <span class="n">DF</span><span class="o">/</span>
+            <span class="n">df_linux</span><span class="o">/</span>    <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">linux</span>
+            <span class="n">df_windows</span><span class="o">/</span>  <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">windows</span>
+            <span class="n">df_osx</span><span class="o">/</span>      <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">osx</span>
+
+            <span class="n">metasm</span><span class="o">/</span>      <span class="o">-</span> <span class="n">Checkout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">library</span> <span class="k">for</span> <span class="n">ruby</span> <span class="n">scripts</span>
+                           <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jjyg</span><span class="o">/</span><span class="n">metasm</span>
+            <span class="n">df_misc</span><span class="o">/</span>     <span class="o">-</span> <span class="n">Checkout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ruby</span> <span class="n">scripts</span>
+                           <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jjyg</span><span class="o">/</span><span class="n">df_misc</span>
+            <span class="n">dfhack</span><span class="o">/</span>      <span class="o">-</span> <span class="n">DFHack</span> <span class="n">checkout</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Use &#8220;new-release.pl v0.??.??&#8221; to automatically perform a number of
+steps. If you get a mismatch error from match-ctors.pl, see &#8220;STAGE 1&#8221;.</li>
+<li>Start the linux DF version, and launch the tool.</li>
+<li>Execute (reset-state-annotation)</li>
+<li>Commit.</li>
+<li>Use the tool to verify that the layout of the compound globals
+on linux is correct, and update xml as necessary. Check that
+unit seems reasonable, etc. Compare the changes in g_src between
+releases. Delete redundant entries for some linux &amp; osx globals
+in symbols.xml.</li>
+<li>Compile DFHack without plugins for windows and run devel/find-offsets
+to find globals there.</li>
+<li>With the windows version in wine, run (check-struct-sizes) to see if
+any objects changed their size. If nothing is obviously wrong,
+use (check-struct-sizes :annotate? t) to mark correctly sized
+objects ALIGNED.</li>
+<li>Check the rest of the document for info on finding still missing globals.</li>
+<li>Commit.</li>
+<li>Run make-csv.sh to update CSV files and verify vtable size and argument counts.</li>
+<li>Commit.</li>
+</ul>
+</div>
+<div class="section" id="running-dwarf-fortress">
+<h2><a class="toc-backref" href="#id3">Running Dwarf Fortress</a><a class="headerlink" href="#running-dwarf-fortress" title="Permalink to this headline">¶</a></h2>
+<p>The lisp tool expects that the game is started in a mode where all
+allocated memory is automatically filled with a certain byte value.</p>
+<p>On linux this is achieved by simply starting the game like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MALLOC_PERTURB_</span><span class="o">=</span><span class="mi">45</span> <span class="o">./</span><span class="n">df</span>
+</pre></div>
+</div>
+<p>Windows requires applying a patch to a copy of the executable like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">f</span> <span class="s1">&#39;Dwarf Fortress.exe&#39;</span> <span class="s1">&#39;Dwarf_Fortress_malloc.exe&#39;</span>
+<span class="n">ruby</span> <span class="o">-</span><span class="n">I</span> <span class="o">~/</span><span class="n">Games</span><span class="o">/</span><span class="n">DF</span><span class="o">/</span><span class="n">metasm</span> <span class="o">~/</span><span class="n">Games</span><span class="o">/</span><span class="n">DF</span><span class="o">/</span><span class="n">df_patchmalloc</span><span class="o">.</span><span class="n">rb</span> <span class="s1">&#39;Dwarf_Fortress_malloc.exe&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="available-scripts">
+<h2><a class="toc-backref" href="#id4">Available Scripts</a><a class="headerlink" href="#available-scripts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-release-pl">
+<h3>new-release.pl<a class="headerlink" href="#new-release-pl" title="Permalink to this headline">¶</a></h3>
+<p>Takes the full v0.??.?? version number as one required parameter.</p>
+<p>Uses md5sum for linux and winedump for windows to find
+out the new hash and PE timestamp.</p>
+<p>Use the stamps to create new sections in symbols.xml
+Also paste them into make-csv inside start.lisp</p>
+<p>Creates an empty v0.??.??.lst, and change thes open-annotations
+filename in start.lisp.</p>
+<p>Wipes linux/df.globals.xml empty of all the global definitions.</p>
+<p>Runs make-scans.sh to find out addresses of vtables and
+many linux/osx globals, and pastes them into symbols.xml</p>
+</div>
+<div class="section" id="make-scans-sh">
+<h3>make-scans.sh<a class="headerlink" href="#make-scans-sh" title="Permalink to this headline">¶</a></h3>
+<p>Runs ruby and perl scripts to extract data from the executables,
+and writes the output to txt files in subdirectories.</p>
+</div>
+<div class="section" id="make-csv-sh">
+<h3>make-csv.sh<a class="headerlink" href="#make-csv-sh" title="Permalink to this headline">¶</a></h3>
+<p>Uses the lisp tool and some scripts to produce csv files with
+offsets for linux and windows. These are useful for manual lookup
+and some scripts.</p>
+</div>
+<div class="section" id="start-sh">
+<h3>start.sh<a class="headerlink" href="#start-sh" title="Permalink to this headline">¶</a></h3>
+<p>Starts the lisp tool. You may pass the process ID as a parameter
+to avoid the prompt.</p>
+</div>
+<div class="section" id="make-keybindings-pl">
+<h3>make-keybindings.pl<a class="headerlink" href="#make-keybindings-pl" title="Permalink to this headline">¶</a></h3>
+<p>Used by make-scans to extract the keybinding enum from g_src
+in form of df.keybindings.xml</p>
+</div>
+<div class="section" id="match-ctors-pl">
+<h3>match-ctors.pl<a class="headerlink" href="#match-ctors-pl" title="Permalink to this headline">¶</a></h3>
+<p>Used by make-scans to compare the extracted addresses of the
+compound linux/osx globals with a saved copy from a previous
+version and thus determine their names.</p>
+</div>
+<div class="section" id="match-vtables-pl">
+<h3>match-vtables.pl<a class="headerlink" href="#match-vtables-pl" title="Permalink to this headline">¶</a></h3>
+<p>Used by make-csv.sh to produce a file listing the addresses of
+all virtual methods in a compact form. Relies on csv files and
+data from make-scans.sh</p>
+</div>
+</div>
+<div class="section" id="stage-1-linux-compound-globals">
+<h2><a class="toc-backref" href="#id5">STAGE 1. Linux compound globals</a><a class="headerlink" href="#stage-1-linux-compound-globals" title="Permalink to this headline">¶</a></h2>
+<p>(done by new-release.pl normally)</p>
+<p>Linux and OSX initalize and destruct their complex globals in
+a way that allows to determine their addresses by disassembling
+a small section of the executable. This is currently done by
+ruby scripts called from new-release.pl; it is also possible to do
+that via the lisp tool for linux.</p>
+<p>The ruby scripts produce a raw dump of the global addresses as
+linux/ctors.txt. A perl script is then used to compare it with
+linux/ctors-base.txt (which is manually edited and committed into the
+repository), and thus derive the names of the globals by their
+order. The resulting data is written back to linux/ctors.txt,
+linux/df.globals.xml and linux/cglobals.txt (which is inserted
+into symbols.xml).</p>
+<p>If the size of a global changes too much, or a new one is added
+in the middle, this matching may fail. In this case it is necessary
+to manually match and add the new names to ctors.txt and commit
+it as ctors-base.txt. After that, run make-scans.sh to rerun
+the scripts, and paste linux/cglobals.txt into symbols.xml.</p>
+<p>OSX behaves exactly the same as linux in this respect.</p>
+</div>
+<div class="section" id="stage-2-old-way-to-find-linux-compound-globals">
+<h2><a class="toc-backref" href="#id6">STAGE 2. Old way to find Linux compound globals</a><a class="headerlink" href="#stage-2-old-way-to-find-linux-compound-globals" title="Permalink to this headline">¶</a></h2>
+<p>(now mostly obsolete, retained as fallback and for historical interest)</p>
+<p>Globals gps, enabler, gview and init are in the export table
+for linking with libgraphics, so they are immediately available
+in (browse &#64;global.*).</p>
+<p>Run (list-globals/linux), paste the results in linux/df.globals.xml,
+and immediately compare it to the old version from source control.
+The order of the globals is quite stable, so if sizes look similar,
+they can be guessed immediately.</p>
+<p>The .bss compound section should be done except for &#8216;announcements&#8217;.</p>
+<p>Run (browse-dataseg). The first three -30000 are cursor. Following
+group of 6 are selection_rect. After that, at 16-aligned addresses
+are control_mode and game_mode. Tab the game ui to the most common
+two-pane mode, scroll to the end and find 0x30200. Within this dword
+ui_menu_width is byte 1, ui_area_map_width is byte 2.</p>
+<p>(reload), (browse &#64;global.*), look at the most important globals
+for misalignment. If found, fix it and delete old tables from
+symbols.xml.</p>
+</div>
+<div class="section" id="stage-3-linux-primitive-globals">
+<h2><a class="toc-backref" href="#id7">STAGE 3. Linux primitive globals</a><a class="headerlink" href="#stage-3-linux-primitive-globals" title="Permalink to this headline">¶</a></h2>
+<p>Unpause the game for a moment to let various structures be initialized.</p>
+<p>The fields can be found either by a straight memory search, or by
+looking in the area they are expected to be.</p>
+<div class="section" id="a-the-cur-year-area">
+<h3>[A] The &#8216;cur_year&#8217; area.<a class="headerlink" href="#a-the-cur-year-area" title="Permalink to this headline">¶</a></h3>
+<p>Located just before ui_building_assign_type.</p>
+<ol class="arabic">
+<li><p class="first">cur_year / cur_year_tick</p>
+<p>(find-changes); step with dot; Enter; step; +; step; +; step; +; done</p>
+<p>look at values in bss, there will be cur_year_tick, and
+cur_year is 32 bytes before that.</p>
+</li>
+<li><p class="first">process_jobs</p>
+<p>Designate a building for construction.
+Look after process_dig for an enabled boolean.</p>
+</li>
+<li><p class="first">process_dig</p>
+<p>Step the game one step. Designate a tile for digging.
+Look after cur_year and before process_jobs.</p>
+<p>Note: this order because designating sometimes sets process_jobs too.</p>
+</li>
+<li><p class="first">job_next_id / ui_workshop_job_cursor</p>
+<p>Find a workshop without jobs; (find-changes); add job; Enter;
+add job; +; add job; +; done
+Finds job_next_id and ui_workshop_job_cursor, the distinction is obvious.</p>
+<p>The ui_workshop_job_cursor is expected to be after cur_year_tick.</p>
+</li>
+<li><p class="first">ui_workshop_in_add, ui_building_in_resize, ui_building_in_assign</p>
+<p>Expected to be in the area after ui_workshop_job_cursor, in this order.
+Change the relevant state in game and F5.</p>
+</li>
+<li><p class="first">ui_building_item_cursor</p>
+<p>Find a cluttered workshop, t; (find-changes); move cursor down; Enter;
+cursor down; +; cursor down; +; done</p>
+<p>Expected to be right after ui_workshop_job_cursor.</p>
+</li>
+<li><p class="first">current_weather</p>
+<p>Subtract 0x1c from cur_year address. Obviously, a big hack.</p>
+<p>It is best to use a save where the contents are non-zero and known to you.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="b-the-ui-look-cursor-area">
+<h3>[B] The ui_look_cursor area.<a class="headerlink" href="#b-the-ui-look-cursor-area" title="Permalink to this headline">¶</a></h3>
+<p>Located in the area of the 124 byte global before ui.</p>
+<ol class="arabic">
+<li><p class="first">ui_look_cursor</p>
+<p>Like ui_building_item_cursor, but with a cluttered tile and k.</p>
+</li>
+<li><p class="first">ui_selected_unit</p>
+<p>Find a place with many nearby units; (find-changes); v; Enter; v; new;
+...; when returned to origin, 0; 1; 2...; done</p>
+<p>Expected to be before ui_look_cursor.</p>
+</li>
+<li><p class="first">ui_unit_view_mode</p>
+<p>Select unit, page Gen; (find-changes); Inv; Enter; Prf; +; Wnd; +; done</p>
+<p>Expected to be after ui_selected_unit.</p>
+</li>
+<li><p class="first">pause_state</p>
+<p>(find-changes); toggle pause; Enter; toggle; 0; toggle; 1; etc; done</p>
+<p>Expected to be in the area after ui_look_cursor.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="c-the-window-x-y-z-area">
+<h3>[C] The window_x/y/z area.<a class="headerlink" href="#c-the-window-x-y-z-area" title="Permalink to this headline">¶</a></h3>
+<p>Located right after ui_build_selector.</p>
+<ol class="arabic">
+<li><p class="first">window_x, window_y, window_z</p>
+<p>Use k, move window view to upper left corner, then the cursor to bottom
+right as far as it can go without moving the view.</p>
+<p>(find-changes); Shift-RightDown; Enter; Shift-RightDown; + 10;
+Shift-RightDown; + 10; done</p>
+<p>Finds cursor and two variables in bss. Z is just after them.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="d-random-positions">
+<h3>[D] Random positions.<a class="headerlink" href="#d-random-positions" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">announcements</p>
+<p>Immediately follows d_init; starts 25 25 31 31 24 ...</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="stage-4-primary-windows-compound-globals">
+<h2><a class="toc-backref" href="#id8">STAGE 4. Primary windows compound globals</a><a class="headerlink" href="#stage-4-primary-windows-compound-globals" title="Permalink to this headline">¶</a></h2>
+<p>After aligning globals on linux, run (make-csv) to produce offset tables.</p>
+<div class="section" id="world">
+<h3>1. world<a class="headerlink" href="#world" title="Permalink to this headline">¶</a></h3>
+<p>Set a nickname, search for it; the unit will have it at offset 0x1C.
+Then trace back to the unit vector, and subtract its offset.</p>
+</div>
+<div class="section" id="ui">
+<h3>2. ui<a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h3>
+<p>Open the &#8216;s&#8217;quad sidebar page. Navigate to a squad in world.squads.all,
+then backtrace and subtract the offset of ui.squads.list.</p>
+</div>
+<div class="section" id="ui-build-selector">
+<h3>3. ui_build_selector<a class="headerlink" href="#ui-build-selector" title="Permalink to this headline">¶</a></h3>
+<p>Start creating a building, up to the point of material selection.
+Find the material item through world and backtrack references until .bss.</p>
+</div>
+<div class="section" id="ui-sidebar-menus">
+<h3>4. ui_sidebar_menus<a class="headerlink" href="#ui-sidebar-menus" title="Permalink to this headline">¶</a></h3>
+<p>Select a unit in &#8216;v&#8217;, open inventory page, backtrack from
+unit_inventory_item, subtract offset of unit.inv_items.</p>
+</div>
+<div class="section" id="ui-look-list">
+<h3>5. ui_look_list<a class="headerlink" href="#ui-look-list" title="Permalink to this headline">¶</a></h3>
+<p>Put a &#8216;k&#8217; cursor over a unit, backtrack to a 0x10 bytes object
+with pointer at offset 0xC, then to the global vector.</p>
+</div>
+<div class="section" id="ui-advmode">
+<h3>6. ui_advmode<a class="headerlink" href="#ui-advmode" title="Permalink to this headline">¶</a></h3>
+<p>In adventure mode, open the &#8216;c&#8217;ompanions menu, then backtrack from
+world.units.active[0] (i.e. the player) via ui_advmode.companions.unit</p>
+<p>Alternatively, look before ui_look_list for &#8220;0, 15&#8221; coming from the string.</p>
+</div>
+<div class="section" id="enabler">
+<h3>7. enabler<a class="headerlink" href="#enabler" title="Permalink to this headline">¶</a></h3>
+<p>(find-changes), resize the window, enter; resize width by +1 char,
++; repeat until few candidates left; then done, select the renderer
+heap object and backtrack to enabler.renderer.</p>
+<p>Alternatively, look before ui for clocks changing every frame.</p>
+</div>
+<div class="section" id="map-renderer">
+<h3>8. map_renderer<a class="headerlink" href="#map-renderer" title="Permalink to this headline">¶</a></h3>
+<p>Put a &#8216;v&#8217; cursor exactly above a unit; backtrack from the unit object.</p>
+<p>Alternatively, look before ui_advmode for the unit pointer list.</p>
+</div>
+<div class="section" id="texture">
+<h3>9. texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
+<p>Load the game with [GRAPHICS:YES] in init.txt, and example set.
+Then search for string &#8220;example/dwarves.bmp&#8221; and backtrack.</p>
+<p>Alternatively, look between ui_build_selector and init.</p>
+</div>
+</div>
+<div class="section" id="stage-5-secondary-windows-compound-globals">
+<h2><a class="toc-backref" href="#id9">STAGE 5. Secondary windows compound globals</a><a class="headerlink" href="#stage-5-secondary-windows-compound-globals" title="Permalink to this headline">¶</a></h2>
+<p>These are too difficult to find by backtracking or search, so try
+looking in the expected area first:</p>
+<div class="section" id="timed-events">
+<h3>1. timed_events<a class="headerlink" href="#timed-events" title="Permalink to this headline">¶</a></h3>
+<p>Look for a pointer vector around -0x54 before ui.</p>
+</div>
+<div class="section" id="ui-building-assign">
+<h3>2. ui_building_assign_*<a class="headerlink" href="#ui-building-assign" title="Permalink to this headline">¶</a></h3>
+<p>2a. ui_building_assign_is_marked</p>
+<blockquote>
+<div><p>Assign to zone, (find-changes), toggle 1st unit, enter; toggle 1st,
+0; toggle 1st, 1; toggle 2nd, new; done</p>
+<p>The vector is expected to be just before ui.</p>
+</div></blockquote>
+<p>2b. ui_building_assign_items</p>
+<blockquote>
+<div>Expected to be immediately before ui_building_assign_is_marked.</div></blockquote>
+<p>2c. ui_building_assign_units</p>
+<blockquote>
+<div><p>Start assigning units to a pasture, backtrack from one of the units.</p>
+<p>The vector is expected to be immediately before world.</p>
+</div></blockquote>
+<p>2d. ui_building_assign_type</p>
+<blockquote>
+<div>The vector is expected to be 2nd vector immediately after ui_look_list.</div></blockquote>
+</div>
+<div class="section" id="gview">
+<h3>3. gview<a class="headerlink" href="#gview" title="Permalink to this headline">¶</a></h3>
+<p>Immediately follows ui.</p>
+</div>
+<div class="section" id="init-files">
+<h3>4. Init files<a class="headerlink" href="#init-files" title="Permalink to this headline">¶</a></h3>
+<p>4a. d_init</p>
+<blockquote>
+<div>Follows world after a small gap (starts with flagarray).</div></blockquote>
+<p>4b. init</p>
+<blockquote>
+<div>Follows ui_build_selector after a small gap.</div></blockquote>
+</div>
+<div class="section" id="gps">
+<h3>5. gps<a class="headerlink" href="#gps" title="Permalink to this headline">¶</a></h3>
+<p>Look at around offset ui_area_map_width+0x470 for pointers.</p>
+</div>
+<div class="section" id="created-item">
+<h3>6. created_item_*<a class="headerlink" href="#created-item" title="Permalink to this headline">¶</a></h3>
+<p>6a. created_item_type</p>
+<blockquote>
+<div>Expected to be at around -0x40 before world.</div></blockquote>
+<p>6b. created_item_subtype</p>
+<blockquote>
+<div>The first vector immediately after ui_look_list.</div></blockquote>
+<p>6c. created_item_mattype</p>
+<blockquote>
+<div>Immediately before ui_sidebar_menus.</div></blockquote>
+<p>6d. created_item_matindex</p>
+<blockquote>
+<div>Before ui, after timed_events.</div></blockquote>
+<p>6e. created_item_count</p>
+<blockquote>
+<div>Immediately before timed_events.</div></blockquote>
+</div>
+</div>
+<div class="section" id="stage-6-windows-primitive-globals">
+<h2><a class="toc-backref" href="#id10">STAGE 6. Windows primitive globals</a><a class="headerlink" href="#stage-6-windows-primitive-globals" title="Permalink to this headline">¶</a></h2>
+<p>Like linux primitives, except the ordering is completely different.</p>
+<p>This section only describes the ordering heuristics; for memory search
+instructions see linux primitive globals.</p>
+<p>[A] formation_next_id</p>
+<blockquote>
+<div>Followed by ui_building_item_cursor, cur_year.</div></blockquote>
+<p>[B] interaction_instance_next_id...hist_figure_next_id</p>
+<blockquote>
+<div>Contains window_x, ui_workshop_in_add.</div></blockquote>
+<p>[C] machine_next_id</p>
+<blockquote>
+<div>Followed by ui_look_cursor, window_y.</div></blockquote>
+<p>[D] crime_next_id</p>
+<blockquote>
+<div><p>Followed by, in this order (but with some gaps):</p>
+<ul class="simple">
+<li>ui_workshop_job_cursor</li>
+<li>current_weather (immediately after ui_workshop_job_cursor)</li>
+<li>process_dig</li>
+<li>process_jobs</li>
+<li>ui_building_in_resize</li>
+<li>ui_building_in_assign</li>
+<li>pause_state</li>
+</ul>
+</div></blockquote>
+<p>[E] Random positions.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>cur_year_tick</li>
+</ol>
+<blockquote>
+<div>Look immediately before artifact_next_id.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>window_z</li>
+</ol>
+<blockquote>
+<div>Look before proj_next_id.</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>ui_selected_unit</li>
+</ol>
+<blockquote>
+<div>Look just after squad_next_id.</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>ui_unit_view_mode</li>
+</ol>
+<blockquote>
+<div>Look just before hist_event_collection_next_id.</div></blockquote>
+<ol class="arabic simple" start="5">
+<li>announcements</li>
+</ol>
+<blockquote>
+<div>Immediately follows d_init; starts 25 25 31 31 24 ...</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="SYNTAX.html" title="previous chapter">Data Structure Definition Syntax</a></li>
+      <li>Next: <a href="../../docs/Binpatches.html" title="next chapter">Patching the DF binary</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Updating DF-structures for a new DF version</a><ul>
+<li><a class="reference internal" href="#general-process">General Process</a></li>
+<li><a class="reference internal" href="#running-dwarf-fortress">Running Dwarf Fortress</a></li>
+<li><a class="reference internal" href="#available-scripts">Available Scripts</a><ul>
+<li><a class="reference internal" href="#new-release-pl">new-release.pl</a></li>
+<li><a class="reference internal" href="#make-scans-sh">make-scans.sh</a></li>
+<li><a class="reference internal" href="#make-csv-sh">make-csv.sh</a></li>
+<li><a class="reference internal" href="#start-sh">start.sh</a></li>
+<li><a class="reference internal" href="#make-keybindings-pl">make-keybindings.pl</a></li>
+<li><a class="reference internal" href="#match-ctors-pl">match-ctors.pl</a></li>
+<li><a class="reference internal" href="#match-vtables-pl">match-vtables.pl</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stage-1-linux-compound-globals">STAGE 1. Linux compound globals</a></li>
+<li><a class="reference internal" href="#stage-2-old-way-to-find-linux-compound-globals">STAGE 2. Old way to find Linux compound globals</a></li>
+<li><a class="reference internal" href="#stage-3-linux-primitive-globals">STAGE 3. Linux primitive globals</a><ul>
+<li><a class="reference internal" href="#a-the-cur-year-area">[A] The &#8216;cur_year&#8217; area.</a></li>
+<li><a class="reference internal" href="#b-the-ui-look-cursor-area">[B] The ui_look_cursor area.</a></li>
+<li><a class="reference internal" href="#c-the-window-x-y-z-area">[C] The window_x/y/z area.</a></li>
+<li><a class="reference internal" href="#d-random-positions">[D] Random positions.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stage-4-primary-windows-compound-globals">STAGE 4. Primary windows compound globals</a><ul>
+<li><a class="reference internal" href="#world">1. world</a></li>
+<li><a class="reference internal" href="#ui">2. ui</a></li>
+<li><a class="reference internal" href="#ui-build-selector">3. ui_build_selector</a></li>
+<li><a class="reference internal" href="#ui-sidebar-menus">4. ui_sidebar_menus</a></li>
+<li><a class="reference internal" href="#ui-look-list">5. ui_look_list</a></li>
+<li><a class="reference internal" href="#ui-advmode">6. ui_advmode</a></li>
+<li><a class="reference internal" href="#enabler">7. enabler</a></li>
+<li><a class="reference internal" href="#map-renderer">8. map_renderer</a></li>
+<li><a class="reference internal" href="#texture">9. texture</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stage-5-secondary-windows-compound-globals">STAGE 5. Secondary windows compound globals</a><ul>
+<li><a class="reference internal" href="#timed-events">1. timed_events</a></li>
+<li><a class="reference internal" href="#ui-building-assign">2. ui_building_assign_*</a></li>
+<li><a class="reference internal" href="#gview">3. gview</a></li>
+<li><a class="reference internal" href="#init-files">4. Init files</a></li>
+<li><a class="reference internal" href="#gps">5. gps</a></li>
+<li><a class="reference internal" href="#created-item">6. created_item_*</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stage-6-windows-primitive-globals">STAGE 6. Windows primitive globals</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/library/xml/how-to-update.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

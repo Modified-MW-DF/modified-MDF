@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Scripts for Modders &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="List of Authors" href="../Authors.html" />
+    <link rel="prev" title="GUI Scripts" href="gui.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="scripts-for-modders">
+<span id="modtools"></span><h1><a class="toc-backref" href="#id25">Scripts for Modders</a><a class="headerlink" href="#scripts-for-modders" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">modtools/*</span></code> scripts provide tools for modders, often with changes
+to the raw files, and are not intended to be called manually by end-users.</p>
+<p>They all have standard arguments: arguments are of the form <code class="docutils literal"><span class="pre">tool</span> <span class="pre">-argName1</span> <span class="pre">argVal1</span>
+<span class="pre">-argName2</span> <span class="pre">argVal2</span></code>. This is equivalent to <code class="docutils literal"><span class="pre">tool</span> <span class="pre">-argName2</span> <span class="pre">argVal2</span> <span class="pre">-argName1</span>
+<span class="pre">argVal1</span></code>. It is not necessary to provide a value to an argument name: <code class="docutils literal"><span class="pre">tool</span>
+<span class="pre">-argName3</span></code> is fine.</p>
+<p>Argument names are preceded with a dash, and supplying the same argument
+name multiple times will result in an error.</p>
+<p>The <code class="docutils literal"><span class="pre">-help</span></code> argument to any <code class="docutils literal"><span class="pre">modtools</span></code> script will print a descriptive
+usage string describing the arguments, similar to the documentation here.</p>
+<p>For multiple word argument values, brackets must be used: <code class="docutils literal"><span class="pre">tool</span>
+<span class="pre">-argName4</span> <span class="pre">[</span> <span class="pre">sadf1</span> <span class="pre">sadf2</span> <span class="pre">sadf3</span> <span class="pre">]</span></code>. In order to allow passing literal braces as
+part of the argument, backslashes are used: <code class="docutils literal"><span class="pre">tool</span> <span class="pre">-argName4</span> <span class="pre">[</span> <span class="pre">\]</span> <span class="pre">asdf</span> <span class="pre">\foo</span> <span class="pre">]</span></code>
+sets <code class="docutils literal"><span class="pre">argName4</span></code> to <code class="docutils literal"><span class="pre">\]</span> <span class="pre">asdf</span> <span class="pre">foo</span></code>. The <code class="docutils literal"><span class="pre">*-trigger</span></code> scripts have a similar
+policy with backslashes.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#scripts-for-modders" id="id25">Scripts for Modders</a><ul>
+<li><a class="reference internal" href="#modtools-add-syndrome" id="id26">modtools/add-syndrome</a></li>
+<li><a class="reference internal" href="#modtools-anonymous-script" id="id27">modtools/anonymous-script</a></li>
+<li><a class="reference internal" href="#modtools-change-build-menu" id="id28">modtools/change-build-menu</a></li>
+<li><a class="reference internal" href="#modtools-create-item" id="id29">modtools/create-item</a></li>
+<li><a class="reference internal" href="#modtools-create-unit" id="id30">modtools/create-unit</a></li>
+<li><a class="reference internal" href="#modtools-equip-item" id="id31">modtools/equip-item</a></li>
+<li><a class="reference internal" href="#modtools-extra-gamelog" id="id32">modtools/extra-gamelog</a></li>
+<li><a class="reference internal" href="#modtools-force" id="id33">modtools/force</a></li>
+<li><a class="reference internal" href="#modtools-if-entity" id="id34">modtools/if-entity</a></li>
+<li><a class="reference internal" href="#modtools-interaction-trigger" id="id35">modtools/interaction-trigger</a></li>
+<li><a class="reference internal" href="#modtools-invader-item-destroyer" id="id36">modtools/invader-item-destroyer</a></li>
+<li><a class="reference internal" href="#modtools-item-trigger" id="id37">modtools/item-trigger</a></li>
+<li><a class="reference internal" href="#modtools-moddable-gods" id="id38">modtools/moddable-gods</a></li>
+<li><a class="reference internal" href="#modtools-outside-only" id="id39">modtools/outside-only</a></li>
+<li><a class="reference internal" href="#modtools-projectile-trigger" id="id40">modtools/projectile-trigger</a></li>
+<li><a class="reference internal" href="#modtools-random-trigger" id="id41">modtools/random-trigger</a></li>
+<li><a class="reference internal" href="#modtools-raw-lint" id="id42">modtools/raw-lint</a></li>
+<li><a class="reference internal" href="#modtools-reaction-product-trigger" id="id43">modtools/reaction-product-trigger</a></li>
+<li><a class="reference internal" href="#modtools-reaction-trigger" id="id44">modtools/reaction-trigger</a></li>
+<li><a class="reference internal" href="#modtools-reaction-trigger-transition" id="id45">modtools/reaction-trigger-transition</a></li>
+<li><a class="reference internal" href="#modtools-skill-change" id="id46">modtools/skill-change</a></li>
+<li><a class="reference internal" href="#modtools-spawn-flow" id="id47">modtools/spawn-flow</a></li>
+<li><a class="reference internal" href="#modtools-syndrome-trigger" id="id48">modtools/syndrome-trigger</a></li>
+<li><a class="reference internal" href="#modtools-transform-unit" id="id49">modtools/transform-unit</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="modtools-add-syndrome">
+<span id="id1"></span><h2><a class="toc-backref" href="#id26">modtools/add-syndrome</a><a class="headerlink" href="#modtools-add-syndrome" title="Permalink to this headline">¶</a></h2>
+<p>This allows adding and removing syndromes from units.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">syndrome</span> <span class="n">name</span>
+    <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span> <span class="n">to</span> <span class="n">operate</span> <span class="n">on</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="s2">&quot;gila monster bite&quot;</span>
+<span class="o">-</span><span class="n">resetPolicy</span> <span class="n">policy</span>
+    <span class="n">specify</span> <span class="n">a</span> <span class="n">policy</span> <span class="n">of</span> <span class="n">what</span> <span class="n">to</span> <span class="n">do</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">already</span> <span class="n">has</span> <span class="n">an</span>
+    <span class="n">instance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span><span class="o">.</span>  <span class="n">examples</span><span class="p">:</span>
+        <span class="n">NewInstance</span>
+            <span class="n">default</span> <span class="n">behavior</span><span class="p">:</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span>
+        <span class="n">DoNothing</span>
+        <span class="n">ResetDuration</span>
+        <span class="n">AddDuration</span>
+<span class="o">-</span><span class="n">erase</span>
+    <span class="n">instead</span> <span class="n">of</span> <span class="n">adding</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span><span class="p">,</span> <span class="n">erase</span> <span class="n">one</span>
+<span class="o">-</span><span class="n">eraseAll</span>
+    <span class="n">erase</span> <span class="n">every</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span>
+<span class="o">-</span><span class="n">eraseClass</span> <span class="n">SYN_CLASS</span>
+    <span class="n">erase</span> <span class="n">every</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">every</span> <span class="n">syndrome</span> <span class="k">with</span> <span class="n">the</span> <span class="n">given</span> <span class="n">SYN_CLASS</span>
+<span class="o">-</span><span class="n">target</span> <span class="nb">id</span>
+    <span class="n">the</span> <span class="n">unit</span> <span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="n">unit</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="mi">0</span>
+        <span class="mi">28</span>
+<span class="o">-</span><span class="n">skipImmunities</span>
+    <span class="n">add</span> <span class="n">the</span> <span class="n">syndrome</span> <span class="n">to</span> <span class="n">the</span> <span class="n">target</span> <span class="n">even</span> <span class="k">if</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">immune</span> <span class="n">to</span> <span class="n">the</span> <span class="n">syndrome</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-anonymous-script">
+<span id="id2"></span><h2><a class="toc-backref" href="#id27">modtools/anonymous-script</a><a class="headerlink" href="#modtools-anonymous-script" title="Permalink to this headline">¶</a></h2>
+<p>This allows running a short simple Lua script passed as an argument instead of
+running a script from a file. This is useful when you want to do something too
+complicated to make with the existing modtools, but too simple to be worth its
+own script file.  Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">anonymous</span><span class="o">-</span><span class="n">script</span> <span class="s2">&quot;print(args[1])&quot;</span> <span class="n">arg1</span> <span class="n">arg2</span>
+<span class="c1"># prints &quot;arg1&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-change-build-menu">
+<span id="id3"></span><h2><a class="toc-backref" href="#id28">modtools/change-build-menu</a><a class="headerlink" href="#modtools-change-build-menu" title="Permalink to this headline">¶</a></h2>
+<p>Change the build sidebar menus.</p>
+<p>This script provides a flexible and comprehensive system for adding and removing
+items from the build sidebar menus. You can add or remove workshops/furnaces by
+text ID, or you can add/remove ANY building via a numeric building ID triplet.</p>
+<p>Changes made with this script do not survive a save/load. You will need to redo
+your changes each time the world loads.</p>
+<p>Just to be clear: You CANNOT use this script AT ALL if there is no world
+loaded!</p>
+<p><strong>Usage:</strong></p>
+<p><code class="docutils literal"><span class="pre">modtools/change-build-menu</span> <span class="pre">start|enable</span></code>:</p>
+<p><code class="docutils literal"><span class="pre">enable</span> <span class="pre">modtools/change-build-menu</span></code>:</p>
+<blockquote>
+<div>Start the ticker. This needs to be done before any changes will take
+effect. Note that you can make changes before or after starting the
+ticker, both options should work equally well.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">modtools/change-build-menu</span> <span class="pre">stop|disable</span></code>:</p>
+<p><code class="docutils literal"><span class="pre">disable</span> <span class="pre">modtools/change-build-menu</span></code>:</p>
+<blockquote>
+<div>Stop the ticker. Does not clear stored changes. The ticker will
+automatically stop when the current world is unloaded.</div></blockquote>
+<p><code class="docutils literal"><span class="pre">modtools/change-build-menu</span> <span class="pre">add</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">&lt;CATEGORY&gt;</span> <span class="pre">[&lt;KEY&gt;]</span></code>:</p>
+<blockquote>
+<div><p>Add the workshop or furnace with the ID <code class="docutils literal"><span class="pre">&lt;ID&gt;</span></code> to <code class="docutils literal"><span class="pre">&lt;CATEGORY&gt;</span></code>.
+<code class="docutils literal"><span class="pre">&lt;KEY&gt;</span></code> is an optional DF hotkey ID.</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">&lt;CATEGORY&gt;</span></code> may be one of:</dt>
+<dd><ul class="first last simple">
+<li>MAIN_PAGE</li>
+<li>SIEGE_ENGINES</li>
+<li>TRAPS</li>
+<li>WORKSHOPS</li>
+<li>FURNACES</li>
+<li>CONSTRUCTIONS</li>
+<li>MACHINES</li>
+<li>CONSTRUCTIONS_TRACK</li>
+</ul>
+</dd>
+<dt>Valid <code class="docutils literal"><span class="pre">&lt;ID&gt;</span></code> values for hardcoded buildings are as follows:</dt>
+<dd><ul class="first last simple">
+<li>CARPENTERS</li>
+<li>FARMERS</li>
+<li>MASONS</li>
+<li>CRAFTSDWARFS</li>
+<li>JEWELERS</li>
+<li>METALSMITHSFORGE</li>
+<li>MAGMAFORGE</li>
+<li>BOWYERS</li>
+<li>MECHANICS</li>
+<li>SIEGE</li>
+<li>BUTCHERS</li>
+<li>LEATHERWORKS</li>
+<li>TANNERS</li>
+<li>CLOTHIERS</li>
+<li>FISHERY</li>
+<li>STILL</li>
+<li>LOOM</li>
+<li>QUERN</li>
+<li>KENNELS</li>
+<li>ASHERY</li>
+<li>KITCHEN</li>
+<li>DYERS</li>
+<li>TOOL</li>
+<li>MILLSTONE</li>
+<li>WOOD_FURNACE</li>
+<li>SMELTER</li>
+<li>GLASS_FURNACE</li>
+<li>MAGMA_SMELTER</li>
+<li>MAGMA_GLASS_FURNACE</li>
+<li>MAGMA_KILN</li>
+<li>KILN</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">modtools/change-build-menu</span> <span class="pre">remove</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">&lt;CATEGORY&gt;</span></code>:</p>
+<blockquote>
+<div><p>Remove the workshop or furnace with the ID <code class="docutils literal"><span class="pre">&lt;ID&gt;</span></code> from <code class="docutils literal"><span class="pre">&lt;CATEGORY&gt;</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">&lt;CATEGORY&gt;</span></code> and <code class="docutils literal"><span class="pre">&lt;ID&gt;</span></code> may have the same values as for the &#8220;add&#8221;
+option.</p>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">modtools/change-build-menu</span> <span class="pre">revert</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">&lt;CATEGORY&gt;</span></code>:</p>
+<blockquote>
+<div>Revert an earlier remove or add operation. It is NOT safe to &#8220;remove&#8221;
+an &#8220;add&#8221;ed building or vice versa, use this option to reverse any
+changes you no longer want/need.</div></blockquote>
+<p><strong>Module Usage:</strong></p>
+<p>To use this script as a module put the following somewhere in your own script:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="n">buildmenu</span> <span class="o">=</span> <span class="n">reqscript</span> <span class="s2">&quot;change-build-menu&quot;</span>
+</pre></div>
+</div>
+<p>Then you can call the functions documented here like so:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Example: Remove the carpenters workshop:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">buildmenu</span><span class="o">.</span><span class="n">ChangeBuilding</span><span class="p">(</span><span class="s2">&quot;CARPENTERS&quot;</span><span class="p">,</span> <span class="s2">&quot;WORKSHOPS&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Example: Make it impossible to build walls (not recommended!):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="n">typ</span><span class="p">,</span> <span class="n">styp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">building_type</span><span class="o">.</span><span class="n">Construction</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">construction_type</span><span class="o">.</span><span class="n">Wall</span>
+<span class="n">buildmenu</span><span class="o">.</span><span class="n">ChangeBuildingAdv</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">styp</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;CONSTRUCTIONS&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>Note that to allow any of your changes to take effect you need to start the
+ticker. See the &#8220;Command Usage&#8221; section.</p>
+<p><strong>Global Functions:</strong></p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">GetWShopID(btype,</span> <span class="pre">bsubtype,</span> <span class="pre">bcustom)</span></code>:</dt>
+<dd>GetWShopID returns a workshop&#8217;s or furnace&#8217;s string ID based on its
+numeric ID triplet. This string ID <em>should</em> match what is expected
+by eventful for hardcoded buildings.</dd>
+<dt><code class="docutils literal"><span class="pre">GetWShopType(id)</span></code>:</dt>
+<dd>GetWShopIDs returns a workshop or furnace&#8217;s ID numbers as a table.
+The passed in ID should be the building&#8217;s string identifier, it makes
+no difference if it is a custom building or a hardcoded one.
+The return table is structured like so: <code class="docutils literal"><span class="pre">{type,</span> <span class="pre">subtype,</span> <span class="pre">custom}</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">IsEntityPermitted(id)</span></code>:</dt>
+<dd>IsEntityPermitted returns true if DF would normally allow you to build
+a workshop or furnace. Use this if you want to change a building, but
+only if it is permitted in the current entity. You do not need to
+specify an entity, the current fortress race is used.</dd>
+</dl>
+<p><code class="docutils literal"><span class="pre">ChangeBuilding(id,</span> <span class="pre">category,</span> <span class="pre">[add,</span> <span class="pre">[key]])</span></code>:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">ChangeBuildingAdv(typ,</span> <span class="pre">subtyp,</span> <span class="pre">custom,</span> <span class="pre">category,</span> <span class="pre">[add,</span> <span class="pre">[key]]):</span></code></dt>
+<dd><p class="first">These two functions apply changes to the build sidebar menus. If &#8220;add&#8221;
+is true then the building is added to the specified category, else it
+is removed. When adding you may specify &#8220;key&#8221;, a string DF hotkey ID.</p>
+<p class="last">The first version of this function takes a workshop or furnace ID as a
+string, the second takes a numeric ID triplet (which can specify any
+building, not just workshops or furnaces).</p>
+</dd>
+</dl>
+<p><code class="docutils literal"><span class="pre">RevertBuildingChanges(id,</span> <span class="pre">category)</span></code>:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">RevertBuildingChangesAdv(typ,</span> <span class="pre">subtyp,</span> <span class="pre">custom,</span> <span class="pre">category)</span></code>:</dt>
+<dd>These two functions revert changes made by &#8220;ChangeBuilding&#8221; and
+&#8220;ChangeBuildingAdv&#8221;. Like those two functions there are two versions,
+a simple one that takes a string ID and one that takes a numeric ID
+triplet.</dd>
+</dl>
+</div>
+<div class="section" id="modtools-create-item">
+<span id="id4"></span><h2><a class="toc-backref" href="#id29">modtools/create-item</a><a class="headerlink" href="#modtools-create-item" title="Permalink to this headline">¶</a></h2>
+<p>Replaces the <a class="reference internal" href="../Plugins.html#createitem"><span class="std std-ref">createitem</span></a> plugin, with standard
+arguments. The other versions will be phased out in a later version.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">creator</span> <span class="nb">id</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">who</span> <span class="n">will</span> <span class="n">create</span> <span class="n">the</span> <span class="n">item</span><span class="p">,</span>
+    <span class="ow">or</span> \\<span class="n">LAST</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">unit</span> <span class="k">with</span> <span class="nb">id</span> <span class="n">df</span><span class="o">.</span><span class="k">global</span><span class="o">.</span><span class="n">unit_next_id</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="mi">0</span>
+        <span class="mi">2</span>
+        \\<span class="n">LAST</span>
+<span class="o">-</span><span class="n">material</span> <span class="n">matstring</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">material</span> <span class="n">of</span> <span class="n">the</span> <span class="n">item</span> <span class="n">to</span> <span class="n">be</span> <span class="n">created</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">INORGANIC</span><span class="p">:</span><span class="n">IRON</span>
+        <span class="n">CREATURE_MAT</span><span class="p">:</span><span class="n">DWARF</span><span class="p">:</span><span class="n">BRAIN</span>
+        <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">MUSHROOM_HELMET_PLUMP</span><span class="p">:</span><span class="n">DRINK</span>
+<span class="o">-</span><span class="n">item</span> <span class="n">itemstr</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">itemdef</span> <span class="n">of</span> <span class="n">the</span> <span class="n">item</span> <span class="n">to</span> <span class="n">be</span> <span class="n">created</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">WEAPON</span><span class="p">:</span><span class="n">ITEM_WEAPON_PICK</span>
+<span class="o">-</span><span class="n">matchingShoes</span>
+    <span class="n">create</span> <span class="n">two</span> <span class="n">of</span> <span class="n">this</span> <span class="n">item</span>
+<span class="o">-</span><span class="n">matchingGloves</span>
+    <span class="n">create</span> <span class="n">two</span> <span class="n">of</span> <span class="n">this</span> <span class="n">item</span><span class="p">,</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">handedness</span> <span class="n">appropriately</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-create-unit">
+<span id="id5"></span><h2><a class="toc-backref" href="#id30">modtools/create-unit</a><a class="headerlink" href="#modtools-create-unit" title="Permalink to this headline">¶</a></h2>
+<p>Creates a unit.  Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">race</span> <span class="n">raceName</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">race</span> <span class="n">of</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">be</span> <span class="n">created</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">DWARF</span>
+        <span class="n">HUMAN</span>
+<span class="o">-</span><span class="n">caste</span> <span class="n">casteName</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">caste</span> <span class="n">of</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">be</span> <span class="n">created</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">MALE</span>
+        <span class="n">FEMALE</span>
+<span class="o">-</span><span class="n">domesticate</span>
+    <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">can</span><span class="s1">&#39;t learn or can&#39;</span><span class="n">t</span> <span class="n">speak</span><span class="p">,</span> <span class="n">make</span> <span class="n">it</span> <span class="n">a</span> <span class="n">friendly</span> <span class="n">animal</span>
+<span class="o">-</span><span class="n">setUnitToFort</span>
+    <span class="n">Sets</span> <span class="n">the</span> <span class="n">groupId</span> <span class="ow">and</span> <span class="n">civId</span> <span class="n">to</span> <span class="n">the</span> <span class="n">local</span> <span class="n">fort</span><span class="o">.</span>
+<span class="o">-</span><span class="n">civId</span> <span class="nb">id</span>
+    <span class="n">Make</span> <span class="n">the</span> <span class="n">created</span> <span class="n">unit</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">civ</span>
+    <span class="p">(</span><span class="ow">or</span> <span class="n">none</span> <span class="k">if</span> <span class="nb">id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span>  <span class="n">If</span> <span class="nb">id</span> <span class="ow">is</span> \\<span class="n">LOCAL</span><span class="p">,</span> <span class="n">make</span> <span class="n">it</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="n">the</span>
+    <span class="n">civ</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">fort</span><span class="p">;</span> <span class="n">otherwise</span> <span class="nb">id</span> <span class="n">must</span> <span class="n">be</span> <span class="n">an</span> <span class="n">integer</span>
+<span class="o">-</span><span class="n">groupId</span> <span class="nb">id</span>
+    <span class="n">Make</span> <span class="n">the</span> <span class="n">created</span> <span class="n">unit</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">group</span>
+    <span class="p">(</span><span class="ow">or</span> <span class="n">none</span> <span class="k">if</span> <span class="nb">id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span>  <span class="n">If</span> <span class="nb">id</span> <span class="ow">is</span> \\<span class="n">LOCAL</span><span class="p">,</span> <span class="n">make</span> <span class="n">it</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="n">the</span>
+    <span class="n">group</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">fort</span><span class="p">;</span> <span class="n">otherwise</span> <span class="nb">id</span> <span class="n">must</span> <span class="n">be</span> <span class="n">an</span> <span class="n">integer</span>
+<span class="o">-</span><span class="n">name</span> <span class="n">entityRawName</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">unit</span><span class="s1">&#39;s name to be a random name appropriate for the</span>
+    <span class="n">given</span> <span class="n">entity</span><span class="o">.</span>  <span class="n">examples</span><span class="p">:</span>
+        <span class="n">MOUNTAIN</span>
+<span class="o">-</span><span class="n">nick</span> <span class="n">nickname</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">unit</span><span class="s1">&#39;s nickname directly</span>
+<span class="o">-</span><span class="n">location</span> <span class="p">[</span> <span class="n">x</span> <span class="n">y</span> <span class="n">z</span> <span class="p">]</span>
+    <span class="n">create</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">at</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">coordinates</span>
+<span class="o">-</span><span class="n">age</span> <span class="n">howOld</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">birth</span> <span class="n">date</span> <span class="n">of</span> <span class="n">the</span> <span class="n">unitby</span> <span class="n">current</span> <span class="n">age</span>
+<span class="o">-</span><span class="n">flagSet</span> <span class="p">[</span> <span class="n">flag1</span> <span class="n">flag2</span> <span class="o">...</span> <span class="p">]</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">unit</span> <span class="n">flags</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">new</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">true</span>
+    <span class="n">flags</span> <span class="n">may</span> <span class="n">be</span> <span class="n">selected</span> <span class="kn">from</span> <span class="nn">df.unit_flags1</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">unit_flags2</span><span class="p">,</span>
+    <span class="ow">or</span> <span class="n">df</span><span class="o">.</span><span class="n">unit_flags3</span>
+<span class="o">-</span><span class="n">flagClear</span> <span class="p">[</span> <span class="n">flag1</span> <span class="n">flag2</span> <span class="o">...</span> <span class="p">]</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">unit</span> <span class="n">flags</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">new</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">false</span>
+    <span class="n">flags</span> <span class="n">may</span> <span class="n">be</span> <span class="n">selected</span> <span class="kn">from</span> <span class="nn">df.unit_flags1</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">unit_flags2</span><span class="p">,</span>
+    <span class="ow">or</span> <span class="n">df</span><span class="o">.</span><span class="n">unit_flags3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-equip-item">
+<span id="id6"></span><h2><a class="toc-backref" href="#id31">modtools/equip-item</a><a class="headerlink" href="#modtools-equip-item" title="Permalink to this headline">¶</a></h2>
+<p>Force a unit to equip an item with a particular body part; useful in
+conjunction with the <code class="docutils literal"><span class="pre">create</span></code> scripts above.  See also <a class="reference internal" href="../Plugins.html#forceequip"><span class="std std-ref">forceequip</span></a>.</p>
+</div>
+<div class="section" id="modtools-extra-gamelog">
+<span id="id7"></span><h2><a class="toc-backref" href="#id32">modtools/extra-gamelog</a><a class="headerlink" href="#modtools-extra-gamelog" title="Permalink to this headline">¶</a></h2>
+<p>This script writes extra information to the gamelog.
+This is useful for tools like <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=106497">Soundsense</a>.</p>
+</div>
+<div class="section" id="modtools-force">
+<span id="id8"></span><h2><a class="toc-backref" href="#id33">modtools/force</a><a class="headerlink" href="#modtools-force" title="Permalink to this headline">¶</a></h2>
+<p>This tool triggers events like megabeasts, caravans, and migrants.</p>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">eventType</span> <span class="n">event</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">event</span> <span class="n">to</span> <span class="n">trigger</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">MegaBeast</span>
+        <span class="n">Migrants</span>
+        <span class="n">Caravan</span>
+        <span class="n">Diplomat</span>
+        <span class="n">WildlifeCurious</span>
+        <span class="n">WildlifeMischievous</span>
+        <span class="n">WildlifeFlier</span>
+        <span class="n">NightCreature</span>
+<span class="o">-</span><span class="n">civ</span> <span class="n">entity</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">civ</span> <span class="n">of</span> <span class="n">the</span> <span class="n">event</span><span class="p">,</span> <span class="k">if</span> <span class="n">applicable</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">player</span>
+        <span class="n">MOUNTAIN</span>
+        <span class="n">EVIL</span>
+        <span class="mi">28</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-if-entity">
+<span id="id9"></span><h2><a class="toc-backref" href="#id34">modtools/if-entity</a><a class="headerlink" href="#modtools-if-entity" title="Permalink to this headline">¶</a></h2>
+<p>Run a command if the current entity matches a given ID.</p>
+<p>To use this script effectively it needs to be called from &#8220;raw/onload.init&#8221;.
+Calling this from the main dfhack.init file will do nothing, as no world has
+been loaded yet.</p>
+<p>Usage:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">id</span></code>:</dt>
+<dd>Specify the entity ID to match</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">cmd</span> <span class="pre">[</span> <span class="pre">commandStrs</span> <span class="pre">]</span></code>:</dt>
+<dd>Specify the command to be run if the current entity matches the entity
+given via -id</dd>
+</dl>
+</li>
+</ul>
+<p>All arguments are required.</p>
+<p>Example:</p>
+<blockquote>
+<div># Print a message if you load an elf fort, but not a dwarf, human, etc
+# fort.
+if-entity -id &#8220;FOREST&#8221; -cmd [ lua &#8220;print(&#8216;Dirty hippies.&#8217;)&#8221; ]</div></blockquote>
+</div>
+<div class="section" id="modtools-interaction-trigger">
+<span id="id10"></span><h2><a class="toc-backref" href="#id35">modtools/interaction-trigger</a><a class="headerlink" href="#modtools-interaction-trigger" title="Permalink to this headline">¶</a></h2>
+<p>This triggers events when a unit uses an interaction on another. It works by
+scanning the announcements for the correct attack verb, so the attack verb
+must be specified in the interaction. It includes an option to suppress this
+announcement after it finds it.</p>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">unregisters</span> <span class="nb">all</span> <span class="n">triggers</span>
+<span class="o">-</span><span class="n">onAttackStr</span> <span class="nb">str</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">when</span> <span class="n">the</span> <span class="n">attack</span> <span class="n">verb</span> <span class="ow">is</span> <span class="s2">&quot;str&quot;</span><span class="o">.</span> <span class="n">both</span> <span class="n">onAttackStr</span> <span class="ow">and</span> <span class="n">onDefendStr</span> <span class="n">MUST</span> <span class="n">be</span> <span class="n">specified</span>
+<span class="o">-</span><span class="n">onDefendStr</span> <span class="nb">str</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">when</span> <span class="n">the</span> <span class="n">defend</span> <span class="n">verb</span> <span class="ow">is</span> <span class="s2">&quot;str&quot;</span><span class="o">.</span> <span class="n">both</span> <span class="n">onAttackStr</span> <span class="ow">and</span> <span class="n">onDefendStr</span> <span class="n">MUST</span> <span class="n">be</span> <span class="n">specified</span>
+<span class="o">-</span><span class="n">suppressAttack</span>
+    <span class="n">delete</span> <span class="n">the</span> <span class="n">attack</span> <span class="n">announcement</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">combat</span> <span class="n">logs</span>
+<span class="o">-</span><span class="n">suppressDefend</span>
+    <span class="n">delete</span> <span class="n">the</span> <span class="n">defend</span> <span class="n">announcement</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">combat</span> <span class="n">logs</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span>
+    <span class="n">commandStrs</span>
+        \\<span class="n">ATTACK_VERB</span>
+        \\<span class="n">DEFEND_VERB</span>
+        \\<span class="n">ATTACKER_ID</span>
+        \\<span class="n">DEFENDER_ID</span>
+        \\<span class="n">ATTACK_REPORT</span>
+        \\<span class="n">DEFEND_REPORT</span>
+        \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+        <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+<p>You must specify both an attack string and a defend string to guarantee
+correct performance. Either will trigger the script when it happens, but
+it will not be triggered twice in a row if both happen.</p>
+</div>
+<div class="section" id="modtools-invader-item-destroyer">
+<span id="id11"></span><h2><a class="toc-backref" href="#id36">modtools/invader-item-destroyer</a><a class="headerlink" href="#modtools-invader-item-destroyer" title="Permalink to this headline">¶</a></h2>
+<p>This tool configurably destroys invader items to prevent clutter or to prevent
+the player from getting tools exclusive to certain races.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">reset</span> <span class="nb">all</span> <span class="n">registered</span> <span class="n">data</span>
+<span class="o">-</span><span class="n">allEntities</span> <span class="p">[</span><span class="n">true</span><span class="o">/</span><span class="n">false</span><span class="p">]</span>
+    <span class="nb">set</span> <span class="n">whether</span> <span class="n">it</span> <span class="n">should</span> <span class="n">delete</span> <span class="n">items</span> <span class="kn">from</span> <span class="nn">invaders</span> <span class="kn">from</span> <span class="nn">any</span> <span class="n">civ</span>
+<span class="o">-</span><span class="n">allItems</span> <span class="p">[</span><span class="n">true</span><span class="o">/</span><span class="n">false</span><span class="p">]</span>
+    <span class="nb">set</span> <span class="n">whether</span> <span class="n">it</span> <span class="n">should</span> <span class="n">delete</span> <span class="nb">all</span> <span class="n">invader</span> <span class="n">items</span> <span class="n">regardless</span> <span class="n">of</span>
+    <span class="nb">type</span> <span class="n">when</span> <span class="n">an</span> <span class="n">appropriate</span> <span class="n">invader</span> <span class="n">dies</span>
+<span class="o">-</span><span class="n">item</span> <span class="n">itemdef</span>
+    <span class="nb">set</span> <span class="n">a</span> <span class="n">particular</span> <span class="n">itemdef</span> <span class="n">to</span> <span class="n">be</span> <span class="n">destroyed</span> <span class="n">when</span> <span class="n">an</span> <span class="n">invader</span>
+    <span class="kn">from</span> <span class="nn">an</span> <span class="n">appropriate</span> <span class="n">civ</span> <span class="n">dies</span><span class="o">.</span>  <span class="n">examples</span><span class="p">:</span>
+        <span class="n">ITEM_WEAPON_PICK</span>
+<span class="o">-</span><span class="n">entity</span> <span class="n">entityName</span>
+    <span class="nb">set</span> <span class="n">a</span> <span class="n">particular</span> <span class="n">entity</span> <span class="n">up</span> <span class="n">so</span> <span class="n">that</span> <span class="n">its</span> <span class="n">invaders</span> <span class="n">destroy</span> <span class="n">their</span>
+    <span class="n">items</span> <span class="n">shortly</span> <span class="n">after</span> <span class="n">death</span><span class="o">.</span>  <span class="n">examples</span><span class="p">:</span>
+        <span class="n">MOUNTAIN</span>
+        <span class="n">EVIL</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-item-trigger">
+<span id="id12"></span><h2><a class="toc-backref" href="#id37">modtools/item-trigger</a><a class="headerlink" href="#modtools-item-trigger" title="Permalink to this headline">¶</a></h2>
+<p>This powerful tool triggers DFHack commands when a unit equips, unequips, or
+attacks another unit with specified item types, specified item materials, or
+specified item contaminants.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">clear</span> <span class="nb">all</span> <span class="n">registered</span> <span class="n">triggers</span>
+<span class="o">-</span><span class="n">checkAttackEvery</span> <span class="n">n</span>
+    <span class="n">check</span> <span class="n">the</span> <span class="n">attack</span> <span class="n">event</span> <span class="n">at</span> <span class="n">least</span> <span class="n">every</span> <span class="n">n</span> <span class="n">ticks</span>
+<span class="o">-</span><span class="n">checkInventoryEvery</span> <span class="n">n</span>
+    <span class="n">check</span> <span class="n">inventory</span> <span class="n">event</span> <span class="n">at</span> <span class="n">least</span> <span class="n">every</span> <span class="n">n</span> <span class="n">ticks</span>
+<span class="o">-</span><span class="n">itemType</span> <span class="nb">type</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="k">for</span> <span class="n">items</span> <span class="n">of</span> <span class="n">this</span> <span class="nb">type</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">ITEM_WEAPON_PICK</span>
+        <span class="n">RING</span>
+<span class="o">-</span><span class="n">onStrike</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">on</span> <span class="n">appropriate</span> <span class="n">weapon</span> <span class="n">strikes</span>
+<span class="o">-</span><span class="n">onEquip</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">when</span> <span class="n">someone</span> <span class="n">equips</span> <span class="n">an</span> <span class="n">appropriate</span> <span class="n">item</span>
+<span class="o">-</span><span class="n">onUnequip</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">when</span> <span class="n">someone</span> <span class="n">unequips</span> <span class="n">an</span> <span class="n">appropriate</span> <span class="n">item</span>
+<span class="o">-</span><span class="n">material</span> <span class="n">mat</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">commmand</span> <span class="n">on</span> <span class="n">items</span> <span class="k">with</span> <span class="n">the</span> <span class="n">given</span> <span class="n">material</span>
+    <span class="n">examples</span>
+        <span class="n">INORGANIC</span><span class="p">:</span><span class="n">IRON</span>
+        <span class="n">CREATURE_MAT</span><span class="p">:</span><span class="n">DWARF</span><span class="p">:</span><span class="n">BRAIN</span>
+        <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">MUSHROOM_HELMET_PLUMP</span><span class="p">:</span><span class="n">DRINK</span>
+<span class="o">-</span><span class="n">contaminant</span> <span class="n">mat</span>
+    <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span> <span class="n">on</span> <span class="n">items</span> <span class="k">with</span> <span class="n">a</span> <span class="n">given</span> <span class="n">material</span> <span class="n">contaminant</span>
+    <span class="n">examples</span>
+        <span class="n">INORGANIC</span><span class="p">:</span><span class="n">IRON</span>
+        <span class="n">CREATURE_MAT</span><span class="p">:</span><span class="n">DWARF</span><span class="p">:</span><span class="n">BRAIN</span>
+        <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">MUSHROOM_HELMET_PLUMP</span><span class="p">:</span><span class="n">DRINK</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span>
+    <span class="n">commandStrs</span>
+        \\<span class="n">ATTACKER_ID</span>
+        \\<span class="n">DEFENDER_ID</span>
+        \\<span class="n">ITEM_MATERIAL</span>
+        \\<span class="n">ITEM_MATERIAL_TYPE</span>
+        \\<span class="n">ITEM_ID</span>
+        \\<span class="n">ITEM_TYPE</span>
+        \\<span class="n">CONTAMINANT_MATERIAL</span>
+        \\<span class="n">CONTAMINANT_MATERIAL_TYPE</span>
+        \\<span class="n">CONTAMINANT_MATERIAL_INDEX</span>
+        \\<span class="n">MODE</span>
+        \\<span class="n">UNIT_ID</span>
+        \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+        <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-moddable-gods">
+<span id="id13"></span><h2><a class="toc-backref" href="#id38">modtools/moddable-gods</a><a class="headerlink" href="#modtools-moddable-gods" title="Permalink to this headline">¶</a></h2>
+<p>This is a standardized version of Putnam&#8217;s moddableGods script. It allows you
+to create gods on the command-line.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">name</span> <span class="n">godName</span>
+    <span class="n">sets</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">god</span> <span class="n">to</span> <span class="n">godName</span>
+    <span class="k">if</span> <span class="n">there</span><span class="s1">&#39;s already a god of that name, the script halts</span>
+<span class="o">-</span><span class="n">spheres</span> <span class="p">[</span> <span class="n">sphereList</span> <span class="p">]</span>
+    <span class="n">define</span> <span class="n">a</span> <span class="n">space</span><span class="o">-</span><span class="n">separated</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">spheres</span> <span class="n">of</span> <span class="n">influence</span> <span class="n">of</span> <span class="n">the</span> <span class="n">god</span>
+<span class="o">-</span><span class="n">depictedAs</span> <span class="nb">str</span>
+    <span class="n">often</span> <span class="n">depicted</span> <span class="k">as</span> <span class="n">a</span> <span class="nb">str</span>
+<span class="o">-</span><span class="n">domain</span> <span class="nb">str</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">domain</span> <span class="n">of</span> <span class="n">the</span> <span class="n">god</span>
+<span class="o">-</span><span class="n">description</span> <span class="nb">str</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">god</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-outside-only">
+<span id="id14"></span><h2><a class="toc-backref" href="#id39">modtools/outside-only</a><a class="headerlink" href="#modtools-outside-only" title="Permalink to this headline">¶</a></h2>
+<p>This allows you to specify certain custom buildings as outside only, or inside
+only. If the player attempts to build a building in an inappropriate location,
+the building will be destroyed.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">clears</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">registered</span> <span class="n">buildings</span>
+<span class="o">-</span><span class="n">checkEvery</span> <span class="n">n</span>
+    <span class="nb">set</span> <span class="n">how</span> <span class="n">often</span> <span class="n">existing</span> <span class="n">buildings</span> <span class="n">are</span> <span class="n">checked</span> <span class="k">for</span> <span class="n">whether</span> <span class="n">they</span>
+    <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">location</span> <span class="n">to</span> <span class="n">n</span> <span class="n">ticks</span>
+<span class="o">-</span><span class="nb">type</span> <span class="p">[</span><span class="n">EITHER</span><span class="p">,</span> <span class="n">OUTSIDE_ONLY</span><span class="p">,</span> <span class="n">INSIDE_ONLY</span><span class="p">]</span>
+    <span class="n">specify</span> <span class="n">what</span> <span class="n">sort</span> <span class="n">of</span> <span class="n">restriction</span> <span class="n">to</span> <span class="n">put</span> <span class="n">on</span> <span class="n">the</span> <span class="n">building</span>
+<span class="o">-</span><span class="n">building</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">building</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-projectile-trigger">
+<span id="id15"></span><h2><a class="toc-backref" href="#id40">modtools/projectile-trigger</a><a class="headerlink" href="#modtools-projectile-trigger" title="Permalink to this headline">¶</a></h2>
+<p>This triggers dfhack commands when projectiles hit their targets.  Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">unregister</span> <span class="nb">all</span> <span class="n">triggers</span>
+<span class="o">-</span><span class="n">material</span>
+    <span class="n">specify</span> <span class="n">a</span> <span class="n">material</span> <span class="k">for</span> <span class="n">projectiles</span> <span class="n">that</span> <span class="n">will</span> <span class="n">trigger</span> <span class="n">the</span> <span class="n">command</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">INORGANIC</span><span class="p">:</span><span class="n">IRON</span>
+        <span class="n">CREATURE_MAT</span><span class="p">:</span><span class="n">DWARF</span><span class="p">:</span><span class="n">BRAIN</span>
+        <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">MUSHROOM_HELMET_PLUMP</span><span class="p">:</span><span class="n">DRINK</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandList</span> <span class="p">]</span>
+    \\<span class="n">LOCATION</span>
+    \\<span class="n">PROJECTILE_ID</span>
+    \\<span class="n">FIRER_ID</span>
+    \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+    <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-random-trigger">
+<span id="id16"></span><h2><a class="toc-backref" href="#id41">modtools/random-trigger</a><a class="headerlink" href="#modtools-random-trigger" title="Permalink to this headline">¶</a></h2>
+<p>Trigger random dfhack commands with specified probabilities.
+Register a few scripts, then tell it to &#8220;go&#8221; and it will pick one
+based on the probability weights you specified.</p>
+<p>Events are mutually-exclusive - register a list of scripts along with
+relative weights, then tell the script to select and run one with the
+specified probabilities.  The weights must be positive integers, but
+they do NOT have to sum to any particular number.</p>
+<p>The outcomes are mutually exclusive: only one will be triggered.  If you
+want multiple independent random events, call the script multiple times.</p>
+<p>99% of the time, you won&#8217;t need to worry about this, but just in case,
+you can specify a name of a list of outcomes to prevent interference from
+other scripts that call this one.  That also permits situations where you
+don&#8217;t know until runtime what outcomes you want.  For example, you could
+make a <a class="reference internal" href="#modtools-reaction-trigger"><span class="std std-ref">modtools/reaction-trigger</span></a> that registers the worker as a mayor
+candidate, then run this script to choose a random mayor from the list of
+units that did the mayor reaction.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">outcomeListName</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">this</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">outcomes</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">interference</span>
+    <span class="k">if</span> <span class="n">two</span> <span class="n">scripts</span> <span class="n">are</span> <span class="n">registering</span> <span class="n">outcomes</span> <span class="n">at</span> <span class="n">the</span> <span class="n">same</span> <span class="n">time</span><span class="o">.</span>  <span class="n">If</span> <span class="n">none</span>
+    <span class="ow">is</span> <span class="n">specified</span><span class="p">,</span> <span class="n">the</span> <span class="n">default</span> <span class="n">outcome</span> <span class="nb">list</span> <span class="ow">is</span> <span class="n">selected</span> <span class="n">automatically</span><span class="o">.</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">run</span> <span class="k">if</span> <span class="n">this</span> <span class="n">outcome</span> <span class="ow">is</span> <span class="n">selected</span>
+    <span class="n">must</span> <span class="n">be</span> <span class="n">specified</span> <span class="n">unless</span> <span class="n">the</span> <span class="o">-</span><span class="n">trigger</span> <span class="n">argument</span> <span class="ow">is</span> <span class="n">given</span>
+<span class="o">-</span><span class="n">weight</span> <span class="n">n</span>
+    <span class="n">the</span> <span class="n">relative</span> <span class="n">probability</span> <span class="n">weight</span> <span class="n">of</span> <span class="n">this</span> <span class="n">outcome</span>
+    <span class="n">n</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">negative</span> <span class="n">integer</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">specified</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">by</span> <span class="n">default</span>
+<span class="o">-</span><span class="n">trigger</span>
+    <span class="n">selects</span> <span class="n">a</span> <span class="n">random</span> <span class="n">script</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">outcomeList</span>
+    <span class="p">(</span><span class="ow">or</span> <span class="n">the</span> <span class="n">default</span> <span class="n">one</span> <span class="k">if</span> <span class="n">none</span> <span class="ow">is</span> <span class="n">specified</span><span class="p">)</span>
+<span class="o">-</span><span class="n">preserveList</span>
+    <span class="n">when</span> <span class="n">combined</span> <span class="k">with</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">preserves</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">outcomes</span> <span class="n">so</span> <span class="n">you</span>
+    <span class="n">don</span><span class="s1">&#39;t have to register them again.</span>
+<span class="o">-</span><span class="n">withProbability</span> <span class="n">p</span>
+    <span class="n">p</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">real</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span> <span class="n">inclusive</span>
+    <span class="n">triggers</span> <span class="n">the</span> <span class="n">command</span> <span class="n">immediately</span> <span class="k">with</span> <span class="n">this</span> <span class="n">probability</span>
+<span class="o">-</span><span class="n">seed</span> <span class="n">s</span>
+    <span class="n">sets</span> <span class="n">the</span> <span class="n">random</span> <span class="n">seed</span> <span class="k">for</span> <span class="n">debugging</span> <span class="n">purposes</span>
+    <span class="p">(</span><span class="n">guarantees</span> <span class="n">the</span> <span class="n">same</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">random</span> <span class="n">numbers</span> <span class="n">will</span> <span class="n">be</span> <span class="n">produced</span><span class="p">)</span>
+    <span class="n">use</span>
+<span class="o">-</span><span class="n">listOutcomes</span>
+    <span class="n">lists</span> <span class="n">the</span> <span class="n">currently</span> <span class="n">registered</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">outcomes</span> <span class="n">of</span> <span class="n">the</span> <span class="n">outcomeList</span>
+    <span class="n">along</span> <span class="k">with</span> <span class="n">their</span> <span class="n">probability</span> <span class="n">weights</span><span class="p">,</span> <span class="k">for</span> <span class="n">debugging</span> <span class="n">purposes</span>
+<span class="o">-</span><span class="n">clear</span>
+    <span class="n">unregister</span> <span class="n">everything</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><code class="docutils literal"><span class="pre">-preserveList</span></code> is something of a beta feature, which should be
+avoided by users without a specific reason to use it.</p>
+<p>It is highly recommended that you always specify <code class="docutils literal"><span class="pre">-outcomeListName</span></code>
+when you give this command to prevent almost certain interference.
+If you want to trigger one of 5 outcomes three times, you might want
+this option even without <code class="docutils literal"><span class="pre">-outcomeListName</span></code>.</p>
+<p class="last">The list is NOT retained across game save/load, as nobody has yet had
+a use for this feature.  Contact expwnent if you would use it; it&#8217;s
+not that hard but if nobody wants it he won&#8217;t bother.</p>
+</div>
+</div>
+<div class="section" id="modtools-raw-lint">
+<span id="id17"></span><h2><a class="toc-backref" href="#id42">modtools/raw-lint</a><a class="headerlink" href="#modtools-raw-lint" title="Permalink to this headline">¶</a></h2>
+<p>Checks for simple issues with raw files. Can be run automatically.</p>
+</div>
+<div class="section" id="modtools-reaction-product-trigger">
+<span id="id18"></span><h2><a class="toc-backref" href="#id43">modtools/reaction-product-trigger</a><a class="headerlink" href="#modtools-reaction-product-trigger" title="Permalink to this headline">¶</a></h2>
+<p>This triggers dfhack commands when reaction products are produced, once per
+product.  Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">unregister</span> <span class="nb">all</span> <span class="n">reaction</span> <span class="n">hooks</span>
+<span class="o">-</span><span class="n">reactionName</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reaction</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">run</span> <span class="n">on</span> <span class="n">the</span> <span class="n">target</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">special</span> <span class="n">args</span>
+        \\<span class="n">WORKER_ID</span>
+        \\<span class="n">REACTION</span>
+        \\<span class="n">BUILDING_ID</span>
+        \\<span class="n">LOCATION</span>
+        \\<span class="n">INPUT_ITEMS</span>
+        \\<span class="n">OUTPUT_ITEMS</span>
+        \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+        <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-reaction-trigger">
+<span id="id19"></span><h2><a class="toc-backref" href="#id44">modtools/reaction-trigger</a><a class="headerlink" href="#modtools-reaction-trigger" title="Permalink to this headline">¶</a></h2>
+<p>Triggers dfhack commands when custom reactions complete, regardless of whether
+it produced anything, once per completion.  Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">unregister</span> <span class="nb">all</span> <span class="n">reaction</span> <span class="n">hooks</span>
+<span class="o">-</span><span class="n">reactionName</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reaction</span>
+<span class="o">-</span><span class="n">syndrome</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">syndrome</span> <span class="n">to</span> <span class="n">be</span> <span class="n">applied</span> <span class="n">to</span> <span class="n">the</span> <span class="n">targets</span>
+<span class="o">-</span><span class="n">allowNonworkerTargets</span>
+    <span class="n">allow</span> <span class="n">other</span> <span class="n">units</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">building</span> <span class="n">to</span> <span class="n">be</span> <span class="n">targetted</span> <span class="n">by</span>
+    <span class="n">either</span> <span class="n">the</span> <span class="n">script</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">syndrome</span>
+<span class="o">-</span><span class="n">allowMultipleTargets</span>
+    <span class="n">allow</span> <span class="n">multiple</span> <span class="n">targets</span> <span class="n">to</span> <span class="n">the</span> <span class="n">script</span> <span class="ow">or</span> <span class="n">syndrome</span>
+    <span class="k">if</span> <span class="n">absent</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">running</span> <span class="n">a</span> <span class="n">script</span><span class="p">,</span> <span class="n">only</span> <span class="n">one</span> <span class="n">target</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span>
+        <span class="k">if</span> <span class="n">applying</span> <span class="n">a</span> <span class="n">syndrome</span><span class="p">,</span> <span class="n">then</span> <span class="n">only</span> <span class="n">one</span> <span class="n">target</span> <span class="n">will</span> <span class="n">be</span> <span class="n">infected</span>
+<span class="o">-</span><span class="n">resetPolicy</span> <span class="n">policy</span>
+    <span class="n">the</span> <span class="n">policy</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">case</span> <span class="n">that</span> <span class="n">the</span> <span class="n">syndrome</span> <span class="ow">is</span> <span class="n">already</span> <span class="n">present</span>
+    <span class="n">policy</span>
+        <span class="n">NewInstance</span> <span class="p">(</span><span class="n">default</span><span class="p">)</span>
+        <span class="n">DoNothing</span>
+        <span class="n">ResetDuration</span>
+        <span class="n">AddDuration</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">run</span> <span class="n">on</span> <span class="n">the</span> <span class="n">target</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">special</span> <span class="n">args</span>
+        \\<span class="n">WORKER_ID</span>
+        \\<span class="n">TARGET_ID</span>
+        \\<span class="n">BUILDING_ID</span>
+        \\<span class="n">LOCATION</span>
+        \\<span class="n">REACTION_NAME</span>
+        \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+        <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-reaction-trigger-transition">
+<span id="id20"></span><h2><a class="toc-backref" href="#id45">modtools/reaction-trigger-transition</a><a class="headerlink" href="#modtools-reaction-trigger-transition" title="Permalink to this headline">¶</a></h2>
+<p>Prints useful things to the console and a file to help modders
+transition from <code class="docutils literal"><span class="pre">autoSyndrome</span></code> to <a class="reference internal" href="#modtools-reaction-trigger"><span class="std std-ref">modtools/reaction-trigger</span></a>.</p>
+<p>This script is basically an apology for breaking backward
+compatibility in June 2014, and will be removed eventually.</p>
+</div>
+<div class="section" id="modtools-skill-change">
+<span id="id21"></span><h2><a class="toc-backref" href="#id46">modtools/skill-change</a><a class="headerlink" href="#modtools-skill-change" title="Permalink to this headline">¶</a></h2>
+<p>Sets or modifies a skill of a unit.  Args:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">-skill skillName:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">set the skill that we&#8217;re talking about</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">-mode (add/set):</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">are we adding experience/levels or setting them?</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">-granularity (experience/level):</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">direct experience, or experience levels?</td>
+</tr>
+<tr class="field-even field"><th class="field-name">-unit id:</th><td class="field-body">id of the target unit</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">-value amount:</th><td class="field-body">how much to set/add</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="modtools-spawn-flow">
+<span id="id22"></span><h2><a class="toc-backref" href="#id47">modtools/spawn-flow</a><a class="headerlink" href="#modtools-spawn-flow" title="Permalink to this headline">¶</a></h2>
+<p>Creates flows at the specified location.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">material</span> <span class="n">mat</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">material</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flow</span><span class="p">,</span> <span class="k">if</span> <span class="n">applicable</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">INORGANIC</span><span class="p">:</span><span class="n">IRON</span>
+        <span class="n">CREATURE_MAT</span><span class="p">:</span><span class="n">DWARF</span><span class="p">:</span><span class="n">BRAIN</span>
+        <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">MUSHROOM_HELMET_PLUMP</span><span class="p">:</span><span class="n">DRINK</span>
+<span class="o">-</span><span class="n">location</span> <span class="p">[</span> <span class="n">x</span> <span class="n">y</span> <span class="n">z</span><span class="p">]</span>
+    <span class="n">the</span> <span class="n">location</span> <span class="n">to</span> <span class="n">spawn</span> <span class="n">the</span> <span class="n">flow</span>
+<span class="o">-</span><span class="n">flowType</span> <span class="nb">type</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">flow</span> <span class="nb">type</span>
+    <span class="n">examples</span><span class="p">:</span>
+        <span class="n">Miasma</span>
+        <span class="n">Steam</span>
+        <span class="n">Mist</span>
+        <span class="n">MaterialDust</span>
+        <span class="n">MagmaMist</span>
+        <span class="n">Smoke</span>
+        <span class="n">Dragonfire</span>
+        <span class="n">Fire</span>
+        <span class="n">Web</span>
+        <span class="n">MaterialGas</span>
+        <span class="n">MaterialVapor</span>
+        <span class="n">OceanWave</span>
+        <span class="n">SeaFoam</span>
+<span class="o">-</span><span class="n">flowSize</span> <span class="n">size</span>
+    <span class="n">specify</span> <span class="n">how</span> <span class="n">big</span> <span class="n">the</span> <span class="n">flow</span> <span class="ow">is</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-syndrome-trigger">
+<span id="id23"></span><h2><a class="toc-backref" href="#id48">modtools/syndrome-trigger</a><a class="headerlink" href="#modtools-syndrome-trigger" title="Permalink to this headline">¶</a></h2>
+<p>Triggers dfhack commands when syndromes are applied to units.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">clear</span> <span class="nb">all</span> <span class="n">triggers</span>
+<span class="o">-</span><span class="n">syndrome</span> <span class="n">name</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">a</span> <span class="n">syndrome</span>
+<span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">commandStrs</span> <span class="p">]</span>
+    <span class="n">specify</span> <span class="n">the</span> <span class="n">command</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="n">after</span> <span class="n">infection</span>
+    <span class="n">args</span>
+        \\<span class="n">SYNDROME_ID</span>
+        \\<span class="n">UNIT_ID</span>
+        \\<span class="n">LOCATION</span>
+        \\<span class="n">anything</span> <span class="o">-&gt;</span> \<span class="n">anything</span>
+        <span class="n">anything</span> <span class="o">-&gt;</span> <span class="n">anything</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modtools-transform-unit">
+<span id="id24"></span><h2><a class="toc-backref" href="#id49">modtools/transform-unit</a><a class="headerlink" href="#modtools-transform-unit" title="Permalink to this headline">¶</a></h2>
+<p>Transforms a unit into another unit type, possibly permanently.
+Warning: this will crash arena mode if you view the unit on the
+same tick that it transforms.  If you wait until later, it will be fine.</p>
+<p>Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">clear</span>
+    <span class="n">clear</span> <span class="n">records</span> <span class="n">of</span> <span class="n">normal</span> <span class="n">races</span>
+<span class="o">-</span><span class="n">unit</span> <span class="nb">id</span>
+    <span class="nb">set</span> <span class="n">the</span> <span class="n">target</span> <span class="n">unit</span>
+<span class="o">-</span><span class="n">duration</span> <span class="n">ticks</span>
+    <span class="n">how</span> <span class="n">long</span> <span class="n">it</span> <span class="n">should</span> <span class="n">last</span><span class="p">,</span> <span class="ow">or</span> <span class="s2">&quot;forever&quot;</span>
+<span class="o">-</span><span class="n">setPrevRace</span>
+    <span class="n">make</span> <span class="n">a</span> <span class="n">record</span> <span class="n">of</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">race</span> <span class="n">so</span> <span class="n">that</span> <span class="n">you</span> <span class="n">can</span>
+    <span class="n">change</span> <span class="n">it</span> <span class="n">back</span> <span class="k">with</span> <span class="o">-</span><span class="n">untransform</span>
+<span class="o">-</span><span class="n">keepInventory</span>
+    <span class="n">move</span> <span class="n">items</span> <span class="n">back</span> <span class="n">into</span> <span class="n">inventory</span> <span class="n">after</span> <span class="n">transformation</span>
+<span class="o">-</span><span class="n">race</span> <span class="n">raceName</span>
+<span class="o">-</span><span class="n">caste</span> <span class="n">casteName</span>
+<span class="o">-</span><span class="n">suppressAnnouncement</span>
+    <span class="n">don</span><span class="s1">&#39;t show the Unit has transformed into a Blah! event</span>
+<span class="o">-</span><span class="n">untransform</span>
+    <span class="n">turn</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">back</span> <span class="n">into</span> <span class="n">what</span> <span class="n">it</span> <span class="n">was</span> <span class="n">before</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../Scripts.html">DFHack Scripts</a><ul>
+      <li>Previous: <a href="gui.html" title="previous chapter">GUI Scripts</a></li>
+      <li>Next: <a href="../Authors.html" title="next chapter">List of Authors</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Scripts for Modders</a><ul>
+<li><a class="reference internal" href="#modtools-add-syndrome">modtools/add-syndrome</a></li>
+<li><a class="reference internal" href="#modtools-anonymous-script">modtools/anonymous-script</a></li>
+<li><a class="reference internal" href="#modtools-change-build-menu">modtools/change-build-menu</a></li>
+<li><a class="reference internal" href="#modtools-create-item">modtools/create-item</a></li>
+<li><a class="reference internal" href="#modtools-create-unit">modtools/create-unit</a></li>
+<li><a class="reference internal" href="#modtools-equip-item">modtools/equip-item</a></li>
+<li><a class="reference internal" href="#modtools-extra-gamelog">modtools/extra-gamelog</a></li>
+<li><a class="reference internal" href="#modtools-force">modtools/force</a></li>
+<li><a class="reference internal" href="#modtools-if-entity">modtools/if-entity</a></li>
+<li><a class="reference internal" href="#modtools-interaction-trigger">modtools/interaction-trigger</a></li>
+<li><a class="reference internal" href="#modtools-invader-item-destroyer">modtools/invader-item-destroyer</a></li>
+<li><a class="reference internal" href="#modtools-item-trigger">modtools/item-trigger</a></li>
+<li><a class="reference internal" href="#modtools-moddable-gods">modtools/moddable-gods</a></li>
+<li><a class="reference internal" href="#modtools-outside-only">modtools/outside-only</a></li>
+<li><a class="reference internal" href="#modtools-projectile-trigger">modtools/projectile-trigger</a></li>
+<li><a class="reference internal" href="#modtools-random-trigger">modtools/random-trigger</a></li>
+<li><a class="reference internal" href="#modtools-raw-lint">modtools/raw-lint</a></li>
+<li><a class="reference internal" href="#modtools-reaction-product-trigger">modtools/reaction-product-trigger</a></li>
+<li><a class="reference internal" href="#modtools-reaction-trigger">modtools/reaction-trigger</a></li>
+<li><a class="reference internal" href="#modtools-reaction-trigger-transition">modtools/reaction-trigger-transition</a></li>
+<li><a class="reference internal" href="#modtools-skill-change">modtools/skill-change</a></li>
+<li><a class="reference internal" href="#modtools-spawn-flow">modtools/spawn-flow</a></li>
+<li><a class="reference internal" href="#modtools-syndrome-trigger">modtools/syndrome-trigger</a></li>
+<li><a class="reference internal" href="#modtools-transform-unit">modtools/transform-unit</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/docs/_auto/modtools.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,282 @@
+.. _gui:
+
+###########
+GUI Scripts
+###########
+
+.. include:: /scripts/gui/about.txt
+
+.. contents::
+
+.. _gui/advfort:
+
+.. include:: /scripts/gui/advfort.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/advfort_items:
+
+.. include:: /scripts/gui/advfort_items.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/assign-rack:
+
+.. include:: /scripts/gui/assign-rack.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/assign-rack`
+
+
+.. _gui/autobutcher:
+
+.. include:: /scripts/gui/autobutcher.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/autobutcher`
+
+
+.. _gui/choose-weapons:
+
+.. include:: /scripts/gui/choose-weapons.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/choose-weapons`
+
+
+.. _gui/clone-uniform:
+
+.. include:: /scripts/gui/clone-uniform.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/clone-uniform`
+
+
+.. _gui/companion-order:
+
+.. include:: /scripts/gui/companion-order.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/companion-order`
+
+
+.. _gui/confirm-opts:
+
+.. include:: /scripts/gui/confirm-opts.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/create-item:
+
+.. include:: /scripts/gui/create-item.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/dfstatus:
+
+.. include:: /scripts/gui/dfstatus.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/dfstatus`
+
+
+.. _gui/extended-status:
+
+.. include:: /scripts/gui/extended-status.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/family-affairs:
+
+.. include:: /scripts/gui/family-affairs.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/gm-editor:
+
+.. include:: /scripts/gui/gm-editor.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/gm-unit:
+
+.. include:: /scripts/gui/gm-unit.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/guide-path:
+
+.. include:: /scripts/gui/guide-path.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/guide-path`
+
+
+.. _gui/hack-wish:
+
+.. include:: /scripts/gui/hack-wish.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/hello-world:
+
+.. include:: /scripts/gui/hello-world.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/liquids:
+
+.. include:: /scripts/gui/liquids.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/liquids`
+
+
+.. _gui/load-screen:
+
+.. include:: /scripts/gui/load-screen.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/manager-quantity:
+
+.. include:: /scripts/gui/manager-quantity.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/manager-quantity`
+
+
+.. _gui/mechanisms:
+
+.. include:: /scripts/gui/mechanisms.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/mechanisms`
+
+
+.. _gui/mod-manager:
+
+.. include:: /scripts/gui/mod-manager.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/no-dfhack-init:
+
+.. include:: /scripts/gui/no-dfhack-init.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/power-meter:
+
+.. include:: /scripts/gui/power-meter.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/power-meter`
+
+
+.. _gui/prerelease-warning:
+
+.. include:: /scripts/gui/prerelease-warning.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/quickcmd:
+
+.. include:: /scripts/gui/quickcmd.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/rename:
+
+.. include:: /scripts/gui/rename.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/rename`
+
+
+.. _gui/room-list:
+
+.. include:: /scripts/gui/room-list.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/room-list`
+
+
+.. _gui/settings-manager:
+
+.. include:: /scripts/gui/settings-manager.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/settings-manager`
+
+
+.. _gui/siege-engine:
+
+.. include:: /scripts/gui/siege-engine.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/siege-engine`
+
+
+.. _gui/stockpiles:
+
+.. include:: /scripts/gui/stockpiles.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/stockpiles`
+
+
+.. _gui/unit-info-viewer:
+
+.. include:: /scripts/gui/unit-info-viewer.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _gui/workflow:
+
+.. include:: /scripts/gui/workflow.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/workflow`
+
+
+.. _gui/workshop-job:
+
+.. include:: /scripts/gui/workshop-job.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+:dfhack-keybind:`gui/workshop-job`
