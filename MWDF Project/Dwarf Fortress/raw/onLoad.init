@@ -1,4 +1,4 @@
-#################### Welcome to Masterwork Dwarf Fortress Version 1.25 ####################
+#################### Welcome to Masterwork Dwarf Fortress Version 1.26 ####################
 
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
@@ -9,7 +9,7 @@
 :lua dfhack.color(15)
 :lua dfhack.print('version ')
 :lua dfhack.color(12)
-:lua dfhack.println('1.25')
+:lua dfhack.println('1.26')
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
 :lua dfhack.color(-1)
@@ -21,7 +21,7 @@
 :lua print(' ')
 :lua print('Initializing embark settings.')
 points 1274
-dwarves 7
+startdwarf 7
 embark-tools anywhere
 removefirewood
 #addwood
@@ -146,6 +146,8 @@ AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
 AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 
+tesb-job-monitor -living .002 -gem .005
+
 :lua print(' ')
 :lua print('World Initialization Complete!')
 
@@ -158,6 +160,8 @@ AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 ###############################################################################
 ###############################################################################
 ###############################################################################
+
+
 
 
 

@@ -1,4 +1,4 @@
-#################### Welcome to Masterwork Dwarf Fortress Version 1.25 ####################
+#################### Welcome to Masterwork Dwarf Fortress Version 1.26 ####################
 
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
@@ -9,7 +9,7 @@
 :lua dfhack.color(15)
 :lua dfhack.print('version ')
 :lua dfhack.color(12)
-:lua dfhack.println('1.25')
+:lua dfhack.println('1.26')
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
 :lua dfhack.color(-1)
@@ -68,7 +68,7 @@ modtools/reaction-trigger -reactionName OPEN_LEGENDS -command [ open-legends ]
 
 #################### THE EARTH STRIKES BACK! ####################
 :lua print(' ')
-tesb-job-monitor -living .002 -gem .005
+#tesb-job-monitor -living .002 -gem .005
 tesb-weather -creature TESB_AWAKENED_STORM -weather rain
 tesb-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
 modtools/reaction-trigger -reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]

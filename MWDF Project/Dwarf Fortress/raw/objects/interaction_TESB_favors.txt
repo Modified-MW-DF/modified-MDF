@@ -1,6 +1,6 @@
 interaction_TESB_favor
 
-!YES_SECRET_TESB!OBJECT:INTERACTION]
+YES_SECRET_TESB[OBJECT:INTERACTION]
 
 #A - I know its a mod and its not our mod.
 # but the favors are slated for being turned off and on.
@@ -1030,6 +1030,7 @@ Flux stones are in the MINERALS and METALS Spheres.
 				[CDI:TARGET_RANGE:C:15]
 				[CDI:MAX_TARGET_NUMBER:C:1]
 				[CDI:WAIT_PERIOD:33]
+
 
 
 

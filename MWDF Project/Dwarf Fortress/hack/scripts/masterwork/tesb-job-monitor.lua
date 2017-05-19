@@ -298,11 +298,6 @@ if grace then
   end
   grace_total = tonumber(args.grace_period) or grace.ints[1]
   grace_count = grace.ints[2]
-  -- Reset count if a new fort or reclaim, i.e. onload.init runs prior to load of embark screen.
-  if df.global.gps.screen.value == 0 then
-    --print("Reset grace counter.")
-    grace_count = 0
-  end
 else
   grace_total = tonumber(args.grace_period) or 250
   grace_count = 0
@@ -313,7 +308,7 @@ dfhack.persistent.save({key="TESB/grace",value=tesb_version,ints={grace_total,gr
 
 local rng = dfhack.random.new()
 jobCheck = require('plugins.eventful')
-jobCheck.onJobCompleted.tesbJobMonitor=function(job)
+jobCheck.onJobCompleted.tesbJobMonitor = function(job)
   if digging_list[df.job_type[job.job_type]] then -- Will be nil if not on the list
     local pos = job.pos
     if caste_list[GetLayerMat(pos)] and (not GetVeinMat(pos)) then

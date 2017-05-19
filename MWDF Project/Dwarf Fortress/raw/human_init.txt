@@ -10,41 +10,18 @@
 ################### human guild transformations ###################
 #:lua print(' ')
 #:lua print('The guilds are prepared to lend you their hands!')
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_COOK_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste COOK_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_COOK_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste COOK_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_SMITH_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste SMITH_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_SMITH_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste SMITH_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MASON_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste MASON_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MASON_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste MASON_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FARMER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste FARMER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FARMER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste FARMER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FISHER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste FISHER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FISHER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste FISHER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MERCHANT_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste MERCHANT_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MERCHANT_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste MERCHANT_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_JEWELER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste JEWELER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_JEWELER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste JEWELER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CLOTHIER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste CLOTHIER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CLOTHIER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste CLOTHIER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_HEALER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste HEALER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_HEALER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste HEALER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_LEATHERWORKER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste LEATHERWORKER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_LEATHERWORKER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste LEATHERWORKER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CARPENTER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste CARPENTER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CARPENTER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste CARPENTER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_ENGINEER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste ENGINEER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_ENGINEER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race HUMAN -caste ENGINEER_FEMALE -keepInventory ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_COOK -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild COOK ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_SMITH -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild SMITH ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MASON -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild MASON ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FARMER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild FARMER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_FISHER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild FISHER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_MERCHANT -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild MERCHANT ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_JEWELER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild JEWELER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CLOTHIER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild CLOTHIER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_HEALER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild HEALER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_LEATHERWORKER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild LEATHERWORKER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_CARPENTER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild CARPENTER ]
+modtools/reaction-trigger -reactionName HUMAN_JOIN_GUILD_ENGINEER -command [ safe-guild-transform -unit \\WORKER_ID -race HUMAN -guild ENGINEER ]
 
 modtools/reaction-trigger -reactionName LUA_HOOK_UPGRADE_BUILDING_HUMAN_GUILDHALL_MASON -command [ building/subtype-change -building \\BUILDING_ID -type GUILDHALL_MASON_1 ]
 modtools/reaction-trigger -reactionName LUA_HOOK_UPGRADE_BUILDING_HUMAN_GUILDHALL_CARPENTER -command [ building/subtype-change -building \\BUILDING_ID -type GUILDHALL_CARPENTER_1 ]
