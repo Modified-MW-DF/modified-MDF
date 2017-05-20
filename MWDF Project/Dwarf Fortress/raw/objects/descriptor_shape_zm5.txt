@@ -2,11 +2,11 @@ descriptor_shape_zm5
 
 [OBJECT:DESCRIPTOR_SHAPE]
 
-[SHAPE:SKULL]
+[SHAPE:SKULL_ZM]
 	[NAME:skull:skulls]
 	[TILE:'o']
 
-[SHAPE:PLANET]
+[SHAPE:PLANET_ZM]
 	[NAME:planet:planets]
         [ADJ:yellow]
 	[ADJ:red]
@@ -14,3 +14,76 @@ descriptor_shape_zm5
 	[ADJ:gray]
 	[ADJ:gaseous]
 	[TILE:'O']
+
+[SHAPE:SHIP_ZM]
+	[NAME:ship:ships]
+        [ADJ:royal]
+	[ADJ:transport]
+	[ADJ:pirate]
+	[ADJ:merchant]
+	[ADJ:ghost]
+	[TILE:'s']
+
+[SHAPE:BOAT_ZM]
+	[NAME:boat:boats]
+	[TILE:'b']
+
+[SHAPE:FORT_ZM]
+	[NAME:fortress:fortresses]
+	[TILE:'f']
+
+[SHAPE:CASTLE_ZM]
+	[NAME:castle:castles]
+	[TILE:'c']
+
+[SHAPE:KEEP_ZM]
+	[NAME:keep:keeps]
+	[TILE:'k']
+
+[SHAPE:BASTION_ZM]
+	[NAME:bastion:bastions]
+	[TILE:'b']
+
+[SHAPE:TAVERN_ZM]
+	[NAME:tavern:taverns]
+	[TILE:'T']
+
+[SHAPE:INN_ZM]
+	[NAME:inn:inns]
+	[TILE:'i']
+
+[SHAPE:TEMPLE_ZM]
+	[NAME:temple:temples]
+	[TILE:'t']
+
+[SHAPE:SHRINE_ZM]
+	[NAME:shrine:shrines]
+	[TILE:'S']
+
+[SHAPE:CORPSE_ZM]
+	[NAME:corpse:corpses]
+	[TILE:'c']
+
+[SHAPE:TOMB_ZM]
+	[NAME:tomb:tombs]
+	[TILE:'t']
+
+[SHAPE:CRYPT_ZM]
+	[NAME:crypt:crypts]
+	[TILE:'C']
+
+[SHAPE:GRAVE_ZM]
+	[NAME:grave:graves]
+	[TILE:'g']
+
+[SHAPE:FARM_ZM]
+	[NAME:farm:farms]
+	[TILE:'F']
+
+[SHAPE:VILLAGE_ZM]
+	[NAME:village:villages]
+	[TILE:'V']
+
+[SHAPE:TOWN_ZM]
+	[NAME:town:towns]
+	[TILE:'T']
