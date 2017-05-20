@@ -27,7 +27,8 @@ end
 eventful.onProjItemCheckImpact.capture=function(projectile)
 	if projectile then
 		if getmetatable(projectile.item) == 'item_ammost' then
-			if string.starts(projectile.item.subtype.ammo_class,'DFHACK_PROJCAGE') then
+			print(projectile.item.name)
+			if string.starts(projectile.item.ammo_class,'DFHACK_PROJCAGE') then
 				local material = dfhack.matinfo.decode(projectile.item)
 				
 				if not material then return nil end
