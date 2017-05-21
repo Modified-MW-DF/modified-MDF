@@ -146,7 +146,7 @@ AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
 AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 
-tesb-job-monitor -living .002 -gem .005
+#tesb#-job-monitor -living .002 -gem .005
 
 :lua print(' ')
 :lua print('World Initialization Complete!')

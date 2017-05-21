@@ -1,5 +1,5 @@
 plant_TESB
-YES_TESB[OBJECT:PLANT]
+!YES_TESB!OBJECT:PLANT]
 
 This file is intended for use with The Earth Strikes Back! mod.  See the readme file or http://www.bay12forums.com/smf/index.php?topic=144831
 
