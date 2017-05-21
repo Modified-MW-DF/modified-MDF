@@ -1,0 +1,95 @@
+Brief descriptions of Seven Deadly Sins-based Megabeasts, by ZM5.
+
+All of these may be found both as "wild" megabeasts in lairs, and also as cursed historical figures in various civilized sites.
+Every one of the Sin Incarnations can take over civilizations in worldgen.
+
+They have varying site types - all can be found in labyrinths, the second site type is different for each incarnation.
+All are lair hunters and will chase you down if you enter their lair.
+-------------------------------------------------------------------------------------------------------------------------------
+Cursed Lust - a humanoid covered in tumors, possessing an elongated tongue. From its back sprout six tentacles ending in hands.
+Males and females have minor variations in their body plans - both are capable of spurting a fluid that causes contact and ingestion syndromes.
+
+The syndrome caused by the male causes dizziness, blistering, bruising, swelling and eventually necrosis.
+The syndrome caused by the female causes dizziness, vomiting blood, coughing up blood, general bleeding, and nausea.
+
+They are competent at biting, talented in wrestling, fighting, and whip skills, and proficient in dodging, kicking and striking.
+
+Additionally, they don't feel fear, pain, cannot be made nauseous, dizzy, or feverish, and do not require eating, sleeping or drinking.
+-------------------------------------------------------------------------------------------------------------------------------
+Slothful Mind - a flying humanoid with a massively enlarged head, housing an unnaturally large brain. Lacks most internal organs.
+
+Very weak physically, and easily tired out - however they recuperate very quickly.
+
+They have four special abilities that they can use in order to make up for their physical weakness -
+casting a stream of fire, hurling heavy rocks at up to 5 targets at once, kicking up a wave of dust that knocks
+around nearby creatures, and raising nearby dead bodies as zombie minions.
+
+They don't feel fear or pain, do not require eating, sleeping, drinking or breathing, and cannot be made feverish.
+They'll also avoid traps, and are immune to fire.
+
+They are talented in dodging - additionally, they learn skills three times as fast.
+-------------------------------------------------------------------------------------------------------------------------------
+Unending Gluttony - a gargantuan humanoid with a stomach maw and eyes in unusual places.
+
+They have a single eye on top of their head, one inside their stomach, one on their upper body, one on their left hand and
+one on their right upper arm.
+
+They are do not feel fear or pain, do not need to breathe or sleep, and cannot be made feverish.
+
+They are capable of biting with either of their maws - both are more powerful than bites from similarly-sized creatures.
+ 
+Additionally, they can throw up orange puke that can cause necrosis, swelling and nausea.
+
+They have expert biting and fighting skills, talented in striking, and competent in dodging.
+Out of all Sin Incarnations, they are the largest.
+-------------------------------------------------------------------------------------------------------------------------------
+Burning Wrath - massive humanoid with magma for blood - second biggest of the Sin Incarnations.
+
+They have a higher innate body temperature, are very easily angered, do not feel fear or pain, do not require sleeping,
+drinking or eating, cannot be made feverish, do not need to breathe and may rarely enter a martial trance while in combat. 
+They lack most vital organs.
+
+Their only ability is to enrage even further - this temporarily increases their strength and agility and makes them even more
+likely to enter a state of rage. Aside from that, they just hit really hard.
+
+They have expert wrestling, fighting, striking and kicking skills.
+
+Due to their high innate combat skills and magma blood, its not recommended to fight them up close, unless there's a water source nearby.
+Throwing is highly recommended. Wrestling in particular is ineffective due to their raw strength - additionally, any body part 
+the Wrath incarnation holds on to will quickly start melting and bleeding.
+
+After dying, their bodies eventually burn away, leaving nothing behind.
+-------------------------------------------------------------------------------------------------------------------------------
+Fallen Pride - large, winged, horned humanoid, resembling a bat-like devil.
+
+They are immune to fire damage, are capable of flight, do not feel fear or pain, cannot be made feverish, and do not require
+eating, drinking, sleeping or breathing. They also cannot be stunned.
+
+They are capable of throwing fireballs at up to 2 targets, and can also shoot a stream of fire.
+Their last unique attack is to taunt a single target - this makes the target more violent and potentially more prone to entering a rage state.
+
+They are competent in dodging, adept in striking and kicking, and experts at fighting.
+-------------------------------------------------------------------------------------------------------------------------------
+Insatiable Greed - winged, flying centauroid with a bull-like head and hooves.
+
+They cannot be made feverish or nauseous, do not feel fear or pain, cannot be stunned, and do not require sleep.
+
+They are covered in a layer of gold, which adds slight protection and slightly more force to their attacks.
+
+They have 3 unique abilities - they can cast a Sedation spell, which causes dizziness and reduces strength, agility and endurance to 50%;
+a breath attack which shoots out a cloud of gold powder that can potentially turn those affected by it into golden statues (similar effect as petrifaction),
+and also cast a Barrier spell on themselves, which temporarily increases toughness.
+
+They are adept at fighting, biting, wrestling, striking, and kicking.
+-------------------------------------------------------------------------------------------------------------------------------
+Hateful Envy - a humanoid skeleton, embedded in a covering of green, metamorphic sludge.
+
+They do not feel fear or pain, do not require eating, drinking, sleeping or breathing, are immune to fire and cannot be made nauseous or feverish.
+
+Due to being made of sludge, most of their attacks count as edged - making them highly dangerous up close. 
+
+They only have one special ability, where they toss a chunk of sludge that on contact has a chance of turning the victim into a small, easily-killed ooze.
+
+They are talented at striking and dodging. While they can bleed, it is difficult to hit any vital organs - blunt weapons in particular are ineffective.
+The head is the weak spot, having a thinner layer of sludge.
+-------------------------------------------------------------------------------------------------------------------------------

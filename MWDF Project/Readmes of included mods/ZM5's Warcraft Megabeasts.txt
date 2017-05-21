@@ -1,0 +1,112 @@
+Brief descriptions of all Warcraft-based megabeasts, by ZM5.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dragons - Most dragons are similar in terms of body features - winged quadruped with 2 horns - main difference being in their unique abilities. The only exception is the Drakeadon.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Red Dragon - more or less a tougher version of vanilla DF dragons - capable of flight.
+Can also breathe a stream of dragonfire, spit a fireball or a bolt of magma, and flap their wings to kick up a cloud of dust.
+
+Bronze Dragon - lightning and time-aligned dragons, with a paralyzing lightning breath - aside from the wing flap,
+they can spit a ball of lightning (a projectile that can potentially knock back and damage bones and internal organs),
+a blob of liquid lightning which can cause paralysis, and also cast a Torpor spell which decreases speed and agility.
+
+Blue Dragon - frost and magic-aligned dragons, with a frost breath that causes blisters and slowing down. 
+They are capable of a wing flap, and also a similar syndrome-inducing liquid glob and solid, strong projectile as their bronze cousins.
+On top of that, they have three magical abilities - a slow spell which decreases speed and agility, Polymorph which 
+has a chance of transforming a victim into a sheep, and also a single fireball throw.
+
+Green Dragon - nature-aligned dragons. They have an acid breath that causes major bleeding and blistering.
+They are also capable of two spells - Sleep, which can induce drowsiness, and Accelerate Decay, which causes severe necrosis and dizziness.
+
+Black Dragon - earth-aligned dragons. They have a potent magma breath, and can occasionally breathe a stream of fire.
+Additonally they can also use an earth-shatter attack which sends rocks at up to 2 targets, and also an undirected
+flame wave attack.
+
+Drakeadon - two-headed, wingless, animalistic dragons. They lack the magical abilities of the other dragons, but also possess
+the breath attacks of all other dragons - they also have the same Blast Wave of the black dragons, as well as their earth shatter.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Giants
+-------------------------------------------------------------------------------------------------------------------------------
+Magma Giant - a giant of magma and molten crust. Not as durable as bronze colossi - however, they possess a magma breath and a fire jet
+attack.
+
+Gronn - cyclopean, brutish giants. They possess three unique attacks - a boulder toss, which can potentially do a lot of internal damage,
+a ground slam which releases a wave of dust that knocks creatures around, and a shout that can cause dizziness. They have expert fighter and striker skills,
+but are only adequate in dodging.
+
+Magnaron - a tougher, fire-immune variant of the Gronn, over three times as large. They are more resistant to damage due to having a layer of stone over most of their body.
+They have similar attacks as the Gronn - their boulder toss can hit up to three targets. In addition they also have a Pulse attack that can cause pain and dizziness.
+They have accomplished striker and fighter skills, and are skilled at dodging.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Titanic Watchers - Giants of stone - all technically part of the same "creature", merely being different castes - you may not always find each type in every world you generate.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stone Keeper - Possesses similar abilities to the Magnaron, with the addition of a petrifying gas attack that can turn those affected into stone statues.
+
+Storm Keeper - Possess most lightning-based abilities - can hurl lightning bolts at up to 2 targets, and can also use a Paralyzing Shock attack that can cause paralysis and pain.
+
+Ice Keeper - Possesses most ice-based abilities - can hurl frost bolts at up to 2 targets, and can use a Frost Shock, which causes pain, blistering and reduces speed.
+
+Construct of the Sun - Eagle-headed guardian that wields fire magic - including a blast wave, a magma bolt, a fireball and a flame stream.
+
+Construct of Life - Ram-headed guardian with nature magic - can use the green dragon's Accelerate Decay spell, a Wither spell, which reduces strength and speed by half,
+an Unleash Life spell which doubles strength, but reduces endurance to 20% and causes drowsiness - lastly, they can also raise dead bodies as hostile Puppet Shamblers.
+
+Construct of Destruction - Jackal-headed guardian with shadow magic - can hurl shadow bolts at up to 4 targets, raise dead bodies as zombie minions,
+use Death Coil which can cause severe bleeding and necrosis while also reducing willpower, and also use an Oblivion spell, which reduces willpower to 35% and can potentially drive its victim
+to attack everything around it.
+
+Construction of Magic - Female guardian wielding arcane magic. Has 4 spells - Moonfire, which can cause bleeding, dizziness and blindness - Mana Burn, which can cause bleeding and dizziness - 
+Slow, which reduces agility and speed - and Sedation, which cuts agility, strength and endurance by half, and causes dizziness.
+
+Nature Keeper - Female guardian with nature magic. Can use the green dragon's Sleep spell, a Sunbeam which can cause severe bleeding, blistering and pain - 
+induce a Hemorrhagic Fever which causes bleeding, vomiting blood and the fever status, and a Withering Curse which causes coughing blood and reduces toughness to 40%.
+
+Maiden of Virtue - Female guardian with holy magic. Can toss holy bolts at up to 3 targets, use a Protection spell which triples her toughness - 
+Holy Fire, which can cause severe bleeding, blistering and pain, on top of reducing endurance to 40% - and Repentance, which has a chance of instantly knocking the target unconscious.
+
+Maiden of Grief - Corrupted female guardian with shadow magic. Can use Unstable Affliction, which has a chance of inflicting a fever, and causes swelling and oozing, Curse - which negatively 
+impacts combat rolls, Bloodlust - which increases her strength and speed, and Waking Nightmare, which causes drowsiness and possibly drives a creature to attack everything nearby.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Other beasts
+-------------------------------------------------------------------------------------------------------------------------------
+Mindless Abomination - undead construct with 3 arms. Counts as a semimegabeast. 
+Has advantages similar to other undead - doesn't need to breathe, doesn't feel pain, fear or exertion, cannot be made nauseous.
+They can release either a directed or undirected burst of ichor, which can cause bruising, swelling, necrosis, nausea, dizziness, and vomiting blood.
+Their ichor doesn't work on other undead - including the Forsaken and Scourge undead.
+They have accomplished axe and melee fighter skill,  skilled in wrestling, and proficient in striking and biting.
+
+Void Terror - a two-headed, quadruped demon with one-eyed heads and seven eye stalks protruding from its upper body.
+It has many different special attacks - it can breathe a stream of fire, cast Mana Burn, Slow, Waking Nightmare,
+Cripple - which reduces speed to 10%, strength to 25%, toughness to 75%, agility to 50%, endurance to 50%, and also causes dizziness, blistering and oozing,
+and Energy Drain, which reduces endurance by 50% and causes dizziness.
+
+Nian - a corrupted wolf-like wild god with two heads, possessing a combination of nature and shadow magic. 
+Can breathe a stream of fire, and also cast Wither, Accelerate Decay and Moonfire.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prime Sha - as with the Titanic Watchers, they are technically different castes of the same creature, and as such not every type may appear in the same world.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+All Prime Sha have similar body plans - having 6 eyes, four legs (which they don't actually need in order to walk) - the main difference being the amount of their back spikes, wheter
+they have tusks or mandibles, and the amount of horns - all are capable of throwing shadow bolts at up to 4 targets.
+All of the Sha's unique abilities can cause a creature to cough, potentially spreading the Sha's influence to other nearby friendly creatures.
+
+Sha of Hatred - can raise dead as powerful, agile zombies that can spit black sludge - the sludge can cause an affected creature to turn hostile to everything around it. 
+Can additionally Instill Hatred, which makes a creature more violent and fearless, potentially throwing itself into a dangerous situation, 
+and has a low chance of simply making it hostile to everything around it.
+
+Sha of Anger - can breathe a cloud of shadowflame, potentially causing burns - can also Intensify Anger, which can potentially make a creature hostile and more violent.
+
+Sha of Pride - can shoot a blast of negative energy at a target, causing the creature to potentially become overconfident and hostile - can also cast a Mark of Arrogance, which has a similar effect.
+
+Sha of Violence - can enrage, increasing its strength and agility and making it more prone to rage. Can also Instill Violence in other creatures, making them more violent and anger-prone.
+
+Sha of Fear - can breathe shadow and use Terrify, both of which can cause a creature to run away in fear.
+
+Sha of Despair - can use Whirl of Shadow, which is an undirected flow of darkness - potentially causes a creature to be more prone to depression. Can also use Crippling Despair which has a similar effect.
+
+Sha of Doubt - can use Breath of Doubt which is a flow of shadow that can cause a creature to be more prone to anxiety and stress - can also use Gnawing Doubt, which has a similar effect.

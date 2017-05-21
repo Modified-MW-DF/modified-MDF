@@ -1,0 +1,115 @@
+All types of secrets that can be gained from slabs or books (similar to Necromancers), by ZM5.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Demon Hunter - a secret associated with sacrifice. Demon hunters can see even without eyes, and do not need to eat, sleep or drink,
+do not feel fear, and cannot be overexerted.
+
+Demonic creatures will be sensed even in unexplored areas, showing up as light green circles.
+
+Demon hunters can cast Mana Burn, which causes dizziness and bleeding; Soul Barrier, which increases toughness to 200% and
+willpower to 500% of a friendly creature; and Netherwalk, which increases agility and speed to 200%.
+
+They can also transform into a strong demon form - in that form, they can fly, and hurl bolts of fel energy,
+which do strong blunt damage. Their strength, agility and toughness are also highly increased, and so is their
+rate of learning the sword skill. Attacks against a demon hunter in this form have their force reduced by 1/3.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Voodoo Priest - secret associated with animals. They actually appear in four different varieties.
+
+All Voodoo Priests can cast Hex, which has a chance of turning a creature into a harmless toad.
+
+Priests of the Tiger have their agility quadrupled, and their strength raised to 120%.
+
+They can also cast Tiger's Agility and Tiger's Strength - the former quadruples the agility of a friendly creature,
+and sets their speed to 110% of what it normally is; the latter increases strength to 200%. 
+
+They can transform into a Tigon - while they lack special abilities in that form, they can move much faster, and their
+scratches and bites are incredibly deadly. Attacks against them in this form have their force reduced by 1/3.
+
+Priests of the Serpent have their agility doubled and their endurance quadrupled. They can cast Blood Venom, which
+causes pain, swelling, bleeding, and vomiting blood; and Serpent's Endurance, which increases endurance of friendly creatures
+to 500%. 
+They can transform into a Slith - humanoid serpent-like beings. They can spit globs of acid in this form, and also spit
+a glob of their venom which can cause necrosis, paralysis, and bleeding. Their bites can inject the same venom.
+Attacks against them in this form have their force reduced by 1/2.
+
+Priests of the Bat gain doubled agility and quadrupled disease resistance. They can cast True Sight, which allows a creature
+to see even without eyes, and Sonic Focus, which increases focus to 400% and agility to 150%.
+
+They can transform into a Blood Seeker, a humanoid bat-like creature. In this form, they can shoot sonic waves,
+which do strong blunt damage, and they also can shriek, inducing fear in those who hear it. Their bites
+suck out blood in this form. Attacks against them have their force reduced by 1/3.
+
+Priests of the Spider have their disease resistance tripled, and recuperation doubled. They can cast
+Chitinous Armor on friendly creatures, which increases toughness to 400%, and disease resistance to 500%;
+and Spider's Embrace, which increases recuperation to 400%, and also makes it so the affected creature cannot
+over-exert themselves, or feel pain.
+
+They can transform into a Widowspawn, a humanoid spider-like creature similar to the nerubians.
+In this form, their bites can inject a venom that causes bleeding, pain and necrosis. They can also
+spray webbing to immobilize opponents. Attacks against them in this form have their force reduced by 1/3.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Paladin - a secret associated with the light. Paladins have their strength increased to 300%, toughness to 600%,
+agility to 200%, and recuperation to 900%.
+
+They can cast Holy Bolt, which is a projectile that does strong blunt damage, Resurrection, which can bring a single
+creature back to life, Turn Undead, which removes the inability to feel fear from any undead being, while also terrifying them,
+and Crusader's Might, which works on up to three creatures and gives them 1000 points to strength and toughness, 300 to agility
+and 1250 to recuperation.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Death Knight - a secret associated with death. Death knights have their strength increased to 400%, toughness to 300%,
+agility to 120% and recuperation to 150%.
+
+They can raise dead bodies as ghouls - additionally, they can cast Hemorrhagic Fever, Frost Shock, as well as Shadow Bolt and
+Death Coil.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pyromancer - a secret associated with fire. Pyromancers are purely offensive casters - they can throw fireballs at up to 2 targets,
+shoot a jet of fire, use "Flare" which fires a massive wave of dragonfire, and shoot magma bolts.
+
+They additionally can raise dead bodies as firemen.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorcerer - a secret associated with darkness. Sorcerers use debilitating magic to weaken their opponents.
+They can cast Blindness, which temporarily blinds a creature (if they have eyes to begin with),
+Organ Failure, which causes nausea and impairs the function of most organs, and Heartbleed,
+which rots the heart and causes severe bleeding from it.
+
+Additionally, they can raise dead bodies as either skeletons or skeletal mages.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biomancer - a secret associated with disease. Biomancers rot their opponents alive and cause long-term diseases.
+
+They can cast Rotting Plague, which causes necrosis and nausea, Blood Boil, which causes bleeding, swelling, coughing up blood and vomiting blood,
+and Cripple, which reduces speed and strength to 25%, toughness to 75%, agility and endurance to 50%.
+
+Biomancers can raise dead bodies as plaguebearers.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Psychic - a secret associated with scholarship. Psychics have mastered mind over matter, and have varied abilities.
+
+They can telekinetically hurl rocks at up to 3 targets, kick up an undirected wave of dust which knocks around those caught in it,
+and can also use Crush Lungs, which impairs the lungs of a target creature, eventually causing them to suffocate,
+Bind Limbs, which decreases speed to 5% and agility to 35%, and also causes numbness in the hands and feet,
+and Mind Blast, which causes pain in the head and nervous system, possibly knocking the creature out instantly,
+as well as dizziness after a long period.
+
+They can raise dead bodies as mind-controlled slaves, which are similar to standard zombies, but lack the attribute bonuses.
+
+Additionally, psychics can still see even if their eyes are damaged.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Blessed Warrior - a secret associated with strength. Blessed warriors have their strength and toughness increased to 400%,
+agility to 300%, and recuperation to 600%.
+
+Attacks against them have their force reduced by 1/2.
+
+They can slam the ground, which releases an undirected wave of dust that knocks around those caught in it - they also can
+use Dust kick, which is similar but can be aimed in a specific direction.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Archdruid - a secret associated with nature. Druids can shapeshift into various different forms.
+
+In all forms, they can use Sleep, which causes drowsiness and dizziness.
+
+Their first transformation allows them to change into Moonkin, a more powerful version of the Wildkin. In this form,
+they can cast Moonfire, which can cause bleeding, dizziness, and blindness. 
+
+Their second transformation is the Guardian Bear, a more defensive form that reduces the force of incoming attacks by 1/2.
+Their scratches and bites are incredibly deadly in this form.
+
+Their last form is the Feral Panther - they can Shadowmeld in this form, instantly going into stealth mode;
+they also can move much faster in this form, and can climb on walls.

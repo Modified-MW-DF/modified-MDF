@@ -1,0 +1,45 @@
+Brief descriptions of all non-hostile Warcraft creatures, by ZM5.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mammoth - massive relative of the elephants. Found in tundras, taigas, and glaciers. 
+
+Their main difference is their fur, which provides a considerable amount of insulation against the cold.
+
+Goods made out of mammoth body parts have a value multiplier of 5.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Shoveltusk - quadruped herbivores found in tundras, taigas and glaciers. They have a single antler and a pair of tusks.
+
+May occasionally be used by certain races as mounts or pack animals. They are somewhat prone to rage and wild ones may attack unprovoked.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tallstrider - flightless birds found in tropical savannas, grasslands, and moist broadleaf forests.
+
+Some races may use them as mounts, and they can be trained as hunting animals.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hawkstrider - flightless birds similar to the tallstriders, found in all types of forests.
+
+They can be used as mounts, and also trained as war or hunting animals.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Kodo - very large, quadruped reptiles found in the deserts, savannas and grasslands.
+
+They are trainable as war animals, and many races will utilize them as mounts and pack animals.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Raptoryx - small, half-bird half-lizard creatures found in savage tropical biomes.
+
+They hunt vermin and may be brought along as pets by some migrants.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sea Hag - spirit entities whose physical bodies are composed out of driftwood and seaweeds.
+
+They are mostly found near the coasts. Although non-hostile, they can be difficult to fight if provoked.
+
+They can shriek which causes fear in any nearby creature.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Talbuk - stag-like herbivores found in the grasslands, shrublands and savannas.
+
+They mostly find use as mounts and pack animals.
+
+Males are more prone to rage than the females.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

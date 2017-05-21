@@ -1,0 +1,400 @@
+Brief descriptions of all Warcraft predators, by ZM5.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Worg - horse-sized wolf creatures, found in the mountains, temperate grasslands, forests and shrublands. 
+Dangerous in groups. Can be used as war/hunting animals and mounts by races with access to them.
+
+Devilsaur - gargantuan, two-legged dinosaur, found in savage tropical forests and wetlands. Will attempt to knock over buildings,
+although they can be domesticated and made into mounts or war animals.
+
+Arachnatid - large scorpion-like insect, found in the glaciers, tundras and taigas. Both their bite and their sting
+can inject venom that causes necrosis. Can be made into war/hunting animals and mounts.
+
+Jormungar - gargantuan worm-like creature, found in savage tundras, taigas and glaciers. It attacks with bites and lashing with its tail.
+Its bite can inject a venom that can cause severe pain and necrosis.
+
+Frostsaber - large, striped feline, found in tundras, taigas and glaciers. Can be trained as war/hunting animals or as mounts.
+Their bites are more powerful than those of similar wildcats.
+
+Saber Worg - relative of the worgs, found in tundras, taigas and glaciers. It is slightly larger, and its bites are stronger.
+It is also more prone to enraging than regular worgs.
+
+Scorpid - desert-dwelling scorpion-like creature. Smaller than the arachnatids, it is found in the deserts and savannas.
+Its poison can cause necrosis and/or oozing.
+
+Silithid - insectoids found in savage deserts and savannas. They have several different castes. 
+
+Silithid Worker - most common caste, second-smallest - at full size they're only slightly bigger than most dwarves.
+They have a stinger which can inject a venom that causes dizziness and blistering.
+
+Silithid Wasp - second most common caste, is the smallest, being smaller than most dwarves. Flies, and is more prone to rage
+than other silithid castes. Their venom can cause necrosis and minor bleeding.
+
+Silithid Reaver - large silithid with vestigial wings. They lack venom attacks of any kind, instead mostly hitting hard - 
+they'll also break down doors and furniture. Can be used as mounts.
+
+Silithid Colossus - gargantuan silithid, incapable of flight. They have two arms ending in scythe-like blades and a single horn.
+They'll topple any buildings they can find.
+
+Sand Reaver - large caste with 6 legs, though not as big as the Colossus - they have a pincer at the end of their tails.
+Attacks with the pincer can latch firmly onto body parts, while also injecting a venom that can cause swelling, necrosis, nausea and dizziness.
+Like the Colossus, they'll topple any buildings.
+
+Raptor - dinosaur found in savage tropical forests and wetlands - can be made into hunting/war animals and mounts.
+They won't mindlessly charge full-speed into enemies, instead waiting until their target is near.
+
+Proto Dragon - large, feral dragons with barbs at the end of their wings, found in savage tundras, taigas, glaciers and mountains.
+They lack the breath attacks of the more evolved dragons.
+They can be made into mounts and war animals - wild ones will attempt to topple and buildings.
+
+Hippogryph - flying beasts with features of both stags and birds, found in savage broadleaf forests. 
+They have hooves instead of rear feet, and a pair of antlers.
+They do not feel fear or pain, and cannot be stunned. Can be made into war/hunting animals and mounts.
+
+Rylak - flying, two-headed beast with horns from the savage mountains, tundras, and temperate grasslands.
+Can be made into mounts.
+
+Chimaerok - flying, two-headed beast similar to the Rylak - found in savage tropical broadleaf forests, taigas,
+and tropical swamps.
+They possess three unique attacks - a lightning breath that can cause melting damage and paralysis, a corrosive breath
+which is a spray of acid, and can also spit a single glob of acid.
+
+Core Hound - gargantuan, two-headed, elemental quadruped. 
+Immune to fire damage, doesn't feel fear or pain, cannot be stunned and do not need to breathe.
+Each head has a single horn and a pair of tusks.
+They are only found deep underground and in the savage mountains. 
+Attacks aimed at them have their force reduced by half.
+They can also breathe a stream of magma at any enemies.
+
+Crocolisk - six-legged crocodilian creature. Found in savage wetlands, rivers and lakes. 
+Faster than regular crocodiles - they can be made into war/hunting animals.
+
+Diemetradon - six-legged dinosaur creature. Found in savage rocky wastelands, mountains, and tropical broadleaf forests.
+Can be made into war/hunting animals. They possess a sonic wave attack that can cause dizziness.
+
+Basilisk - six-legged, armored reptile. Found underground and in savage deserts, mountains, and tropical moist broadleaf forests.
+Attacks aimed at them have their force reduced by half. Crystals from their bodies can be made into crafts.
+They have a blinding light attack that can cause petrifaction.
+
+Owlcat - quadruped with features of various animals - mostly similar to felines, but also has a bird-like beak and a pair of antlers.
+Found in savage tropical grasslands, savannas, and coniferous forests. Can be made into mounts and war/hunting animals.
+
+Teroclaw - predatory bird with tusks, found in savage mountains, temperate grasslands and coniferous forests.
+Can be made into war/hunting animals.
+
+Clefthoof - large quadruped covered in far - has a nasal horn and two tusks. 
+Can be trained as war/hunting animals. Civs will also use them as mounts, wagon pullers and pack animals.
+
+Ravager - large insectoids, found in savage deserts and tropical forests. They have 3 different castes.
+
+Standard ravagers are similar to the Silithid reavers - however, ravagers are bigger, can fly, and have a single horn.
+
+Ravager wasps are similar to the Silithid Wasps - however they do not have venom. They also have a single horn.
+
+Ravager crawlers are diminutive, weaker versions of the other ravagers, and lack wings or a horn - they are also more common than the others.
+
+Thunder Lizard - massive, four-legged reptiles with a single horn. Found in savage deserts and savannas.
+It can breathe a ball of lightning, or alternatively breathe a cloud of lightning that causes melting damage and paralysis.
+
+Fire Salamander - large quadruped reptile - similar to the Thunder Lizards. Found in savage deserts and deep underground.
+Instead of lightning-based attacks, they use fire - either breathing a stream of it, or spitting a single fireball.
+
+Direhorn - large dinosaur similar to a triceratops. Found in savage tropical moist broadleaf forests, tropical swamps, and deserts.
+They have three horns and a large bony club on their tail, which can be used for attacks.
+Their hide is also tough, being on a similar level as bronze - can make for good armor.
+Can be trained as mounts or war animals.
+
+Pterrordax - large reptilian flier - can be trained as a war animal or a mount. Found in savage tropical swamps and tropical moist broadleaf forests.
+They will occasionally use a headbutt attack that can potentially cause serious internal damage.
+
+Skyscreamer - large reptilian flier - found in savage mountains, tropical swamps, and tropical moist broadleaf forests.
+They have spikes at the ends of their wings, similarly to the proto dragons. Like the Pterrordax, they can be trained as
+war animals or as mounts, and also have a deadly headbutt attack.
+
+Wind Serpent - a snake-like reptile with wings and feathers, found in savage shrublands, deserts and savannas. 
+Can be trained as a war or hunting animal.
+They have a lightning breath attack similar to the thunder lizards.
+
+Dragonhawk - flying creature with the features of a hawk, a dragon, and a serpent. Found in savage temperate forests and grasslands.
+Can be trained as either war or hunting animals, and as mounts.
+They have a fire breath attack that acts more like a super-heated gas than actual fire - it still causes melting damage, however.
+
+Couatl - flying, amphibious serpent with feathers. Found in savage tropical wetlands, lakes and oceans.
+Can be trained as war/hunting animals - they also have a venomous bite that can cause dizziness, nausea and severe necrosis.
+
+Snap Dragon - amphibious, quadruped reptile. Found in savage tropical wetlands, lakes, oceans and rivers.
+Trainable as war or hunting animals. They have an acidic spit attack that can cause blisters and bleeding.
+
+Nether Ray - flying stingray-like creature, found in savage tropical marshes, and coniferous forests.
+They can be used as mounts or war/hunting animals.
+They have a venomous sting that can cause short-term paralysis and nausea.
+
+Warp Stalker - lizard-like creature with horns and a three-pronged tail. Found in savage temperate forests and grasslands.
+Can be trained as war/hunting animals.
+They have a unique Time Warp ability that increases their speed by 800% for a short period of time - this can make them appear as 
+though they zip around the map.
+
+Mana Wyrm - small, flying snake-like creature. Found in savage temperate forests and temperate grasslands.
+Can be trained as hunting animals.
+They can use an Energy Drain attack that reduces endurance and strength, and causes dizziness.
+
+Three-Headed Hydra - large, amphibious, two-legged reptilian creature, found in savage tropical forests, lakes and oceans.
+Can be trained as war/hunting animals. 
+They are slow, but have an acidic spit attack - their bites can also target multiple body parts at once.
+
+Wyvern - large quadruped flier with a stinger. Found in savage mountains, deserts, and tropical savannas.
+Can be used as mounts or war/hunting animals.
+Their venom can cause oozing, a fever, and/or severe necrosis.
+
+Spore Bat - medium-sized flying creature, found in savage wetlands. Can be trained as hunting animals.
+They can release a cloud of spores that cause dizziness in those nearby.
+They cannot bite or scratch, but instead use tackles, headbutts and swipes with their tentacle-like tails
+that can latch firmly onto attacked body parts.
+
+Spore Walker - large tripod creature. Found in savage wetlands.
+Can be trained as hunting animals. 
+They have a melee "shock" attack that can cause edged damage, potentially severing limbs - even if it doesnt, it can
+cause pain and paralysis.
+
+Rock Borer - worm-like creature found underground. Can be trained as war animals or hunting.
+They attack with bites and tail lashes - additionally, they can also spit acid.
+
+Elekk - elephant-like creatures from savage grasslands, shrublands and savannas. Can be trained as mounts and war animals.
+They come in two variants - standard elekks have two horns and two tusks. 
+A rarer variant, the Grand Elekk, has four tusks and seven horns - they are also more prone to rage and their head is covered
+with a layer of stone, offering some level of protection.
+
+Riverbeast - a hippo-like beast found in savage tropical lakes and rivers. Can be trained as war animals.
+They have two tusks and a tail club. Their head, tail, tail club and upper body are all covered with a layer
+of stone, adding protection and also making their club blows more damaging.
+
+Quilbeast - medium-sized boar-like beast found in savage deserts, savannas, grasslands and shrublands.
+Can be trained as war/hunting animals. Very prone to rage.
+
+Falcosaur - medium-sized creature appearing as a cross between a raptor and a bird. They have a beak and feathers.
+Found in savage tropical forests and grasslands. Can be made into war/hunting animals and mounts.
+
+Faerie Dragon - small, flying lizard-like creature, found in good grasslands and forests.
+They can use Mana Burn, causing bleeding and dizziness. Can be trained as hunting animals.
+
+Quilen - large quadruped beasts, found in savage savannas and grasslands. Can be trained as mounts and war/hunting animals.
+
+They do not feel fear. Quilen have two varieties - regular flesh-and-blood Quilen, and stone Quilen which are more resistant to damage and hit harder.
+
+Mushan - large quadruped reptile, similarly sized to the Kodos and Thunder Lizards. Found in savage grasslands and savannas.
+
+Some races may use them as wagon pullers, mounts, war animals or pack animals.
+
+Kunchong - gigantic insectoid creature, rarely found in savage grasslands and savannas.
+
+They are similar in terms of build to the Silithid Colossus - they lack horns, however, and have wings that allow them to fly.
+
+They do not feel fear, and can be trained as war animals.
+
+Cloud Serpent - flying serpent with two pairs of horns, found in the savage mountains, grasslands and savannas. Doesn't require wings to fly.
+
+They can be trained as mounts and war/hunting animals.
+
+Their bites are infused with electricity and may cause paralysis and large amounts of pain.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Humanoids
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Jungle Stalker - large, horned humanoid from savage tropical forests.
+
+They are relatively rare but will attempt to topple any buildings. Additionally, they wait until a creature is nearby before charging.
+
+Rock Flayer - primitive humanoids with a stinger and four arms, ending in scythe-like blades. Found in savage mountains, rocky wastelands, badlands, and underground.
+
+They are very prone to rage, however they also will not charge until an enemy creature is nearby.
+
+Fungal Giant - massive humanoids found in savage wetlands.
+
+They have tendrils instead of fingers, three hearts, and four eyes.
+
+They cannot scratch or bite, but instead can lash with their tendrils, potentially latching onto the targetted limb.
+
+Additionally they can release a cloud of spores, which can cause nausea, dizziness, and drowsiness.
+
+Skardyn - cursed dwarves with scales instead of skin, found deep underground.
+
+They act as a tougher version if the subterranean animal people, using metal weapons and equipment similar to that of normal dwarves.
+
+Like regular dwarves, they can potentially enter martial trances when outnumbered.
+
+Crystalline Tenders - crystal humanoids found in savage glaciers, tundras and taigas.
+
+They do not feel fear or pain, and do not need to breathe.
+
+They have two varieties - Crystal Dryads and Crystal Satyrs. 
+
+Crystal Satyrs are bipedal and have horns, whereas Crystal Dryads are centauroids.
+
+Due to being made of crystal, they are tougher to damage and hit harder - additionally, they do not bleed
+and require severe damage to the head, upper body or lower body to be killed.
+
+Grell - small fey humanoids from savage forests. 
+
+They are somewhat rare, but usually appear in large groups.
+
+They will attempt to pull levers and steal items, food or booze.
+
+Withered - mutated Nightborne found in tropical forests.
+
+Fairly unremarkable combat-wise - they have a Drain Energy attack that reduces endurance to 50% and causes dizziness.
+
+Bog Beast - ambulatory plant creatures found in the wetlands.
+
+Very prone to raging, they are rather strong due to their size. 
+Otherwise they do not have innate combat abilities or special attacks.
+
+Fungal Monster - humanoid plant monster, found in savage wetlands.
+
+Larger than the bog beasts, they can release spores that cause nausea and vomiting blood - rarely, they may also cause the lungs to rot.
+
+Wildkin - humanoid creature with features of owls, bears, and the antlers of a stag.
+Found in savage savannas, deserts, taigas and tropical forests.
+
+They do not possess unique abilities - due to their size, however, they can still hit hard.
+
+Gilgoblin - amphibious, mutated goblins. 
+
+They are found in oceans and lakes. Capable of swimming faster than most other creatures.
+
+They will attempt to steal items, food or booze.
+
+Goren - underground humanoids. They have a layer of stone over their tail, lower arms, neck, head, upper and lower body.
+
+Although most are smaller than dwarves, some can grow to gigantic sizes given enough years in the world.
+
+Their bites can cause acid to spatter over the wound - on top of that they can also spit acid from a distance.
+
+Mistlurker - one-eyed elemental humanoids found in savage swamps.
+
+Similarly to the fungal giants, they have tendrils instead of fingers - their lash attacks can latch onto the targetted body part.
+
+They dissipate into mist on death, leaving nothing behind.
+
+Virmen - bunny-like skulking race, found in caves.
+
+They are a somewhat stronger version of vanilla Kobolds - however the Virmen are larger, and use more varied weaponry and armor.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Demons
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Observer - flying squid-like demon with seven eyes and ten tentacles, found underground and in evil biomes.
+
+They can lash with their tentacles and tongues, and also have three types of beam attacks - a pain beam that
+has a 50% chance of causing debilitating pain, a blinding beam that has a 50% chance of inducing blindness,
+and a deathly beam that can cause necrosis, vomiting blood and a fever.
+
+Felhound - vaguely canine demon. It lacks eyes and has two tentacles tipped with sucker mouths. Found in evil savannas, deserts, and forests.
+
+It can use both an Energy Drain attack similar to that of the Withered, and a Mana Burn similar to that of the Faerie Dragon.
+
+They can be trained as war/hunting animals.
+
+Felstalker - canid demon similar to the Felhound, although larger and lacking the tentacle-like protrusions.
+
+They can be trained as war/hunting animals and mounts.
+
+Helboar - spiky, corrupted boars found in evil deserts, shrublands and savannas. Can be trained as war/hunting animals.
+
+They are a lot more prone to rage than most other creatures.
+
+Darkhound - corrupted wolves found in taigas, temperate forests, grasslands and shrublands. Trainable as war/hunting animals.
+
+Some of the more common creatures in said biomes - they never show up alone. Also more prone to rage than most other creatures.
+
+Felbat - flying, vaguely humanoid demons. Found in evil deserts, savannas, and forests.
+
+They may occasionally be used as mounts by evil races.
+
+Felsteed - demonic horses found in evil deserts, mountains, and temperate savannas and grasslands.
+
+Evil races may occasionally use them as mounts. They are a lot more aggressive than other horse-like animals.
+
+Dreadsteed - demonic horses, found in the deepest underground layer and in evil deserts.
+
+They have seven horns and six spike-like growths. 
+
+Evil races may occasionally use them as mounts or pack animals.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Undead - they have most of the advantages that vanilla DF undead have.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Feral Ghoul - undead humanoids, found in any evil biome and underground.
+
+They are never found alone, and mostly attack with scratches.
+
+If their bites or scratches tear the skin, they can cause liquid rot to spatter over the wound, which can cause nausea, necrosis and blistering.
+
+Frostwyrm - massive, skeletal blue dragons, found in evil taigas, tundras, glaciers, and temperate coniferous forests.
+
+They have similar frost breath attacks as the blue dragons. They can also use Frost Shock, causing pain, blistering, and lowering the speed of the target.
+
+They can be trained as war/hunting animals and also as mounts - evil races may very rarely use them.
+
+Plague-dog - large, quadruped construct, found underground and in evil tundras, taigas, temperate forests, and temperate shrublands.
+
+They have metallic plates on their heads that may occasionally protect from attacks. 
+
+They can also spew necrotic sludge that can cause nausea and severe necrosis. Trainable as war/hunting animals and mounts.
+
+Gargoyle - flying, bat-like undead. Found in any evil biome.
+
+They do not feel pain, and can be made into pets.
+
+A protective layer of stone covers most of their bodies, making them tougher to damage and also making their attacks hit harder.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Other
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fleshfiend - small creatures with no eyes, found in evil biomes.
+
+They have similar advantages to the undead - do not require eating, drinking, do not feel pain or fear, etc.
+
+They are nearly 1/3 the size of a dwarf, however they almost never appear alone - along with being unable to be debilitated, this can make them difficult for unarmed or non-military dwarves.
+
+Treant - humanoid, wooden guardians found in the forests. 
+
+They do not need to breathe, eat, drink or sleep, cannot feel pain, cannot be stunned and cannot be made nauseous.
+
+Due to being made out of wood, they can do more damage with their attacks and also aren't as easy to damage.
+
+They will not attack any natural wildlife.
+
+Fungal Horror - amphibious plant monsters, found in evil wetlands, rivers, lakes, and pools.
+
+They do not feel fear or pain, cannot be stunned and will not be overexerted. They also do not require eyes to see.
+
+They can release spores that can cause nausea, vomiting blood, coughing up blood, and rarely bleeding from the lungs.
+
+Their only attacks consist of lashes or stabs with their many tentacles.
+
+Corrupted Treant - corrupted versions of Treants, hostile to all life.
+
+They can release noxious fumes that can cause a fever, necrosis of the lungs, nausea, and dizziness.
+
+Additionally, their claws and teeth are covered with sludge that will spatter over the wounds. This can cause necrosis, dizziness and vomiting blood.
+
+Mandragora - three-headed, eyeless plant monsters found in savage tropical broadleaf forests.
+
+They do not feel fear or pain, and cannot be stunned.
+
+They can spit toxic slime that can cause oozing, blistering and necrosis. 
+They also can breathe a cloud of poison that can cause a fever, dizziness and erratic behavior.
+
+Sha - manifestations of negative emotions found in evil biomes. They come in two varieties.
+
+Both do not feel fear or pain, cannot be made feverish, nauseous or dizzy, cannot be stunned or blinded, 
+do not need to eat, drink or sleep and do not require connections for full movement.
+
+Lesser Sha appear similar to fleshfiends, only much bigger. They mostly attack with bites.
+
+Regular Sha are more like flying torsos with large claws and fangs. They can use a "possession" attack that can
+cause the affected creature to lash out at other nearby creatures, and potentially spread the infection to others.
+
+On death, they turn into a puddle of sludge that can cause pain, vomiting blood, and erratic behavior if stepped on or ingested.
