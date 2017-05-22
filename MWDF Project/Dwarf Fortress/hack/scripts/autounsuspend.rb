@@ -27,7 +27,7 @@ class AutoUnsuspend
 
     def start
         @running = true
-        @onupdate = df.onupdate_register('autounsuspend', 5) { process if @running }
+        @onupdate = df.onupdate_register('autounsuspend', 100) { process if @running }
     end
 
     def stop

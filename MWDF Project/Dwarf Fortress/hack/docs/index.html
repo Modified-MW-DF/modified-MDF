@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to DFHack’s documentation! &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction and Overview" href="docs/Introduction.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-dfhack-s-documentation">
+<h1>Welcome to DFHack&#8217;s documentation!<a class="headerlink" href="#welcome-to-dfhack-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>DFHack is a Dwarf Fortress memory access library, distributed with
+a wide variety of useful scripts and plugins.</p>
+<p>The project is currently hosted at <a class="reference external" href="https://www.github.com/DFHack/dfhack">https://www.github.com/DFHack/dfhack</a>,
+and can be downloaded from <a class="reference external" href="http://github.com/DFHack/dfhack/releases">the releases page</a>.</p>
+<p>All new releases are announced in <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=139553">the bay12 forums thread</a>,
+which is also a good place for discussion and questions.</p>
+<p>For users, it provides a significant suite of bugfixes and interface
+enhancements by default, and more can be enabled.  There are also many tools
+(such as <a class="reference internal" href="docs/Plugins.html#workflow"><span class="std std-ref">workflow</span></a> or <a class="reference internal" href="docs/Plugins.html#autodump"><span class="std std-ref">autodump</span></a>) which can make life easier.
+You can even add third-party scripts and plugins to do almost anything!</p>
+<p>For modders, DFHack makes many things possible.  Custom reactions, new
+interactions, magic creature abilities, and more can be set through <a class="reference internal" href="docs/_auto/modtools.html#modtools"><span class="std std-ref">Scripts for Modders</span></a>
+and custom raws.  Non-standard DFHack scripts and inits can be stored in the
+raw directory, making raws or saves fully self-contained for distribution -
+or for coexistence in a single DF install, even with incompatible components.</p>
+<p>For developers, DFHack unites the various ways tools access DF memory and
+allows easier development of new tools.  As an open-source project under
+<a class="reference internal" href="LICENSE.html#license"><span class="std std-ref">various copyleft licences</span></a>, contributions are welcome.</p>
+</div>
+<div class="section" id="user-manual">
+<h2>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/Introduction.html">Introduction and Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/Introduction.html#installing-dfhack">Installing DFHack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Introduction.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Introduction.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Core.html">DFHack Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/Core.html#command-implementation">Command Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Core.html#using-dfhack-commands">Using DFHack Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Core.html#built-in-commands">Built-in Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Core.html#init-files">Init Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Core.html#miscellaneous-notes">Miscellaneous Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Plugins.html">DFHack Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#data-inspection-and-visualizers">Data inspection and visualizers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#bugfixes">Bugfixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#ui-upgrades">UI Upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#job-and-fortress-management">Job and Fortress management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#map-modification">Map modification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/Plugins.html#mods-and-cheating">Mods and Cheating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Scripts.html">DFHack Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/_auto/base.html">Basic Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/_auto/devel.html">Development Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/_auto/fix.html">Bugfixing Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/_auto/gui.html">GUI Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/_auto/modtools.html">Scripts for Modders</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-contents">
+<h2>Other Contents<a class="headerlink" href="#other-contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/Authors.html">List of Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NEWS.html">Changelog</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="for-developers">
+<h2>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Contributing.html">How to contribute to DFHack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Compile.html">Compiling DFHack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/NEWS-dev.html">Development Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Lua API.html">DFHack Lua API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library/xml/SYNTAX.html">Data Structure Definition Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library/xml/how-to-update.html">Updating DF-structures for a new DF version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/Binpatches.html">Patching the DF binary</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="docs/Introduction.html" title="next chapter">Introduction and Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to DFHack&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#user-manual">User Manual</a></li>
+<li><a class="reference internal" href="#other-contents">Other Contents</a></li>
+<li><a class="reference internal" href="#for-developers">For Developers</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

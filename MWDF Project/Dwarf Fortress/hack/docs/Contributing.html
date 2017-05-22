@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>How to contribute to DFHack &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Compiling DFHack" href="docs/Compile.html" />
+    <link rel="prev" title="Changelog" href="NEWS.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-contribute-to-dfhack">
+<h1><a class="toc-backref" href="#id2">How to contribute to DFHack</a><a class="headerlink" href="#how-to-contribute-to-dfhack" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#how-to-contribute-to-dfhack" id="id2">How to contribute to DFHack</a><ul>
+<li><a class="reference internal" href="#contributing-code" id="id3">Contributing Code</a><ul>
+<li><a class="reference internal" href="#code-format" id="id4">Code Format</a></li>
+<li><a class="reference internal" href="#how-to-get-new-code-into-dfhack" id="id5">How to get new code into DFHack</a></li>
+<li><a class="reference internal" href="#memory-research" id="id6">Memory research</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-library-as-a-developer" id="id7">Using the library as a developer</a><ul>
+<li><a class="reference internal" href="#df-data-structure-definitions" id="id8">DF data structure definitions</a></li>
+<li><a class="reference internal" href="#remote-access-interface" id="id9">Remote access interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation-standards" id="id10">Documentation Standards</a></li>
+<li><a class="reference internal" href="#other-ways-to-help" id="id11">Other ways to help</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="contributing-code">
+<span id="id1"></span><h2><a class="toc-backref" href="#id3">Contributing Code</a><a class="headerlink" href="#contributing-code" title="Permalink to this headline">¶</a></h2>
+<p>Several things should be kept in mind when contributing code to DFHack.</p>
+<div class="section" id="code-format">
+<h3><a class="toc-backref" href="#id4">Code Format</a><a class="headerlink" href="#code-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Four space indents for C++. Never use tabs for indentation in any language.</li>
+<li>LF (Unix style) line terminators</li>
+<li>Avoid trailing whitespace</li>
+<li>UTF-8 encoding</li>
+<li>For C++:<ul>
+<li>Opening and closing braces on their own lines or opening brace at the end of the previous line</li>
+<li>Braces placed at original indent level if on their own lines</li>
+<li>#includes should be sorted. C++ libraries first, then dfhack modules, then df structures,
+then local includes. Within each category they should be sorted alphabetically.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-to-get-new-code-into-dfhack">
+<h3><a class="toc-backref" href="#id5">How to get new code into DFHack</a><a class="headerlink" href="#how-to-get-new-code-into-dfhack" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Submit pull requests to the <code class="docutils literal"><span class="pre">develop</span></code> branch, not the <code class="docutils literal"><span class="pre">master</span></code> branch.
+(The <code class="docutils literal"><span class="pre">master</span></code> branch always points at the most recent release)</li>
+<li>Use a new branch for each feature or bugfix so that your changes can be merged independently
+(i.e. not the master or develop branch of your fork).</li>
+<li>If possible, compile on multiple platforms when changing anything that compiles</li>
+<li>It must pass CI - run <code class="docutils literal"><span class="pre">python</span> <span class="pre">travis/all.py</span></code> to check this.</li>
+<li>Update <code class="docutils literal"><span class="pre">NEWS.rst</span></code> and <code class="docutils literal"><span class="pre">docs/Authors.rst</span></code> when applicable.</li>
+<li>Create a GitHub pull request once finished</li>
+<li>Submit ideas and bug reports as <a class="reference external" href="https://github.com/DFHack/dfhack/issues/">issues on GitHub</a>.
+Posts in the forum thread can easily get missed or forgotten.</li>
+<li>Work on <a class="reference external" href="https://github.com/DFHack/dfhack/issues/?q=is:open+-label:idea">reported problems</a>
+will take priority over ideas or suggestions.</li>
+</ul>
+</div>
+<div class="section" id="memory-research">
+<span id="contributing-memory-research"></span><h3><a class="toc-backref" href="#id6">Memory research</a><a class="headerlink" href="#memory-research" title="Permalink to this headline">¶</a></h3>
+<p>If you want to do memory research, you&#8217;ll need some tools and some knowledge.
+In general, you&#8217;ll need a good memory viewer and optionally something
+to look at machine code without getting crazy :)
+Using publicly known information and analyzing the game&#8217;s data is preferred.</p>
+<p>Good windows tools include:</p>
+<ul class="simple">
+<li>Cheat Engine</li>
+<li>IDA Pro 5.0 (freely available for non-commercial use)</li>
+</ul>
+<p>Good linux tools:</p>
+<ul class="simple">
+<li>angavrilov&#8217;s df-structures gui (visit us on IRC for details).</li>
+<li>edb (Evan&#8217;s Debugger)</li>
+<li>IDA Pro 5.0 running under Wine</li>
+<li>Some of the tools residing in the <code class="docutils literal"><span class="pre">legacy</span></code> dfhack branch.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-the-library-as-a-developer">
+<h2><a class="toc-backref" href="#id7">Using the library as a developer</a><a class="headerlink" href="#using-the-library-as-a-developer" title="Permalink to this headline">¶</a></h2>
+<p>Currently, the most direct way to use the library is to write a script or plugin that can be loaded by it.
+All the plugins can be found in the &#8216;plugins&#8217; folder. There&#8217;s no in-depth documentation
+on how to write one yet, but it should be easy enough to copy one and just follow the pattern.
+<code class="docutils literal"><span class="pre">plugins/skeleton/skeleton.cpp</span></code> is provided for this purpose.</p>
+<p>Other than through plugins, it is possible to use DFHack via remote access interface,
+or by writing scripts in Lua or Ruby.  There are plenty of examples in the scripts folder.
+The <a class="reference internal" href="docs/Lua API.html#lua-api"><span class="std std-ref">DFHack Lua API</span></a> is quite well documented.</p>
+<p>The most important parts of DFHack are the Core, Console, Modules and Plugins.</p>
+<ul class="simple">
+<li>Core acts as the centerpiece of DFHack - it acts as a filter between DF and
+SDL and synchronizes the various plugins with DF.</li>
+<li>Console is a thread-safe console that can be used to invoke commands exported by Plugins.</li>
+<li>Modules actually describe the way to access information in DF&#8217;s memory. You
+can get them from the Core. Most modules are split into two parts: high-level
+and low-level. High-level is mostly method calls, low-level publicly visible
+pointers to DF&#8217;s data structures.</li>
+<li>Plugins are the tools that use all the other stuff to make things happen.
+A plugin can have a list of commands that it exports and an onupdate function
+that will be called each DF game tick.</li>
+</ul>
+<p>Rudimentary API documentation can be built using doxygen (see build options
+in <code class="docutils literal"><span class="pre">CMakeCache.txt</span></code> or with <code class="docutils literal"><span class="pre">ccmake</span></code> or <code class="docutils literal"><span class="pre">cmake-gui</span></code>).  The full DFHack
+documentation is built with <a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a>, which runs automatically at compile time.</p>
+<p>DFHack consists of variously licensed code, but invariably weak copyleft.
+The main license is zlib/libpng, some bits are MIT licensed, and some are
+BSD licensed.  See the <a class="reference internal" href="LICENSE.html#license"><span class="std std-ref">Licenses</span></a> for more information.</p>
+<p>Feel free to add your own extensions and plugins. Contributing back to
+the DFHack repository is welcome and the right thing to do :)</p>
+<div class="section" id="df-data-structure-definitions">
+<h3><a class="toc-backref" href="#id8">DF data structure definitions</a><a class="headerlink" href="#df-data-structure-definitions" title="Permalink to this headline">¶</a></h3>
+<p>DFHack uses information about the game data structures, represented via xml files
+in the <code class="docutils literal"><span class="pre">library/xml/</span></code> submodule.</p>
+<p>See <a class="reference external" href="https://github.com/DFHack/df-structures">https://github.com/DFHack/df-structures</a>, and the documentation linked in the index.</p>
+<p>Data structure layouts are described in files following the <code class="docutils literal"><span class="pre">df.*.xml</span></code> name pattern.
+This information is transformed by a perl script into C++ headers describing the
+structures, and associated metadata for the Lua wrapper. These headers and data
+are then compiled into the DFHack libraries, thus necessitating a compatibility
+break every time layouts change; in return it significantly boosts the efficiency
+and capabilities of DFHack code.</p>
+<p>Global object addresses are stored in <code class="file docutils literal"><span class="pre">symbols.xml</span></code>, which is copied to the dfhack
+release package and loaded as data at runtime.</p>
+</div>
+<div class="section" id="remote-access-interface">
+<h3><a class="toc-backref" href="#id9">Remote access interface</a><a class="headerlink" href="#remote-access-interface" title="Permalink to this headline">¶</a></h3>
+<p>DFHack supports remote access by exchanging Google protobuf messages via a TCP
+socket. Both the core and plugins can define remotely accessible methods. The
+<code class="docutils literal"><span class="pre">dfhack-run</span></code> command uses this interface to invoke ordinary console commands.</p>
+<p>Currently the supported set of requests is limited, because the developers don&#8217;t
+know what exactly is most useful.  <a class="reference internal" href="docs/Plugins.html#remotefortressreader"><span class="std std-ref">remotefortressreader</span></a> provides a fairly
+comprehensive interface for visualisers such as <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=146473">Armok Vision</a>.</p>
+</div>
+</div>
+<div class="section" id="documentation-standards">
+<h2><a class="toc-backref" href="#id10">Documentation Standards</a><a class="headerlink" href="#documentation-standards" title="Permalink to this headline">¶</a></h2>
+<p>DFHack documentation is built with <a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a>, and configured automatically
+through CMake.  If you want to build the docs <em>only</em>, use this command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">.</span> <span class="n">docs</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Whether you&#8217;re adding new code or just fixing old documentation (and there&#8217;s plenty),
+there are a few important standards for completeness and consistent style.  Treat
+this section as a guide rather than iron law, match the surrounding text, and you&#8217;ll
+be fine.</p>
+<p>Each command should have a short (~54 character) help string, which is shown
+by the <a class="reference internal" href="docs/Core.html#ls"><span class="std std-ref">ls</span></a> command.  For scripts, this is a comment on the first line
+(the comment marker and whitespace is stripped).  For plugins it&#8217;s the second
+argument to <code class="docutils literal"><span class="pre">PluginCommand</span></code>.  Please make this brief but descriptive!</p>
+<p>Everything should be documented!  If it&#8217;s not clear <em>where</em> a particular
+thing should be documented, ask on IRC or in the DFHack thread on Bay12 -
+as well as getting help, you&#8217;ll be providing valuable feedback that
+makes it easier for future readers!</p>
+<p>Scripts can use a custom autodoc function, based on the Sphinx <code class="docutils literal"><span class="pre">include</span></code>
+directive - anything between the tokens is copied into the appropriate scripts
+documentation page.  For Ruby, we follow the built-in docstring convention
+(<code class="docutils literal"><span class="pre">=begin</span></code> and <code class="docutils literal"><span class="pre">=end</span></code>).  For Lua, the tokens are <code class="docutils literal"><span class="pre">[====[</span></code> and <code class="docutils literal"><span class="pre">]====]</span></code>
+- ordinary multi-line strings.  It is highly encouraged to reuse this string
+as the in-console documentation by (eg.) printing it when a <code class="docutils literal"><span class="pre">-help</span></code> argument
+is given.</p>
+<p>The docs <strong>must</strong> have a heading which exactly matches the command, underlined
+with <code class="docutils literal"><span class="pre">=====</span></code> to the same length.  For example, a lua file would have:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>local helpstr = [====[
+
+add-thought
+===========
+Adds a thought or emotion to the selected unit.  Can be used by other scripts,
+or the gui invoked by running ``add-thought gui`` with a unit selected.
+
+]====]
+</pre></div>
+</div>
+<p>Where the heading for a section is also the name of a command, the spelling
+and case should exactly match the command to enter in the DFHack command line.</p>
+<p>Try to keep lines within 80-100 characters, so it&#8217;s readable in plain text
+in the terminal - Sphinx (our documentation system) will make sure
+paragraphs flow.</p>
+<p>If there aren&#8217;t many options or examples to show, they can go in a paragraph of
+text.  Use double-backticks to put commands in monospaced font, like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>You can use ``cleanowned scattered x`` to dump tattered or abandoned items.
+</pre></div>
+</div>
+<p>If the command takes more than three arguments, format the list as a table
+called Usage.  The table <em>only</em> lists arguments, not full commands.
+Input values are specified in angle brackets.  Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+
+<span class="p">:</span><span class="n">arg1</span><span class="p">:</span>          <span class="n">A</span> <span class="n">simple</span> <span class="n">argument</span><span class="o">.</span>
+<span class="p">:</span><span class="n">arg2</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span><span class="p">:</span>  <span class="n">Does</span> <span class="n">something</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">value</span><span class="o">.</span>
+<span class="p">:</span><span class="n">Very</span> <span class="n">long</span> <span class="n">argument</span><span class="p">:</span>
+                <span class="n">Is</span> <span class="n">very</span> <span class="n">specific</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>To demonstrate usage - useful mainly when the syntax is complicated, list the
+full command with arguments in monospaced font, then indent the next line and
+describe the effect:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>``resume all``
+        Resumes all suspended constructions.
+</pre></div>
+</div>
+<p>If it would be helpful to mention another DFHack command, don&#8217;t just type the
+name - add a hyperlink!  Specify the link target in backticks, and it will be
+replaced with the corresponding title and linked:  eg <code class="docutils literal"><span class="pre">`autolabor`</span></code>
+=&gt; <a class="reference internal" href="docs/Plugins.html#autolabor"><span class="std std-ref">autolabor</span></a>.  Link targets should be equivalent to the command
+described (without file extension), and placed above the heading of that
+section like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_autolabor</span><span class="p">:</span>
+
+<span class="n">autolabor</span>
+<span class="o">=========</span>
+</pre></div>
+</div>
+<p>Add link targets if you need them, but otherwise plain headings are preferred.
+Scripts have link targets created automatically.</p>
+</div>
+<div class="section" id="other-ways-to-help">
+<h2><a class="toc-backref" href="#id11">Other ways to help</a><a class="headerlink" href="#other-ways-to-help" title="Permalink to this headline">¶</a></h2>
+<p>DFHack is a software project, but there&#8217;s a lot more to it than programming.
+If you&#8217;re not comfortable programming, you can help by:</p>
+<ul class="simple">
+<li>reporting bugs and incomplete documentation</li>
+<li>improving the documentation</li>
+<li>finding third-party scripts to add</li>
+<li>writing tutorials for newbies</li>
+</ul>
+<p>All those things are crucial, and often under-represented.  So if that&#8217;s
+your thing, go get started!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="NEWS.html" title="previous chapter">Changelog</a></li>
+      <li>Next: <a href="docs/Compile.html" title="next chapter">Compiling DFHack</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to contribute to DFHack</a><ul>
+<li><a class="reference internal" href="#contributing-code">Contributing Code</a><ul>
+<li><a class="reference internal" href="#code-format">Code Format</a></li>
+<li><a class="reference internal" href="#how-to-get-new-code-into-dfhack">How to get new code into DFHack</a></li>
+<li><a class="reference internal" href="#memory-research">Memory research</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-library-as-a-developer">Using the library as a developer</a><ul>
+<li><a class="reference internal" href="#df-data-structure-definitions">DF data structure definitions</a></li>
+<li><a class="reference internal" href="#remote-access-interface">Remote access interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation-standards">Documentation Standards</a></li>
+<li><a class="reference internal" href="#other-ways-to-help">Other ways to help</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/Contributing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

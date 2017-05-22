@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Stonesense &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stonesense">
+<span id="id1"></span><h1>Stonesense<a class="headerlink" href="#stonesense" title="Permalink to this headline">¶</a></h1>
+<p>Stonesense is an isometric visualizer for Dwarf Fortress,
+implemented as <a class="reference internal" href="../../../docs/Plugins.html#plugin-stonesense"><span class="std std-ref">a DFHack plugin</span></a>.</p>
+<p>Useful links:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=106497">Official Stonesense thread</a> for feedback,
+questions, requests or bug reports</li>
+<li><a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=48172">Screenshots thread</a></li>
+<li><a class="reference external" href="http://dwarffortresswiki.org/Utility:Stonesense">Main wiki page</a></li>
+<li><a class="reference external" href="http://dwarffortresswiki.org/Utility:Stonesense/Adding_Content">How to add content</a></li>
+<li><a class="reference external" href="https://github.com/DFHack/stonesense">Stonesense on Github</a></li>
+</ul>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The DFHack command <code class="docutils literal"><span class="pre">stonesense</span></code> (or <code class="docutils literal"><span class="pre">ssense</span></code>) opens Stonesense
+in a new window.  This viewer window has read-only access to the game,
+and can follow the game view, or be moved independently.</p>
+<p><code class="docutils literal"><span class="pre">stonesense</span> <span class="pre">overlay</span></code> replaces the map section of your DF window.
+Note that it&#8217;s not (yet) suitable for use as your only interface.
+Use DF&#8217;s <code class="docutils literal"><span class="pre">[PRINT_MODE:2D]</span></code> init option for stability.
+For best results, edit <code class="docutils literal"><span class="pre">[segmentsize_z:2]</span></code> in <code class="docutils literal"><span class="pre">init.txt</span></code>, and if
+you are unable to see the edges of the map with the overlay active
+try decreasing the <code class="docutils literal"><span class="pre">[segmentsize_XY]</span></code> - normal values are 50 to 80
+depending on your screen resolution.</p>
+<div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="http://www.bay12forums.com/smf/index.php?topic=48172.msg3198664#msg3198664"><img alt="../../../_images/ssense-roadtruss.jpg" src="../../../_images/ssense-roadtruss.jpg" /></a>
+<p class="caption"><span class="caption-text">The above-ground part of the fortress <em>Roadtruss</em>.</span></p>
+</div>
+<p>Configuration options are documented and can be pre-set in
+<a class="reference download internal" href="../../../_downloads/init.txt" download=""><code class="xref download docutils literal"><span class="pre">../resources/init.txt</span></code></a>.</p>
+<div class="section" id="controls">
+<h3>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h3>
+<p>Mouse controls are hard-coded and cannot be changed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Left click:</th><td class="field-body">Move debug cursor (if available)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Right click:</th><td class="field-body">Recenter screen</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Scrollwheel:</th><td class="field-body">Move up and down</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Ctrl-Scroll:</th><td class="field-body">Increase/decrease Z depth shown</td>
+</tr>
+</tbody>
+</table>
+<p>Follow mode makes the Stonesense view follow the location of the DF
+window.  The offset can be adjusted by holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> while using the
+keyboard window movement keys.  When you turn on cursor follow mode, the
+Stonesense debug cursor will follow the DF cursor when the latter exists.</p>
+<p>You can take screenshots with <code class="kbd docutils literal"><span class="pre">F5</span></code>, larger screenshots with
+<code class="kbd docutils literal"><span class="pre">Ctrl</span></code><code class="kbd docutils literal"><span class="pre">F5</span></code>, and screenshot the whole map at full resolution with
+<code class="kbd docutils literal"><span class="pre">Ctrl</span></code><code class="kbd docutils literal"><span class="pre">Shift</span></code><code class="kbd docutils literal"><span class="pre">F5</span></code>.  Screenshots are saved to the DF directory.
+Note that feedback is printed to the DFHack console, and you may need
+to zoom out before taking very large screenshots.</p>
+<p>See <a class="reference download internal" href="../../../_downloads/keybinds.txt" download=""><code class="xref download docutils literal"><span class="pre">../resources/keybinds.txt</span></code></a> to learn or set keybindings,
+including zooming, changing the dimensions of the rendered area, toggling
+various views, fog, and rotation.  Here&#8217;s the important section:</p>
+<pre class="literal-block">
+INSTRUCTIONS:
+
+This document specifies the keys and associated actions stonesense 
+can recognize.  The syntax is: 
+        [&lt;action name&gt;:&lt;action key 1&gt;:&lt;action key 2&gt; ... ]
+If the closing brace is preceeded by an asterisk: 
+        [&lt;stuff&gt;*]
+then the keys specified will repeat each frame until released, 
+otherwise it will occur exactly once each time the character is
+registered.  
+
+It is possible to specify the same action on multiple lines, or 
+to leave action names out of the list completely.  
+
+Listing multiple actions on the same line is not supported.  
+Likewise listing the same key for multiple actions will result 
+in only the last action listed being the one taken when the key is 
+pressed.  Currently only keyboard events are supported; 
+stonesense's mouse events are all hardcoded.  
+
+A complete listing of valid actions and key values can be found at 
+the bottom of this file.  
+
+KEYBINDINGS:
+
+[ROTATE:KEYS_ENTER]
+[RELOAD_SEGMENT:KEY_R]
+[TOGGLE_DESIGNATIONS:KEY_D]
+[TOGGLE_STOCKS:KEY_I]
+[TOGGLE_ZONES:KEY_U]
+[TOGGLE_OCCLUSION:KEY_O]
+[TOGGLE_CREATURE_MOODS:KEY_M]
+[TOGGLE_CREATURE_PROFS:KEY_P]
+[TOGGLE_CREATURE_JOBS:KEY_J]
+[TOGGLE_CREATURE_NAMES:KEY_N]
+[CHOP_WALLS:KEY_C]
+[CYCLE_TRACKING_MODE:KEY_F]
+[RESET_VIEW_OFFSET:KEY_Z]
+[DECR_SEGMENT_Z:KEY_1]
+[INCR_SEGMENT_Z:KEY_2]
+[TOGGLE_SINGLE_LAYER:KEY_S]
+[TOGGLE_SHADE_HIDDEN_TILES:KEY_B]
+[TOGGLE_SHOW_HIDDEN_TILES:KEY_H]
+[TOGGLE_OSD:KEYF_2]
+[TOGGLE_KEYBINDS:KEYS_SLASH]
+[INCR_ZOOM:KEYS_FULLSTOP]
+[DECR_ZOOM:KEYS_COMMA]
+[SCREENSHOT:KEYF_5]
+[INCR_RELOAD_TIME:KEYPAD_PLUS]
+[DECR_RELOAD_TIME:KEYPAD_MINUS]
+[CREDITS:KEYF_9]
+
+[DECR_Y:KEYS_UP*]
+[INCR_Y:KEYS_DOWN*]
+[DECR_X:KEYS_LEFT*]
+[INCR_X:KEYS_RIGHT*]
+[DECR_Z:KEYS_PGDN:KEY_9]
+[INCR_Z:KEYS_PGUP:KEY_0]
+
+
+</pre>
+</div>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<p>If Stonesense gives an error saying that it can&#8217;t load
+<code class="file docutils literal"><span class="pre">creatures/large_256/*.png</span></code>, your video card cannot handle the high
+detail sprites used. Either open <code class="file docutils literal"><span class="pre">creatures/init.txt</span></code> and remove the
+line containing that folder, or <a class="reference external" href="http://dffd.bay12games.com/file.php?id=6096">use these smaller sprites</a>.</p>
+<p>Stonesense requires working graphics acceleration, and we recomend
+at least a dual core CPU to avoid slowing down your game of DF.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Stonesense</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#controls">Controls</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../../_sources/plugins/stonesense/docs/Stonesense.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

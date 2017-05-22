@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Development Scripts &#8212; DFHack 0.43.05-r1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.43.05-r1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bugfixing Scripts" href="fix.html" />
+    <link rel="prev" title="Basic Scripts" href="base.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="development-scripts">
+<span id="devel"></span><h1><a class="toc-backref" href="#id29">Development Scripts</a><a class="headerlink" href="#development-scripts" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">devel/*</span></code> scripts are intended for developer use, but many may
+be of interest to anyone investigating odd phenomema or just messing
+around.  They are documented to encourage such inquiry.</p>
+<p>Some can PERMANENTLY DAMAGE YOUR SAVE if misused, so please be careful.
+The warnings are real; if in doubt make backups before running the command.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#development-scripts" id="id29">Development Scripts</a><ul>
+<li><a class="reference internal" href="#devel-all-bob" id="id30">devel/all-bob</a></li>
+<li><a class="reference internal" href="#devel-annc-monitor" id="id31">devel/annc-monitor</a></li>
+<li><a class="reference internal" href="#devel-check-release" id="id32">devel/check-release</a></li>
+<li><a class="reference internal" href="#devel-clear-script-env" id="id33">devel/clear-script-env</a></li>
+<li><a class="reference internal" href="#devel-click-monitor" id="id34">devel/click-monitor</a></li>
+<li><a class="reference internal" href="#devel-cmptiles" id="id35">devel/cmptiles</a></li>
+<li><a class="reference internal" href="#devel-export-dt-ini" id="id36">devel/export-dt-ini</a></li>
+<li><a class="reference internal" href="#devel-find-offsets" id="id37">devel/find-offsets</a></li>
+<li><a class="reference internal" href="#devel-inject-raws" id="id38">devel/inject-raws</a></li>
+<li><a class="reference internal" href="#devel-inspect-screen" id="id39">devel/inspect-screen</a></li>
+<li><a class="reference internal" href="#devel-light" id="id40">devel/light</a></li>
+<li><a class="reference internal" href="#devel-list-filters" id="id41">devel/list-filters</a></li>
+<li><a class="reference internal" href="#devel-lsmem" id="id42">devel/lsmem</a></li>
+<li><a class="reference internal" href="#devel-lua-example" id="id43">devel/lua-example</a></li>
+<li><a class="reference internal" href="#devel-modstate-monitor" id="id44">devel/modstate-monitor</a></li>
+<li><a class="reference internal" href="#devel-nuke-items" id="id45">devel/nuke-items</a></li>
+<li><a class="reference internal" href="#devel-pop-screen" id="id46">devel/pop-screen</a></li>
+<li><a class="reference internal" href="#devel-prepare-save" id="id47">devel/prepare-save</a></li>
+<li><a class="reference internal" href="#devel-print-args" id="id48">devel/print-args</a></li>
+<li><a class="reference internal" href="#devel-print-args2" id="id49">devel/print-args2</a></li>
+<li><a class="reference internal" href="#devel-save-version" id="id50">devel/save-version</a></li>
+<li><a class="reference internal" href="#devel-scanitemother" id="id51">devel/scanitemother</a></li>
+<li><a class="reference internal" href="#devel-send-key" id="id52">devel/send-key</a></li>
+<li><a class="reference internal" href="#devel-spawn-unit-helper" id="id53">devel/spawn-unit-helper</a></li>
+<li><a class="reference internal" href="#devel-test-perlin" id="id54">devel/test-perlin</a></li>
+<li><a class="reference internal" href="#devel-unforbidall" id="id55">devel/unforbidall</a></li>
+<li><a class="reference internal" href="#devel-unit-path" id="id56">devel/unit-path</a></li>
+<li><a class="reference internal" href="#devel-watch-minecarts" id="id57">devel/watch-minecarts</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="devel-all-bob">
+<span id="id1"></span><h2><a class="toc-backref" href="#id30">devel/all-bob</a><a class="headerlink" href="#devel-all-bob" title="Permalink to this headline">¶</a></h2>
+<p>Changes the first name of all units to &#8220;Bob&#8221;.
+Useful for testing <a class="reference internal" href="modtools.html#modtools-interaction-trigger"><span class="std std-ref">modtools/interaction-trigger</span></a> events.</p>
+</div>
+<div class="section" id="devel-annc-monitor">
+<span id="id2"></span><h2><a class="toc-backref" href="#id31">devel/annc-monitor</a><a class="headerlink" href="#devel-annc-monitor" title="Permalink to this headline">¶</a></h2>
+<p>Displays announcements and reports in the console.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">enable|start:</th><td class="field-body">Begins monitoring</td>
+</tr>
+<tr class="field-even field"><th class="field-name">disable|stop:</th><td class="field-body">Stops monitoring</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">interval X:</th><td class="field-body">Sets the delay between checks for
+new announcements to <code class="docutils literal"><span class="pre">X</span></code> frames</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="devel-check-release">
+<span id="id3"></span><h2><a class="toc-backref" href="#id32">devel/check-release</a><a class="headerlink" href="#devel-check-release" title="Permalink to this headline">¶</a></h2>
+<p>Basic checks for release readiness</p>
+</div>
+<div class="section" id="devel-clear-script-env">
+<span id="id4"></span><h2><a class="toc-backref" href="#id33">devel/clear-script-env</a><a class="headerlink" href="#devel-clear-script-env" title="Permalink to this headline">¶</a></h2>
+<p>Clears the environment of the specified lua script(s).</p>
+</div>
+<div class="section" id="devel-click-monitor">
+<span id="id5"></span><h2><a class="toc-backref" href="#id34">devel/click-monitor</a><a class="headerlink" href="#devel-click-monitor" title="Permalink to this headline">¶</a></h2>
+<p>Displays the grid coordinates of mouse clicks in the console.
+Useful for plugin/script development.</p>
+<p>Usage: <code class="docutils literal"><span class="pre">devel/click-monitor</span> <span class="pre">start|stop</span></code></p>
+</div>
+<div class="section" id="devel-cmptiles">
+<span id="id6"></span><h2><a class="toc-backref" href="#id35">devel/cmptiles</a><a class="headerlink" href="#devel-cmptiles" title="Permalink to this headline">¶</a></h2>
+<p>Lists and/or compares two tiletype material groups.</p>
+<p>Usage: <code class="docutils literal"><span class="pre">devel/cmptiles</span> <span class="pre">material1</span> <span class="pre">[material2]</span></code></p>
+</div>
+<div class="section" id="devel-export-dt-ini">
+<span id="id7"></span><h2><a class="toc-backref" href="#id36">devel/export-dt-ini</a><a class="headerlink" href="#devel-export-dt-ini" title="Permalink to this headline">¶</a></h2>
+<p>Exports an ini file containing memory addresses for Dwarf Therapist.</p>
+</div>
+<div class="section" id="devel-find-offsets">
+<span id="id8"></span><h2><a class="toc-backref" href="#id37">devel/find-offsets</a><a class="headerlink" href="#devel-find-offsets" title="Permalink to this headline">¶</a></h2>
+<p>WARNING: THIS SCRIPT IS STRICTLY FOR DFHACK DEVELOPERS.</p>
+<p>Running this script on a new DF version will NOT
+MAKE IT RUN CORRECTLY if any data structures
+changed, thus possibly leading to CRASHES AND/OR
+PERMANENT SAVE CORRUPTION.</p>
+<p>Finding the first few globals requires this script to be
+started immediately after loading the game, WITHOUT
+first loading a world. The rest expect a loaded save,
+not a fresh embark. Finding current_weather requires
+a special save previously processed with <a class="reference internal" href="#devel-prepare-save"><span class="std std-ref">devel/prepare-save</span></a>
+on a DF version with working dfhack.</p>
+<p>The script expects vanilla game configuration, without
+any custom tilesets or init file changes. Never unpause
+the game unless instructed. When done, quit the game
+without saving using &#8216;die&#8217;.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li>global names to force finding them</li>
+<li><code class="docutils literal"><span class="pre">all</span></code> to force all globals</li>
+<li><code class="docutils literal"><span class="pre">nofeed</span></code> to block automated fake input searches</li>
+<li><code class="docutils literal"><span class="pre">nozoom</span></code> to disable neighboring object heuristics</li>
+</ul>
+</div>
+<div class="section" id="devel-inject-raws">
+<span id="id9"></span><h2><a class="toc-backref" href="#id38">devel/inject-raws</a><a class="headerlink" href="#devel-inject-raws" title="Permalink to this headline">¶</a></h2>
+<p>WARNING: THIS SCRIPT CAN PERMANENLY DAMAGE YOUR SAVE.</p>
+<p>This script attempts to inject new raw objects into your
+world. If the injected references do not match the actual
+edited raws, your save will refuse to load, or load but crash.</p>
+<p>This script can handle reaction, item and building definitions.</p>
+<p>The savegame contains a list of the relevant definition tokens in
+the right order, but all details are read from raws every time.
+This allows just adding stub definitions, and simply saving and
+reloading the game.</p>
+<p>This is useful enough for modders and some users to justify the danger.</p>
+<p>Usage example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">devel</span><span class="o">/</span><span class="n">inject</span><span class="o">-</span><span class="n">raws</span> <span class="n">trapcomp</span> <span class="n">ITEM_TRAPCOMP_STEAM_PISTON</span> <span class="n">workshop</span> <span class="n">STEAM_ENGINE</span> <span class="n">MAGMA_STEAM_ENGINE</span> <span class="n">reaction</span> <span class="n">STOKE_BOILER</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="devel-inspect-screen">
+<span id="id10"></span><h2><a class="toc-backref" href="#id39">devel/inspect-screen</a><a class="headerlink" href="#devel-inspect-screen" title="Permalink to this headline">¶</a></h2>
+<p>Read the tiles from the screen and display info about them.</p>
+</div>
+<div class="section" id="devel-light">
+<span id="id11"></span><h2><a class="toc-backref" href="#id40">devel/light</a><a class="headerlink" href="#devel-light" title="Permalink to this headline">¶</a></h2>
+<p>An experimental lighting engine for DF, using the <a class="reference internal" href="../Plugins.html#rendermax"><span class="std std-ref">rendermax</span></a> plugin.</p>
+<p>Call <code class="docutils literal"><span class="pre">devel/light</span> <span class="pre">static</span></code> to not recalculate lighting when in game.
+Press <code class="kbd docutils literal"><span class="pre">~</span></code> to recalculate lighting. Press <code class="kbd docutils literal"><span class="pre">`</span></code> to exit.</p>
+</div>
+<div class="section" id="devel-list-filters">
+<span id="id12"></span><h2><a class="toc-backref" href="#id41">devel/list-filters</a><a class="headerlink" href="#devel-list-filters" title="Permalink to this headline">¶</a></h2>
+<p>List input items for the building currently being built.
+This is where the filters in lua/dfhack/buildings.lua come from.</p>
+</div>
+<div class="section" id="devel-lsmem">
+<span id="id13"></span><h2><a class="toc-backref" href="#id42">devel/lsmem</a><a class="headerlink" href="#devel-lsmem" title="Permalink to this headline">¶</a></h2>
+<p>Prints memory ranges of the process.</p>
+</div>
+<div class="section" id="devel-lua-example">
+<span id="id14"></span><h2><a class="toc-backref" href="#id43">devel/lua-example</a><a class="headerlink" href="#devel-lua-example" title="Permalink to this headline">¶</a></h2>
+<p>An example lua script, which reports the number of times it has
+been called.  Useful for testing environment persistence.</p>
+</div>
+<div class="section" id="devel-modstate-monitor">
+<span id="id15"></span><h2><a class="toc-backref" href="#id44">devel/modstate-monitor</a><a class="headerlink" href="#devel-modstate-monitor" title="Permalink to this headline">¶</a></h2>
+<p>Display changes in key modifier state, ie Ctrl/Alt/Shift.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">enable|start:</th><td class="field-body">Begin monitoring</td>
+</tr>
+<tr class="field-even field"><th class="field-name">disable|stop:</th><td class="field-body">End monitoring</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="devel-nuke-items">
+<span id="id16"></span><h2><a class="toc-backref" href="#id45">devel/nuke-items</a><a class="headerlink" href="#devel-nuke-items" title="Permalink to this headline">¶</a></h2>
+<p>Deletes ALL items not held by units, buildings or jobs.
+Intended solely for lag investigation.</p>
+</div>
+<div class="section" id="devel-pop-screen">
+<span id="id17"></span><h2><a class="toc-backref" href="#id46">devel/pop-screen</a><a class="headerlink" href="#devel-pop-screen" title="Permalink to this headline">¶</a></h2>
+<p>For killing bugged out gui script screens.</p>
+</div>
+<div class="section" id="devel-prepare-save">
+<span id="id18"></span><h2><a class="toc-backref" href="#id47">devel/prepare-save</a><a class="headerlink" href="#devel-prepare-save" title="Permalink to this headline">¶</a></h2>
+<p>WARNING: THIS SCRIPT IS STRICTLY FOR DFHACK DEVELOPERS.</p>
+<p>This script prepares the current savegame to be used
+with <a class="reference internal" href="#devel-find-offsets"><span class="std std-ref">devel/find-offsets</span></a>. It CHANGES THE GAME STATE
+to predefined values, and initiates an immediate
+<a class="reference internal" href="base.html#quicksave"><span class="std std-ref">quicksave</span></a>, thus PERMANENTLY MODIFYING the save.</p>
+</div>
+<div class="section" id="devel-print-args">
+<span id="id19"></span><h2><a class="toc-backref" href="#id48">devel/print-args</a><a class="headerlink" href="#devel-print-args" title="Permalink to this headline">¶</a></h2>
+<p>Prints all the arguments you supply to the script on their own line.
+Useful for debugging other scripts.</p>
+</div>
+<div class="section" id="devel-print-args2">
+<span id="id20"></span><h2><a class="toc-backref" href="#id49">devel/print-args2</a><a class="headerlink" href="#devel-print-args2" title="Permalink to this headline">¶</a></h2>
+<p>Prints all the arguments you supply to the script on their own line
+with quotes around them.</p>
+</div>
+<div class="section" id="devel-save-version">
+<span id="id21"></span><h2><a class="toc-backref" href="#id50">devel/save-version</a><a class="headerlink" href="#devel-save-version" title="Permalink to this headline">¶</a></h2>
+<p>Display DF version information about the current save</p>
+</div>
+<div class="section" id="devel-scanitemother">
+<span id="id22"></span><h2><a class="toc-backref" href="#id51">devel/scanitemother</a><a class="headerlink" href="#devel-scanitemother" title="Permalink to this headline">¶</a></h2>
+<p>List indices in <code class="docutils literal"><span class="pre">world.item.other[]</span></code> where current selected item appears.</p>
+</div>
+<div class="section" id="devel-send-key">
+<span id="id23"></span><h2><a class="toc-backref" href="#id52">devel/send-key</a><a class="headerlink" href="#devel-send-key" title="Permalink to this headline">¶</a></h2>
+<p>Send a key to the current screen or a parent</p>
+<p>Usage:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">devel/send-key KEY_NAME:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Send KEY_NAME</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">devel/send-key KEY_NAME X:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Send KEY_NAME to the screen <code class="docutils literal"><span class="pre">X</span></code> screens above
+the current screen</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="devel-spawn-unit-helper">
+<span id="id24"></span><h2><a class="toc-backref" href="#id53">devel/spawn-unit-helper</a><a class="headerlink" href="#devel-spawn-unit-helper" title="Permalink to this headline">¶</a></h2>
+<p>Setup stuff to allow arena creature spawn after a mode change.</p>
+<p>With Arena spawn data initialized:</p>
+<ul class="simple">
+<li>enter the <code class="kbd docutils literal"><span class="pre">k</span></code> menu and change mode using
+<code class="docutils literal"><span class="pre">rb_eval</span> <span class="pre">df.gametype</span> <span class="pre">=</span> <span class="pre">:DWARF_ARENA</span></code></li>
+<li>spawn creatures (<code class="kbd docutils literal"><span class="pre">c</span></code> ingame)</li>
+<li>revert to game mode using <code class="docutils literal"><span class="pre">rb_eval</span> <span class="pre">df.gametype</span> <span class="pre">=</span> <span class="pre">#{df.gametype.inspect}</span></code></li>
+<li>To convert spawned creatures to livestock, select each one with
+the <code class="kbd docutils literal"><span class="pre">v</span></code> menu, and enter <code class="docutils literal"><span class="pre">rb_eval</span> <span class="pre">df.unit_find.civ_id</span> <span class="pre">=</span> <span class="pre">df.ui.civ_id</span></code></li>
+</ul>
+</div>
+<div class="section" id="devel-test-perlin">
+<span id="id25"></span><h2><a class="toc-backref" href="#id54">devel/test-perlin</a><a class="headerlink" href="#devel-test-perlin" title="Permalink to this headline">¶</a></h2>
+<p>Generates an image using multiple octaves of perlin noise.</p>
+</div>
+<div class="section" id="devel-unforbidall">
+<span id="id26"></span><h2><a class="toc-backref" href="#id55">devel/unforbidall</a><a class="headerlink" href="#devel-unforbidall" title="Permalink to this headline">¶</a></h2>
+<p>Unforbid all items.</p>
+</div>
+<div class="section" id="devel-unit-path">
+<span id="id27"></span><h2><a class="toc-backref" href="#id56">devel/unit-path</a><a class="headerlink" href="#devel-unit-path" title="Permalink to this headline">¶</a></h2>
+<p>Show the internal path a unit is currently following.</p>
+</div>
+<div class="section" id="devel-watch-minecarts">
+<span id="id28"></span><h2><a class="toc-backref" href="#id57">devel/watch-minecarts</a><a class="headerlink" href="#devel-watch-minecarts" title="Permalink to this headline">¶</a></h2>
+<p>Logs minecart coordinates and speeds to console.</p>
+<p>Usage:  <code class="docutils literal"><span class="pre">devel/watch-minecarts</span> <span class="pre">start|stop</span></code></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">DFHack</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../Scripts.html">DFHack Scripts</a><ul>
+      <li>Previous: <a href="base.html" title="previous chapter">Basic Scripts</a></li>
+      <li>Next: <a href="fix.html" title="next chapter">Bugfixing Scripts</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Development Scripts</a><ul>
+<li><a class="reference internal" href="#devel-all-bob">devel/all-bob</a></li>
+<li><a class="reference internal" href="#devel-annc-monitor">devel/annc-monitor</a></li>
+<li><a class="reference internal" href="#devel-check-release">devel/check-release</a></li>
+<li><a class="reference internal" href="#devel-clear-script-env">devel/clear-script-env</a></li>
+<li><a class="reference internal" href="#devel-click-monitor">devel/click-monitor</a></li>
+<li><a class="reference internal" href="#devel-cmptiles">devel/cmptiles</a></li>
+<li><a class="reference internal" href="#devel-export-dt-ini">devel/export-dt-ini</a></li>
+<li><a class="reference internal" href="#devel-find-offsets">devel/find-offsets</a></li>
+<li><a class="reference internal" href="#devel-inject-raws">devel/inject-raws</a></li>
+<li><a class="reference internal" href="#devel-inspect-screen">devel/inspect-screen</a></li>
+<li><a class="reference internal" href="#devel-light">devel/light</a></li>
+<li><a class="reference internal" href="#devel-list-filters">devel/list-filters</a></li>
+<li><a class="reference internal" href="#devel-lsmem">devel/lsmem</a></li>
+<li><a class="reference internal" href="#devel-lua-example">devel/lua-example</a></li>
+<li><a class="reference internal" href="#devel-modstate-monitor">devel/modstate-monitor</a></li>
+<li><a class="reference internal" href="#devel-nuke-items">devel/nuke-items</a></li>
+<li><a class="reference internal" href="#devel-pop-screen">devel/pop-screen</a></li>
+<li><a class="reference internal" href="#devel-prepare-save">devel/prepare-save</a></li>
+<li><a class="reference internal" href="#devel-print-args">devel/print-args</a></li>
+<li><a class="reference internal" href="#devel-print-args2">devel/print-args2</a></li>
+<li><a class="reference internal" href="#devel-save-version">devel/save-version</a></li>
+<li><a class="reference internal" href="#devel-scanitemother">devel/scanitemother</a></li>
+<li><a class="reference internal" href="#devel-send-key">devel/send-key</a></li>
+<li><a class="reference internal" href="#devel-spawn-unit-helper">devel/spawn-unit-helper</a></li>
+<li><a class="reference internal" href="#devel-test-perlin">devel/test-perlin</a></li>
+<li><a class="reference internal" href="#devel-unforbidall">devel/unforbidall</a></li>
+<li><a class="reference internal" href="#devel-unit-path">devel/unit-path</a></li>
+<li><a class="reference internal" href="#devel-watch-minecarts">devel/watch-minecarts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, The DFHack Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/docs/_auto/devel.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

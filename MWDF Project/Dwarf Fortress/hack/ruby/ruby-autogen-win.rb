@@ -2505,6 +2505,8 @@ class EntitySellCategory < MemHack::Enum
     ENUM[59] = :ThreadYarn ; NUME[:ThreadYarn] = 59
     ENUM[60] = :Tools ; NUME[:Tools] = 60
     ENUM[61] = :Clay ; NUME[:Clay] = 61
+    ENUM[62] = :Parchment ; NUME[:Parchment] = 62
+    ENUM[63] = :CupsMugsGoblets ; NUME[:CupsMugsGoblets] = 63
 end
 
 class EnvironmentType < MemHack::Enum
@@ -7089,6 +7091,8 @@ class SquadOrderType < MemHack::Enum
     ENUM[4] = :TRAIN ; NUME[:TRAIN] = 4
     ENUM[5] = :DRIVE_ENTITY_OFF_SITE ; NUME[:DRIVE_ENTITY_OFF_SITE] = 5
     ENUM[6] = :CAUSE_TROUBLE_FOR_ENTITY ; NUME[:CAUSE_TROUBLE_FOR_ENTITY] = 6
+    ENUM[7] = :KILL_HF ; NUME[:KILL_HF] = 7
+    ENUM[8] = :DRIVE_ARMIES_FROM_SITE ; NUME[:DRIVE_ARMIES_FROM_SITE] = 8
 end
 
 class StockpileCategory < MemHack::Enum
@@ -7443,6 +7447,7 @@ class TalkChoiceType < MemHack::Enum
     ENUM[196] = :ExpressEmotionMenu ; NUME[:ExpressEmotionMenu] = 196
     ENUM[197] = :StateValueMenu ; NUME[:StateValueMenu] = 197
     ENUM[198] = :StateValue ; NUME[:StateValue] = 198
+    ENUM[199] = :SayNoOrderYet ; NUME[:SayNoOrderYet] = 199
     ENUM[200] = :ProvideDirectionsBuilding ; NUME[:ProvideDirectionsBuilding] = 200
     ENUM[201] = :Argue ; NUME[:Argue] = 201
     ENUM[202] = :Flatter ; NUME[:Flatter] = 202
@@ -7459,6 +7464,7 @@ class TalkChoiceType < MemHack::Enum
     ENUM[213] = :RefuseWork ; NUME[:RefuseWork] = 213
     ENUM[214] = :GrantWorkGroup ; NUME[:GrantWorkGroup] = 214
     ENUM[215] = :RefuseWorkGroup ; NUME[:RefuseWorkGroup] = 215
+    ENUM[216] = :GiveSquadOrder ; NUME[:GiveSquadOrder] = 216
 end
 
 class TileBuildingOcc < MemHack::Enum
@@ -8515,6 +8521,9 @@ class UiAdvmodeMenu < MemHack::Enum
     ENUM[41] = :Unk41 ; NUME[:Unk41] = 41
     ENUM[42] = :Unk42 ; NUME[:Unk42] = 42
     ENUM[43] = :DodgeDirection ; NUME[:DodgeDirection] = 43
+    ENUM[44] = :Unk44 ; NUME[:Unk44] = 44
+    ENUM[45] = :Unk45 ; NUME[:Unk45] = 45
+    ENUM[46] = :Build ; NUME[:Build] = 46
 end
 
 class UiSidebarMode < MemHack::Enum
@@ -10279,8 +10288,8 @@ class ActivityEvent < MemHack::Compound
         val &= ((1 << 16) - 1)
         ((val >> (16-1)) & 1) == 0 ? val : val - (1 << 16)
     end
-    def getName(arg0, str)
-        DFHack.vmethod_call(self, 176, arg0, str) ; nil
+    def getName(unit_id, str)
+        DFHack.vmethod_call(self, 176, unit_id, str) ; nil
     end
 end
 
@@ -10658,25 +10667,23 @@ class ActivityEventDiscussTopicst < ActivityEvent
     field(:participants, 72) {
         global :ActivityEventParticipants
     }
-    field(:anon_1, 176) {
+    field(:site_id, 176) {
+        number 32, true, -1
+    }
+    def site_tg ; df.world.world_data.sites.binsearch(site_id) ; end
+    field(:location_id, 180) {
+        number 32, true, -1
+    }
+    field(:building_id, 184) {
         number 32, true
     }
-    field(:anon_2, 180) {
+    field(:anon_1, 188) {
         number 32, true
     }
-    field(:anon_3, 184) {
-        number 32, true
+    field(:knowledge, 192) {
+        global :KnowledgeScholarCategoryFlag
     }
-    field(:anon_4, 188) {
-        number 32, true
-    }
-    field(:anon_5, 192) {
-        number 32, true
-    }
-    field(:anon_6, 196) {
-        number 32, true
-    }
-    field(:anon_7, 200) {
+    field(:timer, 200) {
         number 32, true
     }
 end
@@ -10926,22 +10933,22 @@ class ActivityEventPerformancest < ActivityEvent
         number 32, true, -1
     }
     def dance_form_tg ; df.world.dance_forms.all.binsearch(dance_form) ; end
-    field(:anon_1, 200) {
+    field(:unk_1, 200) {
         number 32, true
     }
-    field(:anon_2, 204) {
+    field(:unk_2, 204) {
         number 32, true
     }
-    field(:anon_3, 208) {
+    field(:unk_3, 208) {
         number 32, true
     }
-    field(:anon_4, 212) {
+    field(:unk_4, 212) {
         number 32, true
     }
-    field(:anon_5, 216) {
+    field(:unk_5, 216) {
         number 32, true
     }
-    field(:anon_6, 220) {
+    field(:unk_6, 220) {
         number 32, true
     }
     field(:participant_actions, 224) {
@@ -10964,80 +10971,71 @@ class ActivityEventPerformancest < ActivityEvent
                         number 32, true, -1
                     }
                     def histfig_tg ; df.world.history.figures.binsearch(histfig_id) ; end
-                    field(:anon_1, 16) {
+                    field(:unk_act_1, 16) {
                         number 32, true
                     }
-                    field(:anon_2, 20) {
+                    field(:unk_act_2, 20) {
                         number 32, true
                     }
-                    field(:anon_3, 24) {
+                    field(:unk_act_3, 24) {
                         number 16, true
                     }
-                    field(:anon_4, 26) {
+                    field(:unk_act_4, 26) {
                         number 16, true
                     }
-                    field(:anon_5, 28) {
+                    field(:unk_act_5, 28) {
                         number 16, true
                     }
-                    field(:anon_6, 32) {
+                    field(:unk_act_6, 32) {
                         number 32, true
                     }
-                    field(:anon_7, 36) {
+                    field(:unk_act_7, 36) {
                         number 32, true
                     }
-                    field(:anon_8, 40) {
+                    field(:unk_act_8, 40) {
                         number 32, true
                     }
-                    field(:anon_9, 44) {
+                    field(:unk_act_9, 44) {
                         number 32, true
                     }
                 }
             }
         }
     }
-    field(:anon_7, 248) {
+    field(:pos_performer_2d, 248) {
+        global :Coord2d
+    }
+    field(:pos_performer, 252) {
+        global :Coord
+    }
+    field(:unk_pos_1, 258) {
         number 16, true
     }
-    field(:anon_8, 250) {
+    field(:unk_pos_2, 260) {
         number 16, true
     }
-    field(:anon_9, 252) {
+    field(:unk_pos_3, 262) {
         number 16, true
     }
-    field(:anon_10, 254) {
+    field(:unk_pos_4, 264) {
         number 16, true
     }
-    field(:anon_11, 256) {
+    field(:unk_pos_5, 266) {
         number 16, true
     }
-    field(:anon_12, 258) {
+    field(:unk_pos_6, 268) {
         number 16, true
     }
-    field(:anon_13, 260) {
+    field(:unk_pos_7, 270) {
         number 16, true
     }
-    field(:anon_14, 262) {
+    field(:unk_pos_8, 272) {
         number 16, true
     }
-    field(:anon_15, 264) {
+    field(:unk_pos_9, 274) {
         number 16, true
     }
-    field(:anon_16, 266) {
-        number 16, true
-    }
-    field(:anon_17, 268) {
-        number 16, true
-    }
-    field(:anon_18, 270) {
-        number 16, true
-    }
-    field(:anon_19, 272) {
-        number 16, true
-    }
-    field(:anon_20, 274) {
-        number 16, true
-    }
-    field(:anon_21, 276) {
+    field(:unk_pos_10, 276) {
         number 16, true
     }
     field(:play_orders, 280) {
@@ -11047,30 +11045,30 @@ class ActivityEventPerformancest < ActivityEvent
             }
         }
     }
-    field(:anon_22, 304) {
+    field(:unk_11, 304) {
         number 32, true
     }
-    field(:anon_23, 308) {
+    field(:unk_12, 308) {
         static_array(49, 1) {
             number 8, true
         }
     }
-    field(:anon_24, 358) {
+    field(:unk_13, 358) {
         number 16, true
     }
-    field(:anon_25, 360) {
+    field(:unk_14, 360) {
         number 16, true
     }
-    field(:anon_26, 362) {
+    field(:unk_15, 362) {
         number 16, true
     }
-    field(:anon_27, 364) {
+    field(:unk_16, 364) {
         number 32, true
     }
-    field(:anon_28, 368) {
+    field(:unk_17, 368) {
         number 32, true
     }
-    field(:anon_29, 372) {
+    field(:unk_18, 372) {
         number 32, true
     }
 end
@@ -11143,25 +11141,23 @@ class ActivityEventPonderTopicst < ActivityEvent
     field(:participants, 72) {
         global :ActivityEventParticipants
     }
-    field(:anon_1, 176) {
+    field(:site_id, 176) {
+        number 32, true, -1
+    }
+    def site_tg ; df.world.world_data.sites.binsearch(site_id) ; end
+    field(:location_id, 180) {
+        number 32, true, -1
+    }
+    field(:building_id, 184) {
         number 32, true
     }
-    field(:anon_2, 180) {
+    field(:anon_1, 188) {
         number 32, true
     }
-    field(:anon_3, 184) {
-        number 32, true
+    field(:knowledge, 192) {
+        global :KnowledgeScholarCategoryFlag
     }
-    field(:anon_4, 188) {
-        number 32, true
-    }
-    field(:knowledge_category, 192) {
-        number 32, true
-    }
-    field(:knowledge_flag, 196) {
-        number 32, true
-    }
-    field(:anon_5, 200) {
+    field(:timer, 200) {
         number 32, true
     }
 end
@@ -11220,19 +11216,20 @@ class ActivityEventReadst < ActivityEvent
     field(:participants, 72) {
         global :ActivityEventParticipants
     }
-    field(:anon_1, 176) {
+    field(:building_id, 176) {
         number 32, true
     }
-    field(:anon_2, 180) {
+    field(:site_id, 180) {
+        number 32, true, -1
+    }
+    def site_tg ; df.world.world_data.sites.binsearch(site_id) ; end
+    field(:location_id, 184) {
+        number 32, true, -1
+    }
+    field(:state, 188) {
         number 32, true
     }
-    field(:anon_3, 184) {
-        number 32, true
-    }
-    field(:anon_4, 188) {
-        number 32, true
-    }
-    field(:anon_5, 192) {
+    field(:timer, 192) {
         number 32, true
     }
 end
@@ -11245,13 +11242,14 @@ class ActivityEventResearchst < ActivityEvent
     field(:participants, 72) {
         global :ActivityEventParticipants
     }
-    field(:anon_1, 176) {
-        number 32, true
+    field(:site_id, 176) {
+        number 32, true, -1
     }
-    field(:anon_2, 180) {
-        number 32, true
+    def site_tg ; df.world.world_data.sites.binsearch(site_id) ; end
+    field(:location_id, 180) {
+        number 32, true, -1
     }
-    field(:anon_3, 184) {
+    field(:building_id, 184) {
         number 32, true
     }
 end
@@ -18557,18 +18555,13 @@ class CulturalIdentity < MemHack::Compound
             }
         }
     }
-    field(:unk_1c, 40) {
-        static_array(22, 2) {
-            number 16, true
+    field(:ethic, 40) {
+        static_array(22, 2, EthicType) {
+            number 16, true, nil, EthicResponse
         }
     }
-    field(:unk_48, 84) {
-        static_array(32, 4) {
-            number 32, true
-        }
-    }
-    field(:unk_v42_1, 212) {
-        static_array(32, 4) {
+    field(:values, 84) {
+        static_array(64, 4, ValueType) {
             number 32, true
         }
     }
@@ -21463,12 +21456,7 @@ class EntityRaw < MemHack::Compound
         }
     }
     field(:values, 12356) {
-        static_array(32, 4, ValueType) {
-            number 32, true
-        }
-    }
-    field(:unk_v42_1, 12484) {
-        static_array(32, 4) {
+        static_array(64, 4, ValueType) {
             number 32, true
         }
     }
@@ -22647,10 +22635,11 @@ class GeneralRefActivityEventst < GeneralRef
 
     rtti_classname :general_ref_activity_eventst
 
-    field(:anon_1, 8) {
-        number 32, true
+    field(:activity_id, 8) {
+        number 32, true, -1
     }
-    field(:anon_2, 12) {
+    def activity_tg ; df.world.activities.all.binsearch(activity_id) ; end
+    field(:event_id, 12) {
         number 32, true
     }
 end
@@ -24172,7 +24161,7 @@ class HistoricalEntity < MemHack::Compound
                     field(:leather, 0) {
                         global :MaterialVecRef
                     }
-                    field(:anon_1, 48) {
+                    field(:parchment, 48) {
                         global :MaterialVecRef
                     }
                     field(:fiber, 96) {
@@ -24477,12 +24466,7 @@ class HistoricalEntity < MemHack::Compound
                 }
             }
             field(:values, 3048) {
-                static_array(32, 4, ValueType) {
-                    number 32, true
-                }
-            }
-            field(:values_2, 3176) {
-                static_array(32, 4, ValueType) {
+                static_array(64, 4, ValueType) {
                     number 32, true
                 }
             }
@@ -46244,6 +46228,7 @@ class UiUnitViewMode < MemHack::Compound
             ENUM[3] = :Wounds ; NUME[:Wounds] = 3
             ENUM[4] = :PrefLabor ; NUME[:PrefLabor] = 4
             ENUM[5] = :PrefDogs ; NUME[:PrefDogs] = 5
+            ENUM[6] = :PrefOccupation ; NUME[:PrefOccupation] = 6
         end
 
         number 32, true, nil, UiUnitViewMode_TValue
@@ -49105,7 +49090,7 @@ class UnitSkill < MemHack::Compound
     field(:demotion_counter, 24) {
         number 32, true
     }
-    field(:unk_1c, 28) {
+    field(:natural_skill_lvl, 28) {
         number 32, true
     }
 end
@@ -49180,9 +49165,9 @@ class UnitSoul < MemHack::Compound
     field(:personality, 584) {
         global :UnitPersonality
     }
-    field(:perfomance_skills, 952) {
+    field(:performance_skills, 952) {
         pointer {
-            compound(:UnitSoul_TPerfomanceSkills) {
+            compound(:UnitSoul_TPerformanceSkills) {
                 sizeof 96
 
                 field(:musical_instruments, 0) {
@@ -50948,7 +50933,7 @@ class ViewscreenJobmanagementst < Viewscreen
     field(:in_max_workshops, 36) {
         number 8, true, nil, BooleanEnum
     }
-    field(:anon_1, 40) {
+    field(:max_workshops, 40) {
         stl_string
     }
 end
@@ -52970,7 +52955,20 @@ class ViewscreenOverallstatusst < Viewscreen
 
     field(:visible_pages, 32) {
         stl_vector(2) {
-            number 16, true
+            class ::DFHack::ViewscreenOverallstatusst_TVisiblePages < MemHack::Enum
+                ENUM = Hash.new
+                NUME = Hash.new
+                ENUM[0] = :Animals ; NUME[:Animals] = 0
+                ENUM[1] = :Kitchen ; NUME[:Kitchen] = 1
+                ENUM[2] = :Stone ; NUME[:Stone] = 2
+                ENUM[3] = :Stocks ; NUME[:Stocks] = 3
+                ENUM[4] = :Health ; NUME[:Health] = 4
+                ENUM[5] = :Prices ; NUME[:Prices] = 5
+                ENUM[6] = :Currency ; NUME[:Currency] = 6
+                ENUM[7] = :Justice ; NUME[:Justice] = 7
+            end
+
+            number 16, true, nil, ViewscreenOverallstatusst_TVisiblePages
         }
     }
     field(:page_cursor, 56) {
@@ -53088,10 +53086,10 @@ class ViewscreenPricest < Viewscreen
 
     rtti_classname :viewscreen_pricest
 
-    field(:anon_1, 32) {
+    field(:category_idx, 32) {
         number 16, true
     }
-    field(:anon_2, 36) {
+    field(:item_idx, 36) {
         number 32, true
     }
 end
@@ -54694,22 +54692,22 @@ class ViewscreenWorkquotaConditionst < Viewscreen
     field(:anon_5, 248) {
         stl_vector
     }
-    field(:anon_6, 272) {
+    field(:list_unk1, 272) {
         stl_vector(2) {
             number 16, true
         }
     }
-    field(:anon_7, 296) {
+    field(:list_unk2, 296) {
         stl_vector(4) {
             number 32, true
         }
     }
-    field(:anon_8, 320) {
+    field(:list_unk3, 320) {
         stl_vector(2) {
             number 16, true
         }
     }
-    field(:anon_9, 344) {
+    field(:list_visible, 344) {
         stl_vector(2) {
             number 16, true
         }
@@ -54760,13 +54758,13 @@ class ViewscreenWorkquotaConditionst < Viewscreen
             number 32, true
         }
     }
-    field(:anon_10, 416) {
+    field(:anon_6, 416) {
         number 8, true
     }
-    field(:anon_11, 424) {
+    field(:anon_7, 424) {
         stl_vector
     }
-    field(:anon_12, 448) {
+    field(:anon_8, 448) {
         number 32, true
     }
     field(:item_count_edit, 452) {
@@ -57330,7 +57328,7 @@ class World < MemHack::Compound
             field(:type, 48) {
                 number 32, true, -1
             }
-            field(:unk_str1, 56) {
+            field(:filter, 56) {
                 stl_string
             }
             field(:item_types, 88) {
@@ -57410,6 +57408,7 @@ class World < MemHack::Compound
             field(:interactions, 2904) {
                 stl_vector(8) {
                     pointer {
+                        global :InteractionEffect
                     }
                 }
             }

@@ -1,0 +1,106 @@
+.. _fix:
+
+#################
+Bugfixing Scripts
+#################
+
+.. include:: /scripts/fix/about.txt
+
+.. contents::
+
+.. _fix/blood-del:
+
+.. include:: /scripts/fix/blood-del.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/build-location:
+
+.. include:: /scripts/fix/build-location.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/dead-units:
+
+.. include:: /scripts/fix/dead-units.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/diplomats:
+
+.. include:: /scripts/fix/diplomats.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/dry-buckets:
+
+.. include:: /scripts/fix/dry-buckets.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/fat-dwarves:
+
+.. include:: /scripts/fix/fat-dwarves.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/feeding-timers:
+
+.. include:: /scripts/fix/feeding-timers.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/item-occupancy:
+
+.. include:: /scripts/fix/item-occupancy.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/loyaltycascade:
+
+.. include:: /scripts/fix/loyaltycascade.rb
+   :start-after: =begin
+   :end-before: =end
+
+
+.. _fix/merchants:
+
+.. include:: /scripts/fix/merchants.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/population-cap:
+
+.. include:: /scripts/fix/population-cap.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/stable-temp:
+
+.. include:: /scripts/fix/stable-temp.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _fix/stuckdoors:
+
+.. include:: /scripts/fix/stuckdoors.rb
+   :start-after: =begin
+   :end-before: =end
+
+
+.. _fix/tile-occupancy:
+
+.. include:: /scripts/fix/tile-occupancy.lua
+   :start-after: [====[
+   :end-before: ]====]

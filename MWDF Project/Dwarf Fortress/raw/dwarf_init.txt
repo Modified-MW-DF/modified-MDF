@@ -10,53 +10,22 @@
 ################### Guilds and Garrisons ###################
 #:lua print(' ')
 #:lua print('Guild and garrison members learn skills at faster rates.')
-modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_FEMALE -keepInventory ]
-
-modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_MALE -keepInventory ]
-modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_FEMALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild ALCHEMIST ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild BEAST_WARDEN ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild CARPENTER ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild CRAFTDWARF ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild ENGINEER ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild FARMER ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild FISHERMAN ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild HEALER ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild JEWELER ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MASON -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild MASON ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild MERCHANT ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild SMITH ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild GUARD ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild LEGIONNAIRE ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild MARKSMAN ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER -command [ safe-guild-transform -unit \\WORKER_ID -race DWARF -guild WRESTLER ]
 
 
 

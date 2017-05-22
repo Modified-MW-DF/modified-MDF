@@ -1,0 +1,71 @@
+Brief descriptions of all Dragon's Dogma and miscellaneous megabeasts, by ZM5.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dragons Dogma - Eye Megabeasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Gazer - a flying orb with a single eye set in its toothy maw, and several tentacles with fanged mouths sprouting from its body. 
+It mostly relies on its magical abilities - it is capable of shooting a stream of fire, shoot ice bolts at up to 3 targets, shoot liquidized frost at up to 4 targets, and shoot 
+liquid lightning at up to 2 targets. It also has a unique Gaze attack, which can cause any number of potential afflictions,
+including blindness, nausea, strength, agility and endurance lowered to 50%, dizziness, drowsiness, unconsciousness, necrosis,
+blisters, and petrifaction. It can also release a cloud of poisonous gas, which has a chance of causing nausea, dizziness, vomiting blood, and/or coughing blood.
+
+Evil Eye - semimegabeast version of the Gazer - it possess more tentacles, but is also much smaller, and its magical abilities are weaker.
+It can shoot a single fireball, and shoot liquid lightning or frost at up to 2 targets. Its Gaze attack is slightly weaker, not being able to cause drowsiness or
+blistering - instead being able to cause vomiting blood and swelling.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dragons Dogma - Dragonkin Megabeasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cursed Dragon - undead, eyeless, rotting dragon. Due to being undead, it doesnt feel pain, fear or exertion, cannot be stunned or blinded, doesnt need to breathe, and cannot be crippled
+by striking at the limbs. It can breathe a poisonous vapor, which causes necrosis and dizziness, and can potentially also cause swelling - can also flap its wings to kick up dust that knocks
+away nearby creatures, and also cast a Torpor spell, which slows down its victim. It lacks a brain inside its skull - its function is instead filled by a soul gem embedded in its chest.
+
+Saint Dragon - the "Grigori"-style dragon - it is gargantuan compared to other dragons. It possesses several different abilities - breathing a stream of dragonfire, spitting a ball of fire,
+throwing ice bolts at up to 3 targets, cast Paralyzing Shock at up to 3 targets, which can induce paralysis and pain in all limbs, and also Holy Fire on up to 5 targets, which can cause bleeding,
+blistering, pain and also reducing endurance to 40%.
+
+Firedrake - a smaller, semimegabeast red dragon. It can breathe a single jet of fire. Its attack triggers are slightly higher than other semimegabeasts, but also not as high as regular megabeasts.
+
+Thunderwyvern - a semimegabeast yellow dragon - it can breathe a cloud of lightning that can cause paralysis, pain and melting damage. Has similar attack triggers to the Firedrake.
+
+Wyrm - a semimegabeast blue dragon - smaller than the Firedrake and Thunderwyvern. Can breathe a cloud of frost, which can reduce speed and cause blistering. It also has the ability to cast a Slow
+spell, and also hurl a ball of lightning.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dragons Dogma - Other Megabeasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Awakened One - Daimon's second from from DD. It technically has two heads - one is its actual head, the other is the torso. 
+Has incredibly powerful magical abilities - can hurl bolts of ice at up to 8 targets, throw fireballs at up to 4 targets, hurl
+liquid lightning at up to 2 targets, breathe a stream of dark flames which can cause burning damage, cast Torpor on up to 2 targets,
+and cast Immolation, which knocks away nearby creatures and covers them in flames. Additionally has professional skill in all unarmed and weapon
+skills, and proficient in dodging. Has higher attack triggers than most other megabeasts.
+
+Dark Bishop - a floating undead. Weaker physically, it makes up for it with various types of magic - it can cast Repentance, which has a chance of causing
+immediate unconsciousness in a single target, cast Holy Fire at up to 3 targets, throw Holy Bolts at up to 5 targets, cast Sleep, and hurl a single fireball.
+Dissipates into a burst of light upon death, leaving no corpse behind.
+
+Griffin - flying quadruped beast. Counts as a semimegabeast - is skilled in biting, striking, and fighting, and is competent in dodging.
+Doesn't feel fear or pain, and cannot be stunned.
+
+Cockatrice - flying quadruped monster. Can breathe a petrifying gas that reduces speed to 80%, has a chance of causing paralysis, and also has a low chance 
+of causing petrifaction. Its clawing attacks are poisonous and cause necrosis, and can also cause nausea and bleeding.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Miscellaneous megabeasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Behemoth - gargantuan quadruped with two horns - more than twice as large as fully-grown vanilla Dragons. 
+No specific gimmicks besides hitting really hard - it doesn't feel fear, but it still can feel pain and be knocked unconscious with enough attacks.
+
+Chimera - large, three-headed semimegabeast with two wings and a scorpions stinger. Capable of flight. 
+Their stinger can inject a venom which works similarly to the giant desert scorpions neurotoxin.
+
+Duke of Flies - large demons of pestilence, with three pairs of arms, four pairs of legs, two pairs of wings, two pairs of ovipositors and eight eyes.
+
+They do not feel fear, pain or nausea, and cannot be overexerted or stunned.
+
+Their bites and ovipositor stings can drain blood from those hit by it.
+
+They possess several magical abilities - they can raise the dead as ghouls, and can also cast Rotting Plague, Cripple, Blood Boil, Heartbleed, and Organ Failure.
+
+They have adept kicking, striking and biting skill, skilled in biting, and accomplished in fighting.

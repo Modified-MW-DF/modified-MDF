@@ -121,14 +121,30 @@ end
 
 local function createItem(mat,itemType,quality,creator,description,amount)
  local item=df.item.find(dfhack.items.createItem(itemType[1], itemType[2], mat[1], mat[2], creator))
+ local item2=nil
  assert(item, 'failed to create item')
  quality = math.max(0, math.min(5, quality - 1))
  item:setQuality(quality)
  if df.item_type[itemType[1]]=='SLAB' then
   item.description=description
  end
+ if df.item_type[itemType[1]]=='GLOVES' then
+  --create matching gloves
+  item:setGloveHandedness(1)
+  item2=df.item.find(dfhack.items.createItem(itemType[1], itemType[2], mat[1], mat[2], creator))
+  assert(item2, 'failed to create item')
+  item2:setQuality(quality)
+  item2:setGloveHandedness(2)
+ end
+ if df.item_type[itemType[1]]=='SHOES' then
+  --create matching shoes
+  item2=df.item.find(dfhack.items.createItem(itemType[1], itemType[2], mat[1], mat[2], creator))
+  assert(item2, 'failed to create item')
+  item2:setQuality(quality)
+ end
  if tonumber(amount) > 1 then
   item:setStackSize(amount)
+  if item2 then item2:setStackSize(amount) end
  end
 end
 

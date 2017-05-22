@@ -15,26 +15,15 @@ Teleports a unit to given coordinates.  Examples:
 ]====]
 
 function teleport(unit,pos)
- if dfhack.maps.getTileBlock(unit.pos) then
-  local unitoccupancy = dfhack.maps.getTileBlock(unit.pos).occupancy[unit.pos.x%16][unit.pos.y%16]
-  local newoccupancy = dfhack.maps.getTileBlock(pos).occupancy[pos.x%16][pos.y%16]
-  if newoccupancy.unit then
-   unit.flags1.on_ground=true
-  end
-  unit.pos.x = pos.x
-  unit.pos.y = pos.y
-  unit.pos.z = pos.z
-  if not unit.flags1.on_ground then unitoccupancy.unit = false else unitoccupancy.unit_grounded = false end
- else --the unit had no map tile beneath them. they probably came from create-unit.
-  local newoccupancy = dfhack.maps.getTileBlock(pos).occupancy[pos.x%16][pos.y%16]
-  if newoccupancy.unit then
-   unit.flags1.on_ground=true
-  end
-  unit.pos.x = pos.x
-  unit.pos.y = pos.y
-  unit.pos.z = pos.z
-  --we wont need to set previous occupancy, because the unit litteraly existed outside of time and space.
- end  
+ local unitoccupancy = dfhack.maps.getTileBlock(unit.pos).occupancy[unit.pos.x%16][unit.pos.y%16]
+ local newoccupancy = dfhack.maps.getTileBlock(pos).occupancy[pos.x%16][pos.y%16]
+ if newoccupancy.unit then
+  unit.flags1.on_ground=true
+ end
+ unit.pos.x = pos.x
+ unit.pos.y = pos.y
+ unit.pos.z = pos.z
+ if not unit.flags1.on_ground then unitoccupancy.unit = false else unitoccupancy.unit_grounded = false end
 end
 
 utils = require('utils')

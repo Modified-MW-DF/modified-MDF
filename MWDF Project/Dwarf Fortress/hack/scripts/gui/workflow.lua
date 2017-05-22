@@ -252,12 +252,14 @@ function RangeEditor:onEditRange()
         COLOR_WHITE,
         (cons.goal_value-cons.goal_gap)..'-'..cons.goal_value,
         function(text)
-            local maxv = string.match(text, '^%s*(%d+)%s*$')
+            local maxv = tonumber(string.match(text, '^%s*(%d+)%s*$'))
             if maxv then
                 cons.goal_value = maxv
                 return self.save_cb(cons)
             end
             local minv,maxv = string.match(text, '^%s*(%d+)-(%d+)%s*$')
+            minv = tonumber(minv)
+            maxv = tonumber(maxv)
             if minv and maxv and minv ~= maxv then
                 cons.goal_value = math.max(minv,maxv)
                 cons.goal_gap = math.abs(maxv-minv)

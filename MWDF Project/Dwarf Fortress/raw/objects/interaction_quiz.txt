@@ -1,6 +1,6 @@
 interaction_mw_quiz
 
-YES_MMM_MYTH[OBJECT:INTERACTION]
+!YES_MMM_MYTH!OBJECT:INTERACTION]
 
 [INTERACTION:INVITE_QUIZ]
 	[I_SOURCE:CREATURE_ACTION]
@@ -572,18 +572,6 @@ YES_MMM_MYTH[OBJECT:INTERACTION]
 				[CDI:VERBAL]
 				[CDI:VERB:answer (C):answers (C):NA]
 				[CDI:WAIT_PERIOD:0]
-
-###############################################################################
-#A- this is a tag corruption defeater line, there should be 5 of them below ###
-# Here all of them should be 80 '#' characters long.  If they are not, then ###
-# please fix them - Amostubal. ################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-
-
 
 
 

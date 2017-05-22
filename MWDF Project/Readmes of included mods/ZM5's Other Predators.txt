@@ -1,0 +1,111 @@
+Brief descriptions of all non-crossover predators - including mythological/folklore creatures and OCs, by ZM5.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mutant - creatures found in savage tropical biomes. They do not feel fear and are more prone to rage.
+
+They can be trained as war/hunting animals and mounts.
+
+Mutants come in several different varieties, mostly different in body plans and size.
+
+Brute mutants are quadrupeds - second biggest of the mutants.
+
+Blob mutants are the largest, and also the slowest.
+
+One-armed mutants, as their name suggests, only possess one usable arm - they are also the smallest out of all mutants.
+
+Long-limb mutants are quadrupeds - they will attempt to pull levers in forts.
+
+Six-legged mutants are the third smallest - they walk on three pairs of legs, making them more difficult to debilitate.
+
+Tentacle mutants have several pairs of tentacles instead of arms. They are also the second smallest.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Possessed Weapons - very rare, ghostly creatures found in evil biomes.
+
+They take the form of any weapon from vanilla DF - edged ones will be made out of adamantine, and blunt ones our of platinum.
+
+They all have grand master in their related weapon skill, dodging, and fighting.
+
+In adv mode, hearing "ghostly whispering" is an indicator one is nearby.
+
+All have a soul gem that, when damaged enough or completely severed, will cause the "death" of the possessed weapon.
+
+On "death", they will leave behind a masterwork version of their respective weapon type, made out of the same materials as outlined above.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Plaguebearer - mutated, tumor-covered undead, found underground and in evil biomes.
+
+They have a disease ichor that they can spew, causing blistering, oozing, necrosis, swelling and nausea.
+Their scratches and bites can also spatter the ichor over wounds.
+
+Additionally, they can release either a stream of gas or an undirected cloud of gas that can cause
+an affected creature to become hostile, and possibly gain other features that are usually found on undead -
+such as increased strength, or not feeling fear or pain.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Drowner - undead humanoids found in evil pools, rivers, lakes, wetlands and forests.
+
+Similarly to other undead, they don't feel fear or pain, and will instantly attack living creatures.
+
+They are perpetually covered in a layer of slime, which will cause nausea on contact. They also bleed the same slime.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Strigoi - humanoid, vampiric creatures. They have two sets of teeth, a pair of wings, a tail with a stinger and two hearts.
+
+They behave similarly to night trolls, kidnapping creatures in worldgen and converting them into more strigois. 
+Historical figures who deface temples may also be transformed into strigois.
+
+They cannot be stunned, and do not feel fear, pain or nausea.
+
+They have expert skill in fighting, and have proficient skills in all weapons.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nuckelavee - large, skinless, demonic creature, resembling a horse with the torso of a humanoid rider sprouting from its midsection.
+Found underground and in evil biomes.
+
+They do not feel fear, pain or nausea, cannot be stunned, and do not need to breathe.
+
+Due to having two heads, both of them need to be severed in order to actually kill it.
+
+They can breathe a gas that causes nausea, oozing and swelling of the muscles.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Psoglav - large, underground dwelling humanoids. They have hooves and a dogs head with a single eye.
+
+They have adequate skill in striking, kicking, fighting, biting and wrestling.
+
+Their bites are a lot more deadly than those of other creatures, as their teeth are incredibly sharp.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Strix - bloodsucking fiends resembling owls with four legs. Found in evil forests.
+
+They are relatively large, and can be trained as war/hunting animals.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Draugr - large, reanimated corpses.
+
+They have most advantages of the undead, not feeling fear, dizziness or pain, 
+being unable to be stunned or made nauseous, and do not need to eat, drink, breathe or sleep.
+
+They function as much tougher variations of the underground animal people, utilizing metal armor and weapons.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Meat Golem - large, skinless, undead construct, found in evil biomes and deep underground.
+
+Their intestines are hanging from a hole in its stomach, and have a fanged maw, allowing them to bite with it, as their head lacks teeth.
+
+They can either hurl vomit, which can knock back those hit by it, or spew a stream of stomach acid that can cause severe bleeding.
+
+They are skilled in striking, kicking, wrestling, biting, and fighting. 
+
+They can be heard from far away - sounds of choking, groaning and gagging usually indicate a meat golem nearby.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Flesh Eater - humanoid creatures found in evil mountains, glaciers and tundras.
+
+They only appear alone, and will attack anything nearby. They do not feel fear or pain.
+
+They are skilled in striking, kicking and wrestling, talented in fighting, and adept in biting.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Forest Beast - large-sized humanoids found in savage temperate forests.
+
+They have a single antler and fungal growths over their body.
+
+They will not attack wildlife, preferring to target civilized creatures.
+
+They have adequate skill in striking, kicking, biting, wrestling, and fighting, and are expert ambushers.
+
+Unlike most other predators, they will not charge immediately, preferring to wait until their prey draws near.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

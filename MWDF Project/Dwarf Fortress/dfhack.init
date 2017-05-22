@@ -3,9 +3,9 @@ season-palette start
 
 #timecontrol
 timestream 1.0
-cageammo
-cageammo start
-cageammo enable
+#cageammo
+#cageammo start
+#cageammo enable
 
 #forumdwarves
 keybinding add Ctrl-Shift-P forumdwarves

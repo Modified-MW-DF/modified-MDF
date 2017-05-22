@@ -1,0 +1,106 @@
+Brief descriptions of all Dragon's Dogma predators, by ZM5.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Humanoids and Undead - all undead creatures have the standard advantages of being undead, i.e no pain, no fear, etc. unless noted otherwise.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Gorecyclops - massive, 4 tusked giant, found underground and in evil forests, shrublands and grasslands. Can potentially grow to be the size of a vanilla DF giant (at 300 years).
+Has expert in mace skill, is competent in wrestling, striking and fighting, novice in kicking and adequate in dodging.
+May sometimes be sold by races with access to evil animals - or used by similar races in sieges.
+
+Eliminator - large, horned humanoid found underground and in evil biomes. Has an armoured head covered with a layer of steel (simulating a helmet).
+Doesn't feel fear or pain. Has accomplished hammer skill, is competent in wrestling, kicking and striking, skilled in fighting, and adequate in dodging.
+As with the Gorecyclopes, it can be sold by races with access to evil animals or used by said races in sieges.
+
+Cave Brute (Ogres from DD) - large humanoid that can be found underground, or in the shrublands, grasslands or savannas at night. Cannot be stunned.
+Proficient in striking, kicking, wrestling, biting and fighting - will also occasionally be "flushed red with anger", temporarily increasing its strength
+and agility, while also making it more prone to rage. Not tamable.
+
+All Saurian variants come in two different sizes - regular and giant - giants are twice as big as the normal caste, but also more rare.
+
+Saurian - lizard-like humanoid found in temperate lakes, rivers and wetlands. They can spit a glob of poison which can cause necrosis on contact.
+
+Sulfur Saurian - found in tropical lakes, rivers and wetlands. Their spit doesn't cause necrosis, but instead reduces the speed of the affected creature to 70%.
+
+Geo Saurian - found in the mountains and underground. Their hides are tougher and reduce the force of oncoming attacks by 1/3. They can spit magma, similar to magma crabs.
+
+Saurian Sage - found underground and in savage lakes, rivers and wetlands. They have two lightning spells - one shoots liquid lightning that can cause paralysis and pain,
+the other shoots a ball of lightning that can cause damage on impact. Its spit causes dizziness and makes creatures more vulnerable to their ball lightning.
+
+Pyre Saurian - found deep underground and in savage rocky wastelands. Immune to fire, cannot be blinded, and has a higher body temperature.
+Can spit a glob of magma, or breathe a stream of fire. Unlike other Saurians, it does not have a giant version.
+
+Feral Goblin (DD Goblins) - come in several different variations. Considered a kobold-like race that dwells in caves, albeit tougher - can potentially come to harass
+your fortress or steal goods. 
+
+Standard feral goblins are slightly bigger than regular kobolds, although are still just as cowardly.
+
+Black Goblins (the Hobgoblin variety) are bigger than the feral goblins and are more prone to rage than other variants.
+
+Grimgoblins are bigger still than the Black Goblins - they also feel no fear, though they aren't as prone to rage.
+
+Greater Goblins are the largest variety, being bigger than humans. They likewise feel no fear.
+
+Feral Goblin Shamans are the most rare variety - while they're a similar size to the regular feral goblins, they possess several spells.
+They can shoot a ball of lightning that causes damage on impact, shoot liquid frost or liquid lightning, both of which can cause syndromes.
+They also can cast a protective spell over their allies, which temporarily increases their toughness and prevents them from feeling fear.
+
+Poisoned Undead - large, humanoid undead, found underground and in evil biomes. 
+They can throw up bile that causes a spatter on the ground - contact with it can cause necrosis and nausea.
+
+Mountain Harpy (standard Harpy from DD) - humanoid flier, found in the mountains. Their song can induce drowsiness.
+
+Snow Harpy - found in taigas and temperate, coniferous forests. Aside from the drowsiness-inducing song, they can also breathe a cloud of frost.
+
+Blood Hag (Succubus from DD) - found in evil temperate forests and taigas. 
+They can suck blood with their bites, and their song can inflict a curse which makes combat rolls worse for those who hear it.
+
+Stone Fiend (Gargoyle from DD) - flier found in savage mountains and temperate forests. 
+They have a stone-like hide that makes them difficult to damage. Additionally, they have a stinger - its stabs can potentially turn an affected creature into a stone statue.
+
+Blood Fiend (Strigoi from DD:DA) - larger variant of the stone fiend, found underground and in evil deserts and temperate forests.
+Its much larger than its cousin, although it lacks the petrifying sting attack - instead its stings merely drain blood.
+
+Wailing Dead (Banshee from DD:DA) - humanoid undead found underground and in evil biomes.
+They can let loose a bloodcurdling scream that causes short-term unconsciouss - aside from that they're unremarkable, combat-wise.
+
+Giant Undead - humanoid undead, nearly twice as large as a regular human. Found underground and in evil biomes.
+They will attempt to topple doors and any buildings.
+
+Skeleton Brute - skeletal undead, nearly four times as large as a regular human. Found further underground and in evil biomes.
+As with the Giant Undead, they will attempt to topple any constructions. Has competent fighting and sword skill.
+
+Gray Cyclops (standard cyclops from DD) - giant with two tusks found in savage grasslands, forests, shrublands, and underground.
+Can be bought from many races - will occasionally be used as mounts or war beasts.
+Has competent wrestling and wrestling, adequate kicking, skilled fighting, and proficient mace skill.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beasts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Garm - wolf-like beast found underground and in evil tundras, taigas, temperate forests and temperate shrublands.
+They can breathe a gas that can induce temporary blindness.
+Races with access to evil animals may sell them. Siegers with access to evil animals will use them as mounts or war animals.
+
+Vile Eye - small, flying eyeball with a pair of fanged mouth-like eyelids. They don't feel fear or pain, and cannot be stunned.
+They have access to three projectile spells - either shooting a fireball, a glob of liquid lightning or a glob of liquid frost.
+Additionally they also have a Gaze attack that can cause a number of varying syndromes - though their version is weaker than that of their
+megabeast cousins.
+
+Hellhound - wolf-like beast found in evil forests, grasslands, shrublands and savannas. They can spit a ball of fire, and their bites
+will cause a burst of flames to erupt.
+
+Direwolf - large, white wolves - can be found in temperate coniferous forests and taigas. 
+Larger than most dwarves - their body materials have a x3 value multiplier.
+
+Warg - wolf-like creature found in evil temperate forests, grasslands, shrublands and savannas.
+They have a poisonous bite that can cause necrosis and short-term nausea.
+
+Gorechimera - a large and powerful but rare beast that can be found in evil forests, taigas, mountains, shrublands, savannas and grasslands.
+They possess several abilities, though they can be disabled if its heads are decapitated.
+The Goat head can shoot bolts of lightning at up to 3 targets, cast a Torpor spell, and cast a sleep spell.
+The Snake head can spray a stream of acid - additionally, bites from it can inject a poison that can cause nausea, dizziness, swelling, necrosis, and oozing.
+The Lion head can roar, terrifying nearby enemies.
+The Gorechimeras body material has a x11 value modifier.
+
+Lesser Chimera (standard DD Chimera) - large, rare beast found in savage forests, mountains, grasslands, savannas and shrublands.
+Similar to the Gorechimera, albeit weaker - its poison only causes necrosis and nausea, its spray attack only sprays poison instead of acid.
+It can only direct a lightning bolt at 1 target at a time - it still has a Sleep spell, but it lacks the Torpor spell.

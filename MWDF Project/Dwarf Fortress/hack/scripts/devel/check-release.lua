@@ -27,7 +27,7 @@ Try running `git fetch origin --tags` in the DFHack source tree.
 ]]
 end
 
-expected_git_desc = ('%s-0-g%s'):format(dfhack_ver, git_commit:sub(1, 7))
+expected_git_desc = ('%s-0-g%s'):format(dfhack_ver, git_commit:sub(1, 8))
 if git_desc:sub(1, #expected_git_desc) ~= expected_git_desc then
     err(([[Bad git description:
 Expected %s, got %s]]):format(expected_git_desc, git_desc))

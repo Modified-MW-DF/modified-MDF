@@ -28,6 +28,7 @@ subpages = {
 
 function derror(msg)
     dialogs.showMessage('Error', msg, COLOR_LIGHTRED)
+    qerror(msg)
 end
 
 subpage_classes = {}
@@ -44,6 +45,27 @@ function defsubpage(name)
     subpage_classes[name] = class
     table.insert(subpage_names, name)
     _ENV[name] = class
+end
+
+function has_manager()
+    return #df.historical_entity.find(df.global.ui.group_id).assignments_by_type.MANAGE_PRODUCTION > 0
+end
+
+function queue_beds(amount)
+    amount = math.floor(tonumber(amount) or derror('Invalid number of beds: ' .. tostring(amount)))
+    if amount == 0 then return end
+    if amount < 0 then
+        derror('Cannot queue a negative number of beds')
+    end
+
+    order = df.manager_order:new()
+    order.id = df.global.world.manager_order_next_id
+    df.global.world.manager_order_next_id = df.global.world.manager_order_next_id + 1
+    order.job_type = df.job_type.ConstructBed
+    order.material_category.wood = true
+    order.amount_left = amount
+    order.amount_total = amount
+    df.global.world.manager_orders:insert('#', order)
 end
 
 status_overlay = defclass(status_overlay, gui.Screen)
@@ -108,6 +130,11 @@ defsubpage('bedroom_list')
 bedroom_list.ATTRS.frame_title = 'Bedroom status'
 
 function bedroom_list:init()
+    self.dirty = false
+    self:refresh()
+end
+
+function bedroom_list:refresh()
     self.data = {
         {'Beds', 'beds'},
         {'Built beds', 'bbeds'},
@@ -119,11 +146,13 @@ function bedroom_list:init()
         {'Units with bedrooms', 'uwith'},
         {'Units without bedrooms', 'uwithout'}
     }
+    self.data.raw = {}
     for _, d in pairs(self.data) do d.list = {} end
     local function add(key, item)
         for _, d in pairs(self.data) do
             if d[2] == key then
                 table.insert(d.list, item)
+                self.data.raw[key] = (self.data.raw[key] or 0) + 1
             end
         end
     end
@@ -153,17 +182,56 @@ function bedroom_list:init()
             add(building.owner and 'obrooms' or 'ubrooms', building)
         end
     end
+    self.queued_beds = 0
+    for _, order in pairs(df.global.world.manager_orders) do
+        if order.job_type == df.job_type.ConstructBed then
+            self.queued_beds = self.queued_beds + order.amount_left
+        end
+    end
 end
 
 function bedroom_list:onRenderBody(p)
-    for _, item in pairs(self.data) do
+    if self.dirty then
+        self:refresh()
+        self.dirty = false
+    end
+
+    p:key_pen(COLOR_LIGHTRED)
+    for _, item in ipairs(self.data) do
         p:string(item[1]):string(': '):string(tostring(#item.list)):newline()
     end
+
+    p:seek(40, 0)
+    p:key_string('MANAGER_NEW_ORDER', 'Order more beds')
+
+    p:newline(40):advance(3)
+    p:string(tostring(self.queued_beds), self.queued_beds > 0 and COLOR_LIGHTGREEN or nil)
+    p:string(' queued')
+    if not has_manager() then
+        p:string(' - '):string('needs manager', COLOR_LIGHTRED)
+    end
+
+    p:newline(40)
+    p:key_string('UNITJOB_MANAGER', 'Open manager')
 end
 
 function bedroom_list:onInput(keys)
     if keys.LEAVESCREEN then
         self:dismiss()
+    elseif keys.MANAGER_NEW_ORDER then
+        dialogs.showInputPrompt(
+            'Queue beds',
+            'Number of beds to queue:',
+            nil,
+            tostring(math.max(0, self.data.raw.units - self.data.raw.beds - self.queued_beds)),
+            function(amount)
+                queue_beds(amount)
+                self:refresh()
+            end
+        )
+    elseif keys.UNITJOB_MANAGER then
+        dfhack.screen.show(df.viewscreen_jobmanagementst:new())
+        self.dirty = true
     end
 end
 

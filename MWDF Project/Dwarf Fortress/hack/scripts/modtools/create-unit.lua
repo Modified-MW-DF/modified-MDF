@@ -587,7 +587,6 @@ if args.name then
 else
   local unit = df.unit.find(unitId)
   unit.name.has_name = false
-  unit.name.first_name = "" -- remove the first name altogether. gets rid of units having number names.
   if unit.status.current_soul then
     unit.status.current_soul.name.has_name = false
   end
@@ -600,17 +599,4 @@ end
 if args.nick and type(args.nick) == 'string' then
   dfhack.units.setNickname(df.unit.find(unitId), args.nick)
 end
-
-
---[[ depracated by amostubal.  no longer necessary as we move the cursor in the creation of the unit.  no longer needs to utilize teleport...
-if args.location then
-  local u = df.unit.find(unitId)
-  local pos = df.coord:new()
-  pos.x = tonumber(args.location[1])
-  pos.y = tonumber(args.location[2])
-  pos.z = tonumber(args.location[3])
-  local teleport = dfhack.script_environment('teleport')
-  teleport.teleport(u, pos)
-end
---]]
 

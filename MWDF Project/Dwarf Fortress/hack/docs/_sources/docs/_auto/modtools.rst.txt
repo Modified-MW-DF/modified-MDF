@@ -1,0 +1,176 @@
+.. _modtools:
+
+###################
+Scripts for Modders
+###################
+
+.. include:: /scripts/modtools/about.txt
+
+.. contents::
+
+.. _modtools/add-syndrome:
+
+.. include:: /scripts/modtools/add-syndrome.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/anonymous-script:
+
+.. include:: /scripts/modtools/anonymous-script.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/change-build-menu:
+
+.. include:: /scripts/modtools/change-build-menu.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/create-item:
+
+.. include:: /scripts/modtools/create-item.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/create-unit:
+
+.. include:: /scripts/modtools/create-unit.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/equip-item:
+
+.. include:: /scripts/modtools/equip-item.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/extra-gamelog:
+
+.. include:: /scripts/modtools/extra-gamelog.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/force:
+
+.. include:: /scripts/modtools/force.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/if-entity:
+
+.. include:: /scripts/modtools/if-entity.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/interaction-trigger:
+
+.. include:: /scripts/modtools/interaction-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/invader-item-destroyer:
+
+.. include:: /scripts/modtools/invader-item-destroyer.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/item-trigger:
+
+.. include:: /scripts/modtools/item-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/moddable-gods:
+
+.. include:: /scripts/modtools/moddable-gods.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/outside-only:
+
+.. include:: /scripts/modtools/outside-only.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/projectile-trigger:
+
+.. include:: /scripts/modtools/projectile-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/random-trigger:
+
+.. include:: /scripts/modtools/random-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/raw-lint:
+
+.. include:: /scripts/modtools/raw-lint.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/reaction-product-trigger:
+
+.. include:: /scripts/modtools/reaction-product-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/reaction-trigger:
+
+.. include:: /scripts/modtools/reaction-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/reaction-trigger-transition:
+
+.. include:: /scripts/modtools/reaction-trigger-transition.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/skill-change:
+
+.. include:: /scripts/modtools/skill-change.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/spawn-flow:
+
+.. include:: /scripts/modtools/spawn-flow.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/syndrome-trigger:
+
+.. include:: /scripts/modtools/syndrome-trigger.lua
+   :start-after: [====[
+   :end-before: ]====]
+
+
+.. _modtools/transform-unit:
+
+.. include:: /scripts/modtools/transform-unit.lua
+   :start-after: [====[
+   :end-before: ]====]
