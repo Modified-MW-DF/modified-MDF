@@ -1,6 +1,6 @@
 interaction_phm
 
-!YES_MMM_PLUMP!OBJECT:INTERACTION]
+YES_MMM_PLUMP[OBJECT:INTERACTION]
 
 [INTERACTION:COUNT_PHM]
 	[I_SOURCE:CREATURE_ACTION]
@@ -232,6 +232,7 @@ If a PHM does a follow-up charge, all the other PHM will join in.
 			[SYN_NAME:joining the attack!]
 			CE_FLASH_TILE:TILE:'!':5:0:0:FREQUENCY:120:120:START:0:END:20
 			[CE_ADD_TAG:OPPOSED_TO_LIFE:NO_AGING:START:0:END:30]
+
 
 
 

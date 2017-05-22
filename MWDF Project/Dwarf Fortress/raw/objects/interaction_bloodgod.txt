@@ -1,6 +1,6 @@
 interaction_bloodgod
 
-!YES_MMM_MYTH!OBJECT:INTERACTION]
+YES_MMM_MYTH[OBJECT:INTERACTION]
 
 [INTERACTION:BIND_BLOODGOD]
 	[I_SOURCE:CREATURE_ACTION]
@@ -106,6 +106,7 @@ interaction_bloodgod
 				[CDI:VERB:gesture:gestures:NA]
 				[CDI:TARGET_VERB:shudder and begin to move:shudders and begins to move]
 				[CDI:WAIT_PERIOD:10]
+
 
 
 
