@@ -219,6 +219,19 @@ YES_CIV_ACTIVE_HUMAN[OBJECT:ENTITY]
 	[ETHIC:MAKE_TROPHY_ANIMAL:ACCEPTABLE]
 	#
 	[VARIABLE_VALUE:ALL:-30:30]
+	[VARIABLE_VALUE:FAMILY:10:35]
+	[VARIABLE_VALUE:POWER:0:33]
+	[VARIABLE_VALUE:ARTWORK:0:33]
+	[VARIABLE_VALUE:CRAFTSMANSHIP:0:33]
+	[VARIABLE_VALUE:MARTIAL_PROWESS:0:33]
+	[VARIABLE_VALUE:SKILL:0:33]
+	[VARIABLE_VALUE:COMMERCE:20:45]
+	[VARIABLE_VALUE:ROMANCE:10:35]
+	[VARIABLE_VALUE:KNOWLEDGE:0:33]
+missing:law,loyalty,friendship,truth,cunning,eloquence,fairness,decorum, tradition,
+cooperation, independence, stoicism,introspection, self_control,tranquility,
+harmony, merriment, hard_work, sacrifice, competition, preserverance, leisure_time,
+nature, and peace
 	#
 	[WILL_ACCEPT_TRIBUTE]
 	[BUILDS_OUTDOOR_FORTIFICATIONS]
