@@ -9,6 +9,7 @@ validArgs = validArgs or utils.invert({
  'temperature',
  'dur',
  'unit',
+ 'offset',
 })
 local args = utils.processArgs({...}, validArgs)
 
@@ -27,6 +28,9 @@ if args.help then -- Help declaration
      x,y,z coordinates to use for position  /
    -temperature #
      temperature to set tile to
+   -offset [ # # # ]
+     sets the x y z offset from the desired location to spawn around
+     DEFAULT [ 0 0 0 ]
    -dur #
      length of time for tile change to last
      0 means the change is natural and will revert back to normal temperature
@@ -45,15 +49,21 @@ if args.unit and tonumber(args.unit) then
 elseif args.location then
  pos = args.location
 else
- print('No center decleration, need -unit or -location')
+ print('No unit or location selected')
  return
 end
+offset = args.offset or {0,0,0}
+location = {}
+location.x = pos.x + offset[1] or pos[1] + offset[1]
+location.y = pos.y + offset[2] or pos[2] + offset[2]
+location.z = pos.z + offset[3] or pos[3] + offset[3]
  
 if args.plan then
- locations,n = dfhack.script_environment('functions/map').getPositionPlan(file,pos)
+ file = dfhack.getDFPath()..'/raw/files/'..args.plan
+ locations,n = dfhack.script_environment('functions/map').getPositionPlan(file,location)
  for i,loc in ipairs(locations) do
   dfhack.script_environment('functions/map').changeTemperature(loc,nil,nil,args.temperature,dur)
  end
 else
- dfhack.script_environment('functions/map').changeTemperature(pos,nil,nil,args.temperature,dur)
+ dfhack.script_environment('functions/map').changeTemperature(location,nil,nil,args.temperature,dur)
 end

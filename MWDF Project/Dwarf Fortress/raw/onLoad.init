@@ -17,6 +17,13 @@
 
 :lua print(' ')
 :lua print('Running World Initialization.')
+
+#################### Liquid-initiation ###################
+:lua print(' ')
+:lua print('Initializing water, pay the bills.')
+base/roses-init
+base/liquid-update
+
 #################### embark points and embark group ####################
 :lua print(' ')
 :lua print('Initializing embark settings.')

@@ -17,8 +17,6 @@ keybinding add Ctrl-Shift-E "embark-tools anywhere"
 keybinding add Ctrl-Shift-S "show"
 keybinding add Ctrl-Shift-H "hide"
 
-#hi#de# hidden by amostubal, it was causing errors in the console, a later execution by onLoad.init was functional with no errors.
-#base/roses-init
 
 #fps boosters by omniclasm
 
@@ -27,8 +25,9 @@ keybinding add Ctrl-Shift-H "hide"
 #deteriorateclothes #start
 #deterioratefood #start
 
-base/building-upgrade
-base/building-upgrade enable
+#base/roses-init
+#base/building-upgrade
+#base/building-upgrade enable
 
 ##############################
 # Generic dwarfmode bindings #

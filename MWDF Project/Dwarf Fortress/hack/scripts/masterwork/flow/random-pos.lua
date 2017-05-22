@@ -121,7 +121,10 @@ else
 end
 radius = args.radius or {0,0,0}
 offset = args.offset or {0,0,0}
-number = tonumber(args.number) or 0
+number = args.number or 0
+number = tonumber(number)
+depth = args.depth or 0
+depth = tonumber(depth)
 location = {}
 location.x = pos.x + offset[1] or pos[1] + offset[1]
 location.y = pos.y + offset[2] or pos[2] + offset[2]

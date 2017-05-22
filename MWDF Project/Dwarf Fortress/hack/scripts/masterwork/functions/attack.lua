@@ -1,26 +1,41 @@
 --attack based functions, version 42.06a
+--[[
+ addAttack(unit,defender_id,body_id,target_id,item_id,attack_id,hitchance,velocity,delay) - Add an attack to unit targeting defender_id's target_id body part. If a body part attack will use body_id, if an item attack will use item_id.
+ getAttack(unit,main_type,sub_type) - Get attack information (material, momentum, contact area, penetration, and sharpness)
+ checkCoverage(unit,bp_id,inventory_item) - Checks if a given item provides coverage for the specified body part. Returns true if it does, false if it does not.
+ getDefense(unit,main_type,sub_type) - Get defense information (layers, tissues, items, materials, and body part)
+ getAttackItem(unit,item,attack) - Called by getAttack for handling item attacks
+ getAttackItemMaterial(item) - Called by getAttackItem, returns the item material
+ getAttackItemMomentum(unit,velocity,weight) - Called by getAttackItem, returns the attack momentum
+ getAttackItemVelocity(unit,attack,weight) - Called by getAttackItem, returns the attack velocity
+ getAttacKItemWeight(unit,item,material) - Called by getAttackItem, returns the items actual and effective weights
+ getAttackUnit(unit,bp_id,attack) - Called by getAttack for handling unit body part attacks
+ getAttackUnitMaterial(unit,bp_id) - Called by getAttackUnit, returns the body part material
+ getAttackUnitMomentum(unit,velocity,weight) - Called by getAttackUnit, returns the attack momentum
+ getAttackUnitVelocity(unit,attack) - Called by getAttackUnit, returns the attack velocity
+ getAttackUnitWeight(unit,bp_id,material) - Called by getAttackUnit, returns the body parts actual and effective weights
+ computeAttackValues(attacker,defender,attack_type,attack_subtype,defense_type,defense_subtype) - Calculates momentum deduction for items and layers, returns two momentum deduction values
+ computeAttackValuesItems(attacker,defender,attack,target) - Called by computeAttackValues, returns momentum deduction for passing through items
+ computeAttackValuesLayers(attacker,defender,attack,target) - Called by computeAttackValues, returns momentum deduction for passing through tissue layers
+ NOTE: All computed values are based on Urist DaVinci's work.
+]]
 ---------------------------------------------------------------------------------------
-function addAttack(unit,defender_id,body_id,target_id,item_id,attack_id,hitchance,velocity,delay) -- Adds an attack with the given characteristics
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
-
+function addAttack(unit,defender_id,body_id,target_id,item_id,attack_id,hitchance,velocity,delay)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  action = df.unit_action:new()
  action.id = unit.next_action_id
  unit.next_action_id = unit.next_action_id + 1
-
  action.type = 1
  attack_action = action.data.attack
  attack_action.target_unit_id = defender_id
  attack_action.attack_item_id = item_id
  attack_action.target_body_part_id = target_id
  attack_action.attack_body_part_id = body_id
- attack_action.unk_30 = velocity
+ attack_action.attack_velocity = velocity
  attack_action.attack_id = attack_id
- attack_action.unk_3c = hitchance
+ attack_action.attack_accuracy = hitchance
  attack_action.timer1 = delay
  attack_action.timer2 = delay
- 
  -- Unknown values
  attack_action.flags = 7
  attack_action.unk_28 = 1
@@ -30,15 +45,11 @@ function addAttack(unit,defender_id,body_id,target_id,item_id,attack_id,hitchanc
   attack_action.unk_4[i] = 7
  end
  attack_action.unk_4.wrestle_type = -1
- 
  unit.actions:insert('#',action)
 end
 
-function checkAttack(unit,main_type,sub_type)
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function getAttack(unit,main_type,sub_type)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  local attack = {}
  if main_type == 'Equipped' then
   item = dfhack.script_environment('functions/unit').checkInventoryType(unit,'WEAPON')[1]
@@ -65,11 +76,8 @@ function checkAttack(unit,main_type,sub_type)
  return attack
 end 
 
-function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventory item is covering the specific body part
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function checkCoverage(unit,bp_id,inventory_item)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  covers = false
  item = inventory_item.item
  itype = df.item_type[item:getType()]
@@ -87,14 +95,14 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
    for i,x in pairs(unit.body.body_plan.body_parts) do
     for j,y in pairs(connect) do
      if x.con_part_id == y and not x.flags.LOWERBODY and not x.flags.HEAD then
-	  if i == bp_id then
-	   covers = true
-	   return covers
-	  else
-	   table.insert(temp,i)
-	  end
-	 end
-	end
+      if i == bp_id then
+       covers = true
+       return covers
+      else
+       table.insert(temp,i)
+      end
+     end
+    end
    end
    connect = temp
    step = step + 1
@@ -117,14 +125,14 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
    for i,x in pairs(unit.body.body_plan.body_parts) do
     for j,y in pairs(connect) do
      if x.con_part_id == y and not x.flags.UPPERBODY and not x.flags.STANCE then
-	  if i == bp_id then
-	   covers = true
-	   return covers
-	  else
-	   table.insert(temp,i)
-	  end
-	 end
-	end
+      if i == bp_id then
+       covers = true
+       return covers
+      else
+       table.insert(temp,i)
+      end
+     end
+    end
    end
    connect = temp
    step = step + 1
@@ -138,14 +146,14 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
    for i,x in pairs(unit.body.body_plan.body_parts) do
     for j,y in pairs(connect) do
      if x.con_part_id == y and not x.flags.UPPERBODY and not x.flags.LOWERBODY then
-	  if i == bp_id then
-	   covers = true
-	   return covers
-	  else
-	   table.insert(temp,i)
-	  end
-	 end
-	end
+      if i == bp_id then
+       covers = true
+       return covers
+      else
+       table.insert(temp,i)
+      end
+     end
+    end
    end
    connect = temp
    step = step + 1
@@ -157,14 +165,14 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
    for i,x in pairs(unit.body.body_plan.body_parts) do
     for j,y in pairs(connect) do
      if x.con_part_id == y and not x.flags.UPPERBODY and not x.flags.LOWERBODY then
-	  if i == bp_id then
-	   covers = true
-	   return covers
-	  else
-	   table.insert(temp,i)
-	  end
-	 end
-	end
+      if i == bp_id then
+       covers = true
+       return covers
+      else
+       table.insert(temp,i)
+      end
+     end
+    end
    end
    connect = temp
    step = step + 1
@@ -176,14 +184,14 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
    for i,x in pairs(unit.body.body_plan.body_parts) do
     for j,y in pairs(connect) do
      if x.con_part_id == y and not x.flags.UPPERBODY and not x.flags.STANCE then
-	  if i == bp_id then
-	   covers = true
-	   return covers
-	  else
-	   table.insert(temp,i)
-	  end
-	 end
-	end
+      if i == bp_id then
+       covers = true
+       return covers
+      else
+       table.insert(temp,i)
+      end
+     end
+    end
    end
    connect = temp
    step = step + 1
@@ -192,11 +200,8 @@ function checkCoverage(unit,bp_id,inventory_item) -- Returns true if an inventor
  return covers
 end
 
-function checkDefense(unit,main_type,sub_type) -- Returns a table of values (layers, tissues, items, materials, body part)
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function getDefense(unit,main_type,sub_type)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  if main_type == 'Random' then
   bp_id = dfhack.script_environment('functions/unit').checkBodyRandom(unit)
  elseif main_type == 'Category' then
@@ -206,7 +211,6 @@ function checkDefense(unit,main_type,sub_type) -- Returns a table of values (lay
  elseif main_type == 'Type' then
   bp_id = dfhack.script_environment('functions/unit').checkBodyType(unit,sub_type)[1]
  end
- 
  local target = {}
  target.layers = {}
  target.tissues = {}
@@ -230,14 +234,9 @@ function checkDefense(unit,main_type,sub_type) -- Returns a table of values (lay
  return target
 end
 
-function getAttackItem(unit,item,attack) -- Return momentum, weight, material, velocity, and item of an attack
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
- 
+function getAttackItem(unit,item,attack)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  material = getAttackItemMaterial(item)
  actweight,effweight = getAttackItemWeight(unit,item,material)
  velocity = getAttackItemVelocity(unit,attack,effweight)
@@ -246,49 +245,30 @@ function getAttackItem(unit,item,attack) -- Return momentum, weight, material, v
 end
 
 function getAttackItemMaterial(item)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
- 
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  material = dfhack.matinfo.decode(item.mat_type,item.mat_index).material
  return material
 end
 
-function getAttackItemMomentum(unit,velocity,weight) -- Returns momentum of an item attack
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+function getAttackItemMomentum(unit,velocity,weight)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  momentum=velocity*weight/1000+1
  return momentum
 end
 
-function getAttackItemVelocity(unit,attack,weight) -- Return the velocity of an item attack
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function getAttackItemVelocity(unit,attack,weight)
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  vel_mod = item.subtype.attacks[attack].velocity_mult
  velocity = unit.body.size_info.size_base * dfhack.units.getPhysicalAttrValue(unit,0) * vel_mod/1000/weight/1000
  if velocity == 0 then velocity = 1 end
- 
  return velocity
 end
 
 function getAttackItemWeight(unit,item,material)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  weight = math.floor(item.subtype.size*material.solid_density/100000)
  weight_fraction = item.subtype.size*material.solid_density*10 - weight*1000000
  actweight=weight*1000+weight_fraction/1000
@@ -296,11 +276,8 @@ function getAttackItemWeight(unit,item,material)
  return actweight,effweight
 end
 
-function getAttackUnit(unit,bp_id,attack) -- Return momentum, weight, material, velocity, and body part of an attack
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function getAttackUnit(unit,bp_id,attack) 
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  body_part = unit.body.body_plan.body_parts[bp_id]
  velocity = getAttackUnitVelocity(unit,attack)
  material = getAttackUnitMaterial(unit,body_part)
@@ -310,10 +287,7 @@ function getAttackUnit(unit,bp_id,attack) -- Return momentum, weight, material, 
 end
 
 function getAttackUnitMaterial(unit,body_part)
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  attacker_race = df.global.world.raws.creatures.all[unit.race]
  layerdata = body_part.layers[#body_part.layers-1]
  tisdata=attacker_race.tissue[layerdata.tissue_id]
@@ -321,55 +295,34 @@ function getAttackUnitMaterial(unit,body_part)
  return material
 end
 
-function getAttackUnitMomentum(unit,velocity,weight) -- Returns momentum of a body part attack
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
-
+function getAttackUnitMomentum(unit,velocity,weight)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  momentum = velocity * weight / 1000 + 1
  return momentum
 end
 
-function getAttackUnitVelocity(unit,attack) -- Returns the velocity of a body part attack
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
- 
+function getAttackUnitVelocity(unit,attack)
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  vel_mod = unit.body.body_plan.attacks[attack].velocity_modifier
  velocity = 100 * dfhack.units.getPhysicalAttrValue(unit,0) / 1000 * vel_mod / 1000
  if velocity == 0 then velocity = 1 end
- 
  return velocity
 end
 
 function getAttackUnitWeight(unit,body_part,material)
- if tonumber(unit) then
-  unit = df.unit.find(tonumber(unit))
- end
-
+ if tonumber(unit) then unit = df.unit.find(tonumber(unit)) end
  partsize = math.floor(unit.body.size_info.size_cur * body_part.relsize / unit.body.body_plan.total_relsize)
  partweight = math.floor(partsize * material.solid_density / 100)
  return partweight
 end
 
 function computeAttackValues(attacker,defender,attack_type,attack_subtype,defense_type,defense_subtype)
- if tonumber(attacker) then
-  attacker = df.unit.find(tonumber(attacker))
- end
- if tonumber(defender) then
-  defender = df.unit.find(tonumber(defender))
- end
- 
- target = checkDefense(defender,defense_type,defense_subtype)
- attack = checkAttack(attacker,attack_type,attack_subtype)
- 
- if target.items then
-  momentum_deduction1 = computeAttackValuesItems(attacker,defender,attack,target)
- end
- 
- if target.layers then
-  momentum_deduction2 = computeAttackValuesLayers(attacker,defender,attack,target)
- end
+ if tonumber(attacker) then attacker = df.unit.find(tonumber(attacker)) end
+ if tonumber(defender) then defender = df.unit.find(tonumber(defender)) end
+ target = getDefense(defender,defense_type,defense_subtype)
+ attack = getAttack(attacker,attack_type,attack_subtype)
+ if target.items then momentum_deduction1 = computeAttackValuesItems(attacker,defender,attack,target) end
+ if target.layers then momentum_deduction2 = computeAttackValuesLayers(attacker,defender,attack,target) end
  return momentum_deduction1,momentum_deduction2
 end
 
@@ -384,7 +337,6 @@ function computeAttackValuesItems(attacker,defender,attack,target)
   timyld = target.materials[i].strength.yield.IMPACT
   timfrc = target.materials[i].strength.fracture.IMPACT
   timstr = target.materials[i].strength.strain_at_yield.IMPACT
- 
   part_size = defender.body.size_info.size_base*target.body_part.relsize/defender.body.body_plan.total_relsize
   coverage = x.subtype.props.coverage
   layer_size = x.subtype.props.layer_size
@@ -403,16 +355,12 @@ function computeAttackValuesItems(attacker,defender,attack,target)
   end
   step_factor = math.max(3,step_factor)
   tvol = part_size*coverage*layer_size*step_factor/100/100
- 
   if attack.item then contact_area = attack.contact end
   if attack.body_part then contact_area = (attacker.body.size_info.size_base*attack.body_part.relsize/attacker.body.body_plan.total_relsize ^ 0.666) * attack.contact/100 end
- 
   if contact_area < tvol then tvol = contact_area end
- 
   shear_cost_1 = tshyld*5000*factors/ashyld/attack.sharpness/1000
   shear_cost_2 = tshfrc*5000*factors/ashfrc/attack.sharpness/1000
   shear_cost_3 = tshfrc*tvol*5000*factors/ashfrc/attack.sharpness/1000
- 
   blunt_cost_1 = tvol*timyld*factors/100/10/500
   blunt_cost_2 = tvol*(timfrc-timyld)*factors/100/10/500
   blunt_cost_3 = tvol*(timfrc-timyld)*factors/100/10/500
@@ -439,7 +387,6 @@ function computeAttackValuesLayers(attacker,defender,attack,target)
   timyld = material.strength.yield.IMPACT
   timfrc = material.strength.fracture.IMPACT
   timstr = material.strength.strain_at_yield.IMPACT
- 
   part_size = defender.body.size_info.size_base*target.body_part.relsize/defender.body.body_plan.total_relsize
   part_thick = (part_size * 10000) ^ 0.333
   modpartfraction= x.part_fraction
@@ -458,16 +405,12 @@ function computeAttackValuesLayers(attacker,defender,attack,target)
    layerthick = 1
   end
   tvol = layervolume
- 
   if attack.item then contact_area = attack.contact end
   if attack.body_part then contact_area = (attacker.body.size_info.size_base*attack.body_part.relsize/attacker.body.body_plan.total_relsize ^ 0.666) * attack.contact/100 end
-
   if contact_area < part_size^0.66 then tvol = tvol*(contact_area/(part_size^0.66)) end
- 
   shear_cost_1 = tshyld*5000*factors/ashyld/attack.sharpness/1000
   shear_cost_2 = tshfrc*5000*factors/ashfrc/attack.sharpness/1000
   shear_cost_3 = tshfrc*tvol*5000*factors/ashfrc/attack.sharpness/1000
- 
   blunt_cost_1 = tvol*timyld*factors/100/10/500
   blunt_cost_2 = tvol*(timfrc-timyld)*factors/100/10/500
   blunt_cost_3 = tvol*(timfrc-timyld)*factors/100/10/500

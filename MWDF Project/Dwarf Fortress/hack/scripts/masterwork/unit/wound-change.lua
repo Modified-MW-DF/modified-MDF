@@ -1,4 +1,4 @@
---unit/wound-change -unit //WORKER_ID .lua v2.0
+--unit/wound-change.lua v2.0
 
 local utils = require 'utils'
 
