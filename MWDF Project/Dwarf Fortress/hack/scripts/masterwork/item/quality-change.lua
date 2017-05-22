@@ -88,18 +88,13 @@ dur = tonumber(args.dur) or 0
 track = nil
 if args.track then track = 'track' end
 
-
 for _,item in pairs(items) do
+ if tonumber(item) then
+  item = df.item.find(item)
+ end
  if args.upgrade then
-  if item.quality == 5 then
-  print('Quality already at masterwork')
-   return
-  end
   quality = item.quality + 1
  elseif args.downgrade then
-  if item.quality == 0 then
-   return
-  end
   quality = item.quality - 1
  elseif args.quality then
   quality = tonumber(args.quality)

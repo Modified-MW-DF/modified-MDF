@@ -123,7 +123,7 @@ if args.flow then
   if args.static then flow.expanding = false end
  end
  if duration-frequency > 0 then
-  script = 'special/customweather -flow '..stype..' -number '..tostring(number)..' -frequency '..tostring(frequency)..' -density '..tostring(density)
+  script = 'flow/random-surface -flow '..stype..' -number '..tostring(number)..' -frequency '..tostring(frequency)..' -density '..tostring(density)
   script = script..' -dur '..tostring(duration-frequency)
   if itype ~= 0 then script = script..' -inorganic '..itype end
   dfhack.script_environment('persist-delay').commandDelay(frequency,script)
@@ -140,7 +140,7 @@ elseif args.liquid then
   dfhack.script_environment('functions/map').spawnLiquid(edges,offset,depth,magma,args.circle,args.taper)
  end
  if duration-frequency > 0 then
-  script = 'special/customweather -liquid '..args.liquid..' -number '..tostring(number)..' -frequency '..tostring(frequency)..' -depth '..tostring(depth)..' -radius [ '..table.unpack(radius)..' ]'
+  script = 'flow/random-surface -liquid '..args.liquid..' -number '..tostring(number)..' -frequency '..tostring(frequency)..' -depth '..tostring(depth)..' -radius [ '..table.unpack(radius)..' ]'
   script = script..' -dur '..tostring(duration-frequency)
   if args.circle then script = script.. ' -circle' end
   if args.taper then script = script..' -taper' end

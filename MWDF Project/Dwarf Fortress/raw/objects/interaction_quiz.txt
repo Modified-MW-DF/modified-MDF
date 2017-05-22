@@ -1,6 +1,6 @@
 interaction_mw_quiz
 
-!YES_MMM_MYTH!OBJECT:INTERACTION]
+YES_MMM_MYTH[OBJECT:INTERACTION]
 
 [INTERACTION:INVITE_QUIZ]
 	[I_SOURCE:CREATURE_ACTION]
@@ -572,6 +572,7 @@ interaction_mw_quiz
 				[CDI:VERBAL]
 				[CDI:VERB:answer (C):answers (C):NA]
 				[CDI:WAIT_PERIOD:0]
+
 
 
 

@@ -50,13 +50,16 @@ arguments:
  return
 end
 
-local item1 = dfhack.script_environment('functions/item').create(args.item,args.material,{creator=args.creator,quality=args.quality,dur=args.dur})
+if not args.creator then
+ args.creator = 0
+end
+local item1 = dfhack.script_environment('functions/item').create(args.item,args.material,args.creator,args.quality,args.dur)
 if args.matchingGloves or args.matchingShoes then
  if args.matchingGloves then
   item1 = df.item.find(item1)
   item1:setGloveHandedness(1);
  end
- local item2 = dfhack.script_environment('functions/item').create(args.item,args.material,{creator=args.creator,quality=args.quality,dur=args.dur})
+ local item2 = dfhack.script_environment('functions/item').create(args.item,args.material,args.creator,args.quality,args.dur)
  if args.matchingGloves then
   item2 = df.item.find(item2)
   item2:setGloveHandedness(2);

@@ -97,7 +97,7 @@ if args.unitTarget then -- Check for target declaration !REQUIRED
  target = df.unit.find(tonumber(args.unitTarget)).pos
 elseif args.locationTarget then
  target = {x=args.locationTarget[1],y=args.locationTarget[2],z=args.locationTarget[3]}
-elseif args.falling then
+elseif args.type == 'falling' or args.type == 'Falling' then
  target = origin
 else
  print('No target specified')
@@ -134,7 +134,6 @@ if not args.creator or not tonumber(args.creator) or not df.unit.find(tonumber(a
   return
  end
 end
-args.creator = df.unit.find(tonumber(args.creator))
 
 number = tonumber(args.number) or 1 -- Specify number of projectiles (default 1)
 for n = 1, number, 1 do
@@ -144,7 +143,7 @@ for n = 1, number, 1 do
    print('Invalid material')
    return
   end
-  item = dfhack.script_environment('functions/item').create(args.item,args.mat,{creator=args.creator,quality=args.quality})
+  item = dfhack.script_environment('functions/item').create(args.item,args.mat,args.creator,args.quality)
   item = df.item.find(item)
  else
   local inventory = args.creator.inventory
@@ -169,7 +168,7 @@ for n = 1, number, 1 do
    break
   else
    item.stack_size = item.stack_size - 1
-   item = dfhack.script_environment('functions/item').create(args.item,dfhack.matinfo.getToken(item.mat_type,item.mat_index),{creator=dfhack.items.getHolderUnit(item),quality=item.quality})
+   item = dfhack.script_environment('functions/item').create(args.item,dfhack.matinfo.getToken(item.mat_type,item.mat_index),dfhack.items.getHolderUnit(item).id,item.quality)
    item = df.item.find(item)
   end
  end

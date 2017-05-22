@@ -199,12 +199,7 @@ elseif args.construction then
 end
 
 if location then
- if location.x > 0 or location.y > 0 or location.z > 0 then
-  dfhack.script_environment('functions/unit').move(unit,location)
- else
-  print('No valid location')
-  return
- end
+ dfhack.script_environment('functions/unit').move(unit,location)
 else
  print('No valid location')
  return

@@ -26,7 +26,7 @@ Churchwarden pipe
 
 [ITEM_TOOL:ITEM_TOOL_PIPE]
 [NAME:churchwarden pipe:churchwarden pipes]
-	[DESCRIPTION:A pipe for smoking pipe-weed made from sweet galena or deep galena plants.]
+	[DESCRIPTION:A pipe for smoking pipeweed made from sweet galena or deep galena plants.]
 [VALUE:5]
 [METAL_MAT]
 [WOOD_MAT]

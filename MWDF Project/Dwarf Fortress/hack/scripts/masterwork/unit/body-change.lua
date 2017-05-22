@@ -131,7 +131,7 @@ elseif args.age then
 elseif args.size then
  if args.size == 'Size' or args.size == 'All' then
   current = unit.body.size_info.size_cur
-  change = dfhack.script_environment('functions/misc').getChange(current,value[i],args.mode)
+  change = dfhack.script_environment('functions/misc').getChange(current,value,args.mode)
   dfhack.script_environment('functions/unit').changeBody(unit,nil,'Size',change,dur)
  end
  if args.size == 'Area' or args.size == 'All' then

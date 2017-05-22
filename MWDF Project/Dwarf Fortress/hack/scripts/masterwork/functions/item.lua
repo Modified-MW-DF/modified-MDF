@@ -1,11 +1,24 @@
---item based functions, version 42.06a
+-- Item based functions, version 42.06a
+--[[
+ trackMaterial(itemID,change,dur,alter) - Tracks the changes to an items material, can track multiple changes
+ trackQuality(itemID,change,dur,alter) - Tracks the changes to an items quality, can track multiple changes
+ trackSubtype(itemID,change,dur,alter) - Tracks the changes to an items subtype, can track multiple changes
+ changeMaterial(item,material,dur,track) - Changes the items material
+ changeQuality(item,quality,dur,track) - Changes the items quality
+ changeSubtype(item,subtype,dur,track) - Changes the items subtype
+ checkAttack(item,attack) - Checks if an item has a specified attack, will return false if no attack is found, will return the attack id if found
+ create(item,material,options) - Creates an item of the given material in format ITEM_TYPE:ITEM_SUBTYPE, MATERIAL_TYPE:MATERIAL_SUBTYPE
+ equip(item,unit,bodyPart,mode) - Equips an item to a units body
+ makeProjectileFall(item,origin,velocity) - Turns an item into a falling projectile
+ makeProjectileShoot(item,origin,target,options) - Turns an item into a shooting projectile
+ removal(item) - Removes an item from the game
+ findItem(search) - Find an item based on the search parameters. See the find functions ReadMe for more information regarding search strings.
+]]
 ---------------------------------------------------------------------------------------
 function trackMaterial(itemID,change,dur,alter)
  local persistTable = require 'persist-table'
  local itemTable = persistTable.GlobalTable.roses.ItemTable
- if not itemTable[tostring(itemID)] then
-  dfhack.script_environment('functions/tables').makeItemTable(itemID)
- end
+ if not itemTable[tostring(itemID)] then dfhack.script_environment('functions/tables').makeItemTable(itemID) end
  if alter == 'track' then
   local materialTable = itemTable[tostring(itemID)].Material
   materialTable.Current = change
@@ -13,18 +26,18 @@ function trackMaterial(itemID,change,dur,alter)
    local statusTable = materialTable.StatusEffects
    local number = #statusTable._children
    statusTable[tostring(number+1)] = {}
-   statusTable[tostring(number+1)].End = 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur
-   statusTable[tostring(number+1)].Change = change
+   statusTable[tostring(number+1)].End = tostring(1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur)
+   statusTable[tostring(number+1)].Change = tostring(change)
   else
    materialTable.Base = change
   end
  elseif alter == 'end' then
   local materialTable = itemTable[tostring(itemID)].Material
-  materialTable.Current = change
+  materialTable.Current = tostring(change)
   local statusTable = materialTable.StatusEffects
   for i = #statusTable._children,1,-1 do
    if statusTable[i] then
-    if statusTable[i].End <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
+    if tonumber(statusTable[i].End) <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
      statusTable[i] = nil
     end
    end
@@ -35,9 +48,7 @@ end
 function trackQuality(itemID,change,dur,alter)
  local persistTable = require 'persist-table'
  local itemTable = persistTable.GlobalTable.roses.ItemTable
- if not itemTable[tostring(itemID)] then
-  dfhack.script_environment('functions/tables').makeItemTable(itemID)
- end
+ if not itemTable[tostring(itemID)] then dfhack.script_environment('functions/tables').makeItemTable(itemID) end
  if alter == 'track' then
   local qualityTable = itemTable[tostring(itemID)].Quality
   qualityTable.Current = tostring(change)
@@ -45,7 +56,7 @@ function trackQuality(itemID,change,dur,alter)
    local statusTable = qualityTable.StatusEffects
    local number = #statusTable._children
    statusTable[tostring(number+1)] = {}
-   statusTable[tostring(number+1)].End = 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur
+   statusTable[tostring(number+1)].End = tostring(1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur)
    statusTable[tostring(number+1)].Change = tostring(change)
   else
    qualityTable.Base = tostring(change)
@@ -56,7 +67,7 @@ function trackQuality(itemID,change,dur,alter)
   local statusTable = qualityTable.StatusEffects
   for i = #statusTable._children,1,-1 do
    if statusTable[i] then
-    if statusTable[i].End <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
+    if tonumber(statusTable[i].End) <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
      statusTable[i] = nil
     end
    end
@@ -67,9 +78,7 @@ end
 function trackSubtype(itemID,change,dur,alter)
  local persistTable = require 'persist-table'
  local itemTable = persistTable.GlobalTable.roses.ItemTable
- if not itemTable[tostring(itemID)] then
-  dfhack.script_environment('functions/tables').makeItemTable(itemID)
- end
+ if not itemTable[tostring(itemID)] then dfhack.script_environment('functions/tables').makeItemTable(itemID) end
  if alter == 'track' then
   local subtypeTable = itemTable[tostring(itemID)].Quality
   subtypeTable.Current = tostring(change)
@@ -77,7 +86,7 @@ function trackSubtype(itemID,change,dur,alter)
    local statusTable = subtypeTable.StatusEffects
    local number = #statusTable._children
    statusTable[tostring(number+1)] = {}
-   statusTable[tostring(number+1)].End = 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur
+   statusTable[tostring(number+1)].End = tostring(1200*28*3*4*df.global.cur_year + df.global.cur_year_tick + dur)
    statusTable[tostring(number+1)].Change = tostring(change)
   else
    subtypeTable.Base = tostring(change)
@@ -88,7 +97,7 @@ function trackSubtype(itemID,change,dur,alter)
   local statusTable = subtypeTable.StatusEffects
   for i = #statusTable._children,1,-1 do
    if statusTable[i] then
-    if statusTable[i].End <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
+    if tonumber(statusTable[i].End) <= 1200*28*3*4*df.global.cur_year + df.global.cur_year_tick then
      statusTable[i] = nil
     end
    end
@@ -97,48 +106,27 @@ function trackSubtype(itemID,change,dur,alter)
 end
 
 function changeMaterial(item,material,dur,track)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  mat = dfhack.matinfo.find(material)
  save = dfhack.matinfo.getToken(item.mat_type,item.mat_index)
  item.mat_type = mat.type
  item.mat_index = mat.index
-
- if tonumber(dur) and tonumber(dur) > 0 then
-  dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeMaterial',{item.id,save,0,'end'})
- end
-
- if track then
-  trackMaterial(item.id,material,dur,track)
- end
+ if tonumber(dur) and tonumber(dur) > 0 then dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeMaterial',{item.id,save,0,'end'}) end
+ if track then trackMaterial(item.id,material,dur,track) end
 end
 
 function changeQuality(item,quality,dur,track)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  save = item.quality
  if quality > 5 then quality = 5 end
  if quality < 0 then quality = 0 end
  item:setQuality(quality)
-
- if tonumber(dur) and tonumber(dur) > 0 then
-  dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeQuality',{item.id,save,0,'end'})
- end
-
- if track then
-  trackQuality(item.id,quality,dur,track)
- end
+ if tonumber(dur) and tonumber(dur) > 0 then dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeQuality',{item.id,save,0,'end'}) end
+ if track then trackQuality(item.id,quality,dur,track) end
 end
 
 function changeSubtype(item,subtype,dur,track)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  local itemType = item:getType()
  local itemSubtype = item:getSubtype()
  itemSubtype = dfhack.items.getSubtypeDef(itemType,itemSubtype).id
@@ -150,23 +138,17 @@ function changeSubtype(item,subtype,dur,track)
    found = true
   end
  end
-
- if tonumber(dur) and tonumber(dur) > 0 and found then
-  dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeSubtype',{item.id,itemSubtype,0,'end'})
- elseif not found then
+ if not found then
   print('Incompatable item type and subtype')
+  return
  end
-
- if track and found then
-  trackSubtype(item.id,subtype,dur,track)
- end
+ if tonumber(dur) and tonumber(dur) > 0 and found then dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','changeSubtype',{item.id,itemSubtype,0,'end'}) end
+ if track then trackSubtype(item.id,subtype,dur,track) end
 end
 
 function checkAttack(item,attack)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
+ attackID = false
  if attack == 'Random' then
   local rand = dfhack.random.new()
   local totwght = 0
@@ -181,62 +163,50 @@ function checkAttack(item,attack)
   pick = rand:random(totwght)
   for i = 1,n do
    if pick >= weights[i-1] and pick < weights[i] then
-    attack = i-1
+    attackID = i-1
     break
    end
   end
  else
   for i,attacks in pairs(item.subtype.attacks) do
    if attacks.verb_2nd == attack or attacks.verb_3rd == attack then
-    attack = i
+    attackID = i
     break
    end
   end
  end
- return attack
+ return attackID
 end
 
-function create(item,material,options) --from modtools/create-item
- options = options or {}
- quality = options.quality or 0
- creatorID = options.creator or -1
- if tonumber(creatorID) and tonumber(creatorID) >= 0then
-  creator = df.unit.find(creatorID)
+function create(item,material,a,b,c) --from modtools/create-item
+ quality = b or 0
+ creatorID = a or -1
+ if creatorID == -1 then
+  creator = df.unit.find(df.global.world.units.active[0])
+  creatorID = creator.id
  else
-  creator = creatorID
+  creator = df.unit.find(tonumber(creatorID))
   creatorID = creator.id
  end
- dur = options.dur or 0
-
+ dur = c or 0
+ dur = tonumber(dur)
  itemType = dfhack.items.findType(item)
  if itemType == -1 then
   error 'Invalid item.'
  end
  local itemSubtype = dfhack.items.findSubtype(item)
-
  material = dfhack.matinfo.find(material)
  if not material then
   error 'Invalid material.'
  end
-
  if tonumber(creatorID) >= 0 then
   item = dfhack.items.createItem(itemType, itemSubtype, material.type, material.index, creator)
- else
-  item = dfhack.items.createItem(itemType, itemSubtype, material.type, material.index, df.unit.find(0))
-  item = df.item.find(item)
-  item.maker_race = -1
-  item.maker = -1
-  item = item.id
  end
-
- if dur > 0 then
-  dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','removal',{item})
- end
-
+ if dur > 0 then dfhack.script_environment('persist-delay').environmentDelay(dur,'functions/item','removal',{item}) end
  return item
 end
 
-function equip(item, unit, bodyPart, mode) --from modtools/equip-item
+function equip(item,unit,bodyPart,mode) --from modtools/equip-item
   --it is assumed that the item is on the ground
   --taken from expwnent
   item.flags.on_ground = false
@@ -261,7 +231,6 @@ function equip(item, unit, bodyPart, mode) --from modtools/equip-item
   if not foundItem then
     occupancy.item = false
   end
-
   local inventoryItem = df.unit_inventory_item:new()
   inventoryItem.item = item
   inventoryItem.mode = mode
@@ -270,10 +239,7 @@ function equip(item, unit, bodyPart, mode) --from modtools/equip-item
 end
 
 function makeProjectileFall(item,origin,velocity)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  proj = dfhack.items.makeProjectile(item)
  proj.origin_pos.x=origin[1]
  proj.origin_pos.y=origin[2]
@@ -293,14 +259,10 @@ function makeProjectileFall(item,origin,velocity)
  proj.speed_x=velocity[1]
  proj.speed_y=velocity[2]
  proj.speed_z=velocity[3]
-
 end
 
 function makeProjectileShot(item,origin,target,options)
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  if options then
   velocity = options.velocity or 20
   hit_chance = options.accuracy or 50
@@ -314,7 +276,6 @@ function makeProjectileShot(item,origin,target,options)
   min_range = 1
   firer = nil
  end
- 
  proj = dfhack.items.makeProjectile(item)
  proj.origin_pos.x=origin[1]
  proj.origin_pos.y=origin[2]
@@ -347,17 +308,11 @@ function makeProjectileShot(item,origin,target,options)
  proj.speed_x=0
  proj.speed_y=0
  proj.speed_z=0
-
 end
 
 function removal(item)
-
- if tonumber(item) then
-  item = df.item.find(tonumber(item))
- end
-
+ if tonumber(item) then item = df.item.find(tonumber(item)) end
  dfhack.items.remove(item)
-
 end
 
 function findItem(search)
@@ -495,9 +450,9 @@ function findItem(search)
  if n > 0 then
   targetList = dfhack.script_environment('functions/misc').permute(targetList)
   target = targetList[1]
-  return target
+  return {target}
  else
-  print('No valid item found for event')
-  return nil
+--  print('No valid item found for event')
+  return {}
  end
 end

@@ -14,18 +14,19 @@ validArgs = validArgs or utils.invert({
 })
 local args = utils.processArgs({...}, validArgs)
 
-mtype = string.upper(split(args.type,':')[1])
-stype = string.upper(split(args.type,':')[2])
-mobj = string.upper(split(args.obj,':')[1])
-sobj = string.upper(split(args.obj,':')[2])
+mtype = split(args.type,':')[1]
+stype = split(args.type,':')[2]
+if args.obj then
+ mobj = split(args.obj,':')[1]
+ sobj = split(args.obj,':')[2]
+else
+ mobj = nil
+ sobj = nil
+end
 direction = 0
 if args.remove then direction = -1 end
 if args.add then direction = 1 end
 if args.add and args.removes then return end
-if direction == 0 then
- print('No valid command, use -remove or -add')
- return
-end
 
 if tonumber(args.civ) then
  civid = tonumber(args.civ)

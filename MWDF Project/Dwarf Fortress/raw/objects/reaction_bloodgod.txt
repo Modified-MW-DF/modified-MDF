@@ -1,6 +1,6 @@
 reaction_bloodgod
 
-!YES_MMM_MYTH!OBJECT:REACTION]
+YES_MMM_MYTH[OBJECT:REACTION]
 
 [REACTION:DRINK_BLOODGOD]
 	[NAME:brew the draught of the blood god]
@@ -24,6 +24,7 @@ reaction_bloodgod
 		[PRODUCT_TO_CONTAINER:goblet]
 		[PRODUCT_DIMENSION:150]
 	[SKILL:BREWING]
+
 
 
 

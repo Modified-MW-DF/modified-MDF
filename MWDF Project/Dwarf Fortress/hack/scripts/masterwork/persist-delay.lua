@@ -36,3 +36,14 @@ function environmentDelay(ticks,environment,functions,arguments)
  end
  return id
 end
+
+function environmentDelete(id)
+ local persistTable = require 'persist-table'
+ local persistDelay = persistTable.GlobalTable.roses.EnvironmentDelay
+ for _,x in pairs(persistDelay._children) do
+  if tonumber(persistDelay[x].ID) == tonumber(id) then
+   persistDelay[x] = nil
+   break
+  end
+ end
+end
