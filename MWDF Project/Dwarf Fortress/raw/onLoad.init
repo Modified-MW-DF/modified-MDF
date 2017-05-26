@@ -9,7 +9,7 @@
 :lua dfhack.color(15)
 :lua dfhack.print('version ')
 :lua dfhack.color(12)
-:lua dfhack.println('1.26')
+:lua dfhack.println('1.27')
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
 :lua dfhack.color(-1)
