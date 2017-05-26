@@ -1,4 +1,4 @@
-#################### Welcome to Masterwork Dwarf Fortress Version 1.26 ####################
+#################### Welcome to Masterwork Dwarf Fortress Version 1.27 ####################
 
 :lua dfhack.color(11)
 :lua dfhack.println('--------------------------------------------------')
@@ -22,7 +22,7 @@
 :lua print(' ')
 :lua print('Initializing water, pay the bills.')
 base/roses-init
-base/liquid-update
+base/liquids-update
 
 #################### embark points and embark group ####################
 :lua print(' ')
