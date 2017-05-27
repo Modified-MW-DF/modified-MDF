@@ -104,7 +104,7 @@ kobold
 
 Addition by Meph: Simplified toys. 
 
-NO_STANDARD_TOYS!ITEM_TOY:ITEM_TOY_TOY]
+[ITEM_TOY:ITEM_TOY_TOY]
 NO_STANDARD_TOYS!NAME:toy:toys]
 NO_STANDARD_TOYS!HARD_MAT]
 

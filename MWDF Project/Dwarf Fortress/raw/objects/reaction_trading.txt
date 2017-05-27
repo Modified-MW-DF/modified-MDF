@@ -3479,7 +3479,7 @@ ammo
 	[NAME:=========== ARMORS ============]
 	[DESCRIPTION:I can outfit an Army with Armor, come on in!]
 	[DESCRIPTION:All trades require negotiation.]
-	[BUILDING:MERCHANT_WEAPON_ARMOR:NONE]
+	[BUILDING:MERCHANT_ARMOR:NONE]
 	[REAGENT:A:500:COIN:NONE:INORGANIC:GOLD][PRESERVE_REAGENT]
 
 [REACTION:TRADE_HELM_BUY]
