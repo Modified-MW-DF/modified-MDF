@@ -1,0 +1,2055 @@
+#::17 ERROR
+#::16 white
+#::15 light magenta
+#::14 light red
+#::13 light brown/yellow
+#::12 light cyan
+#::11 light green
+#::10 light blue
+#::9 dark grey
+#::8 light grey
+#::7 magenta
+#::6 red
+#::5 brown
+#::4 cyan
+#::3 green
+#::2 blue
+#::1 black
+#::0 ERROR
+#:new tile:foreground:background
+
+#new creatures: next underground: Green devourer, creeping eye, plump helmet man, amethyst man, gabbro man, reacher.
+#new creatures: standard: troll, bronze colossus, sea monster.
+#new creatures: subterranean: giant cave spider, fire imp, bat, 
+
+
+[TILESET:_MDF_trees.png:_MDF_trees.png:_MDF_overrides_2]
+
+[OVERRIDE:127:T:TreeDeadTrunkSloping:_MDF_overrides_2:38]
+[OVERRIDE:127:T:TreeTrunkSloping:_MDF_overrides_2:38]
+[OVERRIDE:10:T:TreeDeadTrunkInterior:_MDF_overrides_2:38]*
+[OVERRIDE:10:T:TreeTrunkInterior:_MDF_overrides_2:38]*
+
+[OVERRIDE:196:T:TreeBranchEW:_MDF_overrides_2:23::]
+[OVERRIDE:192:T:TreeBranchNE:_MDF_overrides_2:20::]
+[OVERRIDE:193:T:TreeBranchNEW:_MDF_overrides_2:53::]
+[OVERRIDE:179:T:TreeBranchNS:_MDF_overrides_2:6::]
+[OVERRIDE:195:T:TreeBranchNSE:_MDF_overrides_2:52::]
+[OVERRIDE:158:T:TreeBranchNSEW:_MDF_overrides_2:22::]
+[OVERRIDE:180:T:TreeBranchNSW:_MDF_overrides_2:37::]
+[OVERRIDE:217:T:TreeBranchNW:_MDF_overrides_2:21::]
+[OVERRIDE:218:T:TreeBranchSE:_MDF_overrides_2:4::]
+[OVERRIDE:194:T:TreeBranchSEW:_MDF_overrides_2:36::]
+[OVERRIDE:191:T:TreeBranchSW:_MDF_overrides_2:5::]
+[OVERRIDE:204:T:TreeTrunkBranchE:_MDF_overrides_2:48::]
+[OVERRIDE:202:T:TreeTrunkBranchN:_MDF_overrides_2:50::]
+[OVERRIDE:209:T:TreeTrunkBranchS:_MDF_overrides_2:0::]
+[OVERRIDE:182:T:TreeTrunkBranchW:_MDF_overrides_2:19::]
+[OVERRIDE:186:T:TreeTrunkE:_MDF_overrides_2:17::]
+[OVERRIDE:205:T:TreeTrunkEW:_MDF_overrides_2:34::]
+[OVERRIDE:205:T:TreeTrunkN:_MDF_overrides_2:34::]
+[OVERRIDE:187:T:TreeTrunkNE:_MDF_overrides_2:2::]
+[OVERRIDE:202:T:TreeTrunkNEW:_MDF_overrides_2:50::]
+[OVERRIDE:186:T:TreeTrunkNS:_MDF_overrides_2:17::]
+[OVERRIDE:204:T:TreeTrunkNSE:_MDF_overrides_2:48::]
+[OVERRIDE:206:T:TreeTrunkNSEW:_MDF_overrides_2:1::]
+[OVERRIDE:185:T:TreeTrunkNSW:_MDF_overrides_2:19::]
+[OVERRIDE:201:T:TreeTrunkNW:_MDF_overrides_2:32::]
+[OVERRIDE:10:T:TreeTrunkPillar:_MDF_overrides_2:33::]
+[OVERRIDE:205:T:TreeTrunkS:_MDF_overrides_2:34::]
+[OVERRIDE:188:T:TreeTrunkSE:_MDF_overrides_2:35::]
+[OVERRIDE:203:T:TreeTrunkSEW:_MDF_overrides_2:0::]
+[OVERRIDE:200:T:TreeTrunkSW:_MDF_overrides_2:49::]
+[OVERRIDE:186:T:TreeTrunkW:_MDF_overrides_2:17::]
+[OVERRIDE:158:T:TreeTrunkSloping:_MDF_overrides_2:38::]
+
+[OVERRIDE:196:T:TreeDeadBranchEW:_MDF_overrides_2:23::]
+[OVERRIDE:192:T:TreeDeadBranchNE:_MDF_overrides_2:20::]
+[OVERRIDE:193:T:TreeDeadBranchNEW:_MDF_overrides_2:53::]
+[OVERRIDE:179:T:TreeDeadBranchNS:_MDF_overrides_2:6::]
+[OVERRIDE:195:T:TreeDeadBranchNSE:_MDF_overrides_2:52::]
+[OVERRIDE:158:T:TreeDeadBranchNSEW:_MDF_overrides_2:22::]
+[OVERRIDE:180:T:TreeDeadBranchNSW:_MDF_overrides_2:37::]
+[OVERRIDE:217:T:TreeDeadBranchNW:_MDF_overrides_2:21::]
+[OVERRIDE:218:T:TreeDeadBranchSE:_MDF_overrides_2:4::]
+[OVERRIDE:194:T:TreeDeadBranchSEW:_MDF_overrides_2:36::]
+[OVERRIDE:191:T:TreeDeadBranchSW:_MDF_overrides_2:5::]
+[OVERRIDE:204:T:TreeDeadTrunkBranchE:_MDF_overrides_2:48::]
+[OVERRIDE:202:T:TreeDeadTrunkBranchN:_MDF_overrides_2:50::]
+[OVERRIDE:209:T:TreeDeadTrunkBranchS:_MDF_overrides_2:0::]
+[OVERRIDE:182:T:TreeDeadTrunkBranchW:_MDF_overrides_2:19::]
+[OVERRIDE:186:T:TreeDeadTrunkE:_MDF_overrides_2:17::]
+[OVERRIDE:205:T:TreeDeadTrunkEW:_MDF_overrides_2:34::]
+[OVERRIDE:205:T:TreeDeadTrunkN:_MDF_overrides_2:34::]
+[OVERRIDE:187:T:TreeDeadTrunkNE:_MDF_overrides_2:2::]
+[OVERRIDE:202:T:TreeDeadTrunkNEW:_MDF_overrides_2:50::]
+[OVERRIDE:186:T:TreeDeadTrunkNS:_MDF_overrides_2:17::]
+[OVERRIDE:204:T:TreeDeadTrunkNSE:_MDF_overrides_2:48::]
+[OVERRIDE:206:T:TreeDeadTrunkNSEW:_MDF_overrides_2:1::]
+[OVERRIDE:185:T:TreeDeadTrunkNSW:_MDF_overrides_2:19::]
+[OVERRIDE:201:T:TreeDeadTrunkNW:_MDF_overrides_2:32::]
+[OVERRIDE:10:T:TreeDeadTrunkPillar:_MDF_overrides_2:33::]
+[OVERRIDE:205:T:TreeDeadTrunkS:_MDF_overrides_2:34::]
+[OVERRIDE:188:T:TreeDeadTrunkSE:_MDF_overrides_2:35::]
+[OVERRIDE:203:T:TreeDeadTrunkSEW:_MDF_overrides_2:0::]
+[OVERRIDE:200:T:TreeDeadTrunkSW:_MDF_overrides_2:49::]
+[OVERRIDE:186:T:TreeDeadTrunkW:_MDF_overrides_2:17::]
+[OVERRIDE:158:T:TreeDeadTrunkSloping:_MDF_overrides_2:38::]
+
+[OVERRIDE:10:T:TreeCapPillar:_MDF_overrides_2:25::]
+[OVERRIDE:186:T:TreeCapWallE:_MDF_overrides_2:26::]
+[OVERRIDE:205:T:TreeCapWallN:_MDF_overrides_2:9::]
+[OVERRIDE:187:T:TreeCapWallNE:_MDF_overrides_2:10::]
+[OVERRIDE:201:T:TreeCapWallNW:_MDF_overrides_2:8::]
+[OVERRIDE:205:T:TreeCapWallS:_MDF_overrides_2:41::]
+[OVERRIDE:188:T:TreeCapWallSE:_MDF_overrides_2:42::]
+[OVERRIDE:200:T:TreeCapWallSW:_MDF_overrides_2:40::]
+[OVERRIDE:186:T:TreeCapWallW:_MDF_overrides_2:24::]
+
+[OVERRIDE:10:T:TreeDeadCapPillar:_MDF_overrides_2:25::]
+[OVERRIDE:186:T:TreeDeadCapWallE:_MDF_overrides_2:26::]
+[OVERRIDE:205:T:TreeDeadCapWallN:_MDF_overrides_2:9::]
+[OVERRIDE:187:T:TreeDeadCapWallNE:_MDF_overrides_2:10::]
+[OVERRIDE:201:T:TreeDeadCapWallNW:_MDF_overrides_2:8::]
+[OVERRIDE:205:T:TreeDeadCapWallS:_MDF_overrides_2:41::]
+[OVERRIDE:188:T:TreeDeadCapWallSE:_MDF_overrides_2:42::]
+[OVERRIDE:200:T:TreeDeadCapWallSW:_MDF_overrides_2:40::]
+[OVERRIDE:186:T:TreeDeadCapWallW:_MDF_overrides_2:24::]
+
+
+
+
+
+
+
+##################################################################################
+[TILESET:_MDF_items.png:_MDF_items.png:_MDF_overrides_1]
+
+#[OVERRIDE:206:T:StoneFortification:_MDF_overrides_1:44]
+###[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:DISPLAY_CASE:_MDF_overrides_1:50]
+
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:CAMPFIRE:_MDF_overrides_1:121]
+[OVERRIDE:120:B:WORKSHOP_CUSTOM:Workshop:WOODEN_FLOOR:_MDF_overrides_1:120]
+
+remains
+#[OVERRIDE:253:I:REMAINS:REMAINS::_MDF_overrides_1:119]
+dead
+#[OVERRIDE:1:I:CORPSE:CORPSE::_MDF_overrides_1:46] => I could make 256 corpses, by defining a creature tile from 0 to 255 in the raws. At least the civ-creatures?
+bodyparts
+#[OVERRIDE:253:I:CORPSEPIECE:CORPSEPIECE::_MDF_overrides_1:47]
+
+[OVERRIDE:15:I:ROUGH:ROUGH::_MDF_overrides_1:219::1]
+[OVERRIDE:4:I:SMALLGEM:SMALLGEM::_MDF_overrides_1:218::1]
+[OVERRIDE:4:I:GEM:GEM::_MDF_overrides_1:217::1]
+
+herring looks like meat.
+
+#[OVERRIDE:8:B:NEST:::3:10]
+
+[OVERRIDE:220:B::SiegeEngine::_MDF_overrides_2:128] 
+[OVERRIDE:223:B::SiegeEngine::_MDF_overrides_2:129] 
+[OVERRIDE:205:B::SiegeEngine::_MDF_overrides_2:130] 
+[OVERRIDE:181:B::SiegeEngine::_MDF_overrides_2:131] 
+[OVERRIDE:8:B::SiegeEngine::_MDF_overrides_2:132] 
+[OVERRIDE:221:B::SiegeEngine::_MDF_overrides_2:144]
+[OVERRIDE:186:B::SiegeEngine::_MDF_overrides_2:145]
+[OVERRIDE:222:B::SiegeEngine::_MDF_overrides_2:146]
+[OVERRIDE:198:B::SiegeEngine::_MDF_overrides_2:147]
+[OVERRIDE:177:B::SiegeEngine::_MDF_overrides_1:120]1 cat wood
+[OVERRIDE:92:B::SiegeEngine::_MDF_overrides_2:160]
+[OVERRIDE:208:B::SiegeEngine::_MDF_overrides_2:161]
+[OVERRIDE:47:B::SiegeEngine::_MDF_overrides_2:162]
+[OVERRIDE:210:B::SiegeEngine::_MDF_overrides_2:163]
+
+#[OVERRIDE:17:I:BALLISTAARROWHEAD:BALLISTAARROWHEAD::_MDF_overrides_1:20]
+[OVERRIDE:220:I:BALLISTAPARTS:BALLISTAPARTS::_MDF_overrides_2:129]
+[OVERRIDE:220:I:CATAPULTPARTS:CATAPULTPARTS::_MDF_overrides_1:129]
+
+#[OVERRIDE:178:T:OpenSpace:3:0]
+#[OVERRIDE:249:T:OpenSpace:3:1]
+#[OVERRIDE:250:T:OpenSpace:3:1]
+#[OVERRIDE:242:T:Ashes1:3:6]
+#[OVERRIDE:243:T:Ashes2:3:7]
+#[OVERRIDE:126:T:Ashes3:3:8]
+
+[OVERRIDE:240:T:Driftwood:_MDF_overrides_2:236]
+[OVERRIDE:39:T:Fire:_MDF_overrides_1:195] was ::7
+[OVERRIDE:44:T:Fire:_MDF_overrides_1:196] was ::7
+[OVERRIDE:46:T:Fire:_MDF_overrides_1:197] was ::7
+[OVERRIDE:96:T:Fire:_MDF_overrides_1:198] was ::7
+[OVERRIDE:7:I:BOULDER:BOULDER::_MDF_overrides_1:199]
+[OVERRIDE:240:I:BAR:BAR::_MDF_overrides_1:200]
+[OVERRIDE:15:T:Campfire:_MDF_overrides_1:121] was ::3
+
+[OVERRIDE:176:T:FeatureWallWorn1:_MDF_overrides_1:201]
+[OVERRIDE:177:T:FeatureWallWorn2:_MDF_overrides_1:202]
+[OVERRIDE:178:T:FeatureWallWorn3:_MDF_overrides_1:203]
+[OVERRIDE:176:T:LavaWallWorn1:_MDF_overrides_1:201]
+[OVERRIDE:177:T:LavaWallWorn2:_MDF_overrides_1:202]
+[OVERRIDE:178:T:LavaWallWorn3:_MDF_overrides_1:203]
+[OVERRIDE:176:T:FrozenWallWorn1:_MDF_overrides_1:201]
+[OVERRIDE:177:T:FrozenWallWorn2:_MDF_overrides_1:202]
+[OVERRIDE:178:T:FrozenWallWorn3:_MDF_overrides_1:203]
+[OVERRIDE:176:T:MineralWallWorn1:_MDF_overrides_1:201]
+[OVERRIDE:177:T:MineralWallWorn2:_MDF_overrides_1:202]
+[OVERRIDE:178:T:MineralWallWorn3:_MDF_overrides_1:203]
+[OVERRIDE:176:T:StoneWallWorn1:_MDF_overrides_1:201]
+[OVERRIDE:177:T:StoneWallWorn2:_MDF_overrides_1:202]
+[OVERRIDE:178:T:StoneWallWorn3:_MDF_overrides_1:203]
+
+[OVERRIDE:250:I:SEEDS:SEEDS::_MDF_overrides_1:204]
+
+#[OVERRIDE:247:T:BrookN:4:164]
+#[OVERRIDE:247:T:BrookE:4:164]
+#[OVERRIDE:247:T:BrookS:4:164]
+#[OVERRIDE:247:T:BrookW:4:164]
+#[OVERRIDE:247:T:BrookNE:4:164]
+#[OVERRIDE:247:T:BrookNW:4:164]
+#[OVERRIDE:247:T:BrookSE:4:164]
+#[OVERRIDE:247:T:BrookSW:4:164]
+#[OVERRIDE:247:T:BrookTop:4:164]
+
+[OVERRIDE:09:B:WELL:Well::_MDF_overrides_1:126]
+
+[OVERRIDE:179:B:WEAPON_UPRIGHT:::_MDF_overrides_2:216]
+[OVERRIDE:46:B:WEAPON_UPRIGHT:::_MDF_overrides_2:217]
+
+[OVERRIDE:205:B:BRIDGE:::_MDF_overrides_2:209] lr =
+[OVERRIDE:186:B:BRIDGE:::_MDF_overrides_2:224] ud ||
+[OVERRIDE:187:B:BRIDGE:::_MDF_overrides_2:210] ur
+[OVERRIDE:200:B:BRIDGE:::_MDF_overrides_2:240] dl
+[OVERRIDE:188:B:BRIDGE:::_MDF_overrides_2:241] br
+[OVERRIDE:201:B:BRIDGE:::_MDF_overrides_2:208] ul
+[OVERRIDE:43:B:BRIDGE:::_MDF_overrides_2:211] floor
+[OVERRIDE:206:B:BRIDGE:::_MDF_overrides_2:227] middle
+[OVERRIDE:198:B:BRIDGE:::_MDF_overrides_2:242] r stop
+[OVERRIDE:181:B:BRIDGE:::_MDF_overrides_2:243] l stop
+[OVERRIDE:210:B:BRIDGE:::_MDF_overrides_2:225] d stop
+[OVERRIDE:208:B:BRIDGE:::_MDF_overrides_2:226] u stop
+[OVERRIDE:111:B:BRIDGE:::_MDF_overrides_2:227] o
+#[OVERRIDE:247:B:BRIDGE:::_MDF_overrides_2:] sand
+
+
+[OVERRIDE:186:B:WINDMILL:::_MDF_overrides_2:232]
+[OVERRIDE:205:B:WINDMILL:::_MDF_overrides_2:233]
+[OVERRIDE:196:B:WINDMILL:::_MDF_overrides_2:234]
+[OVERRIDE:79:B:WINDMILL:::_MDF_overrides_2:235]
+[OVERRIDE:179:B:WINDMILL:::_MDF_overrides_2:248]
+[OVERRIDE:47:B:WINDMILL:::_MDF_overrides_2:249]
+[OVERRIDE:92:B:WINDMILL:::_MDF_overrides_2:250]
+
+[OVERRIDE:15:B:GEAR_ASSEMBLY:::_MDF_overrides_2:228]
+[OVERRIDE:42:B:GEAR_ASSEMBLY:::_MDF_overrides_2:246]
+
+[OVERRIDE:205:B:AXLE_HORIZONTAL:::_MDF_overrides_2:229:16:]
+[OVERRIDE:179:B:AXLE_HORIZONTAL:::_MDF_overrides_2:230:16:]
+[OVERRIDE:186:B:AXLE_HORIZONTAL:::_MDF_overrides_2:244:16:]
+[OVERRIDE:196:B:AXLE_HORIZONTAL:::_MDF_overrides_2:245:16:]
+[OVERRIDE:111:B:AXLE_VERTICAL:::_MDF_overrides_2:231:16:]
+[OVERRIDE:9:B:AXLE_VERTICAL:::_MDF_overrides_2:247:16:]
+
+[OVERRIDE:205:B:WATER_WHEEL:::_MDF_overrides_2:238]
+[OVERRIDE:186:B:WATER_WHEEL:::_MDF_overrides_2:239]
+[OVERRIDE:196:B:WATER_WHEEL:::_MDF_overrides_2:254]
+[OVERRIDE:179:B:WATER_WHEEL:::_MDF_overrides_2:255]
+
+[OVERRIDE:246:B:SCREW_PUMP:::_MDF_overrides_2:251]
+[OVERRIDE:37:B:SCREW_PUMP:::_MDF_overrides_2:252]
+
+[OVERRIDE:182:B:ROLLERS:::_MDF_overrides_2:214]
+[OVERRIDE:199:B:ROLLERS:::_MDF_overrides_2:215]
+[OVERRIDE:207:B:ROLLERS:::_MDF_overrides_2:213]
+[OVERRIDE:209:B:ROLLERS:::_MDF_overrides_2:212]
+
+[OVERRIDE:126:B:FARM_PLOT:::_MDF_overrides_2:218]
+[OVERRIDE:247:B:FARM_PLOT:::_MDF_overrides_2:219]
+[OVERRIDE:205:B:FARM_PLOT:::_MDF_overrides_2:220]
+
+[OVERRIDE:205:T:FurrowedSoil:_MDF_overrides_1:193]
+[OVERRIDE:247:T:FurrowedSoil:_MDF_overrides_1:193]
+[OVERRIDE:126:T:FurrowedSoil:_MDF_overrides_1:193]
+
+[OVERRIDE:126:B:ANY_ROAD:RoadDirt::_MDF_overrides_1:193]
+[OVERRIDE:247:B:ANY_ROAD:RoadDirt::_MDF_overrides_1:193]
+[OVERRIDE:43:B:ANY_ROAD:RoadPaved::_MDF_overrides_1:192]
+[OVERRIDE:247:B:ANY_ROAD:RoadPaved::_MDF_overrides_1:191]
+
+[OVERRIDE:17:I:SIEGEAMMO:SIEGEAMMO:0:_MDF_overrides_1:128]
+[OVERRIDE:196:I:SIEGEAMMO:SIEGEAMMO:0:_MDF_overrides_1:129]
+[OVERRIDE:174:I:SIEGEAMMO:SIEGEAMMO:0:_MDF_overrides_1:130]
+[OVERRIDE:177:B:WINDOW_ANY:WindowGem::_MDF_overrides_1:181]
+[OVERRIDE:177:B:WINDOW_ANY:WindowGlass::_MDF_overrides_1:182]
+
+[OVERRIDE:88:I:FLOODGATE:::_MDF_overrides_1:183:16]
+[OVERRIDE:215:I:FLOODGATE:::_MDF_overrides_1:183:16]
+[OVERRIDE:88:B:FLOODGATE:::_MDF_overrides_1:183:16]
+[OVERRIDE:215:B:FLOODGATE:::_MDF_overrides_1:183:16]
+
+[OVERRIDE:08:B:NEST_BOX:NestBox::_MDF_overrides_1:180]
+
+# artifact gem doors
+[OVERRIDE:15:I:DOOR:DOOR::_MDF_overrides_1:185]
+#glass portal
+[OVERRIDE:79:I:DOOR:DOOR::_MDF_overrides_1:185]
+#wooden doors
+[OVERRIDE:186:I:DOOR:DOOR::_MDF_overrides_1:184]
+#stone doors
+[OVERRIDE:197:I:DOOR:DOOR::_MDF_overrides_1:186]
+#metal doors
+[OVERRIDE:240:I:DOOR:DOOR::_MDF_overrides_1:187]
+
+# artifact gem doors
+[OVERRIDE:15:B:DOOR:Door::_MDF_overrides_1:185:15]
+#glass portal
+[OVERRIDE:79:B:DOOR:Door::_MDF_overrides_1:185:12]
+#wooden doors
+[OVERRIDE:186:B:DOOR:Door::_MDF_overrides_1:184:7]
+#stone doors
+[OVERRIDE:197:B:DOOR:Door::_MDF_overrides_1:186:8]
+#metal doors
+[OVERRIDE:240:B:DOOR:Door::_MDF_overrides_1:187:9]
+
+[OVERRIDE:126:B:WORKSHOP_SIEGE:Workshop::_MDF_overrides_1:127:16]
+[OVERRIDE:92:B:WORKSHOP_SIEGE:Workshop::_MDF_overrides_1:110:16]
+[OVERRIDE:47:B:WORKSHOP_SIEGE:Workshop::_MDF_overrides_1:110:16]
+[OVERRIDE:111:B:WORKSHOP_SIEGE:Workshop::_MDF_overrides_1:125:16]
+[OVERRIDE:176:B:WORKSHOP_SIEGE:Workshop::_MDF_overrides_1:124] no color
+
+[OVERRIDE:177:B:WORKSHOP_LEATHER:Workshop::_MDF_overrides_1:131:16]
+[OVERRIDE:176:B:WORKSHOP_LEATHER:Workshop::_MDF_overrides_1:139:16]
+[OVERRIDE:92:B:WORKSHOP_LEATHER:Workshop::_MDF_overrides_1:160:16]
+
+[OVERRIDE:176:B:WORKSHOP_MASON:Workshop::_MDF_overrides_1:161:16]
+[OVERRIDE:91:B:WORKSHOP_MASON:Workshop::_MDF_overrides_1:163:16]
+[OVERRIDE:111:B:WORKSHOP_MASON:Workshop::_MDF_overrides_1:162:16]
+
+[OVERRIDE:42:B:WORKSHOP_JEWELER:Workshop::_MDF_overrides_1:136:16]
+[OVERRIDE:176:B:WORKSHOP_JEWELER:Workshop::_MDF_overrides_1:135:16] 
+[OVERRIDE:91:B:WORKSHOP_JEWELER:Workshop::_MDF_overrides_1:134:16] 
+
+[OVERRIDE:238:B:WORKSHOP_BOWYER:Workshop::_MDF_overrides_1:62:16]
+[OVERRIDE:176:B:WORKSHOP_BOWYER:Workshop::_MDF_overrides_1:141:16]
+
+[OVERRIDE:178:B:WORKSHOP_BUTCHER:Workshop::_MDF_overrides_1:143:16]
+[OVERRIDE:236:B:WORKSHOP_BUTCHER:Workshop::_MDF_overrides_1:142:16]
+[OVERRIDE:247:B:WORKSHOP_BUTCHER:Workshop::_MDF_overrides_1:133:16]
+
+[OVERRIDE:7:B:WORKSHOP_FORGE_ANY:Workshop::_MDF_overrides_1:145] no color
+[OVERRIDE:31:B:WORKSHOP_FORGE_ANY:Workshop::_MDF_overrides_1:144:16]
+
+[OVERRIDE:8:B:WORKSHOP_MAGMA_FORGE:Workshop::_MDF_overrides_1:144:16]
+[OVERRIDE:92:B:WORKSHOP_MAGMA_FORGE:Workshop::_MDF_overrides_1:175:16]
+
+[OVERRIDE:111:B:FURNACE_SMELTER_ANY:::_MDF_overrides_1:174:16]
+[OVERRIDE:93:B:FURNACE_SMELTER_ANY:::_MDF_overrides_1:176:16] 
+[OVERRIDE:7:B:FURNACE_SMELTER_ANY:::_MDF_overrides_1:144:16]
+
+[OVERRIDE:111:B:FURNACE_SMELTER_MAGMA:::_MDF_overrides_1:144:16]
+[OVERRIDE:93:B:FURNACE_SMELTER_MAGMA:::_MDF_overrides_1:176:16] 
+[OVERRIDE:7:B:FURNACE_SMELTER_MAGMA:::_MDF_overrides_1:144:16]
+
+[OVERRIDE:111:B:FURNACE_GLASS_ANY:::_MDF_overrides_1:144:16]
+[OVERRIDE:93:B:FURNACE_GLASS_ANY:::_MDF_overrides_1:177:16] 
+[OVERRIDE:7:B:FURNACE_GLASS_ANY:::_MDF_overrides_1:144:16]
+
+[OVERRIDE:111:B:FURNACE_KILN_ANY:::_MDF_overrides_1:144:16]
+[OVERRIDE:93:B:FURNACE_KILN_ANY:::_MDF_overrides_1:179:16] 
+[OVERRIDE:7:B:FURNACE_KILN_ANY:::_MDF_overrides_1:144:16]
+
+[OVERRIDE:111:B:FURNACE_WOOD:::_MDF_overrides_1:144:16]
+[OVERRIDE:93:B:FURNACE_WOOD:::_MDF_overrides_1:178:16] 
+[OVERRIDE:7:B:FURNACE_WOOD:::_MDF_overrides_1:144:16]
+
+[OVERRIDE:34:B:WORKSHOP_CARPENTER:Workshop::_MDF_overrides_1:127:16]
+[OVERRIDE:176:B:WORKSHOP_CARPENTER:Workshop::_MDF_overrides_1:140:16]
+
+[OVERRIDE:93:B:WORKSHOP_CLOTHIER:Workshop::_MDF_overrides_1:138:16]
+[OVERRIDE:176:B:WORKSHOP_CLOTHIER:Workshop::_MDF_overrides_1:137:16]
+[OVERRIDE:91:B:WORKSHOP_CLOTHIER:Workshop::_MDF_overrides_1:139:16]
+
+#[OVERRIDE:219:B:TRADE_DEPOT:TradeDepot::_MDF_overrides_1:64] #trade depot blocks
+[OVERRIDE:79:B:TRADE_DEPOT:TradeDepot::_MDF_overrides_1:123]
+
+[OVERRIDE:176:B:WORKSHOP_CRAFTSDWARF:Workshop::_MDF_overrides_1:150:16]
+[OVERRIDE:45:B:WORKSHOP_CRAFTSDWARF:Workshop::_MDF_overrides_1:151:16]
+
+[OVERRIDE:111:B:WORKSHOP_STILL:Workshop::_MDF_overrides_1:157:16]
+#[OVERRIDE:246:B:WORKSHOP_STILL:Workshop::_MDF_overrides_1:44:]
+[OVERRIDE:205:B:WORKSHOP_STILL:Workshop::_MDF_overrides_1:155:16]
+[OVERRIDE:184:B:WORKSHOP_STILL:Workshop::_MDF_overrides_1:156:16]
+[OVERRIDE:126:B:WORKSHOP_STILL:Workshop::_MDF_overrides_1:154:16]
+
+[OVERRIDE:176 :B:WORKSHOP_TANNER:Workshop::_MDF_overrides_1:131:16]
+
+[OVERRIDE:7:B:WORKSHOP_DYER:Workshop::_MDF_overrides_1:158] no color
+[OVERRIDE:150:B:WORKSHOP_DYER:Workshop::_MDF_overrides_1:159:16]
+#[OVERRIDE:7:B:WORKSHOP_DYER:Workshop::_MDF_overrides_1:15::16]
+
+[OVERRIDE:35:B:WORKSHOP_KENNEL:Workshop::_MDF_overrides_1:164:16]
+[OVERRIDE:235:B:WORKSHOP_KENNEL:Workshop::_MDF_overrides_1:165:16]
+
+#[OVERRIDE:59:B:WORKSHOP_KITCHEN:Workshop::_MDF_overrides_1:157] #table with tools
+[OVERRIDE:176:B:WORKSHOP_KITCHEN:Workshop::_MDF_overrides_1:166:16]
+[OVERRIDE:236:B:WORKSHOP_KITCHEN:Workshop::_MDF_overrides_1:155:16]
+
+[OVERRIDE:224:B:WORKSHOP_FISHERY:Workshop::_MDF_overrides_1:170:16] meat
+#[OVERRIDE:35:B:WORKSHOP_FISHERY:Workshop::_MDF_overrides_1:13]
+[OVERRIDE:178:B:WORKSHOP_FISHERY:Workshop::_MDF_overrides_1:168:16]
+
+[OVERRIDE:88:B:WORKSHOP_ASHERY:Workshop::_MDF_overrides_1:171:16]
+[OVERRIDE:45:B:WORKSHOP_ASHERY:Workshop::_MDF_overrides_1:172:16]
+[OVERRIDE:177:B:WORKSHOP_ASHERY:Workshop::_MDF_overrides_1:173:16]
+
+[OVERRIDE:65:B:WORKSHOP_FARMER:Workshop::_MDF_overrides_1:137:16]
+[OVERRIDE:79:B:WORKSHOP_FARMER:Workshop::_MDF_overrides_1:167:16]
+[OVERRIDE:240:B:WORKSHOP_FARMER:Workshop::_MDF_overrides_1:173:16]
+
+[OVERRIDE:176:B:WORKSHOP_MECHANIC:Workshop::_MDF_overrides_1:152:16]
+[OVERRIDE:91:B:WORKSHOP_MECHANIC:Workshop::_MDF_overrides_1:153:16]
+
+[OVERRIDE:195:B:WORKSHOP_LOOM:Workshop::_MDF_overrides_1:147:16]
+[OVERRIDE:35:B:WORKSHOP_LOOM:Workshop::_MDF_overrides_1:148:16]
+[OVERRIDE:180:B:WORKSHOP_LOOM:Workshop::_MDF_overrides_1:149:16]
+
+[OVERRIDE:207:B:WORKSHOP_CUSTOM:Workshop:SCREW_PRESS:_MDF_overrides_1:146]
+
+[OVERRIDE:118:T:TreeRoots:_MDF_overrides_1:118]
+[OVERRIDE:118:T:TreeRootSloping:_MDF_overrides_1:118]
+[OVERRIDE:118:T:TreeDeadRoots:_MDF_overrides_1:118]
+[OVERRIDE:118:T:TreeDeadRootSloping:_MDF_overrides_1:118]
+
+[OVERRIDE:178:B:WAGON:Wagon::_MDF_overrides_1:120]
+
+[OVERRIDE:88:T:ConstructedStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:FeatureStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:FrozenStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:Grass1StairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:Grass2StairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:LavaStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:MineralStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:SoilStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:StoneStairUD:_MDF_overrides_1:119::]
+[OVERRIDE:88:T:UnderworldGateStairUD:_MDF_overrides_1:119::]
+
+[OVERRIDE:240:B:BARS_FLOOR:::_MDF_overrides_1:122]
+[OVERRIDE:35:T:Chasm:_MDF_overrides_1:114]
+[OVERRIDE:42:T:EeriePit:_MDF_overrides_1:116]
+#[OVERRIDE:0:T:Void:_MDF_overrides_1:4:3:115] either does not exist or syntax is wrong.
+[OVERRIDE:176:T:SemiMoltenRock:_MDF_overrides_1:117:5:5]
+
+[OVERRIDE:9:I:QUERN:QUERN::_MDF_overrides_1:89]
+[OVERRIDE:9:I:MILLSTONE:MILLSTONE::_MDF_overrides_1:90]
+[OVERRIDE:9:B:WORKSHOP_QUERN:::_MDF_overrides_1:89]
+[OVERRIDE:9:B:WORKSHOP_MILLSTONE:::_MDF_overrides_1:90]
+[OVERRIDE:111:B:WORKSHOP_MILLSTONE:::_MDF_overrides_1:90]
+[OVERRIDE:88:B:ARCHERY_TARGET:::_MDF_overrides_1:92]
+[OVERRIDE:88:I:BIN:::_MDF_overrides_1:80:16:16]
+[OVERRIDE:146:I:QUIVER:::_MDF_overrides_1:93]
+[OVERRIDE:146:I:BACKPACK:::_MDF_overrides_1:94]
+[OVERRIDE:194:I:CRUTCH:::_MDF_overrides_1:83]
+[OVERRIDE:159:I:SPLINT:::_MDF_overrides_1:84]
+[OVERRIDE:159:I:ORTHOPEDIC_CAST:::_MDF_overrides_1:82]
+[OVERRIDE:247:I:GLOB:::_MDF_overrides_1:87]
+[OVERRIDE:15:I:ANY_WEBS:::_MDF_overrides_1:91]
+[OVERRIDE:8:I:BOOK:::_MDF_overrides_1:88]
+[OVERRIDE:73:B:SUPPORT:::_MDF_overrides_1:113]
+[OVERRIDE:20:I:GOBLET:GOBLET::_MDF_overrides_1:99]
+[OVERRIDE:248:I:EGG:EGG::_MDF_overrides_1:101]
+[OVERRIDE:37:I:CHEESE:CHEESE::_MDF_overrides_1:85]
+[OVERRIDE:45:I:SCEPTER:SCEPTER::_MDF_overrides_1:81]
+
+[OVERRIDE:246:I:BARREL:BARREL::_MDF_overrides_1:103:16]
+[OVERRIDE:124:I:PIPE_SECTION:PIPE_SECTION::_MDF_overrides_1:100]
+[OVERRIDE:224:I:FISH:FISH::_MDF_overrides_1:106]
+[OVERRIDE:224:I:FISH_RAW:FISH_RAW::_MDF_overrides_1:107]
+
+[OVERRIDE:47:I:AMMO:AMMO:0:_MDF_overrides_1:0]
+[OVERRIDE:47:I:AMMO:AMMO:1:_MDF_overrides_1:1]
+[OVERRIDE:47:I:AMMO:AMMO:2:_MDF_overrides_1:2]
+
+[OVERRIDE:91:I:ARMOR:ARMOR:0:_MDF_overrides_1:3]
+[OVERRIDE:91:I:ARMOR:ARMOR:1:_MDF_overrides_1:4]
+[OVERRIDE:91:I:ARMOR:ARMOR:2:_MDF_overrides_1:5]
+[OVERRIDE:91:I:ARMOR:ARMOR:3:_MDF_overrides_1:6]
+[OVERRIDE:91:I:ARMOR:ARMOR:4:_MDF_overrides_1:7]
+[OVERRIDE:91:I:ARMOR:ARMOR:5:_MDF_overrides_1:8]
+[OVERRIDE:91:I:ARMOR:ARMOR:6:_MDF_overrides_1:9]
+[OVERRIDE:91:I:ARMOR:ARMOR:7:_MDF_overrides_1:10]
+[OVERRIDE:91:I:ARMOR:ARMOR:8:_MDF_overrides_1:11]
+[OVERRIDE:91:I:ARMOR:ARMOR:9:_MDF_overrides_1:12]
+[OVERRIDE:91:I:ARMOR:ARMOR:10:_MDF_overrides_1:13]
+[OVERRIDE:91:I:ARMOR:ARMOR:11:_MDF_overrides_1:14]
+
+[OVERRIDE:37:I:FOOD:FOOD:0:_MDF_overrides_1:188]
+[OVERRIDE:37:I:FOOD:FOOD:1:_MDF_overrides_1:189]
+[OVERRIDE:37:I:FOOD:FOOD:2:_MDF_overrides_1:190]
+
+[OVERRIDE:91:I:GLOVES:GLOVES:0:_MDF_overrides_1:16]
+[OVERRIDE:91:I:GLOVES:GLOVES:1:_MDF_overrides_1:17]
+[OVERRIDE:91:I:GLOVES:GLOVES:2:_MDF_overrides_1:18]
+
+[OVERRIDE:91:I:HELM:HELM:0:_MDF_overrides_1:20]
+[OVERRIDE:91:I:HELM:HELM:1:_MDF_overrides_1:21]
+[OVERRIDE:91:I:HELM:HELM:2:_MDF_overrides_1:22]
+[OVERRIDE:91:I:HELM:HELM:3:_MDF_overrides_1:23]
+[OVERRIDE:91:I:HELM:HELM:4:_MDF_overrides_1:24]
+[OVERRIDE:91:I:HELM:HELM:5:_MDF_overrides_1:25]
+[OVERRIDE:91:I:HELM:HELM:6:_MDF_overrides_1:26]
+[OVERRIDE:91:I:HELM:HELM:7:_MDF_overrides_1:28]
+
+#[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:0:_MDF_overrides_1:29]
+#[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:1:_MDF_overrides_1:30]
+#[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:2:_MDF_overrides_1:31]
+#[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:3:_MDF_overrides_1:32]
+#[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:4:_MDF_overrides_1:33]
+
+[OVERRIDE:91:I:PANTS:PANTS:0:_MDF_overrides_1:29]
+[OVERRIDE:91:I:PANTS:PANTS:1:_MDF_overrides_1:30]
+[OVERRIDE:91:I:PANTS:PANTS:2:_MDF_overrides_1:31]
+[OVERRIDE:91:I:PANTS:PANTS:3:_MDF_overrides_1:32]
+[OVERRIDE:91:I:PANTS:PANTS:4:_MDF_overrides_1:33]
+[OVERRIDE:91:I:PANTS:PANTS:5:_MDF_overrides_1:34]
+[OVERRIDE:91:I:PANTS:PANTS:6:_MDF_overrides_1:35]
+[OVERRIDE:91:I:PANTS:PANTS:7:_MDF_overrides_1:36]
+[OVERRIDE:91:I:PANTS:PANTS:8:_MDF_overrides_1:37]
+
+[OVERRIDE:91:I:SHIELD:SHIELD:0:_MDF_overrides_1:44]
+[OVERRIDE:91:I:SHIELD:SHIELD:1:_MDF_overrides_1:43]
+
+[OVERRIDE:91:I:SHOES:SHOES:0:_MDF_overrides_1:38]
+[OVERRIDE:91:I:SHOES:SHOES:1:_MDF_overrides_1:39]
+[OVERRIDE:91:I:SHOES:SHOES:2:_MDF_overrides_1:40]
+[OVERRIDE:91:I:SHOES:SHOES:3:_MDF_overrides_1:41]
+[OVERRIDE:91:I:SHOES:SHOES:4:_MDF_overrides_1:42]
+[OVERRIDE:91:I:SHOES:SHOES:5:_MDF_overrides_1:5]
+
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:0:_MDF_overrides_1:51]
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:1:_MDF_overrides_1:52]
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:2:_MDF_overrides_1:53]
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:3:_MDF_overrides_1:54]
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:4:_MDF_overrides_1:55]
+
+[OVERRIDE:145:I:TOY:TOY:0:_MDF_overrides_1:249]
+[OVERRIDE:145:I:TOY:TOY:1:_MDF_overrides_1:250]
+[OVERRIDE:145:I:TOY:TOY:2:_MDF_overrides_1:251]
+[OVERRIDE:145:I:TOY:TOY:3:_MDF_overrides_1:252]
+[OVERRIDE:145:I:TOY:TOY:4:_MDF_overrides_1:253]
+
+
+[OVERRIDE:255:I:TOOL:TOOL:0:_MDF_overrides_1:224]
+[OVERRIDE:255:I:TOOL:TOOL:1:_MDF_overrides_1:225]
+[OVERRIDE:255:I:TOOL:TOOL:2:_MDF_overrides_1:226]
+[OVERRIDE:255:I:TOOL:TOOL:3:_MDF_overrides_1:227]
+[OVERRIDE:255:I:TOOL:TOOL:4:_MDF_overrides_1:228]
+[OVERRIDE:255:I:TOOL:TOOL:5:_MDF_overrides_1:229]
+[OVERRIDE:255:I:TOOL:TOOL:6:_MDF_overrides_1:229]
+[OVERRIDE:255:I:TOOL:TOOL:7:_MDF_overrides_1:229]
+[OVERRIDE:255:I:TOOL:TOOL:8:_MDF_overrides_1:230]
+[OVERRIDE:255:I:TOOL:TOOL:9:_MDF_overrides_1:231]
+[OVERRIDE:255:I:TOOL:TOOL:10:_MDF_overrides_1:180]
+[OVERRIDE:255:I:TOOL:TOOL:11:_MDF_overrides_1:232]
+[OVERRIDE:255:I:TOOL:TOOL:12:_MDF_overrides_1:233]
+[OVERRIDE:255:I:TOOL:TOOL:13:_MDF_overrides_1:234]
+[OVERRIDE:255:I:TOOL:TOOL:14:_MDF_overrides_1:235]
+[OVERRIDE:255:I:TOOL:TOOL:15:_MDF_overrides_1:236]
+[OVERRIDE:255:I:TOOL:TOOL:16:_MDF_overrides_1:221]
+[OVERRIDE:255:I:TOOL:TOOL:17:_MDF_overrides_1:237]
+[OVERRIDE:255:I:TOOL:TOOL:18:_MDF_overrides_1:238]
+[OVERRIDE:255:I:TOOL:TOOL:19:_MDF_overrides_1:239]
+[OVERRIDE:255:I:TOOL:TOOL:20:_MDF_overrides_1:243]
+[OVERRIDE:255:I:TOOL:TOOL:21:_MDF_overrides_1:244]
+[OVERRIDE:255:I:TOOL:TOOL:22:_MDF_overrides_1:245]
+[OVERRIDE:255:I:TOOL:TOOL:23:_MDF_overrides_1:246]
+[OVERRIDE:255:I:TOOL:TOOL:24:_MDF_overrides_1:247]
+[OVERRIDE:255:I:TOOL:TOOL:25:_MDF_overrides_1:248]
+
+[OVERRIDE:255:B:HIVE:Hive::_MDF_overrides_1:234]
+
+[OVERRIDE:47:I:WEAPON:WEAPON:0:_MDF_overrides_1:56]
+[OVERRIDE:47:I:WEAPON:WEAPON:1:_MDF_overrides_1:57]
+[OVERRIDE:47:I:WEAPON:WEAPON:2:_MDF_overrides_1:58]
+[OVERRIDE:47:I:WEAPON:WEAPON:3:_MDF_overrides_1:59]
+[OVERRIDE:47:I:WEAPON:WEAPON:4:_MDF_overrides_1:60]
+[OVERRIDE:47:I:WEAPON:WEAPON:5:_MDF_overrides_1:61]
+[OVERRIDE:47:I:WEAPON:WEAPON:6:_MDF_overrides_1:62]
+[OVERRIDE:47:I:WEAPON:WEAPON:7:_MDF_overrides_1:63]
+[OVERRIDE:47:I:WEAPON:WEAPON:8:_MDF_overrides_1:64]
+[OVERRIDE:47:I:WEAPON:WEAPON:9:_MDF_overrides_1:65]
+[OVERRIDE:47:I:WEAPON:WEAPON:10:_MDF_overrides_1:66]
+[OVERRIDE:47:I:WEAPON:WEAPON:11:_MDF_overrides_1:67]
+[OVERRIDE:47:I:WEAPON:WEAPON:12:_MDF_overrides_1:68]
+[OVERRIDE:47:I:WEAPON:WEAPON:13:_MDF_overrides_1:69]
+[OVERRIDE:47:I:WEAPON:WEAPON:14:_MDF_overrides_1:70]
+[OVERRIDE:47:I:WEAPON:WEAPON:15:_MDF_overrides_1:71]
+[OVERRIDE:47:I:WEAPON:WEAPON:16:_MDF_overrides_1:72]
+[OVERRIDE:47:I:WEAPON:WEAPON:17:_MDF_overrides_1:73]
+[OVERRIDE:47:I:WEAPON:WEAPON:18:_MDF_overrides_1:74]
+[OVERRIDE:47:I:WEAPON:WEAPON:19:_MDF_overrides_1:75]
+[OVERRIDE:47:I:WEAPON:WEAPON:20:_MDF_overrides_1:76]
+[OVERRIDE:47:I:WEAPON:WEAPON:21:_MDF_overrides_1:77]
+[OVERRIDE:47:I:WEAPON:WEAPON:22:_MDF_overrides_1:78]
+[OVERRIDE:47:I:WEAPON:WEAPON:23:_MDF_overrides_1:79]
+
+[OVERRIDE:31:T:RampTop:_MDF_overrides_1:207] was 112
+[OVERRIDE:30:T:SoilRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:MurkyPoolRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:GrassLightRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:GrassDeadRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:GrassDryRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:GrassDarkRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:StoneRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:MineralRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:ConstructedRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:FrozenRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:LavaRamp:_MDF_overrides_1:206]
+[OVERRIDE:30:T:FeatureRamp:_MDF_overrides_1:206]
+
+[OVERRIDE:30:T:RiverRampN:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampS:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampE:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampW:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampNE:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampNW:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampSE:_MDF_overrides_1:206]
+[OVERRIDE:30:T:RiverRampSW:_MDF_overrides_1:206] was 112
+
+
+[TILESET:Meph_plants.png:Meph_plants.png:_MDF_overrides_3]
+
+
+### Plant Growths ###
+
+#leaves.
+[OVERRIDE:5:I:PLANT:PLANT::_MDF_overrides_2:15:8:8]  leaf
+[OVERRIDE:5:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_2:15:8:8] 	leaf 
+
+# Plants at 0, 48, 96 are a template for the ground.
+# there is a total of 113 plants; + trees.
+
+#MUSHROOM_HELMET_PLUMP
+[OVERRIDE:6:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:0:8:8] 		Inside the farm
+[OVERRIDE:6:T:Shrub:_MDF_overrides_3:16:8:8] 						Growing outside
+[OVERRIDE:6:T:ShrubDead:_MDF_overrides_3:16:5:5] 					Growing outside, but dead
+[OVERRIDE:6:I:PLANT:PLANT::_MDF_overrides_3:0:8:8] 				Picked plant
+[OVERRIDE:6:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:32:8:8]
+
+#GRASS_TAIL_PIG
+[OVERRIDE:7:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:1:8:8] 		Inside the farm
+[OVERRIDE:7:T:Shrub:_MDF_overrides_3:17:8:8] 						Growing outside
+[OVERRIDE:7:T:ShrubDead:_MDF_overrides_3:17:5:5] 					Growing outside, but dead
+[OVERRIDE:7:I:PLANT:PLANT::_MDF_overrides_3:1:8:8] 				Picked plant
+[OVERRIDE:7:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:33:8:8]
+
+#GRASS_WHEAT_CAVE
+[OVERRIDE:8:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:2:8:8] 		Inside the farm
+[OVERRIDE:8:T:Shrub:_MDF_overrides_3:18:8:8] 						Growing outside
+[OVERRIDE:8:T:ShrubDead:_MDF_overrides_3:18:5:5] 					Growing outside, but dead
+[OVERRIDE:8:I:PLANT:PLANT::_MDF_overrides_3:2:8:8] 				Picked plant
+[OVERRIDE:8:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:34:8:8]
+
+#POD_SWEET
+[OVERRIDE:9:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:3:8:8] 		Inside the farm
+[OVERRIDE:9:T:Shrub:_MDF_overrides_3:19:8:8] 						Growing outside
+[OVERRIDE:9:T:ShrubDead:_MDF_overrides_3:19:5:5] 					Growing outside, but dead
+[OVERRIDE:9:I:PLANT:PLANT::_MDF_overrides_3:3:8:8] 				Picked plant
+[OVERRIDE:9:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:35:8:8]
+
+#BUSH_QUARRY
+[OVERRIDE:10:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:4:8:8] 		Inside the farm
+[OVERRIDE:10:T:Shrub:_MDF_overrides_3:20:8:8] 						Growing outside
+[OVERRIDE:10:T:ShrubDead:_MDF_overrides_3:20:5:5] 					Growing outside, but dead
+[OVERRIDE:10:I:PLANT:PLANT::_MDF_overrides_3:4:8:8] 				Picked plant
+[OVERRIDE:10:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_2:15:8:8] 	quarry bushe leaf 
+
+#ROOT_MUCK
+[OVERRIDE:11:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:5:8:8] 		Inside the farm
+[OVERRIDE:11:T:Shrub:_MDF_overrides_3:21:8:8] 						Growing outside
+[OVERRIDE:11:T:ShrubDead:_MDF_overrides_3:21:5:5] 					Growing outside, but dead
+[OVERRIDE:11:I:PLANT:PLANT::_MDF_overrides_3:5:8:8] 				Picked plant
+[OVERRIDE:11:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:37:8:8]
+
+#TUBER_BLOATED
+[OVERRIDE:12:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:6:8:8] 		Inside the farm
+[OVERRIDE:12:T:Shrub:_MDF_overrides_3:22:8:8] 						Growing outside
+[OVERRIDE:12:T:ShrubDead:_MDF_overrides_3:22:5:5] 					Growing outside, but dead
+[OVERRIDE:12:I:PLANT:PLANT::_MDF_overrides_3:6:8:8] 				Picked plant
+[OVERRIDE:12:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:38:8:8]
+
+#BULB_KOBOLD
+[OVERRIDE:13:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:7:8:8] 		Inside the farm
+[OVERRIDE:13:T:Shrub:_MDF_overrides_3:23:8:8] 						Growing outside
+[OVERRIDE:13:T:ShrubDead:_MDF_overrides_3:23:5:5] 					Growing outside, but dead
+[OVERRIDE:13:I:PLANT:PLANT::_MDF_overrides_3:7:8:8] 				Picked plant
+[OVERRIDE:13:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:39:8:8]
+
+#BERRIES_PRICKLE
+[OVERRIDE:14:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:8:8:8] 		Inside the farm
+[OVERRIDE:14:T:Shrub:_MDF_overrides_3:24:8:8] 						Growing outside
+[OVERRIDE:14:T:ShrubDead:_MDF_overrides_3:24:5:5] 					Growing outside, but dead
+[OVERRIDE:14:I:PLANT:PLANT::_MDF_overrides_3:8:8:8] 				Picked plant
+[OVERRIDE:14:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:40:8:8]
+
+#BERRIES_STRAW
+[OVERRIDE:15:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:9:8:8] 		Inside the farm
+[OVERRIDE:15:T:Shrub:_MDF_overrides_3:25:8:8] 						Growing outside
+[OVERRIDE:15:T:ShrubDead:_MDF_overrides_3:25:5:5] 					Growing outside, but dead
+[OVERRIDE:15:I:PLANT:PLANT::_MDF_overrides_3:9:8:8] 				Picked plant
+[OVERRIDE:15:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:41:8:8] 				strawberries 
+
+#GRASS_LONGLAND
+[OVERRIDE:16:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:10:8:8] 		Inside the farm
+[OVERRIDE:16:T:Shrub:_MDF_overrides_3:26:8:8] 						Growing outside
+[OVERRIDE:16:T:ShrubDead:_MDF_overrides_3:26:5:5] 					Growing outside, but dead
+[OVERRIDE:16:I:PLANT:PLANT::_MDF_overrides_3:10:8:8] 				Picked plant
+[OVERRIDE:16:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:42:8:8]
+
+#HERB_VALLEY
+[OVERRIDE:17:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:11:8:8] 		Inside the farm
+[OVERRIDE:17:T:Shrub:_MDF_overrides_3:27:8:8] 						Growing outside
+[OVERRIDE:17:T:ShrubDead:_MDF_overrides_3:27:5:5] 					Growing outside, but dead
+[OVERRIDE:17:I:PLANT:PLANT::_MDF_overrides_3:11:8:8] 				Picked plant
+[OVERRIDE:17:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:43:8:8]
+
+#WEED_RAT
+[OVERRIDE:18:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:12:8:8] 		Inside the farm
+[OVERRIDE:18:T:Shrub:_MDF_overrides_3:28:8:8] 						Growing outside
+[OVERRIDE:18:T:ShrubDead:_MDF_overrides_3:28:5:5] 					Growing outside, but dead
+[OVERRIDE:18:I:PLANT:PLANT::_MDF_overrides_3:12:8:8] 				Picked plant
+[OVERRIDE:18:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:44:8:8]
+
+#BERRIES_FISHER
+[OVERRIDE:19:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:13:8:8] 		Inside the farm
+[OVERRIDE:19:T:Shrub:_MDF_overrides_3:29:8:8] 						Growing outside
+[OVERRIDE:19:T:ShrubDead:_MDF_overrides_3:29:5:5] 					Growing outside, but dead
+[OVERRIDE:19:I:PLANT:PLANT::_MDF_overrides_3:13:8:8] 				Picked plant
+[OVERRIDE:19:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:45:8:8]
+
+#REED_ROPE
+[OVERRIDE:20:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:14:8:8] 		Inside the farm
+[OVERRIDE:20:T:Shrub:_MDF_overrides_3:30:8:8] 						Growing outside
+[OVERRIDE:20:T:ShrubDead:_MDF_overrides_3:30:5:5] 					Growing outside, but dead
+[OVERRIDE:20:I:PLANT:PLANT::_MDF_overrides_3:14:8:8] 				Picked plant
+[OVERRIDE:20:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:46:8:8]
+
+#MUSHROOM_CUP_DIMPLE
+[OVERRIDE:21:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:15:8:8] 		Inside the farm
+[OVERRIDE:21:T:Shrub:_MDF_overrides_3:31:8:8] 						Growing outside
+[OVERRIDE:21:T:ShrubDead:_MDF_overrides_3:31:5:5] 					Growing outside, but dead
+[OVERRIDE:21:I:PLANT:PLANT::_MDF_overrides_3:15:8:8] 				Picked plant
+[OVERRIDE:21:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:47:8:8]
+
+#WEED_BLADE
+[OVERRIDE:22:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:48:8:8] 		Inside the farm
+[OVERRIDE:22:T:Shrub:_MDF_overrides_3:64:8:8] 						Growing outside
+[OVERRIDE:22:T:ShrubDead:_MDF_overrides_3:64:5:5] 					Growing outside, but dead
+[OVERRIDE:22:I:PLANT:PLANT::_MDF_overrides_3:48:8:8] 				Picked plant
+[OVERRIDE:22:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:80:8:8]
+
+#ROOT_HIDE
+[OVERRIDE:23:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:49:8:8] 		Inside the farm
+[OVERRIDE:23:T:Shrub:_MDF_overrides_3:65:8:8] 						Growing outside
+[OVERRIDE:23:T:ShrubDead:_MDF_overrides_3:65:5:5] 					Growing outside, but dead
+[OVERRIDE:23:I:PLANT:PLANT::_MDF_overrides_3:49:8:8] 				Picked plant
+[OVERRIDE:23:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:81:8:8]
+
+#SLIVER_BARB
+[OVERRIDE:24:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:50:8:8] 		Inside the farm
+[OVERRIDE:24:T:Shrub:_MDF_overrides_3:66:8:8] 						Growing outside
+[OVERRIDE:24:T:ShrubDead:_MDF_overrides_3:66:5:5] 					Growing outside, but dead
+[OVERRIDE:24:I:PLANT:PLANT::_MDF_overrides_3:50:8:8] 				Picked plant
+[OVERRIDE:24:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:82:8:8]
+
+#BERRY_SUN
+[OVERRIDE:25:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:51:8:8] 		Inside the farm
+[OVERRIDE:25:T:Shrub:_MDF_overrides_3:67:8:8] 						Growing outside
+[OVERRIDE:25:T:ShrubDead:_MDF_overrides_3:67:5:5] 					Growing outside, but dead
+[OVERRIDE:25:I:PLANT:PLANT::_MDF_overrides_3:51:8:8] 				Picked plant
+[OVERRIDE:25:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:83:8:8]
+
+#VINE_WHIP
+[OVERRIDE:26:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:52:8:8] 		Inside the farm
+[OVERRIDE:26:T:Shrub:_MDF_overrides_3:68:8:8] 						Growing outside
+[OVERRIDE:26:T:ShrubDead:_MDF_overrides_3:68:5:5] 					Growing outside, but dead
+[OVERRIDE:26:I:PLANT:PLANT::_MDF_overrides_3:52:8:8] 				Picked plant
+[OVERRIDE:26:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:84:8:8]
+
+
+
+#OATS, BARLEY, SPELT, HARD_WHEAT, SOFT_WHEAT, TWO-GRAIN_WHEAT, SINGLE-GRAIN_WHEAT, RYE, TEFF
+[OVERRIDE:27:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:53:8:8] 		Inside the farm
+[OVERRIDE:27:T:Shrub:_MDF_overrides_3:69:8:8] 						Growing outside
+[OVERRIDE:27:T:ShrubDead:_MDF_overrides_3:69:5:5] 					Growing outside, but dead
+[OVERRIDE:27:I:PLANT:PLANT::_MDF_overrides_3:53:8:8] 				Picked plant
+[OVERRIDE:27:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:85:8:8]
+
+#BUCKWHEAT
+[OVERRIDE:28:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:54:8:8] 		Inside the farm
+[OVERRIDE:28:T:Shrub:_MDF_overrides_3:70:8:8] 						Growing outside
+[OVERRIDE:28:T:ShrubDead:_MDF_overrides_3:70:5:5] 					Growing outside, but dead
+[OVERRIDE:28:I:PLANT:PLANT::_MDF_overrides_3:54:8:8] 				Picked plant
+[OVERRIDE:28:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:86:8:8]
+
+#ALFALFA
+[OVERRIDE:29:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:55:8:8] 		Inside the farm
+[OVERRIDE:29:T:Shrub:_MDF_overrides_3:71:8:8] 						Growing outside
+[OVERRIDE:29:T:ShrubDead:_MDF_overrides_3:71:5:5] 					Growing outside, but dead
+[OVERRIDE:29:I:PLANT:PLANT::_MDF_overrides_3:55:8:8] 				Picked plant
+[OVERRIDE:29:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:87:8:8]
+
+#SORGHUM, QUINOA, KANIWA, PENDANT_AMARANTH, PURPLE_AMARANTH, BLOOD_AMARANTH, ELEPHANT-HEAD_AMARANTH
+[OVERRIDE:30:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:56:8:8] 		Inside the farm
+[OVERRIDE:30:T:Shrub:_MDF_overrides_3:72:8:8] 						Growing outside
+[OVERRIDE:30:T:ShrubDead:_MDF_overrides_3:72:5:5] 					Growing outside, but dead
+[OVERRIDE:30:I:PLANT:PLANT::_MDF_overrides_3:56:8:8] 				Picked plant
+[OVERRIDE:30:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:88:8:8]
+
+#RICE
+[OVERRIDE:31:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:57:8:8] 		Inside the farm
+[OVERRIDE:31:T:Shrub:_MDF_overrides_3:73:8:8] 						Growing outside
+[OVERRIDE:31:T:ShrubDead:_MDF_overrides_3:73:5:5] 					Growing outside, but dead
+[OVERRIDE:31:I:PLANT:PLANT::_MDF_overrides_3:57:8:8] 				Picked plant
+[OVERRIDE:31:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:89:8:8]
+
+#MAIZE
+[OVERRIDE:32:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:58:8:8] 		Inside the farm
+[OVERRIDE:32:T:Shrub:_MDF_overrides_3:74:8:8] 						Growing outside
+[OVERRIDE:32:T:ShrubDead:_MDF_overrides_3:74:5:5] 					Growing outside, but dead
+[OVERRIDE:32:I:PLANT:PLANT::_MDF_overrides_3:58:8:8] 				Picked plant
+[OVERRIDE:32:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:90:8:8]
+
+#BITTER_VETCH
+[OVERRIDE:33:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:59:8:8] 		Inside the farm
+[OVERRIDE:33:T:Shrub:_MDF_overrides_3:75:8:8] 						Growing outside
+[OVERRIDE:33:T:ShrubDead:_MDF_overrides_3:75:5:5] 					Growing outside, but dead
+[OVERRIDE:33:I:PLANT:PLANT::_MDF_overrides_3:59:8:8] 				Picked plant
+[OVERRIDE:33:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:91:8:8]
+
+#RED_SPINACH
+[OVERRIDE:34:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:60:8:8] 		Inside the farm
+[OVERRIDE:34:T:Shrub:_MDF_overrides_3:76:8:8] 						Growing outside
+[OVERRIDE:34:T:ShrubDead:_MDF_overrides_3:76:5:5] 					Growing outside, but dead
+[OVERRIDE:34:I:PLANT:PLANT::_MDF_overrides_3:60:8:8] 				Picked plant
+[OVERRIDE:34:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:92:8:8]
+
+#FOXTAIL_MILLET, FINGER_MILLET, PEARL_MILLET, WHITE_MILLET
+[OVERRIDE:35:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:61:8:8] 		Inside the farm
+[OVERRIDE:35:T:Shrub:_MDF_overrides_3:77:8:8] 						Growing outside
+[OVERRIDE:35:T:ShrubDead:_MDF_overrides_3:77:5:5] 					Growing outside, but dead
+[OVERRIDE:35:I:PLANT:PLANT::_MDF_overrides_3:61:8:8] 				Picked plant
+[OVERRIDE:35:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:93:8:8]
+
+#FONIO
+[OVERRIDE:36:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:62:8:8] 		Inside the farm
+[OVERRIDE:36:T:Shrub:_MDF_overrides_3:78:8:8] 						Growing outside
+[OVERRIDE:36:T:ShrubDead:_MDF_overrides_3:78:5:5] 					Growing outside, but dead
+[OVERRIDE:36:I:PLANT:PLANT::_MDF_overrides_3:62:8:8] 				Picked plant
+[OVERRIDE:36:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:94:8:8]
+
+#FLAX
+[OVERRIDE:37:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:63:8:8] 		Inside the farm
+[OVERRIDE:37:T:Shrub:_MDF_overrides_3:79:8:8] 						Growing outside
+[OVERRIDE:37:T:ShrubDead:_MDF_overrides_3:79:5:5] 					Growing outside, but dead
+[OVERRIDE:37:I:PLANT:PLANT::_MDF_overrides_3:63:8:8] 				Picked plant
+[OVERRIDE:37:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:95:8:8]
+
+#JUTE
+[OVERRIDE:38:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:96:8:8] 		Inside the farm
+[OVERRIDE:38:T:Shrub:_MDF_overrides_3:112:8:8] 						Growing outside
+[OVERRIDE:38:T:ShrubDead:_MDF_overrides_3:112:5:5] 					Growing outside, but dead
+[OVERRIDE:38:I:PLANT:PLANT::_MDF_overrides_3:96:8:8] 				Picked plant
+[OVERRIDE:38:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:128:8:8]
+
+#HEMP, KENAF
+[OVERRIDE:39:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:97:8:8] 		Inside the farm
+[OVERRIDE:39:T:Shrub:_MDF_overrides_3:113:8:8] 						Growing outside
+[OVERRIDE:39:T:ShrubDead:_MDF_overrides_3:113:5:5] 					Growing outside, but dead
+[OVERRIDE:39:I:PLANT:PLANT::_MDF_overrides_3:97:8:8] 				Picked plant
+[OVERRIDE:39:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:129:8:8]
+
+#COTTON
+[OVERRIDE:40:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:98:8:8] 		Inside the farm
+[OVERRIDE:40:T:Shrub:_MDF_overrides_3:114:8:8] 						Growing outside
+[OVERRIDE:40:T:ShrubDead:_MDF_overrides_3:114:5:5] 					Growing outside, but dead
+[OVERRIDE:40:I:PLANT:PLANT::_MDF_overrides_3:98:8:8] 				Picked plant
+[OVERRIDE:40:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:130:8:8]
+
+#RAMIE
+[OVERRIDE:41:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:99:8:8] 		Inside the farm
+[OVERRIDE:41:T:Shrub:_MDF_overrides_3:115:8:8] 						Growing outside
+[OVERRIDE:41:T:ShrubDead:_MDF_overrides_3:115:5:5] 					Growing outside, but dead
+[OVERRIDE:41:I:PLANT:PLANT::_MDF_overrides_3:99:8:8] 				Picked plant
+[OVERRIDE:41:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:131:8:8]
+
+#PAPYRUS_SEDGE
+[OVERRIDE:42:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:100:8:8] 		Inside the farm
+[OVERRIDE:42:T:Shrub:_MDF_overrides_3:116:8:8] 						Growing outside
+[OVERRIDE:42:T:ShrubDead:_MDF_overrides_3:116:5:5] 					Growing outside, but dead
+[OVERRIDE:42:I:PLANT:PLANT::_MDF_overrides_3:100:8:8] 				Picked plant
+[OVERRIDE:42:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:132:8:8]
+
+#ARTICHOKE
+[OVERRIDE:43:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:101:8:8] 		Inside the farm
+[OVERRIDE:43:T:Shrub:_MDF_overrides_3:117:8:8] 						Growing outside
+[OVERRIDE:43:T:ShrubDead:_MDF_overrides_3:117:5:5] 					Growing outside, but dead
+[OVERRIDE:43:I:PLANT:PLANT::_MDF_overrides_3:101:8:8] 				Picked plant
+[OVERRIDE:43:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:133:8:8]
+
+#ASPARAGUS
+[OVERRIDE:44:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:102:8:8] 		Inside the farm
+[OVERRIDE:44:T:Shrub:_MDF_overrides_3:118:8:8] 						Growing outside
+[OVERRIDE:44:T:ShrubDead:_MDF_overrides_3:118:5:5] 					Growing outside, but dead
+[OVERRIDE:44:I:PLANT:PLANT::_MDF_overrides_3:102:8:8] 				Picked plant
+[OVERRIDE:44:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:134:8:8]
+
+#BAMBARA_GROUNDNUT
+[OVERRIDE:45:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:103:8:8] 		Inside the farm
+[OVERRIDE:45:T:Shrub:_MDF_overrides_3:119:8:8] 						Growing outside
+[OVERRIDE:45:T:ShrubDead:_MDF_overrides_3:119:5:5] 					Growing outside, but dead
+[OVERRIDE:45:I:PLANT:PLANT::_MDF_overrides_3:103:8:8] 				Picked plant
+[OVERRIDE:45:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:135:8:8]
+
+#STRING_BEAN, BROAD_BEAN, COWPEA, MUNG_BEAN, PEA, URAD_BEAN
+[OVERRIDE:46:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:104:8:8] 		Inside the farm
+[OVERRIDE:46:T:Shrub:_MDF_overrides_3:120:8:8] 						Growing outside
+[OVERRIDE:46:T:ShrubDead:_MDF_overrides_3:120:5:5] 					Growing outside, but dead
+[OVERRIDE:46:I:PLANT:PLANT::_MDF_overrides_3:104:8:8] 				Picked plant
+[OVERRIDE:46:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:136:8:8]
+
+#BEET, RADISH
+[OVERRIDE:47:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:105:8:8] 		Inside the farm
+[OVERRIDE:47:T:Shrub:_MDF_overrides_3:121:8:8] 						Growing outside
+[OVERRIDE:47:T:ShrubDead:_MDF_overrides_3:121:5:5] 					Growing outside, but dead
+[OVERRIDE:47:I:PLANT:PLANT::_MDF_overrides_3:105:8:8] 				Picked plant
+[OVERRIDE:47:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:137:8:8]
+
+#BITTER_MELON, CUCUMBER
+[OVERRIDE:48:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:106:8:8] 		Inside the farm
+[OVERRIDE:48:T:Shrub:_MDF_overrides_3:122:8:8] 						Growing outside
+[OVERRIDE:48:T:ShrubDead:_MDF_overrides_3:122:5:5] 					Growing outside, but dead
+[OVERRIDE:48:I:PLANT:PLANT::_MDF_overrides_3:106:8:8] 				Picked plant
+[OVERRIDE:48:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:138:8:8]
+
+#CABBAGE, LETTUCE
+[OVERRIDE:49:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:107:8:8] 		Inside the farm
+[OVERRIDE:49:T:Shrub:_MDF_overrides_3:123:8:8] 						Growing outside
+[OVERRIDE:49:T:ShrubDead:_MDF_overrides_3:123:5:5] 					Growing outside, but dead
+[OVERRIDE:49:I:PLANT:PLANT::_MDF_overrides_3:107:8:8] 				Picked plant
+[OVERRIDE:49:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:139:8:8]
+
+#CAPER
+[OVERRIDE:50:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:108:8:8] 		Inside the farm
+[OVERRIDE:50:T:Shrub:_MDF_overrides_3:124:8:8] 						Growing outside
+[OVERRIDE:50:T:ShrubDead:_MDF_overrides_3:124:5:5] 					Growing outside, but dead
+[OVERRIDE:50:I:PLANT:PLANT::_MDF_overrides_3:108:8:8] 				Picked plant
+[OVERRIDE:50:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:140:8:8]
+
+#WILD_CARROT
+[OVERRIDE:51:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:109:8:8] 		Inside the farm
+[OVERRIDE:51:T:Shrub:_MDF_overrides_3:125:8:8] 						Growing outside
+[OVERRIDE:51:T:ShrubDead:_MDF_overrides_3:125:5:5] 					Growing outside, but dead
+[OVERRIDE:51:I:PLANT:PLANT::_MDF_overrides_3:109:8:8] 				Picked plant
+[OVERRIDE:51:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:141:8:8]
+
+#CASSAVA
+[OVERRIDE:52:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:110:8:8] 		Inside the farm
+[OVERRIDE:52:T:Shrub:_MDF_overrides_3:126:8:8] 						Growing outside
+[OVERRIDE:52:T:ShrubDead:_MDF_overrides_3:126:5:5] 					Growing outside, but dead
+[OVERRIDE:52:I:PLANT:PLANT::_MDF_overrides_3:110:8:8] 				Picked plant
+[OVERRIDE:52:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:142:8:8]
+
+#CELERY
+[OVERRIDE:53:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:111:8:8] 		Inside the farm
+[OVERRIDE:53:T:Shrub:_MDF_overrides_3:127:8:8] 						Growing outside
+[OVERRIDE:53:T:ShrubDead:_MDF_overrides_3:127:5:5] 					Growing outside, but dead
+[OVERRIDE:53:I:PLANT:PLANT::_MDF_overrides_3:111:8:8] 				Picked plant
+[OVERRIDE:53:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:143:8:8]
+
+#CHICKPEA, LENTIL, SOYBEAN
+[OVERRIDE:54:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:144:8:8] 		Inside the farm
+[OVERRIDE:54:T:Shrub:_MDF_overrides_3:160:8:8] 						Growing outside
+[OVERRIDE:54:T:ShrubDead:_MDF_overrides_3:160:5:5] 					Growing outside, but dead
+[OVERRIDE:54:I:PLANT:PLANT::_MDF_overrides_3:144:8:8] 				Picked plant
+[OVERRIDE:54:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:176:8:8]
+
+#CHICORY
+[OVERRIDE:55:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:145:8:8] 		Inside the farm
+[OVERRIDE:55:T:Shrub:_MDF_overrides_3:161:8:8] 						Growing outside
+[OVERRIDE:55:T:ShrubDead:_MDF_overrides_3:161:5:5] 					Growing outside, but dead
+[OVERRIDE:55:I:PLANT:PLANT::_MDF_overrides_3:145:8:8] 				Picked plant
+[OVERRIDE:55:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:177:8:8]
+
+#EGGPLANT
+[OVERRIDE:56:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:146:8:8] 		Inside the farm
+[OVERRIDE:56:T:Shrub:_MDF_overrides_3:162:8:8] 						Growing outside
+[OVERRIDE:56:T:ShrubDead:_MDF_overrides_3:162:5:5] 					Growing outside, but dead
+[OVERRIDE:56:I:PLANT:PLANT::_MDF_overrides_3:146:8:8] 				Picked plant
+[OVERRIDE:56:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:178:8:8]
+
+#GARDEN_CRESS
+[OVERRIDE:57:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:147:8:8] 		Inside the farm
+[OVERRIDE:57:T:Shrub:_MDF_overrides_3:163:8:8] 						Growing outside
+[OVERRIDE:57:T:ShrubDead:_MDF_overrides_3:163:5:5] 					Growing outside, but dead
+[OVERRIDE:57:I:PLANT:PLANT::_MDF_overrides_3:147:8:8] 				Picked plant
+[OVERRIDE:57:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:179:8:8] Picked growth
+###############################################################################################
+#error error error
+#
+#[OVERRIDE:58:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:148:8:8] 		Inside the farm
+#[OVERRIDE:58:T:Shrub:_MDF_overrides_3:164:8:8] 						Growing outside
+#[OVERRIDE:58:T:ShrubDead:_MDF_overrides_3:164:5:5] 					Growing outside, but dead
+#[OVERRIDE:58:I:PLANT:PLANT::_MDF_overrides_3:180:8:8] 				Picked plant
+#[OVERRIDE:58:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:180:8:8]
+#
+###############################################################################################
+
+
+#HORNED_MELON
+[OVERRIDE:59:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:149:8:8] 		Inside the farm
+[OVERRIDE:59:T:Shrub:_MDF_overrides_3:165:8:8] 						Growing outside
+[OVERRIDE:59:T:ShrubDead:_MDF_overrides_3:165:5:5] 					Growing outside, but dead
+[OVERRIDE:59:I:PLANT:PLANT::_MDF_overrides_3:149:8:8] 				Picked plant
+[OVERRIDE:59:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:180:8:8]
+
+#LEEK
+[OVERRIDE:60:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:150:8:8] 		Inside the farm
+[OVERRIDE:60:T:Shrub:_MDF_overrides_3:166:8:8] 						Growing outside
+[OVERRIDE:60:T:ShrubDead:_MDF_overrides_3:166:5:5] 					Growing outside, but dead
+[OVERRIDE:60:I:PLANT:PLANT::_MDF_overrides_3:150:8:8] 				Picked plant
+[OVERRIDE:60:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:182:8:8]
+
+#MUSKMELON
+[OVERRIDE:61:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:151:8:8] 		Inside the farm
+[OVERRIDE:61:T:Shrub:_MDF_overrides_3:167:8:8] 						Growing outside
+[OVERRIDE:61:T:ShrubDead:_MDF_overrides_3:167:5:5] 					Growing outside, but dead
+[OVERRIDE:61:I:PLANT:PLANT::_MDF_overrides_3:151:8:8] 				Picked plant
+[OVERRIDE:61:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:183:8:8]
+
+#ONION
+[OVERRIDE:62:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:152:8:8] 		Inside the farm
+[OVERRIDE:62:T:Shrub:_MDF_overrides_3:168:8:8] 						Growing outside
+[OVERRIDE:62:T:ShrubDead:_MDF_overrides_3:168:5:5] 					Growing outside, but dead
+[OVERRIDE:62:I:PLANT:PLANT::_MDF_overrides_3:152:8:8] 				Picked plant
+[OVERRIDE:62:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:184:8:8]
+
+#PARSNIP, TURNIP
+[OVERRIDE:63:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:153:8:8] 		Inside the farm
+[OVERRIDE:63:T:Shrub:_MDF_overrides_3:169:8:8] 						Growing outside
+[OVERRIDE:63:T:ShrubDead:_MDF_overrides_3:169:5:5] 					Growing outside, but dead
+[OVERRIDE:63:I:PLANT:PLANT::_MDF_overrides_3:153:8:8] 				Picked plant
+[OVERRIDE:63:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:185:8:8]
+
+#PEANUT
+[OVERRIDE:64:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:154:8:8] 		Inside the farm
+[OVERRIDE:64:T:Shrub:_MDF_overrides_3:170:8:8] 						Growing outside
+[OVERRIDE:64:T:ShrubDead:_MDF_overrides_3:170:5:5] 					Growing outside, but dead
+[OVERRIDE:64:I:PLANT:PLANT::_MDF_overrides_3:154:8:8] 				Picked plant
+[OVERRIDE:64:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:186:8:8]
+
+#PEPPER
+[OVERRIDE:65:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:155:8:8] 		Inside the farm
+[OVERRIDE:65:T:Shrub:_MDF_overrides_3:171:8:8] 						Growing outside
+[OVERRIDE:65:T:ShrubDead:_MDF_overrides_3:171:5:5] 					Growing outside, but dead
+[OVERRIDE:65:I:PLANT:PLANT::_MDF_overrides_3:155:8:8] 				Picked plant
+[OVERRIDE:65:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:187:8:8]
+
+#POTATO, SWEET_POTATO
+[OVERRIDE:66:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:156:8:8] 		Inside the farm
+[OVERRIDE:66:T:Shrub:_MDF_overrides_3:172:8:8] 						Growing outside
+[OVERRIDE:66:T:ShrubDead:_MDF_overrides_3:172:5:5] 					Growing outside, but dead
+[OVERRIDE:66:I:PLANT:PLANT::_MDF_overrides_3:156:8:8] 				Picked plant
+[OVERRIDE:66:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:188:8:8]
+
+#GARLIC
+[OVERRIDE:67:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:148:8:8] 		Inside the farm
+[OVERRIDE:67:T:Shrub:_MDF_overrides_3:164:8:8] 						Growing outside
+[OVERRIDE:67:T:ShrubDead:_MDF_overrides_3:164:5:5] 					Growing outside, but dead
+[OVERRIDE:67:I:PLANT:PLANT::_MDF_overrides_3:148:8:8] 				Picked plant
+[OVERRIDE:67:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:180:8:8]
+
+#RED_BEAN
+[OVERRIDE:68:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:157:8:8] 		Inside the farm
+[OVERRIDE:68:T:Shrub:_MDF_overrides_3:173:8:8] 						Growing outside
+[OVERRIDE:68:T:ShrubDead:_MDF_overrides_3:173:5:5] 					Growing outside, but dead
+[OVERRIDE:68:I:PLANT:PLANT::_MDF_overrides_3:157:8:8] 				Picked plant
+[OVERRIDE:68:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:189:8:8]
+
+#RHUBARB
+[OVERRIDE:69:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:158:8:8] 		Inside the farm
+[OVERRIDE:69:T:Shrub:_MDF_overrides_3:174:8:8] 						Growing outside
+[OVERRIDE:69:T:ShrubDead:_MDF_overrides_3:174:5:5] 					Growing outside, but dead
+[OVERRIDE:69:I:PLANT:PLANT::_MDF_overrides_3:158:8:8] 				Picked plant
+[OVERRIDE:69:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:190:8:8]
+
+#SPINACH
+[OVERRIDE:70:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:159:8:8] 		Inside the farm
+[OVERRIDE:70:T:Shrub:_MDF_overrides_3:175:8:8] 						Growing outside
+[OVERRIDE:70:T:ShrubDead:_MDF_overrides_3:175:5:5] 					Growing outside, but dead
+[OVERRIDE:70:I:PLANT:PLANT::_MDF_overrides_3:159:8:8] 				Picked plant
+[OVERRIDE:70:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:191:8:8]
+
+#SQUASH
+[OVERRIDE:71:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:193:8:8] 		Inside the farm
+[OVERRIDE:71:T:Shrub:_MDF_overrides_3:208:8:8] 						Growing outside
+[OVERRIDE:71:T:ShrubDead:_MDF_overrides_3:208:5:5] 					Growing outside, but dead
+[OVERRIDE:71:I:PLANT:PLANT::_MDF_overrides_3:193:8:8] 				Picked plant
+[OVERRIDE:71:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:244:8:8]
+
+#TARO
+[OVERRIDE:72:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:193:8:8] 		Inside the farm
+[OVERRIDE:72:T:Shrub:_MDF_overrides_3:209:8:8] 						Growing outside
+[OVERRIDE:72:T:ShrubDead:_MDF_overrides_3:209:5:5] 					Growing outside, but dead
+[OVERRIDE:72:I:PLANT:PLANT::_MDF_overrides_3:193:8:8] 				Picked plant
+[OVERRIDE:72:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:225:8:8]
+
+#TOMATO
+[OVERRIDE:73:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:194:8:8] 		Inside the farm
+[OVERRIDE:73:T:Shrub:_MDF_overrides_3:210:8:8] 						Growing outside
+[OVERRIDE:73:T:ShrubDead:_MDF_overrides_3:210:5:5] 					Growing outside, but dead
+[OVERRIDE:73:I:PLANT:PLANT::_MDF_overrides_3:194:8:8] 				Picked plant
+[OVERRIDE:73:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:226:8:8]
+
+#TOMATILLO
+[OVERRIDE:74:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:195:8:8] 		Inside the farm
+[OVERRIDE:74:T:Shrub:_MDF_overrides_3:211:8:8] 						Growing outside
+[OVERRIDE:74:T:ShrubDead:_MDF_overrides_3:211:5:5] 					Growing outside, but dead
+[OVERRIDE:74:I:PLANT:PLANT::_MDF_overrides_3:195:8:8] 				Picked plant
+[OVERRIDE:74:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:227:8:8]
+
+#WATERMELON, WINTER_MELON
+[OVERRIDE:75:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:196:8:8] 		Inside the farm
+[OVERRIDE:75:T:Shrub:_MDF_overrides_3:212:8:8] 						Growing outside
+[OVERRIDE:75:T:ShrubDead:_MDF_overrides_3:212:5:5] 					Growing outside, but dead
+[OVERRIDE:75:I:PLANT:PLANT::_MDF_overrides_3:196:8:8] 				Picked plant
+[OVERRIDE:75:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:228:8:8]
+
+#LESSER_YAM, LONG_YAM, PURPLE_YAM, WHITE_YAM
+[OVERRIDE:76:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:197:8:8] 		Inside the farm
+[OVERRIDE:76:T:Shrub:_MDF_overrides_3:213:8:8] 						Growing outside
+[OVERRIDE:76:T:ShrubDead:_MDF_overrides_3:213:5:5] 					Growing outside, but dead
+[OVERRIDE:76:I:PLANT:PLANT::_MDF_overrides_3:197:8:8] 				Picked plant
+[OVERRIDE:76:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:229:8:8]
+
+#PASSION_FRUIT
+[OVERRIDE:77:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:198:8:8] 		Inside the farm
+[OVERRIDE:77:T:Shrub:_MDF_overrides_3:214:8:8] 						Growing outside
+[OVERRIDE:77:T:ShrubDead:_MDF_overrides_3:214:5:5] 					Growing outside, but dead
+[OVERRIDE:77:I:PLANT:PLANT::_MDF_overrides_3:198:8:8] 				Picked plant
+[OVERRIDE:77:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:230:8:8]
+
+#GRAPE
+[OVERRIDE:78:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:199:8:8] 		Inside the farm
+[OVERRIDE:78:T:Shrub:_MDF_overrides_3:215:8:8] 						Growing outside
+[OVERRIDE:78:T:ShrubDead:_MDF_overrides_3:215:5:5] 					Growing outside, but dead
+[OVERRIDE:78:I:PLANT:PLANT::_MDF_overrides_3:199:8:8] 				Picked plant
+[OVERRIDE:78:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:231:8:8]
+
+#CRANBERRY
+[OVERRIDE:79:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:200:8:8] 		Inside the farm
+[OVERRIDE:79:T:Shrub:_MDF_overrides_3:216:8:8] 						Growing outside
+[OVERRIDE:79:T:ShrubDead:_MDF_overrides_3:216:5:5] 					Growing outside, but dead
+[OVERRIDE:79:I:PLANT:PLANT::_MDF_overrides_3:200:8:8] 				Picked plant
+[OVERRIDE:79:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:232:8:8]
+
+#BILBERRY, BLUEBERRY
+[OVERRIDE:80:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:201:8:8] 		Inside the farm
+[OVERRIDE:80:T:Shrub:_MDF_overrides_3:217:8:8] 						Growing outside
+[OVERRIDE:80:T:ShrubDead:_MDF_overrides_3:217:5:5] 					Growing outside, but dead
+[OVERRIDE:80:I:PLANT:PLANT::_MDF_overrides_3:201:8:8] 				Picked plant
+[OVERRIDE:80:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:233:8:8]
+
+#BLACKBERRY
+[OVERRIDE:81:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:202:8:8] 		Inside the farm
+[OVERRIDE:81:T:Shrub:_MDF_overrides_3:218:8:8] 						Growing outside
+[OVERRIDE:81:T:ShrubDead:_MDF_overrides_3:218:5:5] 					Growing outside, but dead
+[OVERRIDE:81:I:PLANT:PLANT::_MDF_overrides_3:202:8:8] 				Picked plant
+[OVERRIDE:81:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:234:8:8]
+
+#RASPBERRY
+[OVERRIDE:82:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:203:8:8] 		Inside the farm
+[OVERRIDE:82:T:Shrub:_MDF_overrides_3:219:8:8] 						Growing outside
+[OVERRIDE:82:T:ShrubDead:_MDF_overrides_3:219:5:5] 					Growing outside, but dead
+[OVERRIDE:82:I:PLANT:PLANT::_MDF_overrides_3:203:8:8] 				Picked plant
+[OVERRIDE:82:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:235:8:8]
+
+#PINEAPPLE
+[OVERRIDE:83:B:FARM_PLOT:FarmPlot::_MDF_overrides_3:204:8:8] 		Inside the farm
+[OVERRIDE:83:T:Shrub:_MDF_overrides_3:220:8:8] 						Growing outside
+[OVERRIDE:83:T:ShrubDead:_MDF_overrides_3:220:5:5] 					Growing outside, but dead
+[OVERRIDE:83:I:PLANT:PLANT::_MDF_overrides_3:204:8:8] 				Picked plant
+[OVERRIDE:83:I:PLANT_GROWTH:PLANT_GROWTH::_MDF_overrides_3:236:8:8]
+
+
+
+##################################################################################################################################
+#mod stuff
+
+#decorations
+[TILESET:_Decorations_2.png:_Decorations_2.png:8]
+[OVERRIDE:66:B:WORKSHOP_CUSTOM:Workshop:POISON_VAT:8:66]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:DISPLAY_CASE:8:50]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:CAMPFIRE:6:82]
+
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:48]
+[OVERRIDE:49:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:49]
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:64]
+[OVERRIDE:65:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:65]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:80]
+[OVERRIDE:81:B:WORKSHOP_CUSTOM:Workshop:BANNER_RED:8:81]
+
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:2]
+[OVERRIDE:3:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:3]
+[OVERRIDE:18:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:18]
+[OVERRIDE:19:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:19]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:34]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:BANNER_YELLOW:8:35]
+
+[OVERRIDE:4:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:4]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:5]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:20]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:21]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:BANNER_CYAN:8:37]
+
+[OVERRIDE:8:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:6]
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:7]
+[OVERRIDE:22:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:22]
+[OVERRIDE:23:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:23]
+[OVERRIDE:38:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:38]
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLUE:8:39]
+
+[OVERRIDE:8:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:8]
+[OVERRIDE:9:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:9]
+[OVERRIDE:24:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:24]
+[OVERRIDE:25:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:25]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:40]
+[OVERRIDE:41:B:WORKSHOP_CUSTOM:Workshop:BANNER_GREEN:8:41]
+
+[OVERRIDE:10:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:10]
+[OVERRIDE:11:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:11]
+[OVERRIDE:26:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:26]
+[OVERRIDE:27:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:27]
+[OVERRIDE:42:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:42]
+[OVERRIDE:43:B:WORKSHOP_CUSTOM:Workshop:BANNER_PURPLE:8:43]
+
+[OVERRIDE:12:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:12]
+[OVERRIDE:13:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:13]
+[OVERRIDE:28:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:28]
+[OVERRIDE:29:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:29]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:44]
+[OVERRIDE:45:B:WORKSHOP_CUSTOM:Workshop:BANNER_BLACK:8:45]
+
+[OVERRIDE:14:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:14]
+[OVERRIDE:15:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:15]
+[OVERRIDE:30:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:30]
+[OVERRIDE:31:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:31]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:46]
+[OVERRIDE:47:B:WORKSHOP_CUSTOM:Workshop:BANNER_WHITE:8:47]
+
+#decorations
+[TILESET:_Carpet.png:_Carpet.png:9]
+
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:64]
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:2]
+[OVERRIDE:3:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:3]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:36]
+[OVERRIDE:33:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:33]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:48]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:50]
+[OVERRIDE:51:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:51]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_HORIZONTAL:9:96]
+
+[OVERRIDE:3:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:3]
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:2]
+[OVERRIDE:3:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:3]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:34]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:36]
+[OVERRIDE:33:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:33]
+[OVERRIDE:51:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:51]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:50]
+[OVERRIDE:51:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:51]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_HORIZONTAL:9:96]
+
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:2]
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:2]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:5]
+[OVERRIDE:18:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:18]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:37]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:50]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:50]
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:53]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_HORIZONTAL:9:96]
+
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:64]
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:2]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:5]
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:16]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:36]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:21]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:37]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_VERTICAL:9:96]
+
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:16]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:20]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:21]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:37]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:80]
+[OVERRIDE:33:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:33]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:37]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_VERTICAL:9:96]
+
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:16]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:20]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:21]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:37]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:48]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:50]
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:53]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_VERTICAL:9:96]
+
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:53]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:20]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:48]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:20]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:34]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:20]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:5]
+[OVERRIDE:33:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:33]
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:64]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CENTER_CENTER:9:96]
+
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:53]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:20]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:21]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:20]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:34]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:37]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:50]
+[OVERRIDE:52:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:52]
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:53]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_BOTTOM:9:96]
+
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:16]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:20]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:48]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:80]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:34]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:35]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:48]
+[OVERRIDE:49:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:49]
+[OVERRIDE:50:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:50]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_BOTTOM:9:96]
+
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:2]
+[OVERRIDE:4:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:4]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:5]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:20]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:34]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:21]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:5]
+[OVERRIDE:17:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:17]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:37]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_RIGHT_TOP:9:96]
+
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:64]
+[OVERRIDE:1:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:1]
+[OVERRIDE:2:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:2]
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:16]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:34]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:35]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:36]
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:64]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_CORNER_LEFT_TOP:9:96]
+
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:80]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:34]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:48]
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:16]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:34]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:35]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:80]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:36]
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:64]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NES:9:96]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:7]
+[OVERRIDE:8:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:8]
+[OVERRIDE:9:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:7]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:34]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:35]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:5]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:36]
+[OVERRIDE:64:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:64]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_ESW:9:96]
+
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:53]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:34]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:37]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:34]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:21]
+[OVERRIDE:5:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:5]
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:36]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:37]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_NSW:9:96]
+
+[OVERRIDE:53:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:53]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:34]
+[OVERRIDE:86:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:86]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:34]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:40]
+[OVERRIDE:87:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:87]
+[OVERRIDE:88:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:88]
+[OVERRIDE:87:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:87]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_T_WNE:9:96]
+
+[OVERRIDE:33:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:33]
+[OVERRIDE:17:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:17]
+[OVERRIDE:19:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:19]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:34]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:40]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:35]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:35]
+[OVERRIDE:18:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:18]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_FABRIC:9:96]
+
+[OVERRIDE:9:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:7]
+[OVERRIDE:8:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:8]
+[OVERRIDE:9:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:7]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:34]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:40]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:35]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:35]
+[OVERRIDE:18:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:18]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_TOP_OPEN:9:96]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:39]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:20]
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:39]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:34]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:34]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:40]
+[OVERRIDE:87:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:87]
+[OVERRIDE:88:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:88]
+[OVERRIDE:87:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:87]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_BOTTOM_OPEN:9:96]
+
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:16]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:20]
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:39]
+[OVERRIDE:80:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:80]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:34]
+[OVERRIDE:40:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:40]
+[OVERRIDE:16:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:16]
+[OVERRIDE:19:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:19]
+[OVERRIDE:35:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:35]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_LEFT_OPEN:9:96]
+
+[OVERRIDE:36:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:36]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:20]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:21]
+[OVERRIDE:20:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:20]
+[OVERRIDE:34:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:34]
+[OVERRIDE:37:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:37]
+[OVERRIDE:18:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:18]
+[OVERRIDE:19:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:19]
+[OVERRIDE:21:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:21]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:CARPET_RED_RIGHT_OPEN:9:96]
+
+[OVERRIDE:238:B:WORKSHOP_CUSTOM:Workshop:SIGN_EMPTY:9:238]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:SIGN_EMPTY:9:239]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:SIGN_EMPTY:9:254]
+[OVERRIDE:255:B:WORKSHOP_CUSTOM:Workshop:SIGN_EMPTY:9:255]
+
+[OVERRIDE:10:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARMOR:9:10]
+[OVERRIDE:11:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARMOR:9:11]
+[OVERRIDE:26:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARMOR:9:26]
+[OVERRIDE:27:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARMOR:9:27]
+
+[OVERRIDE:12:B:WORKSHOP_CUSTOM:Workshop:SIGN_HERBALIST:9:12]
+[OVERRIDE:13:B:WORKSHOP_CUSTOM:Workshop:SIGN_HERBALIST:9:13]
+[OVERRIDE:28:B:WORKSHOP_CUSTOM:Workshop:SIGN_HERBALIST:9:28]
+[OVERRIDE:29:B:WORKSHOP_CUSTOM:Workshop:SIGN_HERBALIST:9:29]
+
+[OVERRIDE:14:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD:9:14]
+[OVERRIDE:15:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD:9:15]
+[OVERRIDE:30:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD:9:30]
+[OVERRIDE:31:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD:9:31]
+
+[OVERRIDE:42:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEACUP:9:42]
+[OVERRIDE:43:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEACUP:9:43]
+[OVERRIDE:58:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEACUP:9:58]
+[OVERRIDE:59:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEACUP:9:59]
+
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:SIGN_INN:9:44]
+[OVERRIDE:45:B:WORKSHOP_CUSTOM:Workshop:SIGN_INN:9:45]
+[OVERRIDE:60:B:WORKSHOP_CUSTOM:Workshop:SIGN_INN:9:60]
+[OVERRIDE:61:B:WORKSHOP_CUSTOM:Workshop:SIGN_INN:9:61]
+
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:SIGN_BEER:9:46]
+[OVERRIDE:47:B:WORKSHOP_CUSTOM:Workshop:SIGN_BEER:9:47]
+[OVERRIDE:62:B:WORKSHOP_CUSTOM:Workshop:SIGN_BEER:9:62]
+[OVERRIDE:63:B:WORKSHOP_CUSTOM:Workshop:SIGN_BEER:9:63]
+
+[OVERRIDE:74:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROWN:9:74]
+[OVERRIDE:75:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROWN:9:75]
+[OVERRIDE:90:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROWN:9:90]
+[OVERRIDE:91:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROWN:9:91]
+
+[OVERRIDE:76:B:WORKSHOP_CUSTOM:Workshop:SIGN_HAMMER:9:76]
+[OVERRIDE:77:B:WORKSHOP_CUSTOM:Workshop:SIGN_HAMMER:9:77]
+[OVERRIDE:92:B:WORKSHOP_CUSTOM:Workshop:SIGN_HAMMER:9:92]
+[OVERRIDE:93:B:WORKSHOP_CUSTOM:Workshop:SIGN_HAMMER:9:93]
+
+[OVERRIDE:78:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROSS:9:78]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROSS:9:79]
+[OVERRIDE:94:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROSS:9:94]
+[OVERRIDE:95:B:WORKSHOP_CUSTOM:Workshop:SIGN_CROSS:9:95]
+
+[OVERRIDE:100:B:WORKSHOP_CUSTOM:Workshop:SIGN_MAGIC:9:100]
+[OVERRIDE:101:B:WORKSHOP_CUSTOM:Workshop:SIGN_MAGIC:9:101]
+[OVERRIDE:116:B:WORKSHOP_CUSTOM:Workshop:SIGN_MAGIC:9:116]
+[OVERRIDE:117:B:WORKSHOP_CUSTOM:Workshop:SIGN_MAGIC:9:117]
+
+[OVERRIDE:102:B:WORKSHOP_CUSTOM:Workshop:SIGN_ESCAPE:9:102]
+[OVERRIDE:103:B:WORKSHOP_CUSTOM:Workshop:SIGN_ESCAPE:9:103]
+[OVERRIDE:118:B:WORKSHOP_CUSTOM:Workshop:SIGN_ESCAPE:9:118]
+[OVERRIDE:119:B:WORKSHOP_CUSTOM:Workshop:SIGN_ESCAPE:9:119]
+
+[OVERRIDE:104:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAR:9:104]
+[OVERRIDE:105:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAR:9:105]
+[OVERRIDE:120:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAR:9:120]
+[OVERRIDE:121:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAR:9:121]
+
+[OVERRIDE:106:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOW:9:106]
+[OVERRIDE:107:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOW:9:107]
+[OVERRIDE:122:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOW:9:122]
+[OVERRIDE:123:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOW:9:123]
+
+[OVERRIDE:108:B:WORKSHOP_CUSTOM:Workshop:SIGN_MEDIC:9:108]
+[OVERRIDE:109:B:WORKSHOP_CUSTOM:Workshop:SIGN_MEDIC:9:109]
+[OVERRIDE:124:B:WORKSHOP_CUSTOM:Workshop:SIGN_MEDIC:9:124]
+[OVERRIDE:125:B:WORKSHOP_CUSTOM:Workshop:SIGN_MEDIC:9:125]
+
+[OVERRIDE:110:B:WORKSHOP_CUSTOM:Workshop:SIGN_CARD:9:110]
+[OVERRIDE:111:B:WORKSHOP_CUSTOM:Workshop:SIGN_CARD:9:111]
+[OVERRIDE:126:B:WORKSHOP_CUSTOM:Workshop:SIGN_CARD:9:126]
+[OVERRIDE:127:B:WORKSHOP_CUSTOM:Workshop:SIGN_CARD:9:127]
+
+[OVERRIDE:128:B:WORKSHOP_CUSTOM:Workshop:SIGN_APPLE:9:128]
+[OVERRIDE:129:B:WORKSHOP_CUSTOM:Workshop:SIGN_APPLE:9:129]
+[OVERRIDE:144:B:WORKSHOP_CUSTOM:Workshop:SIGN_APPLE:9:144]
+[OVERRIDE:145:B:WORKSHOP_CUSTOM:Workshop:SIGN_APPLE:9:145]
+
+[OVERRIDE:130:B:WORKSHOP_CUSTOM:Workshop:SIGN_DOG:9:130]
+[OVERRIDE:131:B:WORKSHOP_CUSTOM:Workshop:SIGN_DOG:9:131]
+[OVERRIDE:146:B:WORKSHOP_CUSTOM:Workshop:SIGN_DOG:9:146]
+[OVERRIDE:147:B:WORKSHOP_CUSTOM:Workshop:SIGN_DOG:9:147]
+
+[OVERRIDE:132:B:WORKSHOP_CUSTOM:Workshop:SIGN_ANGEL:9:132]
+[OVERRIDE:133:B:WORKSHOP_CUSTOM:Workshop:SIGN_ANGEL:9:133]
+[OVERRIDE:148:B:WORKSHOP_CUSTOM:Workshop:SIGN_ANGEL:9:148]
+[OVERRIDE:149:B:WORKSHOP_CUSTOM:Workshop:SIGN_ANGEL:9:149]
+
+[OVERRIDE:134:B:WORKSHOP_CUSTOM:Workshop:SIGN_TREE:9:134]
+[OVERRIDE:135:B:WORKSHOP_CUSTOM:Workshop:SIGN_TREE:9:135]
+[OVERRIDE:150:B:WORKSHOP_CUSTOM:Workshop:SIGN_TREE:9:150]
+[OVERRIDE:151:B:WORKSHOP_CUSTOM:Workshop:SIGN_TREE:9:151]
+
+[OVERRIDE:136:B:WORKSHOP_CUSTOM:Workshop:SIGN_CAKE:9:136]
+[OVERRIDE:137:B:WORKSHOP_CUSTOM:Workshop:SIGN_CAKE:9:137]
+[OVERRIDE:152:B:WORKSHOP_CUSTOM:Workshop:SIGN_CAKE:9:152]
+[OVERRIDE:153:B:WORKSHOP_CUSTOM:Workshop:SIGN_CAKE:9:153]
+
+[OVERRIDE:138:B:WORKSHOP_CUSTOM:Workshop:SIGN_EVIL:9:138]
+[OVERRIDE:139:B:WORKSHOP_CUSTOM:Workshop:SIGN_EVIL:9:139]
+[OVERRIDE:154:B:WORKSHOP_CUSTOM:Workshop:SIGN_EVIL:9:154]
+[OVERRIDE:155:B:WORKSHOP_CUSTOM:Workshop:SIGN_EVIL:9:155]
+
+[OVERRIDE:140:B:WORKSHOP_CUSTOM:Workshop:SIGN_MONSTER:9:140]
+[OVERRIDE:141:B:WORKSHOP_CUSTOM:Workshop:SIGN_MONSTER:9:141]
+[OVERRIDE:156:B:WORKSHOP_CUSTOM:Workshop:SIGN_MONSTER:9:156]
+[OVERRIDE:157:B:WORKSHOP_CUSTOM:Workshop:SIGN_MONSTER:9:157]
+
+[OVERRIDE:142:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARENA:9:142]
+[OVERRIDE:143:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARENA:9:143]
+[OVERRIDE:158:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARENA:9:158]
+[OVERRIDE:159:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARENA:9:159]
+
+[OVERRIDE:160:B:WORKSHOP_CUSTOM:Workshop:SIGN_GEMS:9:160]
+[OVERRIDE:161:B:WORKSHOP_CUSTOM:Workshop:SIGN_GEMS:9:161]
+[OVERRIDE:176:B:WORKSHOP_CUSTOM:Workshop:SIGN_GEMS:9:176]
+[OVERRIDE:177:B:WORKSHOP_CUSTOM:Workshop:SIGN_GEMS:9:177]
+
+[OVERRIDE:162:B:WORKSHOP_CUSTOM:Workshop:SIGN_MUSIC:9:162]
+[OVERRIDE:163:B:WORKSHOP_CUSTOM:Workshop:SIGN_MUSIC:9:163]
+[OVERRIDE:178:B:WORKSHOP_CUSTOM:Workshop:SIGN_MUSIC:9:178]
+[OVERRIDE:179:B:WORKSHOP_CUSTOM:Workshop:SIGN_MUSIC:9:179]
+
+[OVERRIDE:164:B:WORKSHOP_CUSTOM:Workshop:SIGN_TOYS:9:164]
+[OVERRIDE:165:B:WORKSHOP_CUSTOM:Workshop:SIGN_TOYS:9:165]
+[OVERRIDE:180:B:WORKSHOP_CUSTOM:Workshop:SIGN_TOYS:9:180]
+[OVERRIDE:181:B:WORKSHOP_CUSTOM:Workshop:SIGN_TOYS:9:181]
+
+[OVERRIDE:166:B:WORKSHOP_CUSTOM:Workshop:SIGN_FISH:9:166]
+[OVERRIDE:167:B:WORKSHOP_CUSTOM:Workshop:SIGN_FISH:9:167]
+[OVERRIDE:182:B:WORKSHOP_CUSTOM:Workshop:SIGN_FISH:9:182]
+[OVERRIDE:183:B:WORKSHOP_CUSTOM:Workshop:SIGN_FISH:9:183]
+
+[OVERRIDE:168:B:WORKSHOP_CUSTOM:Workshop:SIGN_POT:9:168]
+[OVERRIDE:169:B:WORKSHOP_CUSTOM:Workshop:SIGN_POT:9:169]
+[OVERRIDE:184:B:WORKSHOP_CUSTOM:Workshop:SIGN_POT:9:184]
+[OVERRIDE:185:B:WORKSHOP_CUSTOM:Workshop:SIGN_POT:9:185]
+
+[OVERRIDE:170:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD_SHIELD:9:170]
+[OVERRIDE:171:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD_SHIELD:9:171]
+[OVERRIDE:186:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD_SHIELD:9:186]
+[OVERRIDE:187:B:WORKSHOP_CUSTOM:Workshop:SIGN_SWORD_SHIELD:9:187]
+
+[OVERRIDE:172:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAG:9:172]
+[OVERRIDE:173:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAG:9:173]
+[OVERRIDE:188:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAG:9:188]
+[OVERRIDE:189:B:WORKSHOP_CUSTOM:Workshop:SIGN_BAG:9:189]
+
+[OVERRIDE:174:B:WORKSHOP_CUSTOM:Workshop:SIGN_BREAD:9:174]
+[OVERRIDE:175:B:WORKSHOP_CUSTOM:Workshop:SIGN_BREAD:9:175]
+[OVERRIDE:190:B:WORKSHOP_CUSTOM:Workshop:SIGN_BREAD:9:190]
+[OVERRIDE:191:B:WORKSHOP_CUSTOM:Workshop:SIGN_BREAD:9:191]
+
+[OVERRIDE:192:B:WORKSHOP_CUSTOM:Workshop:SIGN_TALKING:9:192]
+[OVERRIDE:193:B:WORKSHOP_CUSTOM:Workshop:SIGN_TALKING:9:193]
+[OVERRIDE:208:B:WORKSHOP_CUSTOM:Workshop:SIGN_TALKING:9:208]
+[OVERRIDE:209:B:WORKSHOP_CUSTOM:Workshop:SIGN_TALKING:9:209]
+
+[OVERRIDE:194:B:WORKSHOP_CUSTOM:Workshop:SIGN_DRAGON:9:194]
+[OVERRIDE:195:B:WORKSHOP_CUSTOM:Workshop:SIGN_DRAGON:9:195]
+[OVERRIDE:210:B:WORKSHOP_CUSTOM:Workshop:SIGN_DRAGON:9:210]
+[OVERRIDE:211:B:WORKSHOP_CUSTOM:Workshop:SIGN_DRAGON:9:211]
+
+[OVERRIDE:196:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOMB:9:196]
+[OVERRIDE:197:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOMB:9:197]
+[OVERRIDE:212:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOMB:9:212]
+[OVERRIDE:213:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOMB:9:213]
+
+[OVERRIDE:198:B:WORKSHOP_CUSTOM:Workshop:SIGN_STORAGE:9:198]
+[OVERRIDE:199:B:WORKSHOP_CUSTOM:Workshop:SIGN_STORAGE:9:199]
+[OVERRIDE:214:B:WORKSHOP_CUSTOM:Workshop:SIGN_STORAGE:9:214]
+[OVERRIDE:215:B:WORKSHOP_CUSTOM:Workshop:SIGN_STORAGE:9:215]
+
+[OVERRIDE:200:B:WORKSHOP_CUSTOM:Workshop:SIGN_POTTED_PLANT:9:200]
+[OVERRIDE:201:B:WORKSHOP_CUSTOM:Workshop:SIGN_POTTED_PLANT:9:201]
+[OVERRIDE:216:B:WORKSHOP_CUSTOM:Workshop:SIGN_POTTED_PLANT:9:216]
+[OVERRIDE:217:B:WORKSHOP_CUSTOM:Workshop:SIGN_POTTED_PLANT:9:217]
+
+[OVERRIDE:202:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEXTILE:9:202]
+[OVERRIDE:203:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEXTILE:9:203]
+[OVERRIDE:218:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEXTILE:9:218]
+[OVERRIDE:219:B:WORKSHOP_CUSTOM:Workshop:SIGN_TEXTILE:9:219]
+
+[OVERRIDE:204:B:WORKSHOP_CUSTOM:Workshop:SIGN_FIRE:9:204]
+[OVERRIDE:205:B:WORKSHOP_CUSTOM:Workshop:SIGN_FIRE:9:205]
+[OVERRIDE:220:B:WORKSHOP_CUSTOM:Workshop:SIGN_FIRE:9:220]
+[OVERRIDE:221:B:WORKSHOP_CUSTOM:Workshop:SIGN_FIRE:9:221]
+
+[OVERRIDE:206:B:WORKSHOP_CUSTOM:Workshop:SIGN_FLOWER:9:206]
+[OVERRIDE:207:B:WORKSHOP_CUSTOM:Workshop:SIGN_FLOWER:9:207]
+[OVERRIDE:222:B:WORKSHOP_CUSTOM:Workshop:SIGN_FLOWER:9:222]
+[OVERRIDE:223:B:WORKSHOP_CUSTOM:Workshop:SIGN_FLOWER:9:223]
+
+[OVERRIDE:224:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_R:9:224]
+[OVERRIDE:225:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_R:9:225]
+[OVERRIDE:240:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_R:9:240]
+[OVERRIDE:241:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_R:9:241]
+
+[OVERRIDE:226:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_LR:9:226]
+[OVERRIDE:225:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_LR:9:225]
+[OVERRIDE:242:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_LR:9:242]
+[OVERRIDE:241:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_LR:9:241]
+
+[OVERRIDE:226:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_L:9:226]
+[OVERRIDE:227:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_L:9:227]
+[OVERRIDE:242:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_L:9:242]
+[OVERRIDE:243:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_L:9:243]
+
+[OVERRIDE:228:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_U:9:228]
+[OVERRIDE:229:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_U:9:229]
+[OVERRIDE:244:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_U:9:244]
+[OVERRIDE:245:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_U:9:245]
+
+[OVERRIDE:228:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_UD:9:228]
+[OVERRIDE:229:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_UD:9:229]
+[OVERRIDE:246:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_UD:9:246]
+[OVERRIDE:247:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_UD:9:247]
+
+[OVERRIDE:230:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_D:9:230]
+[OVERRIDE:231:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_D:9:231]
+[OVERRIDE:246:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_D:9:246]
+[OVERRIDE:247:B:WORKSHOP_CUSTOM:Workshop:SIGN_ARROW_D:9:247]
+
+[OVERRIDE:232:B:WORKSHOP_CUSTOM:Workshop:SIGN_COINS:9:232]
+[OVERRIDE:233:B:WORKSHOP_CUSTOM:Workshop:SIGN_COINS:9:233]
+[OVERRIDE:248:B:WORKSHOP_CUSTOM:Workshop:SIGN_COINS:9:248]
+[OVERRIDE:249:B:WORKSHOP_CUSTOM:Workshop:SIGN_COINS:9:249]
+
+[OVERRIDE:234:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOOK:9:234]
+[OVERRIDE:235:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOOK:9:235]
+[OVERRIDE:250:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOOK:9:250]
+[OVERRIDE:251:B:WORKSHOP_CUSTOM:Workshop:SIGN_BOOK:9:251]
+
+[OVERRIDE:236:B:WORKSHOP_CUSTOM:Workshop:SIGN_EATING:9:236]
+[OVERRIDE:237:B:WORKSHOP_CUSTOM:Workshop:SIGN_EATING:9:237]
+[OVERRIDE:252:B:WORKSHOP_CUSTOM:Workshop:SIGN_EATING:9:252]
+[OVERRIDE:253:B:WORKSHOP_CUSTOM:Workshop:SIGN_EATING:9:253]
+
+[TILESET:TESB_tileset.png:TESB_tileset.png:TESB]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:48]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:80]
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:48]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_INACTIVE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:112]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ANDESITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:113]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_BASALT:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:114]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHALK:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:115]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CHERT:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:116]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CLAYSTONE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:117]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_CONGLOMERATE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:118]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DACITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:119]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DIORITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:120]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_DOLOMITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:121]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GABBRO:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:122]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GNEISS:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:123]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_GRANITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:128]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_LIMESTONE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:129]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MARBLE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:130]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_MUDSTONE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:131]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_PHYLLITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:132]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_QUARTZITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:133]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_RHYOLITE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:134]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_ROCK_SALT:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:135]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SANDSTONE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:136]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SCHIST:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:137]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SHALE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:138]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SILTSTONE:TESB:32]
+
+[OVERRIDE:39:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:64]
+[OVERRIDE:44:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:65]
+[OVERRIDE:46:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:67]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:0]
+[OVERRIDE:96:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:66]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:139]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_TRIBUTE_SLATE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR:TESB:48]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR:TESB:32]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_INACTIVE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_INACTIVE:TESB:48]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_INACTIVE:TESB:32]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_INACTIVE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ANDESITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ANDESITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ANDESITE:TESB:112]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ANDESITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_BASALT:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_BASALT:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_BASALT:TESB:113]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_BASALT:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHALK:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHALK:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHALK:TESB:114]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHALK:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHERT:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHERT:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHERT:TESB:115]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CHERT:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CLAYSTONE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CLAYSTONE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CLAYSTONE:TESB:116]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CLAYSTONE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CONGLOMERATE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CONGLOMERATE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CONGLOMERATE:TESB:117]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_CONGLOMERATE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DACITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DACITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DACITE:TESB:117]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DACITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DIORITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DIORITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DIORITE:TESB:118]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DIORITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DOLOMITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DOLOMITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DOLOMITE:TESB:119]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_DOLOMITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GABBRO:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GABBRO:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GABBRO:TESB:120]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GABBRO:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GNEISS:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GNEISS:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GNEISS:TESB:121]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GNEISS:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GRANITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GRANITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GRANITE:TESB:122]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_GRANITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_LIMESTONE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_LIMESTONE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_LIMESTONE:TESB:128]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_LIMESTONE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MARBLE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MARBLE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MARBLE:TESB:129]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MARBLE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MUDSTONE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MUDSTONE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MUDSTONE:TESB:130]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_MUDSTONE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_PHYLLITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_PHYLLITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_PHYLLITE:TESB:131]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_PHYLLITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_QUARTZITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_QUARTZITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_QUARTZITE:TESB:132]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_QUARTZITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_RHYOLITE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_RHYOLITE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_RHYOLITE:TESB:133]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_RHYOLITE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ROCK_SALT:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ROCK_SALT:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ROCK_SALT:TESB:134]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_ROCK_SALT:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SANDSTONE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SANDSTONE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SANDSTONE:TESB:135]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SANDSTONE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SCHIST:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SCHIST:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SCHIST:TESB:136]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SCHIST:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SHALE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SHALE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SHALE:TESB:137]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SHALE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SILTSTONE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SILTSTONE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SILTSTONE:TESB:138]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SILTSTONE:TESB:32]
+
+[OVERRIDE:7:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SLATE:TESB:16]
+[OVERRIDE:79:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SLATE:TESB:0]
+[OVERRIDE:239:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SLATE:TESB:139]
+[OVERRIDE:254:B:WORKSHOP_CUSTOM:Workshop:TESB_ALTAR_SLATE:TESB:32]

@@ -120,6 +120,11 @@
 		"ColorScheme":"DEFAULTPLUS"
 	},
 	{
+		"Name":"Meph - 16x16",
+		"TilesetType":"MDF",
+		"ColorScheme":"MEPH"
+	},
+	{
 		"Name":"Meph - 32x32",
 		"TilesetType":"MDF",
 		"ColorScheme":"MEPH"
