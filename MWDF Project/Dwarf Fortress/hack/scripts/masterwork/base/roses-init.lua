@@ -298,7 +298,7 @@ else
   dfhack.run_command('base/on-death -verbose')
   print('Running base/on-time')
   dfhack.run_command('base/on-time -verbose')
-  print('Running base/periodic-check')
+--  print('Running base/periodic-check')  turned off in masterwork we don't use it.
   dfhack.run_command('base/periodic-check -verbose')
  else
   dfhack.run_command('base/persist-delay')
@@ -306,6 +306,6 @@ else
   dfhack.run_command('base/flows-update')
   dfhack.run_command('base/on-death')
   dfhack.run_command('base/on-time')
-  dfhack.run_command('base/periodic-check')
+--  dfhack.run_command('base/periodic-check')  turned off in masterwork we don't use it.
  end
 end

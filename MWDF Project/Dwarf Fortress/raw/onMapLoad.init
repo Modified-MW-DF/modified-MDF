@@ -358,7 +358,7 @@ modtools/if-entity -id "KOBOLD" -cmd [ script "raw/kobold_init.txt" ]
 modtools/if-entity -id "ORC" -cmd [ script "raw/orc_init.txt" ]
 modtools/if-entity -id "PLAINS" -cmd [ script "raw/human_init.txt" ]
 modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_init.txt" ]
-modtools/if-entity -id "HERMIT" -cmd [ script "raw/hermit_init.txt"
+modtools/if-entity -id "HERMIT" -cmd [ script "raw/hermit_init.txt" ]
 
 
 #################### REMOVED CURRENTLY NOT FUNCTIONAL FOR PLAYERS ####################

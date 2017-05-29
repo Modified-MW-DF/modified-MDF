@@ -68,6 +68,9 @@ modtools/reaction-trigger -reactionName KILL_CAPTIVE_SUCCUBUS -command [ modtool
 modtools/reaction-trigger -reactionName USE_BLACKJACK -command [ modtools/add-syndrome -syndrome "playing blackjack in the casino" -target \\WORKER_ID ]
 modtools/reaction-trigger -reactionName USE_ROULETTE -command [ modtools/add-syndrome -syndrome "playing a round of roulette in the casino" -target \\WORKER_ID ]
 modtools/reaction-trigger -reactionName USE_POKER -command [ modtools/add-syndrome -syndrome "proving who's the most cleverestest by winning a poker match" -target \\WORKER_ID ]
+modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command [ weather clear ]
+modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
+modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
 
 
 #modtools/outside-only -checkEvery 100 -type OUTSIDE_ONLY -building OUTSIDE_ONLY_ORC_RAIDERS

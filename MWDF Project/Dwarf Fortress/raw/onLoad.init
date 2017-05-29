@@ -22,7 +22,6 @@
 :lua print(' ')
 :lua print('Initializing water, pay the bills.')
 base/roses-init
-base/liquids-update
 
 #################### embark points and embark group ####################
 :lua print(' ')
