@@ -1363,7 +1363,8 @@ b_detail_plan_masterwork
 [ADD_MATERIAL:BONE_FINGER:BONE_TEMPLATE]			!!Bone Stacks
 [ADD_MATERIAL:BONE_TOE:BONE_TEMPLATE]	
 
-[BODY_DETAIL_PLAN:SKELETON_MATERIALS]
+#A- renamed this due to conflict issues between this and zm5s files.
+[BODY_DETAIL_PLAN:MW_SKELETON_MATERIALS]
 	This command is just a shortcut for the similar lines (USE_MATERIAL_TEMPLATE|<token>|<template>) in a creature definition.
 	[ADD_MATERIAL:BONE:UNDEAD_BONE_TEMPLATE]
 	[ADD_MATERIAL:CARTILAGE:CARTILAGE_TEMPLATE]
@@ -1466,8 +1467,8 @@ b_detail_plan_masterwork
 [ADD_MATERIAL:BONE_FINGER:BONE_TEMPLATE]			!!Bone Stacks
 [ADD_MATERIAL:BONE_TOE:BONE_TEMPLATE]	
 
-
-[BODY_DETAIL_PLAN:SKELETON_TISSUES]
+#A - renamed for conflict issues between this and ZM5s files.
+[BODY_DETAIL_PLAN:MW_SKELETON_TISSUES]
 	This command is just a shortcut for the similar lines (USE_TISSUE_TEMPLATE|<token>|<template>) in a creature definition.
 	[ADD_TISSUE:BONE:UNDEAD_BONE_TEMPLATE]
 	[ADD_TISSUE:CARTILAGE:CARTILAGE_TEMPLATE]
