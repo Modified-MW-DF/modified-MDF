@@ -1,4 +1,8 @@
 #mdf
+
+# Path addition - ensures that these paths are availiable for scripts:
+:lua dfhack.internal.addScriptPath('hack/scripts/masterwork')
+
 season-palette start
 
 #timecontrol
