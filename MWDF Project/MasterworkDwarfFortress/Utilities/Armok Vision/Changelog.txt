@@ -1,3 +1,98 @@
+v0.16.2
+ * Fixed fog.
+ * Made the help menu automatically show only when loading.
+ * Fixed creature sprites so they don't glow in the dark.
+ * Added fake 3D effect to creature sprites.
+
+v0.16.1
+ * Added new nestbox model, made by Ola Tuvesson
+ * Added an onscreen help, togglable by F1
+
+v0.16.0
+ * Removed VR support until a dedicated dev steps forward.
+ * Load creature sprites from DF graphics packs.
+ * Added Gemset creature graphics as a default sprite set.
+ * Made open-air fortifications have a different model.
+ * Added models for menacing spikes, levers, farm plots, roads, weapon racks, and armor stands.
+ * Added a quick feedback mechanism using Stomt.
+ * Fixed some bugs with UI stuff not blocking keyboard input to the rest of the program.
+
+v0.15.0
+ * Use HQ4x scaling on small sprites
+ * Completely new terrain generation system, with rounded corners, and fewer polygons
+ * New terrain texturing system, with smoothly blended textures
+ * Lots of new terrain textures to go with the new system.
+ * New grass textures, including custom textures for evil and good grass.
+ * Added onscreen debug logging.
+ * Added a feedback button in the options menu.
+ * Added a donate button in the options menu.
+ * Added coffin and slab models
+ * Added floating Question marks for unknown buildings.
+
+v 0.14.0
+ * Added basic designation support. Only freehand at the moment. More brush types will come later.
+ * Added support for items on the floor.
+ * Added sprites for all items, and 3D models for several
+ * Added a clock and calandar.
+ * Added a button to pause and resume Dwarf Fortress
+
+v 0.13.1
+ * Use texture arrays instead of texture atlases when available.
+ * Use a single postprocess stack instead of multiple separate effects.
+ * Lighten hidden tiles.
+
+v 0.13.0
+ * Added a loading screen
+ * Removed the mesh generation timer that never worked well.
+ * Show snowfall on the world map.
+ * Added a simple hardware survey.
+
+v 0.12.0
+ * Added support for displaying material spatters, including blood, vomit, fallen leaves, mud, snow, etc.
+ * Added a few more options to the esc menu, including camera stuff.
+ * Brought back the old first person camera, and added a key to switch between floating and walking cameras. Default is C.
+ * Fixed a set of bugs that caused the map to not render when playing a heavily modded Dwarf Fortress.
+ * Added basic VR support. Needs heavy testing. To use it, just start Armok Vision with SteamVR running.
+
+v 0.11.3
+ * More improvements to the automated build process.
+ * Allow the user to instantly turn off distant terrain and clouds, but enabling them stil requires a restart.
+ * Include a manifest.json for pylnp.
+
+v 0.11.2
+ * Made first person mode follow physics rules, turning the user into a visitor of the fortress.
+
+v 0.11.1
+ * Fixed a bug where the outside landscape trees would be different every time.
+ * Added tree color to the very very far terrain.
+ * Fixed scene reflections not respecting time of day.
+
+v 0.11.0
+ * Added new mason's workshop model
+ * Added many temporary workshop models made fron chunky voxels.
+ * Fixed various rendering issues.
+ * Made hidden tiles optional
+ * Added trees and buildings to the world map.
+ * Added a screenshot button. F9 by default.
+ * Added SSAO effect.
+ * Changed textures to use point filtering.
+ * Fixed a bug where panning with the middle button wouldn't turn off following.
+ * Added onscreen settings menu. Press esc to open it.
+
+v 0.10.1
+ * Fixed compatibility with new DFHack plugin.
+
+v 0.10.0
+ * Zooming in and out changes the world size in VR now.
+ * Made hidden areas black
+ * Overhauled the outside world, giving much nicer looking maps
+ * Added rivers to the world map
+ * Added lakes to the world map
+ * Changed some internals relating to tile mesh generation
+ * Made mesh generation always include surrounding tile data
+ * Changed how reflections work.
+ * Show designations
+
 v 0.9.1
  * Fixed tree foliage textures.
  * Fixed keyboard not responding on startup.

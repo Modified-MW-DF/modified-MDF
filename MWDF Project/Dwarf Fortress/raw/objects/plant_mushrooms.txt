@@ -121,9 +121,9 @@ plant_mushrooms
 	[MILL:LOCAL_PLANT_MAT:MILL]
 
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
-		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven rum]
-		[STATE_NAME_ADJ:LIQUID:dwarven rum]
-		[STATE_NAME_ADJ:GAS:boiling dwarven rum]
+		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven brandy]
+		[STATE_NAME_ADJ:LIQUID:dwarven brandy]
+		[STATE_NAME_ADJ:GAS:boiling dwarven brandy]
 		[MATERIAL_VALUE:2]
 		[DISPLAY_COLOR:5:0:0]
 		[EDIBLE_RAW]
@@ -195,9 +195,9 @@ plant_mushrooms
 	
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		
-		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven ale]
-		[STATE_NAME_ADJ:LIQUID:dwarven ale]
-		[STATE_NAME_ADJ:GAS:boiling dwarven ale]
+		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven vodka]
+		[STATE_NAME_ADJ:LIQUID:dwarven vodka]
+		[STATE_NAME_ADJ:GAS:boiling dwarven vodka]
 		
 		[MATERIAL_VALUE:2]
 		[DISPLAY_COLOR:5:0:0]
@@ -271,10 +271,10 @@ plant_mushrooms
 	
 	
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
-		
-		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven beer]
-		[STATE_NAME_ADJ:LIQUID:dwarven beer]
-		[STATE_NAME_ADJ:GAS:boiling dwarven beer]
+		#A- name changed to seperate it... there is actually a gin called portobello gin, made at the portobello star, a bar in london of all places!
+		[STATE_NAME_ADJ:ALL_SOLID:frozen dwarven portobella gin]
+		[STATE_NAME_ADJ:LIQUID:dwarven portobella gin]
+		[STATE_NAME_ADJ:GAS:boiling dwarven portobella gin]
 		
 		[MATERIAL_VALUE:2]
 		[DISPLAY_COLOR:5:0:0]
