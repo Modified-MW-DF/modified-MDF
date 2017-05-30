@@ -1,0 +1,13 @@
+#!/bin/bash
+prevline="";
+ls -1 */data/init/overrides.txt |
+    while read line;
+    do
+        if [[ ! -z "$prevline" ]]
+        then
+            echo comparing "$prevline" with "$line";
+            diff "$prevline" "$line";
+        fi;
+        prevline=$line;
+    done;
+diff "$prevline" "$line";
