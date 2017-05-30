@@ -1,0 +1,45 @@
+{
+  "meshing": {
+    "meshingThreads": 4,
+    "queueLimit": 8,
+    "cornerType": 2
+  },
+  "rendering": {
+    "drawRangeSide": 4,
+    "drawRangeUp": 1,
+    "drawRangeDown": 5,
+    "maxBlocksToDraw": 460800,
+    "maxTextureSize": 256,
+    "textureAtlasSize": 2048,
+    "debugTextureAtlas": false,
+    "drawClouds": true,
+    "distantTerrainDetail": 2,
+    "drawShadows": true,
+    "vSyncCount": 0,
+    "targetFrameRate": 60,
+    "showHiddenTiles": false,
+    "fog": true
+  },
+  "units": {
+    "drawUnits": true,
+    "scaleUnits": true
+  },
+  "camera": {
+    "fieldOfView": 70.0,
+    "deferredRendering": true,
+    "SSAO": true,
+    "postProcessing": true
+  },
+  "game": {
+    "showDFScreen": false
+  },
+  "debug": {
+    "drawDebugInfo": false,
+    "saveBuildingList": false,
+    "saveCreatureList": false,
+    "saveItemList": false,
+    "saveMaterialList": false,
+    "savePlantList": false,
+    "saveTiletypeList": false
+  }
+}

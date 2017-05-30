@@ -1,7 +1,14 @@
 {
-    "title": "Armok Vision",
-    "content_version": "v0.9.1",
-    "tooltip": "A full 3D visualiser - shows off Dwarf Fortress with unprecedented detail and beauty.  (64bit)",
-    "win_exe": "Armok Vision.exe",
-    "needs_dfhack": true
+  "author": "Japa, Justin Partain, Kazimuth, Lethosor",
+  "content_version": "v0.16.2",
+  "df_min_version": "0.34.11",
+  "df_max_version": "",
+  "title": "Armok Vision",
+  "tooltip": "A full 3D visualiser - shows off Dwarf Fortress with unprecedented detail and beauty.",
+  "win_exe": "Armok Vision.exe",
+  "osx_exe": "Armok Vision.app",
+  "linux_exe": "Armok Vision.x86_64",
+  "launch_with_terminal": false,
+  "readme": "Readme.txt",
+  "needs_dfhack": true
 }

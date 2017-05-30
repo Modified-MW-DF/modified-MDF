@@ -1,35 +1,690 @@
-Initialize engine version: 5.3.4f1 (fdbb5133b820)
-[VRDevice] Initialization of device oculus failed.
-
- 
-(Filename:  Line: 86)
-
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
-    Vendor:   NVIDIA
-    VRAM:     1972 MB
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics (ID=0x106)
+    Vendor:   Intel
+    VRAM:     944 MB
+    Driver:   9.17.10.4229
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll into Unity Child Domain
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
-Loading C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
-- Completed reload, in  0.889 seconds
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.dll (this message is harmless)
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.Linq.dll (this message is harmless)
-Platform assembly: C:\Users\Patrick\Desktop 3\Masterwork V1.01 (42.06)\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.dll (this message is harmless)
-desktop: 2048x1152 48Hz; virtual: 2048x1152 at 0,0
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Ionic.Zip.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Ionic.Zip.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\protobuf-net.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.173 seconds
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Xml.dll (this message is harmless)
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 145.121048 ms
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Configuration.dll (this message is harmless)
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\Mono.Security.dll (this message is harmless)
+Started Armok Vision version v0.16.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Changing to GodView
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Monitor Mode
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Materials fetched: 64644
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tiletypes fetched: 695
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Itemtypes fetched: 900
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Buildingtypes fetched: 951
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tiletypes fetched: 695
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Plant Raws fetched: 278
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Creature Raws fetched: 1703
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_amphibians.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Set main map to DFCoord(144,144,143)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+TlsException: Invalid certificate received from server. Error code: 0xffffffff800b010a
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.validateCertificates (Mono.Security.X509.X509CertificateCollection certificates) [0x00000] in <filename unknown>:0 
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.ProcessAsTls1 () [0x00000] in <filename unknown>:0 
+  at Mono.Security.Protocol.Tls.Handshake.HandshakeMessage.Process () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) Mono.Security.Protocol.Tls.Handshake.HandshakeMessage:Process ()
+  at Mono.Security.Protocol.Tls.ClientRecordProtocol.ProcessHandshakeMessage (Mono.Security.Protocol.Tls.TlsStream handMsg) [0x00000] in <filename unknown>:0 
+  at Mono.Security.Protocol.Tls.RecordProtocol.InternalReceiveRecordCallback (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+Rethrow as IOException: The authentication or decryption has failed.
+  at Mono.Security.Protocol.Tls.SslStreamBase.AsyncHandshakeCallback (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+Rethrow as WebException: Error getting response stream (Write: The authentication or decryption has failed.): SendFailure
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+  at Stomt.StomtAPI+<LoadTarget>c__Iterator0.MoveNext () [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Stomt.<LoadTarget>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+Maybe wrong target id
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2204 -> priority: 1 
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_annelids.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_birds.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_birds_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_bug_slug_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_desert_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_domestic.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_dwarves.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_elves.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_equipment.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_fanciful.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_goblins.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_humans.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_insects.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_kobolds.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_mountain.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_ocean.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_riverlake.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_temperate.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_tropical.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_large_tundra.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_lizard_kind.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_mountain_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_next_underground.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_ocean_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_other.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_procedural.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_procedural_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_reptiles.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_riverlakepool_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_savage_tropical.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_small_mammals.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_small_mammal_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_small_ocean.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_small_riverlake.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_standard.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_subterranean.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_temperate_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_tropical_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Raw File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\graphics/graphics_tundra_taiga_new.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TerrainShape/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TerrainShape\GrassTextures.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TerrainShape\TerrainShape.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\ItemMeshes/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\ItemMeshes\Meph Items/Meph_Items.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\ItemMeshes\ItemMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\BuildingMeshes/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\BuildingMeshes\CollisionBuildingMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MetalsmithsForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Carpenters
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Farmers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Masons
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Craftsdwarfs
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Jewelers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MetalsmithsForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MagmaForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Bowyers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Mechanics
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Siege
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Butchers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Leatherworks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Tanners
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Clothiers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Fishery
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Still
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Loom
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Kitchen
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Ashery
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Dyers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Millstone
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: SOAP_MAKER
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\BuildingMeshes\BuildingMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MetalsmithsForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Carpenters
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Farmers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Masons
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Craftsdwarfs
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Jewelers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MetalsmithsForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_MagmaForge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Bowyers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Mechanics
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Siege
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Butchers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Leatherworks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Tanners
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Clothiers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Fishery
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Still
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Loom
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Quern
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Kennels
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Kitchen
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Ashery
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Dyers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Millstone
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: SOAP_MAKER
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: SCREW_PRESS
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Tool
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Trap_Lever
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileMeshes/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileMeshes\CollisionMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileMeshes\DesignationMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileMeshes\GrowthMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileMeshes\TileMeshes.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileTextures/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileTextures\BuildingTextures.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Jewelers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\TileTextures\TileTextures.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\MaterialTextures/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\MaterialTextures\MaterialTextures.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Invalid building: Workshop_Jewelers
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Index File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors/index.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Stone_Soil.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Metal.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Stone_Gem.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Stone_Mineral.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Stone_Layer.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Grass.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Wood.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Trees.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Foliage.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Wood_New.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading XML File: C:/Users/Action Pawn/Documents/GitHub/modified-MWDF/MWDF Project/MasterworkDwarfFortress/Utilities/Armok Vision/Armok Vision_Data/StreamingAssets\Colors\Colors_Wood_Newer.xml
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Building material textures...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Building shape textures...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Building special textures...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Updating Material Manager...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Finalizing creature sprites
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Tile page "PROCEDURAL_NEW" has no sprites used!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loaded 4171 creature sprites.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+
+Unloading 7091 unused Assets to reduce memory usage. Loaded Objects now: 4352.
+Total: 47283.675781 ms (FindLiveObjects: 167.277954 ms CreateObjectMapping: 500.833618 ms MarkObjects: 27560.828125 ms  DeleteObjects: 18951.519531 ms)
+
+Meshing thread timed out getting a lock on the task queue
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Meshing thread timed out getting a lock on the task queue
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Meshing thread timed out getting a lock on the task queue
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Took a total of 852813ms to load all XML files.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+loaded 594 meshes, 370 pattern textures, 678 colors, and 394 shape textures.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Complete. Press ESC to change settings or leave feedback. Have a nice day!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at WorldMapMaker.GenerateMesh () [0x00000] in <filename unknown>:0 
+  at WorldMapMaker.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: C:\Users\Action Pawn\Documents\GitHub\modified-MWDF\MWDF Project\MasterworkDwarfFortress\Utilities\Armok Vision\Armok Vision_Data\Managed\System.Data.dll (this message is harmless)

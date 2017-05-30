@@ -1,7 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <buildingMeshes>
+    <buildingMesh file="Unknown.obj">
+        <buildingType token="*"/>
+    </buildingMesh>
+    <buildingMesh file="Coffin.obj" rotation="AwayFromWall">
+        <buildingType token="Coffin"/>
+    </buildingMesh>
+    <buildingMesh file="Slab.obj" rotation="AwayFromWall">
+        <buildingType token="Slab"/>
+    </buildingMesh>
     <buildingMesh file="Chair.obj">
         <buildingType token="Chair"/>
+    </buildingMesh>
+    <buildingMesh file="NestBox.obj"
+                  rotation="AwayFromWall"
+                  pattern="NestBox_P.png"
+                  normal="NestBox_N.png"
+                  alpha="NestBox_A.png"
+                  metallic="NestBox_M.png">
+        <buildingType token="NestBox"/>
     </buildingMesh>
     <buildingMesh file="Bed_Sheet.obj"
                   rotation="AwayFromWall"
@@ -24,6 +41,16 @@
                   rotation="Door">
         <buildingType token="Door"/>
     </buildingMesh>
+    <buildingMesh file="Hatch.obj"
+                  normal="Hatch_N.png"
+                  occlusion="Hatch_O.png"
+                  alpha="Hatch_A.png"
+                  metallic="Hatch_A.png"
+                  pattern="Hatch_P.png"
+                  specular="Hatch_P.png"
+                  >
+        <buildingType token="Hatch"/>
+    </buildingMesh>
     <buildingMesh file="Box.obj">
         <buildingType token="Box"/>
     </buildingMesh>
@@ -43,6 +70,7 @@
     </buildingMesh>
     <buildingMesh file="Bridge.obj">
         <buildingType token="Bridge"/>
+        <buildingType token="RoadPaved"/>
     </buildingMesh>
     <buildingMesh file="Support.obj">
         <buildingType token="Support"/>
@@ -115,17 +143,123 @@
                               y="0"/>
         </subObject>
     </buildingMesh>
+    <buildingMesh file="Bridge.obj">
+        <buildingType token="TradeDepot"/>
+        <subObject file="Support.obj">
+            <buildingPosition x="0"
+                              y="0"/>
+            <buildingPosition x="4"
+                              y="0"/>
+            <buildingPosition x="0"
+                              y="4"/>
+            <buildingPosition x="4"
+                              y="4"/>
+            <buildingPosition x="2"
+                              y="2"/>
+        </subObject>
+    </buildingMesh>
+    <buildingMesh file="NONE">
+        <buildingType token="Workshop_Carpenters"/>
+        <subObject file="WorkshopCarpenters.obj"
+                   pattern="WorkshopCarpenters_P.png"
+                   specular="WorkshopCarpenters_M.png"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopCarpenters_O.png"
+                   alpha="Opaque_A.png"
+                   metallic="WorkshopCarpenters_M.png"
+                   illumination="black.png">
+            <buildingPosition x="1"
+                              y="1"/>
+        </subObject>
+    </buildingMesh>
+
     <buildingMesh file="NONE">
         <buildingType token="Workshop_Farmers"/>
+        <subObject file="WorkshopFarmersSpindle.obj"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopFarmersSpindle_O.png"
+                   alpha="Opaque_A.png"
+                   pattern="Cyan.png"
+                   specular="Medium_S.png">
+            <buildingPosition x="0"
+                              y="2"/>
+        </subObject>
+        <subObject file="WorkshopFarmersStanchion.obj"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopFarmersStanchion_O.png"
+                   alpha="Opaque_A.png">
+            <buildingPosition x="1"
+                              y="0"/>
+        </subObject>
+        <subObject file="WorkshopFarmersGrate.obj"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopFarmersGrate_O.png"
+                   alpha="Opaque_A.png"
+                   pattern="Yellow.png"
+                   specular="Medium_S.png">
+            <buildingPosition x="2"
+                              y="0"/>
+        </subObject>
+        <subObject file="WorkshopFarmersBench.obj"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopFarmersBench_O.png"
+                   alpha="Opaque_A.png">
+            <buildingPosition x="1"
+                              y="2"/>
+        </subObject>
+        <subObject file="WorkshopFarmersSpool.obj"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopFarmersSpool_O.png"
+                   alpha="Opaque_A.png"
+                   pattern="Cyan.png"
+                   specular="Medium_S.png">
+            <buildingPosition x="2"
+                              y="2"/>
+        </subObject>
     </buildingMesh>
     <buildingMesh file="NONE">
         <buildingType token="Workshop_Masons"/>
-        <subObject file="WorkshopCounter.obj">
+        <subObject file="NONE">
+            <subObject file="WorkshopCounterHammerChisel.obj"
+                       normal="WorkshopCounterHammerChisel_N.png"
+                       occlusion="WorkshopCounterHammerChisel_O.png"
+                       alpha="Opaque_A.png"
+                       pattern="WorkshopCounterHammerChisel_P.png"
+                       specular="WorkshopCounterHammerChisel_S.png"
+                       metallic="WorkshopCounterHammerChisel_M.png"
+                       illumination="black.png"
+                       rotation="Random90">
+                <random/>
+            </subObject>
+            <subObject file="WorkshopCounterSetSquare.obj"
+                       normal="Flat_N.png"
+                       occlusion="WorkshopCounterSetSquare_O.png"
+                       alpha="Opaque_A.png"
+                       pattern="WorkshopCounterSetSquare_P.png"
+                       specular="WorkshopCounterSetSquare_S.png"
+                       rotation="Random90">
+                <random/>
+            </subObject>
+            <subObject file="WorkshopCounter.obj">
+                <random/>
+            </subObject>
             <buildingPosition x="2"
                               y="0"/>
             <buildingPosition x="0"
                               y="1"/>
             <buildingPosition x="2"
+                              y="1"/>
+        </subObject>
+        <subObject file="Chair.obj">
+            <buildingPosition x="1"
+                              y="1"/>
+        </subObject>
+        <subObject file="WorkshopMasonStone.obj"
+                   normal="WorkshopMasonStone_N.png"
+                   occlusion="WorkshopMasonStone_O.png"
+                   alpha="Opaque_A.png"
+                   rotation="Random">
+            <buildingPosition x="1"
                               y="2"/>
         </subObject>
     </buildingMesh>
@@ -275,9 +409,16 @@
     </buildingMesh>
     <buildingMesh file="NONE">
         <buildingType token="Workshop_Still"/>
-        <subObject file="WorkshopCounter.obj">
-            <buildingPosition x="0"
-                              y="0"/>
+        <subObject file="Still.obj"
+                   normal="Flat_N.png"
+                   occlusion="Still_O.png"
+                   alpha="Opaque_A.png"
+                   pattern="Still_P.png"
+                   specular="Medium_S.png"
+                   metallic="Still_M.png"
+                   illumination="black.png">
+            <buildingPosition x="1"
+                              y="1"/>
         </subObject>
     </buildingMesh>
     <buildingMesh file="NONE">
@@ -308,11 +449,14 @@
     </buildingMesh>
     <buildingMesh file="NONE">
         <buildingType token="Workshop_Ashery"/>
-        <subObject file="WorkshopCounter.obj">
+        <subObject file="WorkshopAshery.obj"
+                   pattern="WorkshopAshery_P.png"
+                   specular="Medium_S.png"
+                   normal="Flat_N.png"
+                   occlusion="WorkshopAshery_O.png"
+                   alpha="Opaque_A.png">
             <buildingPosition x="1"
-                              y="0"/>
-            <buildingPosition x="0"
-                              y="2"/>
+                              y="1"/>
         </subObject>
     </buildingMesh>
     <buildingMesh file="NONE">
@@ -350,5 +494,20 @@
                   alpha="Diagonals.png">
         <buildingType token="Stockpile"/>
         <buildingType token="Civzone"/>
+    </buildingMesh>
+    <buildingMesh file="Spike.obj">
+        <buildingType token="Weapon"/>
+    </buildingMesh>
+    <buildingMesh file="FarmPlot.obj">
+        <buildingType token="FarmPlot"/>
+    </buildingMesh>
+    <buildingMesh file="WeaponRack.obj" rotation="AwayFromWall">
+        <buildingType token="Weaponrack"/>
+    </buildingMesh>
+    <buildingMesh file="Armorstand.obj" rotation="AwayFromWall">
+        <buildingType token="Armorstand"/>
+    </buildingMesh>
+    <buildingMesh file="Trap_Lever.obj" rotation="AwayFromWall">
+        <buildingType token="Trap_Lever"/>
     </buildingMesh>
 </buildingMeshes>
