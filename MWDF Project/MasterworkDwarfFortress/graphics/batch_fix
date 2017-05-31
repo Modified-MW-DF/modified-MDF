@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ls -1 */data/init/overrides.txt |
+    while read line;
+    do
+        echo Fixing "$line"
+        ./fix_script "$line"
+    done;
+echo Fixed All
