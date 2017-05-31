@@ -1,6 +1,6 @@
 #!/bin/bash
 prevline="";
-ls -1 */data/init/overrides.txt |
+ls -1 */"$1" |
     while read line;
     do
         if [[ ! -z "$prevline" ]]
