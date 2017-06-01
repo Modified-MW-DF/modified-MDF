@@ -4,6 +4,6 @@ ls -1 */data/init/overrides.txt |
     while read line;
     do
         echo Fixing "$line"
-        ./fix_script "$line"
+        ./campfire_fix "$line"
     done;
 echo Fixed All
