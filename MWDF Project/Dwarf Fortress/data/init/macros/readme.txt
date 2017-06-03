@@ -1,0 +1,1 @@
+This is a placeholder to ensure the macro folder is not deleted during release builds.
