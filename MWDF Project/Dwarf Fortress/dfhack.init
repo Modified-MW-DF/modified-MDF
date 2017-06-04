@@ -6,7 +6,7 @@
 season-palette start
 
 #timecontrol
-timestream 
+timestream 1.0
 #cageammo
 #cageammo start
 #cageammo enable
@@ -301,6 +301,7 @@ keybinding add Alt-S@title settings-manager
 keybinding add Alt-S@dwarfmode/Default settings-manager
 embark-tools enable sticky
 gui/extended-status enable
+
 
 
 

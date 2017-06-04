@@ -1,6 +1,6 @@
 descriptor_shape_patreon
 
-YES_PATRON_CONTENT[OBJECT:DESCRIPTOR_SHAPE]
+YES_PATREON_REWARDS[OBJECT:DESCRIPTOR_SHAPE]
 
 [SHAPE:PATRON]
 	[NAME:patron of progress and prosperity]
