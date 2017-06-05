@@ -1,6 +1,6 @@
 interaction_TESB_favor
 
-!YES_SECRET_TESB!OBJECT:INTERACTION]
+!NO_SECRET_TESB!OBJECT:INTERACTION]
 
 #A - I know its a mod and its not our mod.
 # but the favors are slated for being turned off and on.

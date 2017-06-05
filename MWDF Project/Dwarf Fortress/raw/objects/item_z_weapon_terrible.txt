@@ -1,6 +1,6 @@
 item_weapon_terrible
 
-!YES_TERRIBLE_WEAPONS!OBJECT:ITEM]
+!NO_TERRIBLE_WEAPONS!OBJECT:ITEM]
 
 *** The Knives ***
 

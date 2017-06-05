@@ -2,7 +2,7 @@ item_weapon
 
 armoury
 
-!YES_STAL_ARMORY_MELEE!OBJECT:ITEM]
+!NO_STAL_ARMORY_MELEE!OBJECT:ITEM]
 
 ***** TOOLS *****
 

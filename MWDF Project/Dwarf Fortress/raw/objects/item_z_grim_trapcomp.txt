@@ -1,6 +1,6 @@
 item_trapcomp
 
-!YES_GRIM_TRAPCOMP!OBJECT:ITEM]
+!NO_GRIM_TRAPCOMP!OBJECT:ITEM]
 
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_BLADE]
 	[NAME:falling blade:falling blade]
