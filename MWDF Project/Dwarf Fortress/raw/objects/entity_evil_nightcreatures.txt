@@ -6,7 +6,7 @@ entity_evil_nightcreatures
 	[ENTITY:NIGHTCREATURE]
 
 	Adv-Mode playbale:
-	YES_ADV_MODE_NIGHTCREATURE[ALL_MAIN_POPS_CONTROLLABLE]
+	!NO_ADV_MODE_NIGHTCREATURE!ALL_MAIN_POPS_CONTROLLABLE]
 	
 	Materials: (default adds nothing, weak gives them bad weapon-mats, strong give them good weapon mats)
 	[PERMITTED_REACTION:MATERIALS_DEFAULT]NIGHTCREATURE_MATERIALS

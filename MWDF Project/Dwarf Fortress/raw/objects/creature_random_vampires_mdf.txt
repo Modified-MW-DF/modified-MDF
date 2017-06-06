@@ -1,6 +1,6 @@
 creature_random_vampire
 
-!YES_RANDOM_VAMPIRE!OBJECT:CREATURE]
+YES_RANDOM_VAMPIRE!OBJECT:CREATURE]
 
 [CREATURE:VAMPIRE_RANDOM_001_SHAPESHIFT]
 	[DESCRIPTION:The bat form of a dracul of funerals, which it uses for battle.]
@@ -703,6 +703,7 @@ AL]
 ]
 	[TL_COLOR_MODIFIER:BLACK:1]
 	[TLCM_NOUN:eyes:PLURAL]
+
 
 
 

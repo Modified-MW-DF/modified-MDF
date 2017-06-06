@@ -6,7 +6,7 @@ entity_savage_werebeasts
 	[ENTITY:MDF_WEREBEASTS] (mdf werebeasts as opposed to the FD werewolves)
 
 	Adv-Mode playbale:
-	YES_ADV_MODE_MDF_WEREBEASTS[ALL_MAIN_POPS_CONTROLLABLE]
+	!NO_ADV_MODE_MDF_WEREBEASTS!ALL_MAIN_POPS_CONTROLLABLE]
 	
 	Materials: (default adds nothing, weak gives them bad weapon-mats, strong give them good weapon mats)
 	[PERMITTED_REACTION:MATERIALS_DEFAULT]MDF_WEREBEASTS_MATERIALS

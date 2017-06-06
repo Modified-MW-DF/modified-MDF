@@ -6,7 +6,7 @@ entity_evil_titans
 	[ENTITY:TITANS]
 
 	Adv-Mode playbale:
-	YES_ADV_MODE_TITANS[ALL_MAIN_POPS_CONTROLLABLE]
+	!NO_ADV_MODE_TITANS!ALL_MAIN_POPS_CONTROLLABLE]
 	
 	Materials: (default adds nothing, weak gives them bad weapon-mats, strong give them good weapon mats)
 	[PERMITTED_REACTION:MATERIALS_DEFAULT]TITANS_MATERIALS

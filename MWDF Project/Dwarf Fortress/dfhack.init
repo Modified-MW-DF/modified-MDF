@@ -6,7 +6,7 @@
 season-palette start
 
 #timecontrol
-timestream 1.0
+timestream 1.000
 #cageammo
 #cageammo start
 #cageammo enable

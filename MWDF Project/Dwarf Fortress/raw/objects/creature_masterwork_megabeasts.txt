@@ -2037,7 +2037,8 @@ YES_CREATURE_MASTERWORK_MEGABEASTS[OBJECT:CREATURE]
 	[HOMEOTHERM:10040]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[PREFSTRING:macabre ways]
-	[SELECT_CASTE:ALL]ÅE
+	[SELECT_CASTE:ALL]
+
 
 =======================================================================================================================
 
