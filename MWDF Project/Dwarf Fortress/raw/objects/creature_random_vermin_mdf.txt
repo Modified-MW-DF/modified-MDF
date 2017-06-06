@@ -1,6 +1,6 @@
 creature_random_vermin
 
-!YES_RANDOM_VERMIN!OBJECT:CREATURE]
+YES_RANDOM_VERMIN!OBJECT:CREATURE]
 
 [CREATURE:MOUSE_RECLUSE]
 	[DESCRIPTION:A very small and very slow rodent-like animal. Its skin is colored taupe gray. This creature has taupe gray hair and chocolate eyes. It roams most of the known world. Despite its body shape, it can climb. It can live up to 12 years.]
@@ -26837,5 +26837,6 @@ ERVES]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:2990:2257:1525:731:4300:6100]
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:7780:7508:7254:2925:8478:9233]
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900]
+
 
 

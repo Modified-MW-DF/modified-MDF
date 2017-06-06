@@ -1,6 +1,6 @@
 creature_TESB
 
-[OBJECT:CREATURE]
+!NO_TESB!OBJECT:CREATURE]
 
 [CREATURE:TESB_AWAKENED_STONE]
 	[DESCRIPTION:A living boulder with a face and four long, clawed arms.]

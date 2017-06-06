@@ -51,7 +51,7 @@ modtools/reaction-trigger -reactionName FORCE_MIGRANT_ORC -command [ force \\mig
 modtools/reaction-trigger -reactionName RELEASE_KOBOLD_MIGRANTS -command [ modtools/create-unit -race KOBOLD -caste RAT_MALE -setUnitToFort -location [ \\LOCATION ] -name KOBOLD -age 3 ]
 modtools/reaction-trigger -reactionName RELEASE_GOBLIN_MIGRANTS -command [ modtools/create-unit -race GOBLIN -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]
 modtools/reaction-trigger -reactionName RELEASE_OGRE_MIGRANTS -command [ modtools/create-unit -race OGRE -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]
-modtools/reaction-trigger -reactionName RELEASE_HUMAN_MIGRANTS -command [ modtools/create-unit -race HUMAN -caste RAT_MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 3 ]
+modtools/reaction-trigger -reactionName RELEASE_HUMAN_MIGRANTS -command [ modtools/create-unit -race HUMAN -caste MALE -setUnitToFort -location [ \\LOCATION ] -name PLAINS -age 20 ]
 modtools/reaction-trigger -reactionName RELEASE_ELF_MIGRANTS -command [ modtools/create-unit -race ELF -caste MALE -setUnitToFort -location [ \\LOCATION ] -name FOREST -age 20 ]
 modtools/reaction-trigger -reactionName RELEASE_DWARF_MIGRANTS -command [ modtools/create-unit -race DWARF -caste MALE -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 20 ]
 modtools/reaction-trigger -reactionName RELEASE_SUCCUBUS_MIGRANTS -command [ modtools/create-unit -race SUCCUBUS -caste MALE -setUnitToFort -location [ \\LOCATION ] -name EVIL -age 20 ]

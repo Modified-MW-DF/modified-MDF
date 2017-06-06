@@ -1,8 +1,8 @@
 {
-    "author": "JoelPT, PeridexisErrant, DF community",
-    "readme": "Readme_Quickfort.txt",
-    "content_version": "2.1.0",
     "tooltip": "Savable super-macros, with a library of pre-made blueprints.  (breaks keybindings with 'alt' though)",
+    "content_version": "2.1.0",
+    "title": "Quickfort",
+    "author": "JoelPT, PeridexisErrant, DF community",
     "win_exe": "Quickfort.exe",
-    "title": "Quickfort"
+    "readme": "Readme_Quickfort.txt"
 }

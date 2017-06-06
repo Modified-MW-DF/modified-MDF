@@ -1,6 +1,6 @@
 creature_fearthenight
 
-!YES_FEAR_THE_NIGHT!OBJECT:CREATURE]
+!NO_FEAR_THE_NIGHT!OBJECT:CREATURE]
 
 -------------------------------------------------------
 //Various Demon creature types
@@ -777,4 +777,4 @@ creature_fearthenight
 		[NO_GENDER]
 	[SELECT_CASTE:ALL]
 	[SELECT_MATERIAL:ALL]
-		[MULTIPLY_VALUE:100]]
+		[MULTIPLY_VALUE:100]]]

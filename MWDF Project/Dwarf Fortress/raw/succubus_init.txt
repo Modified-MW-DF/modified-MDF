@@ -75,7 +75,7 @@ modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source 
 modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
 modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
 modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
-
+succubus/feature magmaWorkshops
 modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
 modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
 

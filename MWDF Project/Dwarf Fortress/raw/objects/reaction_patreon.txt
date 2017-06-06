@@ -1,7 +1,7 @@
 reaction_patreon
 
 
-YES_PATRON_CONTENT[OBJECT:REACTION]
+YES_PATREON_REWARDS[OBJECT:REACTION]
 
 [REACTION:ANTI_MECHANISM]
 [NAME:Assemble the antikythera mechanism]
