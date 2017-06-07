@@ -1024,11 +1024,9 @@ new	[TOOL:ITEM_TOOL_PESTLE] => alchemy and chemistry, buildmat
 [PERMITTED_BUILDING:REEF_CRAFTSHOP]
 [PERMITTED_BUILDING:ORB_FROZEN]
 
-	###########################################################################################################################
-	end
-	
-	
-	
-	
-	
-	
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

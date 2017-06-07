@@ -224,3 +224,10 @@ body_mutant
 		[DEFAULT_RELSIZE:120]
 	[BP:LF:left foot:left feet][CON:LLL][STANCE][LEFT][CATEGORY:FOOT]
 		[DEFAULT_RELSIZE:120]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

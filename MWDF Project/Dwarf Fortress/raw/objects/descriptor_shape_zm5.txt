@@ -87,3 +87,10 @@ descriptor_shape_zm5
 [SHAPE:TOWN_ZM]
 	[NAME:town:towns]
 	[TILE:'T']
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

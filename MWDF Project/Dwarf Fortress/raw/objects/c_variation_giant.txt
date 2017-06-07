@@ -92,3 +92,10 @@ Maxage conversion is still done on a creature-by-creature basis.
 --- end Modest Mod ---
 	[CV_REMOVE_TAG:FREQUENCY]
 	ANIMAL_GIANT_FREQUENCY[CV_NEW_TAG:FREQUENCY:20]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

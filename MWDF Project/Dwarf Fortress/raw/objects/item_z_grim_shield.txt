@@ -9,3 +9,10 @@ item_shield
 	[BLOCKCHANCE:24]
 	[UPSTEP:4]
 	[MATERIAL_SIZE:9]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -233,9 +233,9 @@ If a PHM does a follow-up charge, all the other PHM will join in.
 			CE_FLASH_TILE:TILE:'!':5:0:0:FREQUENCY:120:120:START:0:END:20
 			[CE_ADD_TAG:OPPOSED_TO_LIFE:NO_AGING:START:0:END:30]
 
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

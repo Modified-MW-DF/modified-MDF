@@ -7333,5 +7333,10 @@ animal people start here. 2x 194 reactions.
  	 [CATEGORY_PARENT:HERMIT_RACE_SNAIL_MAN] 
  	 [DESCRIPTION:Play as an animal person.] 
  	 [PRODUCT:100:1:WOOD:NONE:INORGANIC:GRANITE] 
- 	 
- 	 
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

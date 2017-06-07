@@ -279,7 +279,10 @@ building_a_thoughts
 [COLOR:3:4:0:0:1:0:4:1:0:4:1:0:4:1:0:0:1]
 [COLOR:3:5:0:4:1:0:0:1:0:4:1:0:0:1:0:4:1]
   	[BUILD_ITEM:5:TOY:NONE:NONE:NONE]
-	
-	
-	
-	
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

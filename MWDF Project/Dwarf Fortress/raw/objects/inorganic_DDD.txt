@@ -10,3 +10,10 @@ inorganic_DDD
 	[IS_STONE]
 	[MELTING_POINT:11807]
 	[SOLID_DENSITY:2050]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

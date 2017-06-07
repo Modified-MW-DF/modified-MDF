@@ -74,3 +74,10 @@ item_trapcomp
 		[ATTACK_PREPARE_AND_RECOVER:1:8]
 	[ATTACK:BLUNT:40:0:strike:strikes:butt:1800]45
 		[ATTACK_PREPARE_AND_RECOVER:5:3]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

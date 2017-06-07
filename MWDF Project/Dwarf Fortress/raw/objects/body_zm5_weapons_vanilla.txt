@@ -65,3 +65,10 @@ body_zm5_weapons_vanilla
 		[DEFAULT_RELSIZE:1000]
 	[BP:SG:soul gem:STP][CON:H1][THOUGHT][CATEGORY:SOUL_GEM]
 		[DEFAULT_RELSIZE:200]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -494,3 +494,8 @@ modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_KI
 
 :lua print(' ')
 :lua print('Hermit Initialization Complete.  Now get off my lawn!')
+
+
+
+
+

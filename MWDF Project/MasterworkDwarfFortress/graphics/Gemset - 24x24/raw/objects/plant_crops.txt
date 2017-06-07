@@ -19,7 +19,6 @@ plant_crops
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen single-grain wheat beer]
 		[STATE_NAME_ADJ:LIQUID:single-grain wheat beer]
@@ -30,7 +29,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:single-grain wheat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -41,7 +39,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -49,7 +46,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:single-grain wheat seed:single-grain wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:single-grain wheat seed:single-grain wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -77,7 +73,6 @@ No tag corresponding to (SEED:single-grain wheat seed:single-grain wheat seeds:0
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen two-grain wheat beer]
 		[STATE_NAME_ADJ:LIQUID:two-grain wheat beer]
@@ -88,7 +83,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:two-grain wheat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -99,7 +93,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -107,7 +100,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:two-grain wheat seed:two-grain wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:two-grain wheat seed:two-grain wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -135,7 +127,6 @@ No tag corresponding to (SEED:two-grain wheat seed:two-grain wheat seeds:0:0:1:L
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen soft wheat beer]
 		[STATE_NAME_ADJ:LIQUID:soft wheat beer]
@@ -146,7 +137,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:soft wheat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -157,7 +147,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -165,7 +154,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:soft wheat seed:soft wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:soft wheat seed:soft wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -193,7 +181,6 @@ No tag corresponding to (SEED:soft wheat seed:soft wheat seeds:0:0:1:LOCAL_PLANT
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen hard wheat beer]
 		[STATE_NAME_ADJ:LIQUID:hard wheat beer]
@@ -204,7 +191,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:hard wheat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -215,7 +201,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -223,7 +208,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:hard wheat seed:hard wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:hard wheat seed:hard wheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -251,7 +235,6 @@ No tag corresponding to (SEED:hard wheat seed:hard wheat seeds:0:0:1:LOCAL_PLANT
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen spelt beer]
 		[STATE_NAME_ADJ:LIQUID:spelt beer]
@@ -262,7 +245,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:spelt flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -273,7 +255,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -281,7 +262,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:spelt seed:spelt seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:spelt seed:spelt seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -309,7 +289,6 @@ No tag corresponding to (SEED:spelt seed:spelt seeds:0:0:1:LOCAL_PLANT_MAT:SEED)
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:NOT_FREEZING]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen barley wine] a beer
 		[STATE_NAME_ADJ:LIQUID:barley wine]
@@ -320,7 +299,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:barley flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -331,7 +309,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** ear is threshed to spikelets, milled down to flour
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -339,7 +316,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:barley seed:barley seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:barley seed:barley seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -367,7 +343,6 @@ No tag corresponding to (SEED:barley seed:barley seeds:0:0:1:LOCAL_PLANT_MAT:SEE
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:FOREST_TROPICAL_DRY_BROADLEAF]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen buckwheat beer]
 		[STATE_NAME_ADJ:LIQUID:buckwheat beer]
@@ -378,7 +353,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:buckwheat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -389,11 +363,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** seeds from flower milled
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
@@ -401,7 +373,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:buckwheat seed:buckwheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:buckwheat seed:buckwheat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -434,7 +405,6 @@ No tag corresponding to (SEED:buckwheat seed:buckwheat seeds:0:0:1:LOCAL_PLANT_M
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:oat flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -445,7 +415,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** can be crushed/rolled to oat meal as an intermediate stage
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -453,7 +422,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:oat seed:oat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:oat seed:oat seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -484,11 +452,9 @@ No tag corresponding to (SEED:oat seed:oat seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was
 	[DRY][BIOME:NOT_FREEZING]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PURPLE]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -496,7 +462,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:alfalfa seed:alfalfa seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:alfalfa seed:alfalfa seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -530,7 +495,6 @@ No tag corresponding to (SEED:alfalfa seed:alfalfa seeds:0:0:1:LOCAL_PLANT_MAT:S
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:NOT_FREEZING]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen rye beer]
 		[STATE_NAME_ADJ:LIQUID:rye beer]
@@ -541,7 +505,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:rye flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -552,7 +515,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -560,7 +522,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:rye seed:rye seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:rye seed:rye seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -588,7 +549,6 @@ No tag corresponding to (SEED:rye seed:rye seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen sorghum beer]
 		[STATE_NAME_ADJ:LIQUID:sorghum beer]
@@ -599,7 +559,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:sorghum flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -610,11 +569,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PURPLE]
 		[DISPLAY_COLOR:5:0:1]
@@ -622,7 +579,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:sorghum seed:sorghum seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:sorghum seed:sorghum seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	*** grain can be popped
 	[FREQUENCY:50]
@@ -657,7 +613,6 @@ No tag corresponding to (SEED:sorghum seed:sorghum seeds:0:0:1:LOCAL_PLANT_MAT:S
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][WET][BIOME:ANY_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen rice beer] wiki: saki is a rice beer, and there are also rice wines
 		[STATE_NAME_ADJ:LIQUID:rice beer]
@@ -668,7 +623,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:rice flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -679,7 +633,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -687,7 +640,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:rice:rice:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:rice:rice:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -715,7 +667,6 @@ No tag corresponding to (SEED:rice:rice:0:0:1:LOCAL_PLANT_MAT:SEED) was found in
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen maize beer]
 		[STATE_NAME_ADJ:LIQUID:maize beer]
@@ -726,7 +677,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:maize flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -737,7 +687,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -745,7 +694,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:maize:maize:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:maize:maize:0:0:1:LOCAL_PLANT_MAT:SEED]
 	*** can be popped
 	*** male plant has tassel
@@ -775,7 +723,6 @@ No tag corresponding to (SEED:maize:maize:0:0:1:LOCAL_PLANT_MAT:SEED) was found 
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen quinoa beer]
 		[STATE_NAME_ADJ:LIQUID:quinoa beer]
@@ -786,7 +733,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:quinoa flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -797,11 +743,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** seeds from flower milled
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -809,7 +753,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:quinoa seed:quinoa seeds:4:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:quinoa seed:quinoa seeds:4:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -843,7 +786,6 @@ No tag corresponding to (SEED:quinoa seed:quinoa seeds:4:0:1:LOCAL_PLANT_MAT:SEE
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen kaniwa beer]
 		[STATE_NAME_ADJ:LIQUID:kaniwa beer]
@@ -854,7 +796,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:kaniwa flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -865,11 +806,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL] *** seeds from flower milled
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -877,7 +816,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:kaniwa seed:kaniwa seeds:4:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:kaniwa seed:kaniwa seeds:4:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -909,7 +847,6 @@ No tag corresponding to (SEED:kaniwa seed:kaniwa seeds:4:0:1:LOCAL_PLANT_MAT:SEE
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -917,7 +854,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
 		[STOCKPILE_PLANT_GROWTH]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
@@ -925,7 +861,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:bitter vetch seed:bitter vetch seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:bitter vetch seed:bitter vetch seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -966,7 +901,6 @@ No tag corresponding to (SEED:bitter vetch seed:bitter vetch seeds:6:0:0:LOCAL_P
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen pendant amaranth beer]
 		[STATE_NAME_ADJ:LIQUID:pendant amaranth beer]
@@ -977,7 +911,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:pendant amaranth flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -988,11 +921,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:RED_PURPLE]
 		[DISPLAY_COLOR:5:0:1]
@@ -1002,7 +933,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:pendant amaranth seed:pendant amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pendant amaranth seed:pendant amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1036,7 +966,6 @@ No tag corresponding to (SEED:pendant amaranth seed:pendant amaranth seeds:0:0:1
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen blood amaranth beer]
 		[STATE_NAME_ADJ:LIQUID:blood amaranth beer]
@@ -1047,7 +976,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:blood amaranth flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1058,7 +986,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1066,7 +993,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
 		[STOCKPILE_PLANT_GROWTH]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:DARK_PINK]
 		[DISPLAY_COLOR:4:0:1]
@@ -1075,7 +1001,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:blood amaranth seed:blood amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:blood amaranth seed:blood amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1109,7 +1034,6 @@ No tag corresponding to (SEED:blood amaranth seed:blood amaranth seeds:0:0:1:LOC
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen purple amaranth beer]
 		[STATE_NAME_ADJ:LIQUID:purple amaranth beer]
@@ -1120,7 +1044,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:purple amaranth flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1131,7 +1054,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PURPLE]
 		[DISPLAY_COLOR:5:0:0]
@@ -1140,9 +1062,7 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:purple amaranth seed:purple amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:purple amaranth seed:purple amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1181,7 +1101,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 	[DRY][BIOME:NOT_FREEZING]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -1189,9 +1108,7 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:red spinach seed:red spinach seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:red spinach seed:red spinach seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1230,7 +1147,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:DARK_VIOLET]
 		[DISPLAY_COLOR:5:0:0]
@@ -1238,9 +1154,7 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:elephant-head amaranth seed:elephant-head amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:elephant-head amaranth seed:elephant-head amaranth seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW] red-yellow-green pattern
 		[DISPLAY_COLOR:6:0:1]
@@ -1281,7 +1195,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen pearl millet beer]
 		[STATE_NAME_ADJ:LIQUID:pearl millet beer]
@@ -1292,7 +1205,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:pearl millet flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1303,7 +1215,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1311,7 +1222,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:pearl millet:pearl millet:7:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pearl millet:pearl millet:7:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1339,7 +1249,6 @@ No tag corresponding to (SEED:pearl millet:pearl millet:7:0:0:LOCAL_PLANT_MAT:SE
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen white millet beer]
 		[STATE_NAME_ADJ:LIQUID:white millet beer]
@@ -1350,7 +1259,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:white millet flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1361,7 +1269,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1369,7 +1276,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:white millet:white millet:7:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:white millet:white millet:7:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1397,7 +1303,6 @@ No tag corresponding to (SEED:white millet:white millet:7:0:1:LOCAL_PLANT_MAT:SE
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen finger millet beer]
 		[STATE_NAME_ADJ:LIQUID:finger millet beer]
@@ -1408,7 +1313,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:finger millet flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1419,7 +1323,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1427,7 +1330,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:finger millet:finger millet:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:finger millet:finger millet:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1455,7 +1357,6 @@ No tag corresponding to (SEED:finger millet:finger millet:6:0:0:LOCAL_PLANT_MAT:
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:ANY_TEMPERATE]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen foxtail millet beer]
 		[STATE_NAME_ADJ:LIQUID:foxtail millet beer]
@@ -1466,7 +1367,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:foxtail millet flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1477,7 +1377,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1485,7 +1384,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:foxtail millet:foxtail millet:7:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:foxtail millet:foxtail millet:7:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1513,7 +1411,6 @@ No tag corresponding to (SEED:foxtail millet:foxtail millet:7:0:0:LOCAL_PLANT_MA
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:SAVANNA_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen fonio beer]
 		[STATE_NAME_ADJ:LIQUID:fonio beer]
@@ -1524,7 +1421,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:fonio flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1535,7 +1431,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1543,7 +1438,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:fonio:fonio:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:fonio:fonio:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1571,7 +1465,6 @@ No tag corresponding to (SEED:fonio:fonio:6:0:0:LOCAL_PLANT_MAT:SEED) was found 
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	[DRY][BIOME:GRASSLAND_TROPICAL]
 	[VALUE:2]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen teff beer]
 		[STATE_NAME_ADJ:LIQUID:teff beer]
@@ -1582,7 +1475,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:teff flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1593,7 +1485,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1601,7 +1492,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:teff:teff:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:teff:teff:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1642,7 +1532,6 @@ No tag corresponding to (SEED:teff:teff:6:0:0:LOCAL_PLANT_MAT:SEED) was found in
 		[STATE_NAME_ADJ:GAS:n/a]
 		[PREFIX:NONE]
 		[MATERIAL_VALUE:5]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:flax flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1653,11 +1542,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL_SOLID:PALE_BLUE]
 		[DISPLAY_COLOR:1:0:1]
@@ -1673,7 +1560,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[PREFIX:NONE]
 		[STOCKPILE_GLOB_PASTE]
 		[STOCKPILE_GLOB_PRESSED]
-No tag corresponding to (SEED:flax seed:flax seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:flax seed:flax seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1715,16 +1601,13 @@ No tag corresponding to (SEED:flax seed:flax seeds:0:0:1:LOCAL_PLANT_MAT:SEED) w
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL_SOLID:YELLOW]
 		[DISPLAY_COLOR:6:0:1]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
-No tag corresponding to (SEED:jute seed:jute seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:jute seed:jute seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1779,7 +1662,6 @@ No tag corresponding to (SEED:jute seed:jute seeds:0:0:1:LOCAL_PLANT_MAT:SEED) w
 		[STATE_NAME_ADJ:GAS:n/a]
 		[PREFIX:NONE]
 		[MATERIAL_VALUE:5]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:hemp flour]
 		[STATE_COLOR:ALL_SOLID:WHITE]
@@ -1790,7 +1672,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:MILL:PLANT_POWDER_TEMPLATE) was f
 		[PREFIX:NONE]
 	[MILL:LOCAL_PLANT_MAT:MILL]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -1806,7 +1687,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in 
 		[PREFIX:NONE]
 		[STOCKPILE_GLOB_PASTE]
 		[STOCKPILE_GLOB_PRESSED]
-No tag corresponding to (SEED:hemp seed:hemp seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:hemp seed:hemp seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1855,11 +1735,9 @@ No tag corresponding to (SEED:hemp seed:hemp seeds:0:0:1:LOCAL_PLANT_MAT:SEED) w
 		[STATE_NAME_ADJ:GAS:n/a]
 		[PREFIX:NONE]
 		[MATERIAL_VALUE:5]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL_SOLID:CREAM]
 		[DISPLAY_COLOR:6:0:1]
@@ -1875,7 +1753,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[PREFIX:NONE]
 		[STOCKPILE_GLOB_PASTE]
 		[STOCKPILE_GLOB_PRESSED]
-No tag corresponding to (SEED:cotton seed:cotton seeds:7:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:cotton seed:cotton seeds:7:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1917,12 +1794,10 @@ No tag corresponding to (SEED:cotton seed:cotton seeds:7:0:1:LOCAL_PLANT_MAT:SEE
 	[DRY][BIOME:ANY_TROPICAL]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
-No tag corresponding to (SEED:ramie seed:ramie seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:ramie seed:ramie seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -1971,11 +1846,9 @@ No tag corresponding to (SEED:ramie seed:ramie seeds:0:0:1:LOCAL_PLANT_MAT:SEED)
 		[STATE_NAME_ADJ:GAS:n/a]
 		[PREFIX:NONE]
 		[MATERIAL_VALUE:5]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL_SOLID:WHITE]
 		[DISPLAY_COLOR:7:0:1]
@@ -1991,7 +1864,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[PREFIX:NONE]
 		[STOCKPILE_GLOB_PASTE]
 		[STOCKPILE_GLOB_PRESSED]
-No tag corresponding to (SEED:kenaf seed:kenaf seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:kenaf seed:kenaf seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]
@@ -2036,16 +1908,13 @@ No tag corresponding to (SEED:kenaf seed:kenaf seeds:0:0:1:LOCAL_PLANT_MAT:SEED)
 	[DRY][BIOME:ANY_TROPICAL_WETLAND]
 	[VALUE:2]
 	[SPRING][SUMMER][AUTUMN][WINTER]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL_SOLID:BROWN]
 		[DISPLAY_COLOR:6:0:0]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
-No tag corresponding to (SEED:papyrus seed:papyrus seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:papyrus seed:papyrus seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[FREQUENCY:50]
 	[CLUSTERSIZE:5]

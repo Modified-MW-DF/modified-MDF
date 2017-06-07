@@ -765,4 +765,11 @@ creature_civ_kobold
 				[APP_MOD_DESC_RANGE:0:0:0:1:25:50]
 		[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
 			[TL_COLOR_MODIFIER:PUPIL_EYE_YELLOW:1]
-				[TLCM_NOUN:eyes:PLURAL]]]]
+				[TLCM_NOUN:eyes:PLURAL]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

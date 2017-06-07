@@ -4020,3 +4020,10 @@ creature_fortdefense
 		[CDI:TARGET_RANGE:A:1]
 		[CDI:MAX_TARGET_NUMBER:A:10]
 		[CDI:WAIT_PERIOD:0]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -13,3 +13,10 @@ This is just a separated version of the materials for sharp bone blades and so o
 [BODY_DETAIL_PLAN:SHARP_BONE_TISSUE_LAYERS]
 	[BP_LAYERS:BY_CATEGORY:SHARP_BLADE:SHARP_BONE:100]
         [BP_LAYERS:BY_CATEGORY:TONGUE_SPIKE:SHARP_BONE:100]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

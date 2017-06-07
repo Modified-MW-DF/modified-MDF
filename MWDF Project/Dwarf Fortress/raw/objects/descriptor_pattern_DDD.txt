@@ -26,3 +26,10 @@ descriptor_pattern_DDD
 	[PATTERN:MOTTLED]
 	[CP_COLOR:GRAY]
 	[CP_COLOR:DARK_CHESTNUT]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

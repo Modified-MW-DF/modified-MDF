@@ -317,3 +317,10 @@ aluminum can occasionally be found in its free form in environments that like ox
 [MAX_EDGE:1000] no swords until you can pick mats
 [ITEMS_HARD]
 [IS_STONE]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

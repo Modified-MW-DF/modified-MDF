@@ -777,4 +777,11 @@ creature_fearthenight
 		[NO_GENDER]
 	[SELECT_CASTE:ALL]
 	[SELECT_MATERIAL:ALL]
-		[MULTIPLY_VALUE:100]]]
+		[MULTIPLY_VALUE:100]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

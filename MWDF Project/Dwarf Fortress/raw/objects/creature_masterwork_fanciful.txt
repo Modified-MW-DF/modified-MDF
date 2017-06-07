@@ -462,3 +462,10 @@ Armok was a deity. The God of Blood was most
 		[FEMALE]
 	[CASTE:MALE]
 		[MALE]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

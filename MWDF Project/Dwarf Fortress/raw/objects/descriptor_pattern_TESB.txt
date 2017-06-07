@@ -7,3 +7,10 @@ Blackbody color for magma at 12000 degrees Urist is close to scarlet, but the ga
 	[PATTERN:MOTTLED]
 	[CP_COLOR:RED]
 	[CP_COLOR:ORANGE]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

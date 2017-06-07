@@ -401,12 +401,6 @@ modtools/if-entity -id "HERMIT" -cmd [ script "raw/hermit_init.txt" ]
 
 #modtools/reaction-trigger -reactionName HIRE_ETTIN -command [ modtools/create-unit -race ETTIN -caste FEMALE -setUnitToFort -location [ \\LOCATION ] -name MOUNTAIN -age 25 ]
 
-###############################################################################
-#A- this is a tag corruption defeater line, there should be 5 of them below ###
-# Here all of them should be 80 '#' characters long.  If they are not, then ###
-# please fix them - Amostubal. ################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
+
+
+

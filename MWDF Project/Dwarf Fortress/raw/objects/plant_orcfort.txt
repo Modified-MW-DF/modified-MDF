@@ -193,7 +193,10 @@ plant_orcfort
 		[EDIBLE_VERMIN]
 		[MATERIAL_VALUE:6]
 	[SEED:boreal tuber seed:boreal tuber seeds:1:0:0:LOCAL_PLANT_MAT:SEED]
-	
-	D]
-	
-	
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

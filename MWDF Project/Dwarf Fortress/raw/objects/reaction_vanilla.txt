@@ -686,14 +686,9 @@ of vanilla is attempted to be maintained here.
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_STONE_AXE:GET_MATERIAL_FROM_REAGENT:stone:NONE]
 		[PRODUCT_TOKEN:axe]
 
-
-
-
-
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1
