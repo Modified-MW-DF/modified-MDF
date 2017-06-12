@@ -6,9 +6,6 @@
 :lua print('The mightiest of Orcs, you will be! Ready the War Ships!')
 
 
-
-
-
 ################### Outpost upgrades ###################
 #:lua print(' ')
 #:lua print('Setting up our Outposts!')

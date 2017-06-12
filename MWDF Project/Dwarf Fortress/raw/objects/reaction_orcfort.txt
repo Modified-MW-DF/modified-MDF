@@ -6493,11 +6493,9 @@ YESSIMPLEWOOD[REAGENT:A:5:WOOD:NONE:NONE:NONE]
 	#A- currently contais just 3 weather reactions from the reaction_kobold.txt
 	# this section is here to have a place to add race specific reactions.
 
-
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

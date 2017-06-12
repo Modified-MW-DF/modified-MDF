@@ -310,3 +310,10 @@ interaction_masterwork
 				[CDI:MATERIAL:CREATURE_MAT:MATERIALCREATURE:WARPFLAME:LIQUID_GLOB]
 				[CDI:VERB:launch a bolt of magic the device:launches a bolt of magic from their device:NA]
 				[CDI:WAIT_PERIOD:200]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

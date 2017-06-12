@@ -2350,3 +2350,9 @@ This is the space for dwarvish, human and elven workshops
 [COLOR:3:6:6:0:0:0:0:1:0:0:1:0:0:1:0:0:1:6:0:0:7:6:0:7:4:0:7:6:0]
 [COLOR:3:7:6:0:0:2:6:0:6:0:0:6:0:0:6:0:0:6:0:0:6:0:0:6:0:0:6:0:0]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

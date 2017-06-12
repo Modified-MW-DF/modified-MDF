@@ -735,6 +735,9 @@ This reaction allows gem "clusters" to be processed at the still.
 	[PRODUCT:20:1:ROUGH:NONE:GET_MATERIAL_FROM_REAGENT:cluster:GEM_MAT]
 	[SKILL:BREWING]
 
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

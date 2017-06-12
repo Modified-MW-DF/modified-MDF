@@ -296,20 +296,9 @@ reaction_tailor
 	[PRODUCT:100:2:GLOVES:ITEM_GLOVES_GAUNTLETS:GET_MATERIAL_FROM_REAGENT:A:NONE]
 	[SKILL:LEATHERWORK]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

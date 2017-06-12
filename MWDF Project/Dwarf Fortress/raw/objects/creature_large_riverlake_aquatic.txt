@@ -396,4 +396,11 @@ mayday
 				[TLCM_NOUN:scales:PLURAL]
 		[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:eyes:PLURAL]]				[TLCM_NOUN:eyes:PLURAL]]AL]]				[TLCM_NOUN:eyes:PLURAL]]
+				[TLCM_NOUN:eyes:PLURAL]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

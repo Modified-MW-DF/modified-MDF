@@ -588,4 +588,10 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_WAX_WORKING] 
 	[NAME:===USE WAX WORKING===]	
-	
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

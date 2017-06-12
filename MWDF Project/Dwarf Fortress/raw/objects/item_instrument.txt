@@ -33,3 +33,11 @@ Addition by Meph: Simplified instruments.
 [ITEM_INSTRUMENT:ITEM_INSTRUMENT_INSTRUMENT]
 [NAME:instrument:instruments]
 [HARD_MAT]
+
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

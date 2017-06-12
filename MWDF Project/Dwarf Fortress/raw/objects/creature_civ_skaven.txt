@@ -1286,3 +1286,10 @@ creature_civ_skaven
 		[MULTIPLY_VALUE:2]
 	[SELECT_TISSUE_LAYER:ALL]
 		[TL_HEALING_RATE:1]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -2646,3 +2646,10 @@ body_masterwork
 		[DEFAULT_RELSIZE:100]
 	[BP:FT4:fourth face tentacle:STP][CONTYPE:HEAD][CATEGORY:TENTACLE]
 		[DEFAULT_RELSIZE:100]	
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

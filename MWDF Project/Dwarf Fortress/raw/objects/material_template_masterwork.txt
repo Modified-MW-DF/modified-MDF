@@ -1376,3 +1376,9 @@ This is for creatures that are "made of fire".  Right now there isn't a good for
 [BENDING_STRAIN_AT_YIELD:100]
 	[REACTION_CLASS:PAINTER]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

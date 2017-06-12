@@ -1066,4 +1066,11 @@ you can make a lighter colored bronze by adding bismuth, used temp values from b
 	[DEEP_SPECIAL]
 	[STOCKPILE_THREAD_METAL]
 	[STATE_COLOR:ALL_SOLID:AQUA]
-[REACTION_CLASS:ADAMANTINE_COATING] 
+[REACTION_CLASS:ADAMANTINE_COATING]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -97,3 +97,10 @@ material_template_creatures_DDD
 	[IMPLIES_ANIMAL_KILL]
 	[LEATHER]
 	[ITEMS_LEATHER]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

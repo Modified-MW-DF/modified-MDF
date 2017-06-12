@@ -2239,11 +2239,9 @@ reaction_academic_guild
 	[PRODUCT:100:2:GET_ITEM_DATA_FROM_REAGENT:B:NONE]
 	[SKILL:FORGE_ARMOR]
 
-
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -474,10 +474,9 @@ reaction_finishing_forge
 	[PRODUCT:100:1:SHIELD:ITEM_SHIELD_SHIELD:INORGANIC:COPPER]
 	[SKILL:FORGE_ARMOR]	
 
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

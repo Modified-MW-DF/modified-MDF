@@ -31,3 +31,10 @@ reaction_fdmetals
 	you dont need buildings
 	[PRODUCT:100:1:BAR:NONE:METAL:STEEL][PRODUCT_DIMENSION:150]
 	[SKILL:SOAP_MAKING]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

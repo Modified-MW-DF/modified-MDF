@@ -674,3 +674,10 @@ descriptor_pattern_iris_eye
 	[CP_COLOR:WHITE]
 	[CP_COLOR:BLACK]
 	[CP_COLOR:YELLOW_GREEN]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

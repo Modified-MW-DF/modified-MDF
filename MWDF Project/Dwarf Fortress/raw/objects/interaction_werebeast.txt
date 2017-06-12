@@ -599,3 +599,9 @@ interaction_werebeast
 [CE:CREATURE:WEREBEAST:WERERAT]
 [CE:PERIODIC:MOON_PHASE:27:0]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

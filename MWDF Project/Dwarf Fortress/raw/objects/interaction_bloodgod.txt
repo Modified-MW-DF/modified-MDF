@@ -107,10 +107,9 @@ YES_MMM_MYTH[OBJECT:INTERACTION]
 				[CDI:TARGET_VERB:shudder and begin to move:shudders and begins to move]
 				[CDI:WAIT_PERIOD:10]
 
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

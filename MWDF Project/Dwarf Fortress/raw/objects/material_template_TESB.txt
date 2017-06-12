@@ -45,3 +45,10 @@ material_template_TESB
 	[BENDING_STRAIN_AT_YIELD:100]
 	[MAX_EDGE:1000]
 	[ABSORPTION:0]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

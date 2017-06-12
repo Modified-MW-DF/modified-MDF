@@ -644,12 +644,6 @@ Most of these are from Wikipedia's color list.
 	[WORD:WHITE]
 	[RGB:250:250:250]
 
-
-
-
-
-
-
 [COLOR:MARKINGS_GREEN]
 	[NAME:markings green]
 	[WORD:MARKINGS_GREEN]
@@ -665,3 +659,10 @@ Most of these are from Wikipedia's color list.
 	[NAME:iridescent]
 	[WORD:IRIDESCENT]
 	[RGB:79:121:66]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

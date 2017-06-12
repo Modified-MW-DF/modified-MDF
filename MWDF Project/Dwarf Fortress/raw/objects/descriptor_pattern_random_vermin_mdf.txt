@@ -152,3 +152,9 @@ descriptor_pattern_random_vermin
 	[CP_COLOR:SKY_BLUE]
 	[CP_COLOR:MOSS_GREEN]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1
