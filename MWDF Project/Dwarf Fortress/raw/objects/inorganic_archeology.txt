@@ -515,13 +515,12 @@ USE_MATERIAL_TEMPLATE:STONE_TEMPLATE
 [INORGANIC:WARPSTONE_SOLID] => Placeholder, does not appear naturally. Wait for GUI support before adding this.
 [USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
  [STATE_NAME:ALL_SOLID:stable warpstone]
-       [STATE_ADJ:ALL_SOLID:stable warpstone]
-       [STATE_NAME:LIQUID:stable warpstone]
-       [STATE_ADJ:LIQUID:stable warpstone]
-       [STATE_NAME:GAS:stable warpstone gas]
-       [STATE_ADJ:GAS:stable warpstone gas]
-[MATERIAL_VALUE:20]
-
+	[STATE_ADJ:ALL_SOLID:stable warpstone]
+	[STATE_NAME:LIQUID:stable warpstone]
+	[STATE_ADJ:LIQUID:stable warpstone]
+	[STATE_NAME:GAS:stable warpstone gas]
+	[STATE_ADJ:GAS:stable warpstone gas]
+	[MATERIAL_VALUE:20]
 mdf
 YESMDF_GRAPHICS[DISPLAY_COLOR:2:2:0]YESMDF_GRAPHICS[TILE:169]
 ascii
@@ -534,6 +533,11 @@ obsidian
 !NOOBSIDIAN_GRAPHICS!DISPLAY_COLOR:2:0:1]!NOOBSIDIAN_GRAPHICS!TILE:156]
 mayday
 !NOMAYDAY_GRAPHICS!DISPLAY_COLOR:2:0:1]!NOMAYDAY_GRAPHICS!TILE:178]
-
-[IS_STONE]
+	[IS_STONE]
 	
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

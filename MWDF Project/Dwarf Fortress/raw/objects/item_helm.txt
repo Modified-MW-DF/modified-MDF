@@ -104,3 +104,10 @@ item_helm
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -1158,8 +1158,9 @@ These plants do not exist in the wild.  Extracting a gem seed from a hidden gem 
 		[GROWTH_DROPS_OFF_NO_CLOUD]
 		[GROWTH_PRINT:18:37:4:6:1:120000:200000:3]
 
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

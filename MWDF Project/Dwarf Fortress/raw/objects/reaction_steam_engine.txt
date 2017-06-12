@@ -12,3 +12,9 @@ reaction_steam_engine
 	I.e. with 2000 it means energy of 1 job = 1 water wheel for 20 days.
 	[PRODUCT:100:1:LIQUID_MISC:NONE:WATER][PRODUCT_DIMENSION:2000]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

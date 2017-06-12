@@ -13,3 +13,10 @@ inorganic_stone_vaporstonefd
 [BOILING_POINT:9999]
 [SOLID_DENSITY:667]
 [MATERIAL_VALUE:2]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

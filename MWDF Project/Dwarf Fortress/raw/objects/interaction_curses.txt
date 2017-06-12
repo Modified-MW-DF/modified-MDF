@@ -362,3 +362,10 @@ zm5s 7 sins interactions, disabled for now* OBJECT:INTERACTION]
 	[CE_BODY_TRANSFORMATION:START:0]
 		[CE:CREATURE:GREED:MALE]
 		[CE_ADD_TAG:NO_AGING:START:0]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -1970,20 +1970,9 @@ reaction_mw_crafters
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_WHEELBARROW:GET_MATERIAL_FROM_REAGENT:A:NONE]
 	[SKILL:BONECARVE]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

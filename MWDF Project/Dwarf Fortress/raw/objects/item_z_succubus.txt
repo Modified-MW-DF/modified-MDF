@@ -106,3 +106,10 @@ item_succubus
 	[SIZE:110]
 	[MATERIAL_SIZE:1]
 	[NO_DEFAULT_JOB] // Uses one mat + 1 string to produce
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

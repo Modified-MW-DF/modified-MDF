@@ -130,3 +130,10 @@ entity_fd_beakwolves
 	[VARIABLE_POSITIONS:ALL]
 	[ITEM_THIEF]
 	[BANDITRY:20]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

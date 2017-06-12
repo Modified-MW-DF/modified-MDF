@@ -977,17 +977,27 @@ YES_CREATURE_MASTERWORK_WEREBEAST[OBJECT:CREATURE]
 		[ATTACK_CONTACT_PERC:100]
 		[ATTACK_FLAG_WITH]
 		[ATTACK_PRIORITY:SECOND]
-	[SWIMS_INNATE]2500]
+	[SWIMS_INNATE]
 	[CASTE:FEMALE]
 		[FEMALE]
-		[CREATURE_CLASS:ALL_CREATURES][DESCRIPTION:A monster resembling a lizard which walks on two legs like a man. It has beautiful iridescent scales, and its pinhole eyes glow violet while they focus on two objects at once. It is said that only iron can harm the creature. You will know why you fear the night.]
+		[CREATURE_CLASS:ALL_CREATURES]
+		[DESCRIPTION:A monster resembling a lizard which walks on two legs like a man. It has beautiful iridescent scales, and its pinhole eyes glow violet while they focus on two objects at once. It is said that only iron can harm the creature. You will know why you fear the night.]
 		[CASTE_NAME:werechameleon:werechameleon:werechameleon]
-		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph[SWIMS_INNATE]1100]
+		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+		[SWIMS_INNATE]
 	[CASTE:MALE]
 		[MALE]
-		[CREATURE_CLASS:ALL_CREATURES][DESCRIPTION:A monster resembling a lizard which walks on two legs like a man. It has beautiful iridescent scales, and its pinhole eyes glow violet while they focus on two objects at once. It is said that only iron can harm the creature. You will know why you fear the night.]
+		[CREATURE_CLASS:ALL_CREATURES]
+		[DESCRIPTION:A monster resembling a lizard which walks on two legs like a man. It has beautiful iridescent scales, and its pinhole eyes glow violet while they focus on two objects at once. It is said that only iron can harm the creature. You will know why you fear the night.]
 		[CASTE_NAME:werechameleon:werechameleon:werechameleon]
-		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph[SWIMS_INNATE]1100]
+		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+		[SWIMS_INNATE]
 	[SELECT_CASTE:ALL]
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:20]

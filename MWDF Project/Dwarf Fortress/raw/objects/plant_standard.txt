@@ -2610,3 +2610,10 @@ Uristocrat did the density values.
 		[GROWTH_TRUNK_HEIGHT_PERC:100:-1]
 		[GROWTH_DROPS_OFF_NO_CLOUD]
 		[GROWTH_PRINT:245:7:2:6:0:100000:200000:3]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

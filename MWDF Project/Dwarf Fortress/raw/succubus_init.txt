@@ -10,39 +10,6 @@
 ################### waterwell ###################
 #:lua print(' ')
 #:lua print('We can get you hot... bringing the warmth of hell to you!')
-#modtools/reaction-trigger -reactionName WATERWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 ]
-#modtools/reaction-trigger -reactionName WATERWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
-#modtools/reaction-trigger -reactionName WATERWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
-#modtools/reaction-trigger -reactionName WATERWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
-#modtools/reaction-trigger -reactionName WATERWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
-
 modtools/reaction-trigger -reactionName MAGMAWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 -magma ]
 modtools/reaction-trigger -reactionName MAGMAWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 -magma ]
 modtools/reaction-trigger -reactionName MAGMAWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 -magma ]
@@ -129,3 +96,7 @@ succubus/init
 
 :lua print(' ')
 :lua print('Succubus Initialization complete.  Turn up the heat!')
+
+
+
+

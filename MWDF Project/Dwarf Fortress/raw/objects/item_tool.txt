@@ -345,3 +345,10 @@ item_tool
 	[ATTACK_PREPARE_AND_RECOVER:3:3]
 [ATTACK:BLUNT:20:400:strike:strikes:helve:1000]
 	[ATTACK_PREPARE_AND_RECOVER:3:3]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

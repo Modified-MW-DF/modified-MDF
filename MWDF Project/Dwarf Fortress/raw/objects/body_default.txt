@@ -1899,3 +1899,10 @@ body_default
 		[DEFAULT_RELSIZE:80]
 	[BP:LH2:second left hand:STP][CON:LLA2][GRASP][LEFT][CATEGORY:HAND]
 		[DEFAULT_RELSIZE:80]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

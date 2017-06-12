@@ -310,15 +310,3 @@ modtools/reaction-trigger -reactionName ZINC_GOLEM -command [ modtools/create-un
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1912,3 +1912,10 @@ appropriate Sphere (see interaction_TESB.txt).
 	[TILE:5:1:239]
 	[COLOR:5:1:MAT]
 	[BUILD_ITEM:1:BOULDER:NONE:INORGANIC:SLATE]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

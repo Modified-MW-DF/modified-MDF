@@ -399,3 +399,10 @@ Bay12 forum thread: http://www.bay12forums.com/smf/index.php?topic=146737.0
 	[LAYER_PERMIT:14]
 	[MATERIAL_SIZE:6]
 	[LEATHER]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

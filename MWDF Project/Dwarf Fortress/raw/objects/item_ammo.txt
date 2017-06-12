@@ -96,4 +96,9 @@ Additions by Meph: Javelin ammo, larger, heavier. Also more expensive.
 [SIZE:10]
 [ATTACK:BLUNT:100:200:hit:hits:NO_SUB:2000]
 
-
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

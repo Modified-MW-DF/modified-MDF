@@ -1,6 +1,6 @@
 creature_civ_werebeast
 
-[OBJECT:CREATURE]
+-OBJECT:CREATURE-
 
 
 [CREATURE:WEREBEAST]
@@ -2233,3 +2233,9 @@ creature_civ_werebeast
 [GAIT:CLIMB:Creep:2900:NO_BUILD_UP:0]
 [DESCRIPTION:A large chameleon twisted into humanoid form.  It is crazed for blood and flesh.  Its eyes glow green.  Its brown scales are small and set far apart.  Now you will know why you fear the night.]
 
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

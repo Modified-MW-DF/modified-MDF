@@ -14,19 +14,16 @@ plant_new_trees
 	[USE_MATERIAL_TEMPLATE:STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE]
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	no wood
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
 		*** abaca fiber here
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:ORANGE]
 		[DISPLAY_COLOR:6:0:0]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:abaca seed:abaca seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:abaca seed:abaca seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:NONE:NONE][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -70,7 +67,6 @@ No tag corresponding to (SEED:abaca seed:abaca seeds:6:0:0:LOCAL_PLANT_MAT:SEED)
 	[USE_MATERIAL_TEMPLATE:STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE]
 	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
 	no wood
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen banana beer] also wine
 		[STATE_NAME_ADJ:LIQUID:banana beer]
@@ -81,15 +77,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:MAROON]
 		[DISPLAY_COLOR:4:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW]
 		[DISPLAY_COLOR:6:0:1]
@@ -102,7 +95,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:banana seed:banana seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:banana seed:banana seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:NONE:NONE][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -160,7 +152,6 @@ No tag corresponding to (SEED:banana seed:banana seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen carambola wine]
 		[STATE_NAME_ADJ:LIQUID:carambola wine]
@@ -171,15 +162,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:LILAC]
 		[DISPLAY_COLOR:3:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW_GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -192,7 +180,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:carambola seed:carambola seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:carambola seed:carambola seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -252,15 +239,12 @@ No tag corresponding to (SEED:carambola seed:carambola seeds:6:0:0:LOCAL_PLANT_M
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW]
 		[DISPLAY_COLOR:6:0:1]
@@ -271,7 +255,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:cashew:cashews:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:cashew:cashews:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -332,15 +315,12 @@ No tag corresponding to (SEED:cashew:cashews:6:0:0:LOCAL_PLANT_MAT:SEED) was fou
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
@@ -349,7 +329,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 		[EDIBLE_COOKED]
 		[STOCKPILE_PLANT_GROWTH]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
-No tag corresponding to (SEED:coffee bean:coffee beans:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:coffee bean:coffee beans:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -411,7 +390,6 @@ No tag corresponding to (SEED:coffee bean:coffee beans:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen durian wine]
 		[STATE_NAME_ADJ:LIQUID:durian wine]
@@ -422,15 +400,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:CREAM]
 		[DISPLAY_COLOR:7:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -444,7 +419,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:durian seed:durian seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:durian seed:durian seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -504,7 +478,6 @@ No tag corresponding to (SEED:durian seed:durian seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen guava wine]
 		[STATE_NAME_ADJ:LIQUID:guava wine]
@@ -515,15 +488,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW_GREEN]
 		[DISPLAY_COLOR:6:0:1]
@@ -536,7 +506,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:guava seed:guava seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:guava seed:guava seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -596,7 +565,6 @@ No tag corresponding to (SEED:guava seed:guava seeds:6:0:0:LOCAL_PLANT_MAT:SEED)
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen papaya wine]
 		[STATE_NAME_ADJ:LIQUID:papaya wine]
@@ -607,15 +575,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GOLDEN_YELLOW]
 		[DISPLAY_COLOR:6:0:1]
@@ -628,7 +593,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:papaya seed:papaya seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:papaya seed:papaya seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -687,15 +651,12 @@ No tag corresponding to (SEED:papaya seed:papaya seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:YELLOW]
 		[DISPLAY_COLOR:6:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:6:0:0]
@@ -706,7 +667,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:paradise nut:paradise nuts:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:paradise nut:paradise nuts:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -766,7 +726,6 @@ No tag corresponding to (SEED:paradise nut:paradise nuts:6:0:0:LOCAL_PLANT_MAT:S
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen rambutan wine]
 		[STATE_NAME_ADJ:LIQUID:rambutan wine]
@@ -777,15 +736,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN-YELLOW]
 		[DISPLAY_COLOR:2:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
@@ -799,7 +755,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:rambutan seed:rambutan seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:rambutan seed:rambutan seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -859,22 +814,18 @@ No tag corresponding to (SEED:rambutan seed:rambutan seeds:6:0:0:LOCAL_PLANT_MAT
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:BROWN]
 		[DISPLAY_COLOR:6:0:0]
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:tea seed:tea seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:tea seed:tea seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -935,15 +886,12 @@ No tag corresponding to (SEED:tea seed:tea seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN-YELLOW]
 		[DISPLAY_COLOR:2:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:DARK_GREEN]
 		[DISPLAY_COLOR:2:0:0]
@@ -954,7 +902,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:avocado pit:avocado pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:avocado pit:avocado pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -1014,15 +961,12 @@ No tag corresponding to (SEED:avocado pit:avocado pits:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:LIME]
 		[DISPLAY_COLOR:2:0:1]
@@ -1033,7 +977,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:lime seed:lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:lime seed:lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1093,15 +1036,12 @@ No tag corresponding to (SEED:lime seed:lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED) w
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -1112,7 +1052,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:pomelo seed:pomelo seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pomelo seed:pomelo seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1172,15 +1111,12 @@ No tag corresponding to (SEED:pomelo seed:pomelo seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN-YELLOW]
 		[DISPLAY_COLOR:2:0:1]
@@ -1191,7 +1127,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:citron seed:citron seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:citron seed:citron seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1251,15 +1186,12 @@ No tag corresponding to (SEED:citron seed:citron seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:ORANGE]
 		[DISPLAY_COLOR:6:0:0]
@@ -1270,7 +1202,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:orange seed:orange seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:orange seed:orange seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1330,15 +1261,12 @@ No tag corresponding to (SEED:orange seed:orange seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:ORANGE]
 		[DISPLAY_COLOR:6:0:0]
@@ -1349,7 +1277,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:bitter orange seed:bitter orange seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:bitter orange seed:bitter orange seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1409,15 +1336,12 @@ No tag corresponding to (SEED:bitter orange seed:bitter orange seeds:6:0:0:LOCAL
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:LIME]
 		[DISPLAY_COLOR:2:0:1]
@@ -1428,7 +1352,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:finger lime seed:finger lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:finger lime seed:finger lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1488,15 +1411,12 @@ No tag corresponding to (SEED:finger lime seed:finger lime seeds:6:0:0:LOCAL_PLA
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:6:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:LIME]
 		[DISPLAY_COLOR:2:0:1]
@@ -1507,7 +1427,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:round lime seed:round lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:round lime seed:round lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1567,15 +1486,12 @@ No tag corresponding to (SEED:round lime seed:round lime seeds:6:0:0:LOCAL_PLANT
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:LIME]
 		[DISPLAY_COLOR:2:0:1]
@@ -1586,7 +1502,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:desert lime seed:desert lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:desert lime seed:desert lime seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1646,15 +1561,12 @@ No tag corresponding to (SEED:desert lime seed:desert lime seeds:6:0:0:LOCAL_PLA
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PEACH]
 		[DISPLAY_COLOR:4:0:1]
@@ -1665,7 +1577,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:kumquat seed:kumquat seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:kumquat seed:kumquat seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1725,7 +1636,6 @@ No tag corresponding to (SEED:kumquat seed:kumquat seeds:6:0:0:LOCAL_PLANT_MAT:S
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen custard-apple cider]
 		[STATE_NAME_ADJ:LIQUID:custard-apple cider]
@@ -1736,15 +1646,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:MINT_GREEN]
 		[DISPLAY_COLOR:2:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN-YELLOW]
 		[DISPLAY_COLOR:6:0:1]
@@ -1757,7 +1664,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:custard-apple seed:custard-apple seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:custard-apple seed:custard-apple seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -1817,7 +1723,6 @@ No tag corresponding to (SEED:custard-apple seed:custard-apple seeds:6:0:0:LOCAL
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen date wine]
 		[STATE_NAME_ADJ:LIQUID:date wine]
@@ -1828,11 +1733,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:CREAM]
 		[DISPLAY_COLOR:7:0:1]
@@ -1840,7 +1743,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
 		[STOCKPILE_PLANT_GROWTH]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PLUM]
 		[DISPLAY_COLOR:5:0:0]
@@ -1853,7 +1755,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:date palm seed:date palm seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:date palm seed:date palm seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -1914,7 +1815,6 @@ No tag corresponding to (SEED:date palm seed:date palm seeds:6:0:0:LOCAL_PLANT_M
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen lychee wine]
 		[STATE_NAME_ADJ:LIQUID:lychee wine]
@@ -1925,15 +1825,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
@@ -1946,7 +1843,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:lychee seed:lychee seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:lychee seed:lychee seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2006,15 +1902,12 @@ No tag corresponding to (SEED:lychee seed:lychee seeds:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[STATE_COLOR:ALL:BROWN]
 		[DISPLAY_COLOR:6:0:0]
@@ -2022,7 +1915,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in 
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:macadamia nut:macadamia nuts:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:macadamia nut:macadamia nuts:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2094,15 +1986,12 @@ No tag corresponding to (SEED:macadamia nut:macadamia nuts:6:0:0:LOCAL_PLANT_MAT
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:BLACK]
 		[DISPLAY_COLOR:0:0:1]
@@ -2118,7 +2007,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:olive pit:olive pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:olive pit:olive pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2178,7 +2066,6 @@ No tag corresponding to (SEED:olive pit:olive pits:6:0:0:LOCAL_PLANT_MAT:SEED) w
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen pomegranate wine]
 		[STATE_NAME_ADJ:LIQUID:pomegranate wine]
@@ -2189,15 +2076,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
@@ -2210,7 +2094,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:pomegranate seed:pomegranate seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pomegranate seed:pomegranate seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:226]
 	[TRUNK_PERIOD:10]
@@ -2275,15 +2158,12 @@ No tag corresponding to (SEED:pomegranate seed:pomegranate seeds:6:0:0:LOCAL_PLA
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[STATE_COLOR:ALL:BROWN]
 		[DISPLAY_COLOR:6:0:0]
@@ -2291,7 +2171,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in 
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:almond:almonds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:almond:almonds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2355,7 +2234,6 @@ No tag corresponding to (SEED:almond:almonds:6:0:0:LOCAL_PLANT_MAT:SEED) was fou
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen apple cider]
 		[STATE_NAME_ADJ:LIQUID:apple cider]
@@ -2366,15 +2244,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:0]
@@ -2387,7 +2262,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:apple seed:apple seeds:0:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:apple seed:apple seeds:0:0:1:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -2452,7 +2326,6 @@ No tag corresponding to (SEED:apple seed:apple seeds:0:0:1:LOCAL_PLANT_MAT:SEED)
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen apricot wine]
 		[STATE_NAME_ADJ:LIQUID:apricot wine]
@@ -2463,15 +2336,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PALE_PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PEACH]
 		[DISPLAY_COLOR:4:0:1]
@@ -2484,7 +2354,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:apricot pit:apricot pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:apricot pit:apricot pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -2549,7 +2418,6 @@ No tag corresponding to (SEED:apricot pit:apricot pits:6:0:0:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen bayberry wine]
 		[STATE_NAME_ADJ:LIQUID:bayberry wine]
@@ -2560,11 +2428,9 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PURPLE]
 		[DISPLAY_COLOR:5:0:0]
@@ -2578,7 +2444,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:bayberry seed:bayberry seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:bayberry seed:bayberry seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2646,7 +2511,6 @@ No tag corresponding to (SEED:bayberry seed:bayberry seeds:6:0:0:LOCAL_PLANT_MAT
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen cherry wine]
 		[STATE_NAME_ADJ:LIQUID:cherry wine]
@@ -2657,15 +2521,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
@@ -2678,7 +2539,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:cherry pit:cherry pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:cherry pit:cherry pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -2745,11 +2605,9 @@ No tag corresponding to (SEED:cherry pit:cherry pits:6:0:0:LOCAL_PLANT_MAT:SEED)
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
@@ -2757,7 +2615,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in 
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW] *** not safe?
 		[EDIBLE_COOKED] *** not safe?
-No tag corresponding to (SEED:ginkgo seed:ginkgo seeds:7:0:1:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:ginkgo seed:ginkgo seeds:7:0:1:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:24]
 	[TRUNK_PERIOD:10]
@@ -2820,11 +2677,9 @@ No tag corresponding to (SEED:ginkgo seed:ginkgo seeds:7:0:1:LOCAL_PLANT_MAT:SEE
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[STATE_COLOR:ALL:BROWN]
 		[DISPLAY_COLOR:6:0:0]
@@ -2832,7 +2687,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in 
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:hazel nut:hazel nuts:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:hazel nut:hazel nuts:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -2896,7 +2750,6 @@ No tag corresponding to (SEED:hazel nut:hazel nuts:6:0:0:LOCAL_PLANT_MAT:SEED) w
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen peach cider]
 		[STATE_NAME_ADJ:LIQUID:peach cider]
@@ -2907,15 +2760,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:PINK]
 		[DISPLAY_COLOR:5:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PEACH]
 		[DISPLAY_COLOR:4:0:1]
@@ -2928,7 +2778,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:peach pit:peach pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:peach pit:peach pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -2993,7 +2842,6 @@ No tag corresponding to (SEED:peach pit:peach pits:6:0:0:LOCAL_PLANT_MAT:SEED) w
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen perry]
 		[STATE_NAME_ADJ:LIQUID:perry]
@@ -3004,15 +2852,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN-YELLOW]
 		[DISPLAY_COLOR:2:0:1]
@@ -3025,7 +2870,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:pear seed:pear seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pear seed:pear seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -3090,11 +2934,9 @@ No tag corresponding to (SEED:pear seed:pear seeds:6:0:0:LOCAL_PLANT_MAT:SEED) w
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[STATE_COLOR:ALL:BROWN]
 		[DISPLAY_COLOR:6:0:0]
@@ -3102,7 +2944,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE) was found in 
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:pecan:pecans:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:pecan:pecans:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -3166,7 +3007,6 @@ No tag corresponding to (SEED:pecan:pecans:6:0:0:LOCAL_PLANT_MAT:SEED) was found
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen persimmon wine]
 		[STATE_NAME_ADJ:LIQUID:persimmon wine]
@@ -3177,15 +3017,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:CREAM]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:RED]
 		[DISPLAY_COLOR:4:0:1]
@@ -3198,7 +3035,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:persimmon seed:persimmon seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:persimmon seed:persimmon seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]
@@ -3263,7 +3099,6 @@ No tag corresponding to (SEED:persimmon seed:persimmon seeds:6:0:0:LOCAL_PLANT_M
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen plum wine]
 		[STATE_NAME_ADJ:LIQUID:plum wine]
@@ -3274,15 +3109,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:PLUM]
 		[DISPLAY_COLOR:5:0:0]
@@ -3295,7 +3127,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:plum pit:plum pits:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:plum pit:plum pits:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -3360,7 +3191,6 @@ No tag corresponding to (SEED:plum pit:plum pits:6:0:0:LOCAL_PLANT_MAT:SEED) was
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen sand pear cider]
 		[STATE_NAME_ADJ:LIQUID:sand pear cider]
@@ -3371,15 +3201,12 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE) was
 		[EDIBLE_COOKED]
 		[PREFIX:NONE]
 	[DRINK:LOCAL_PLANT_MAT:DRINK]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:WHITE]
 		[DISPLAY_COLOR:7:0:1]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE]
 		[STATE_COLOR:ALL:TAN]
 		[DISPLAY_COLOR:6:0:0]
@@ -3392,7 +3219,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FRUIT:FRUIT_TEMPLATE) was found i
 	[USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
 		[MATERIAL_VALUE:1]
 		[EDIBLE_VERMIN]
-No tag corresponding to (SEED:sand pear seed:sand pear seeds:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:sand pear seed:sand pear seeds:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:5]
 	[TRUNK_PERIOD:10]
@@ -3457,11 +3283,9 @@ No tag corresponding to (SEED:sand pear seed:sand pear seeds:6:0:0:LOCAL_PLANT_M
 		[PREFIX:NONE]
 	 	[SOLID_DENSITY:600] *** not yet searched
 	 	[STATE_COLOR:ALL_SOLID:BURNT_SIENNA] *** not yet searched
-No tag corresponding to (USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:LEAF:LEAF_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:0]
-No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found in graphics source. -BAMM
 	[USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE]
 		[STATE_COLOR:ALL:GREEN]
 		[DISPLAY_COLOR:2:0:1]
@@ -3470,7 +3294,6 @@ No tag corresponding to (USE_MATERIAL_TEMPLATE:FLOWER:FLOWER_TEMPLATE) was found
 		[EDIBLE_VERMIN]
 		[EDIBLE_RAW]
 		[EDIBLE_COOKED]
-No tag corresponding to (SEED:walnut:walnuts:6:0:0:LOCAL_PLANT_MAT:SEED) was found in graphics source. -BAMM
 	[SEED:walnut:walnuts:6:0:0:LOCAL_PLANT_MAT:SEED]
 	[TREE:LOCAL_PLANT_MAT:WOOD][TREE_TILE:6]
 	[TRUNK_PERIOD:10]

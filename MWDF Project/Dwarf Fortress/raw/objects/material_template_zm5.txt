@@ -1380,3 +1380,10 @@ material_template_zm5
 	[BENDING_STRAIN_AT_YIELD:50000]
 	[MAX_EDGE:10000]
 	[ABSORPTION:100]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -206,3 +206,10 @@ creature_embroidery
    [SELECT_MATERIAL:ALL]
         [ARENA_RESTRICTED]
         [DOES_NOT_EXIST]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -44,3 +44,10 @@ Bay12 forum thread: http://www.bay12forums.com/smf/index.php?topic=146737.0
 	[CLASS:ARROW]
 	[SIZE:75]
 	[ATTACK:EDGE:40:6000:stab:stabs:NO_SUB:400]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -228,3 +228,10 @@ entity_fd_harpies
 	[WILL_ACCEPT_TRIBUTE]
 	[VARIABLE_POSITIONS:ALL]
 	[BANDITRY:50]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

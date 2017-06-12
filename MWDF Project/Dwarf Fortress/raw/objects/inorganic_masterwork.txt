@@ -1090,3 +1090,10 @@ This is for creatures that are "made of fire".  Right now there isn't a good for
 	[COLDDAM_POINT:NONE]
 	[MAT_FIXED_TEMP:15000]
 	[MOLAR_MASS:1]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1

@@ -570,3 +570,10 @@ building_succubus
 	[COLOR:3:3:0:4:1:0:4:1:0:4:1]
 	[BUILD_ITEM:2:BLOCKS:NONE:NONE:NONE]
 		[CAN_USE_ARTIFACT]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1
