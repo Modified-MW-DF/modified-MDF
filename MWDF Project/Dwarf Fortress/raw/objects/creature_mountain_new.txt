@@ -184,7 +184,7 @@ Chinchillas were sponsored by the generous contributions of the Bay 12 community
 	[CHILD:1][GENERAL_CHILD_NAME:chinchilla kit:chinchilla kits]
 	[CREATURE_TILE:'c'][COLOR:7:0:0]
 	[PETVALUE:3]
-	[PET]
+	[PET_EXOTIC]REDUCE_PET_MOD
 	[NATURAL]
 	[LARGE_ROAMING]
 	[BIOME:MOUNTAIN]

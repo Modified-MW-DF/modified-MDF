@@ -3,7 +3,7 @@ creature_bloodgod
 YES_MMM_MYTH[OBJECT:CREATURE]
 
 [CREATURE:CREATURE_BLOODGOD]
-	[OUTSIDER_CONTROLLABLE]
+	!NO_MORE_ADV_OPTIONS!OUTSIDER_CONTROLLABLE]
 	[DESCRIPTION:The avatar of a deity fond of blood and slaughter.]
 	[NAME:Avatar of the Blood God:Avatars of the Blood God:bloody]
 	[CASTE_NAME:Avatar of the Blood God:Avatars of the Blood God:bloody]

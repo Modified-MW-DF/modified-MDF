@@ -2231,6 +2231,7 @@ YES_METALLURGIST[PERMITTED_BUILDING:MAGMA_METALLURGIST]
 	[PERMITTED_REACTION:STERLING_SILVER_MAKING]
 	[PERMITTED_REACTION:ROSE_GOLD_MAKING]
 	[PERMITTED_REACTION:BISMUTH_BRONZE_MAKING]
+	[PERMITTED_REACTION:EXTRCT_TITANIUM]
 
 ###############################################################################
 ##### CREMATORY MOD ###########################################################

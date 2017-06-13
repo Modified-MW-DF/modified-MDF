@@ -1184,7 +1184,6 @@ herring looks like meat.
 
 
 ######################################################################################################
-# Meph's Decoration Overrides
 
 [TILESET:_MDF_decorations.png:_MDF_decorations.png:_MDF_overrides_4]
 

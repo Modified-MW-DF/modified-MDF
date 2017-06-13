@@ -1647,7 +1647,7 @@ Pandas were sponsored by the generous contributions of the Bay 12 community.
 	[CHILD:1][GENERAL_CHILD_NAME:panda cub:panda cubs]
 	[CREATURE_TILE:'P'][COLOR:7:0:1]
 	[PETVALUE:300]
-	[PET]
+	[PET_EXOTIC]REDUCE_PET_MOD
 	[NATURAL]
 	[STANDARD_GRAZER]
 	SPECIFIC_FOOD:PLANT:BAMBOO, ARROW
@@ -1849,7 +1849,7 @@ Capybaras were sponsored by the generous contributions of the Bay 12 community.
 	[CHILD:1][GENERAL_CHILD_NAME:capybara pup:capybara pups]
 	[CREATURE_TILE:'c'][COLOR:6:0:0]
 	[PETVALUE:100]
-	[PET]
+	[PET_EXOTIC]REDUCE_PET_MOD
 	[NATURAL]
 	[STANDARD_GRAZER]
 	[AMPHIBIOUS]

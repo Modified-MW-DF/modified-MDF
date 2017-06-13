@@ -4,6 +4,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_CAULDRON]
 [NAME:cauldron:cauldrons]
+[DESCRIPTION:A large round container used to boil or melt things. Used both in kitchens and metalworking.]
 [VALUE:50]
 [METAL_MAT]
 [HARD_MAT]
@@ -15,6 +16,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_LADLE]
 [NAME:ladle:ladles]
+[DESCRIPTION:A ladle to stir your soup.]
 [VALUE:10]
 [METAL_MAT]
 [HARD_MAT]
@@ -25,6 +27,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_BOWL]
 [NAME:bowl:bowls]
+[DESCRIPTION:A meal container to eat out of.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:MEAL_CONTAINER]
@@ -35,6 +38,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_MORTAR]
 [NAME:mortar:mortars]
+[DESCRIPTION:A tool to grind items into powder. Used in conjunction with a pestle. Needed for Alchemy.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:GRIND_POWDER_RECEPTACLE]
@@ -45,6 +49,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_PESTLE]
 [NAME:pestle:pestles]
+[DESCRIPTION:A tool to grind items into powder. Used in conjunction with a mortar. Needed for Alchemy.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:GRIND_POWDER_GRINDER]
@@ -54,6 +59,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_KNIFE_CARVING]
 [NAME:carving knife:carving knives]
+[DESCRIPTION:A sharp tool to carve meat. Can be used as an improvised edged weapon.]
 [VALUE:10]
 [METAL_WEAPON_MAT]
 [TOOL_USE:MEAT_CARVING]
@@ -72,6 +78,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_KNIFE_BONING]
 [NAME:boning knife:boning knives]
+[DESCRIPTION:A sharp tool to meat boning. Can be used as an improvised edged weapon.]
 [VALUE:10]
 [METAL_WEAPON_MAT]
 [TOOL_USE:MEAT_BONING]
@@ -90,6 +97,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_KNIFE_SLICING]
 [NAME:slicing knife:slicing knives]
+[DESCRIPTION:A sharp tool to slive meat. Can be used as an improvised edged weapon.]
 [VALUE:10]
 [METAL_WEAPON_MAT]
 [TOOL_USE:MEAT_SLICING]
@@ -109,6 +117,7 @@ item_tool
 [ITEM_TOOL:ITEM_TOOL_KNIFE_MEAT_CLEAVER]
 [NAME:meat cleaver:meat cleavers]
 [VALUE:10]
+[DESCRIPTION:A sharp tool to cleave large chunks of meat. Can be used as an improvised edged weapon.]
 [METAL_WEAPON_MAT]
 [TOOL_USE:MEAT_CLEAVING]
 [TILE:'/']
@@ -128,6 +137,7 @@ item_tool
 [NAME:carving fork:carving forks]
 [VALUE:10]
 [METAL_WEAPON_MAT]
+[DESCRIPTION:A sharp tool to hold meat while carving it. Can be used as an improvised edged weapon.]
 [TOOL_USE:HOLD_MEAT_FOR_CARVING]
 [TILE:'/']
 [SIZE:150]
@@ -142,6 +152,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_NEST_BOX]
 [NAME:nest box:nest boxes]
+[DESCRIPTION:A small box for egg-laying creatures. They will nest on it and lay eggs for your animal production or kitchens.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:NEST_BOX]
@@ -152,6 +163,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_JUG]
 [NAME:jug:jugs]
+[DESCRIPTION:A small liquid container.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:LIQUID_CONTAINER]
@@ -163,6 +175,7 @@ item_tool
 [ITEM_TOOL:ITEM_TOOL_LARGE_POT]
 [NAME:pot:pots]
 [ADJECTIVE:large]
+[DESCRIPTION:A large food storage container used mainly for alcoholic drinks.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:FOOD_STORAGE]
@@ -173,6 +186,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_HIVE]
 [NAME:hive:hives]
+[DESCRIPTION:An artificial hive that can house a colony of insects. Used by your beekeepers to farm bees.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:HIVE]
@@ -183,6 +197,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_HONEYCOMB]
 [NAME:honeycomb:honeycombs]
+[DESCRIPTION:A large section of a bee colony full of honey. Needs to create wax or mead.]
 [VALUE:10]
 [TILE:236]
 [SIZE:1000]
@@ -191,6 +206,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_POUCH]
 [NAME:pouch:pouches]
+[DESCRIPTION:A small tool to store objects.]
 [VALUE:10]
 [SOFT_MAT]
 [TOOL_USE:SMALL_OBJECT_STORAGE]
@@ -201,6 +217,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_MINECART]
 [NAME:minecart:minecarts]
+[DESCRIPTION:A large tool that moves on tracks. Used to transport items or as a dwarf-style improvised weapon.]
 [VALUE:50]
 [METAL_MAT]
 [WOOD_MAT]
@@ -214,6 +231,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_WHEELBARROW]
 [NAME:wheelbarrow:wheelbarrows]
+[DESCRIPTION:A large tool with wheels to help with the hauling of objects.]
 [VALUE:50]
 [METAL_MAT]
 [WOOD_MAT]
@@ -226,6 +244,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_STEPLADDER]
 [NAME:stepladder:stepladders]
+[DESCRIPTION:A small ladder that enables fruit pickers to reach fruits on trees.]
 [VALUE:50]
 [METAL_MAT]
 [WOOD_MAT]
@@ -237,6 +256,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_SCROLL_ROLLERS]
 [NAME:scroll rollers:scroll rollers]
+[DESCRIPTION:A small tool used by scholars to roll up sheets.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:ROLL_UP_SHEET]
@@ -248,6 +268,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_BOOK_BINDING]
 [NAME:book binding:book bindings]
+[DESCRIPTION:A smal tool used by scholars to protect folded sheets.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:PROTECT_FOLDED_SHEETS]
@@ -259,6 +280,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_SCROLL]
 [NAME:scroll:scrolls]
+[DESCRIPTION:A small tool used for writing. Will be assembled together with scroll rollers.]
 [VALUE:20]
 [SHEET_MAT]
 [TOOL_USE:CONTAIN_WRITING]
@@ -269,6 +291,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_QUIRE]
 [NAME:quire:quires]
+[DESCRIPTION:A small tool used for writing. Will be assembled together with bookbindings.]
 [VALUE:20]
 [SHEET_MAT]
 [TOOL_USE:CONTAIN_WRITING]
@@ -281,6 +304,7 @@ item_tool
 
 [ITEM_TOOL:ITEM_TOOL_BOOKCASE]
 [NAME:bookcase:bookcases]
+[DESCRIPTION:A tool to store finished books in your library.]
 [VALUE:10]
 [HARD_MAT]
 [TOOL_USE:BOOKCASE]
@@ -290,3 +314,41 @@ item_tool
 [SIZE:1000]
 [MATERIAL_SIZE:6]
 [CONTAINER_CAPACITY:100000]
+
+[ITEM_TOOL:ITEM_TOOL_HELVE]
+[NAME:helve:helves]
+[VALUE:10]
+[DESCRIPTION:The wooden grip used on an axe. Needed to create an axe in adv mode.]
+[HARD_MAT]
+[TILE:255]'\'
+[SIZE:250]
+[NO_DEFAULT_JOB]
+[INCOMPLETE_ITEM]
+[UNIMPROVABLE]
+[NO_DEFAULT_IMPROVEMENTS]
+
+[ITEM_TOOL:ITEM_TOOL_STONE_AXE]
+[NAME:axe:axes]
+[DESCRIPTION:A small axe used in carpentry reactions in adv mode.]
+[VALUE:10]
+[STONE_MAT]
+[NO_DEFAULT_JOB]
+[TILE:255]'/'
+[SIZE:400]
+[SKILL:AXE]
+[TWO_HANDED:27500]
+[MINIMUM_SIZE:5000]
+[MATERIAL_SIZE:1]
+[ATTACK:EDGE:800:400:hack:hacks:NO_SUB:1250]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[ATTACK:BLUNT:800:400:slap:slaps:flat:1250]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[ATTACK:BLUNT:20:400:strike:strikes:helve:1000]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+
+#### EOF - THIS LINE IS 80 CHARACTERS LONG #####50########60########70########80
+5
+4
+3
+2
+1
