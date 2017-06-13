@@ -3,6 +3,9 @@
 # Path addition - ensures that these paths are availiable for scripts:
 :lua dfhack.internal.addScriptPath('hack/scripts/masterwork')
 
+#provides a little announcement, add CREDITS to it to get a list of known contributors.
+masterwork-version
+
 season-palette start
 
 #timecontrol
