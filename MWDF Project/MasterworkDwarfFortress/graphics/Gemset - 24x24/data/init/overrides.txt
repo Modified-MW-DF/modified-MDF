@@ -1,7 +1,6 @@
 #this is the ascii overrides file, which is active if you play with an ascii-raw based tileset.
 
-
-[TILESET:_overrides_item.png:_overrides_item.png:2]
+[TILESET:_gemset_overrides_item.png:_gemset_overrides_item.png:2]
 
 [OVERRIDE:47:I:AMMO:AMMO:0:2:0]
 [OVERRIDE:47:I:AMMO:AMMO:1:2:1]
@@ -319,7 +318,7 @@ Temporary building overrides until TWBT gets workshop support
 
 =========================================================================================================================================================
 
-[TILESET:_overrides_soil_grass.png:_overrides_soil_grass.png:3]
+[TILESET:_gemset_overrides_soil_grass.png:_gemset_overrides_soil_grass.png:3]
 
 [OVERRIDE:178:T:OpenSpace:3:0::1]
 [OVERRIDE:249:T:OpenSpace:3:1::1]
@@ -673,7 +672,7 @@ Temporary building overrides until TWBT gets workshop support
 
 =========================================================================================================================================================
 
-[TILESET:_overrides_plant.png:_overrides_plant.png:4]
+[TILESET:_gemset_overrides_plant.png:_gemset_overrides_plant.png:4]
 
 [OVERRIDE:79:T:TreeTrunkPillar:4:0]
 [OVERRIDE:127:T:TreeTrunkSloping:4:1]
@@ -1084,7 +1083,7 @@ Temporary building overrides until TWBT gets workshop support
 
 =========================================================================================================================================================
 
-[TILESET:_overrides_stone_mineral.png:_overrides_stone_mineral.png:5]
+[TILESET:_gemset_overrides_stone_mineral.png:_gemset_overrides_stone_mineral.png:5]
 
 [OVERRIDE:39:T:StoneFloor1:5:0]				#varied
 [OVERRIDE:44:T:StoneFloor2:5:1]             #varied
@@ -2007,7 +2006,7 @@ Temporary building overrides until TWBT gets workshop support
 
 ========================================================================================================================================================
 
-[TILESET:_overrides_constructed_feature.png:_overrides_constructed_feature.png:6]
+[TILESET:_gemset_overrides_constructed_feature.png:_gemset_overrides_constructed_feature.png:6]
 
 [OVERRIDE:43:T:ConstructedFloor:6:0:8]
 [OVERRIDE:79:T:ConstructedPillar:6:1:8]
@@ -2874,7 +2873,7 @@ Temporary building overrides until TWBT gets workshop support
 
 ========================================================================================================================================================
 
-[TILESET:_overrides_frozen_lava.png:_overrides_frozen_lava.png:7]
+[TILESET:_gemset_overrides_frozen_lava.png:_gemset_overrides_frozen_lava.png:7]
 
 [OVERRIDE:178:T:FrozenFloor1:7:0]			#varied
 [OVERRIDE:178:T:FrozenFloor2:7:0]			#varied

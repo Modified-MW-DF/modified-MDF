@@ -482,6 +482,7 @@ a major titanium ore but can't refine through smelting (see e.g. Kroll process)
 [SOLID_DENSITY:4720]  Previous value was much too low.
 [IS_STONE]
 [MELTING_POINT:12457]
+[REACTION_CLASS:TITANIUM_ORE]
 
 another titanium ore, same comment applies
 [INORGANIC:RUTILE]
@@ -492,6 +493,7 @@ another titanium ore, same comment applies
 [IS_STONE]
 [MELTING_POINT:13285]
 [SOLID_DENSITY:4250]
+[REACTION_CLASS:TITANIUM_ORE]
 
 [INORGANIC:MAGNETITE]
 [USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]

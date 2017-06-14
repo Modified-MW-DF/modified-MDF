@@ -1,12 +1,19 @@
 # modified MWDF
-modified master work dwarf fortress
+### modified masterwork dwarf fortress
 
+This is the amostubal produced variant of masterwork dwarf fortress, began on March 16, 2017. 
 
-This is the amostubal produced variant of masterwork dwarf fortress, it is updated to 43.05 x64, and has many fixes implemented over the last 2 months since its production.  the product is still considered to be owned by Meph and this will be deleted upon his request.
+Short history: 
+This variant was based off of the v1.23 of masterwork by meph last updated on December 09,2016. 
+Since then we have updated the Df game engine to 43.05 x64.  Additionally, we've been updating all the extras from DFHack to the graphic files...  Many fixes have been made and the code now is very stable compared to when we started.
 
-This is the version 1.28 planned branch of the repository.  
+Additionally we have upgraded the launcher to fix many of the bugs that were in its code, and added many new features to improve the game experience!
 
-Note to Contributors:  
- Please fork the 1.28 planned branch and make your pull request to that branch.
+Come join us on our forum page at: [Bay12forums - Masterwork](http://www.bay12forums.com/smf/index.php?topic=163261.0)  
+Join us on on our own Discord channel at: [Masterwork Discord Channel](https://discord.gg/cRbmUAZ)  
+For the Current Release: [Modified-MWDF Release Page](https://github.com/Amostubal/modified-MWDF/releases)  
+For the Current Beta: [Beta Version - Download Link](https://github.com/Amostubal/modified-MWDF/archive/Master-Branch.zip)  
 
-And thank you to all who have and will contribute!
+Note to Contributors: 
+ Please Fork this Branch as it is now the only branch and will be considered the beta version of the pack. 
+ And thank you to all who have and will contribute!

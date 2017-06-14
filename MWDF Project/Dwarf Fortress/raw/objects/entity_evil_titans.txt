@@ -1,4 +1,4 @@
-ntity_evil_titans
+entity_evil_titans
 
 	Toggles the civ active or inactive:
 	!NO_CIV_ACTIVE_TITANS!OBJECT:ENTITY]

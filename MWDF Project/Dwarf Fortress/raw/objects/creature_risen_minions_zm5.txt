@@ -9,7 +9,7 @@ Creatures that dont exist normally, and are only minions raised by various types
 	[NAME:plaguebearer:plaguebearers:plaguebearer]
         [CASTE_NAME:plaguebearer:plaguebearers:plaguebearer]
 	[CREATURE_TILE:'P'][COLOR:2:0:0][FREQUENCY:70]
-        [EVIL][PET]
+        [EVIL][PET_EXOTIC]REDUCE_PET_MOD
 	[UNDERGROUND_DEPTH:0:2]
 	[LARGE_ROAMING][DIFFICULTY:7]
 	[EXTRAVISION][NOFEAR][NOEXERT][NOBREATHE][NONAUSEA][NOPAIN][NO_DRINK][NO_EAT][NO_SLEEP][HAS_NERVES][NO_FEVERS]
@@ -346,7 +346,7 @@ Creatures that dont exist normally, and are only minions raised by various types
 	[NAME:ghoul:ghouls:ghoul]
         [CASTE_NAME:ghoul:ghouls:ghoul]
 	[CREATURE_TILE:'g'][COLOR:5:0:0]
-        [EVIL][PET]
+        [EVIL][PET_EXOTIC]REDUCE_PET_MOD
 	[EXTRAVISION][NOFEAR][NOEXERT][NOBREATHE][NONAUSEA][NOPAIN][NO_DRINK][NO_EAT][NO_SLEEP][HAS_NERVES][CARNIVORE]
         [NOT_LIVING][NO_CONNECTIONS_FOR_MOVEMENT]
         [LARGE_ROAMING][LARGE_PREDATOR]

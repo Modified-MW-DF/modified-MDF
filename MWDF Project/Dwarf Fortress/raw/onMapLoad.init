@@ -1,19 +1,4 @@
-#################### Welcome to Masterwork Dwarf Fortress Version 1.27 ####################
-
-:lua dfhack.color(11)
-:lua dfhack.println('--------------------------------------------------')
-:lua dfhack.color(15)
-:lua dfhack.print('Welcome to ')
-:lua dfhack.color(13)
-:lua dfhack.print('Masterwork Dwarf Fortress ')
-:lua dfhack.color(15)
-:lua dfhack.print('version ')
-:lua dfhack.color(12)
-:lua dfhack.println('1.27')
-:lua dfhack.color(11)
-:lua dfhack.println('--------------------------------------------------')
-:lua dfhack.color(-1)
-
+#Should load when a map is loaded
 
 :lua print(' ')
 :lua print('Running Map Initialization.')
@@ -297,6 +282,8 @@ modtools/if-entity -id "PLAINS" -cmd [ script "raw/human_init.txt" ]
 modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_init.txt" ]
 modtools/if-entity -id "HERMIT" -cmd [ script "raw/hermit_init.txt" ]
 
+# A last time telling the player what version of masterwork they are on, add CREDITS to this to get a list of contributors.
+masterwork-version
 
 #################### REMOVED CURRENTLY NOT FUNCTIONAL FOR PLAYERS ####################
 #SKAVEN

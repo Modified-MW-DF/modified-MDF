@@ -1,19 +1,4 @@
-#################### Welcome to Masterwork Dwarf Fortress Version 1.27 ####################
-
-:lua dfhack.color(11)
-:lua dfhack.println('--------------------------------------------------')
-:lua dfhack.color(15)
-:lua dfhack.print('Welcome to ')
-:lua dfhack.color(13)
-:lua dfhack.print('Masterwork Dwarf Fortress ')
-:lua dfhack.color(15)
-:lua dfhack.print('version ')
-:lua dfhack.color(12)
-:lua dfhack.println('1.27')
-:lua dfhack.color(11)
-:lua dfhack.println('--------------------------------------------------')
-:lua dfhack.color(-1)
-
+masterwork-version
 
 :lua print(' ')
 :lua print('Running World Initialization.')

@@ -14,7 +14,7 @@ Crows were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:crow:crows:corvid]		Modest Mod
 	[GENERAL_CHILD_NAME:crow hatchling:crow hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:0:0:1]
-	[PETVALUE:10][NATURAL][PET]
+	[PETVALUE:10][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:GRASSLAND_TEMPERATE]
 	[BIOME:SAVANNA_TEMPERATE]
 	[BIOME:SHRUBLAND_TEMPERATE]
@@ -186,7 +186,7 @@ Ravens were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:raven:ravens:raven]
 	[GENERAL_CHILD_NAME:raven hatchling:raven hatchlings]
 	[CREATURE_TILE:'r'][COLOR:0:0:1]
-	[PETVALUE:25][NATURAL][PET]
+	[PETVALUE:25][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:GRASSLAND_TEMPERATE]
 	[BIOME:SAVANNA_TEMPERATE]
 	[BIOME:SHRUBLAND_TEMPERATE]
@@ -856,7 +856,7 @@ Sparrows were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:sparrow:sparrows:sparrow]
 	[GENERAL_CHILD_NAME:sparrow hatchling:sparrow hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:6:0:0]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:ANY_GRASSLAND]
 	[BIOME:ANY_SAVANNA]
 	[BIOME:ANY_SHRUBLAND]
@@ -1512,7 +1512,7 @@ Parakeets were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:parakeet:parakeets:parakeet]
 	[GENERAL_CHILD_NAME:parakeet hatchling:parakeet hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:2:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:GRASSLAND_TROPICAL]
 	[BIOME:SAVANNA_TROPICAL]
 	[BIOME:SHRUBLAND_TROPICAL]
@@ -2295,7 +2295,7 @@ Lorikeets were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:lorikeet:lorikeets:lorikeet]
 	[GENERAL_CHILD_NAME:lorikeet hatchling:lorikeet hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:4:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:FOREST_TROPICAL_MOIST_BROADLEAF]
 	[BIOME:SWAMP_MANGROVE]
 	[VERMIN_GROUNDER][FREQUENCY:100]
@@ -2463,7 +2463,7 @@ Wrens were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:wren:wrens:wren]
 	[GENERAL_CHILD_NAME:wren hatchling:wren hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:6:0:0]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:ANY_FOREST]
 	[BIOME:ANY_GRASSLAND]
 	[BIOME:ANY_SAVANNA]
@@ -2965,7 +2965,7 @@ Cockatiels were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:cockatiel:cockatiels:cockatiel]
 	[GENERAL_CHILD_NAME:cockatiel hatchling:cockatiel hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:7:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:ANY_DESERT]
 	[BIOME:GRASSLAND_TEMPERATE]
 	[VERMIN_GROUNDER][FREQUENCY:100]
@@ -3129,7 +3129,7 @@ Peach-faced lovebirds were sponsored by the generous contributions of the Bay 12
 	[CASTE_NAME:peach-faced lovebird:peach-faced lovebirds:peach-faced lovebird]
 	[GENERAL_CHILD_NAME:peach-faced lovebird hatchling:peach-faced lovebird hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:2:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:GRASSLAND_TEMPERATE]
 	[BIOME:SAVANNA_TEMPERATE]
 	[BIOME:SHRUBLAND_TEMPERATE]
@@ -3297,7 +3297,7 @@ Magpies were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:magpie:magpies:magpie]
 	[GENERAL_CHILD_NAME:magpie hatchling:magpie hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:0:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:GRASSLAND_TEMPERATE]
 	[BIOME:SAVANNA_TEMPERATE]
 	[BIOME:SHRUBLAND_TEMPERATE]
@@ -3468,7 +3468,7 @@ Kestrels were sponsored by the generous contributions of the Bay 12 community.
 	[NATURAL]
 	[LARGE_ROAMING]
 	[PETVALUE:25]
-	[PET]
+	[PET_EXOTIC]REDUCE_PET_MOD
 	[BENIGN][FLIER]
 	[BONECARN]
 	[DIVE_HUNTS_VERMIN]		Modest Mod
@@ -3972,7 +3972,7 @@ Eagles were sponsored by the generous contributions of the Bay 12 community.
 	[NATURAL]
 	[LARGE_ROAMING]
 	[PETVALUE:25]
-	[PET]
+	[PET_EXOTIC]REDUCE_PET_MOD
 	[BENIGN][FLIER]
 	[BONECARN]
 	[CHILD:1]
@@ -4306,7 +4306,7 @@ Masked lovebirds were sponsored by the generous contributions of the Bay 12 comm
 	[CASTE_NAME:masked lovebird:masked lovebirds:masked lovebird]
 	[GENERAL_CHILD_NAME:masked lovebird hatchling:masked lovebird hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:2:0:1]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:ANY_TROPICAL_FOREST]
 	[VERMIN_GROUNDER][FREQUENCY:100]
 	[POPULATION_NUMBER:250:500]
@@ -4469,7 +4469,7 @@ Bushtits were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:bushtit:bushtits:bushtit]
 	[GENERAL_CHILD_NAME:bushtit hatchling:bushtit hatchlings]
 	[CREATURE_TILE:109][ALTTILE:110][COLOR:6:0:0]
-	[PETVALUE:30][NATURAL][PET]
+	[PETVALUE:30][NATURAL][PET_EXOTIC]REDUCE_PET_MOD
 	[BIOME:ANY_TEMPERATE_FOREST]
 	[VERMIN_GROUNDER][FREQUENCY:100]
 	[POPULATION_NUMBER:250:500]
