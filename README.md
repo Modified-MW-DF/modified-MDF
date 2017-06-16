@@ -12,7 +12,7 @@ Additionally we have upgraded the launcher to fix many of the bugs that were in 
 Come join us on our forum page at: [Bay12forums - Masterwork](http://www.bay12forums.com/smf/index.php?topic=163261.0)  
 Join us on on our own Discord channel at: [Masterwork Discord Channel](https://discord.gg/cRbmUAZ)  
 For the Current Release: [Modified-MWDF Release Page](https://github.com/Amostubal/modified-MWDF/releases)  
-For the Current Beta: [Beta Version - Download Link](https://github.com/Amostubal/modified-MWDF/archive/Master-Branch.zip)  
+For the Current Beta: [Beta Version - Download Link](https://github.com/Modified-MW-DF/modified-MDF/archive/Master-Branch.zip)  
 
 Note to Contributors: 
  Please Fork this Branch as it is now the only branch and will be considered the beta version of the pack. 
