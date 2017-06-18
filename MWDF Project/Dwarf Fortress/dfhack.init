@@ -297,7 +297,7 @@ multilevel 10
 tweak eggs-fertile
 
 # log extra stuff for Soundsense
-#soundsense
+soundsense
 
 # Lethosor's scripts are part of DFHack, but not activated due to submodule issues
 keybinding add Alt-S@title settings-manager
