@@ -1,0 +1,145 @@
+<!--Hello and welcome to our HTML style guide for all pages on this manual. This is the single most important file for everything ever, basically.-->
+
+<!--
+Below is the standard header format which should start all files in this repository
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="css/style_default.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Last-Edited" content="6/21/2017" /> 
+<title>General - Specifics</title>
+<style></style>
+</head>
+
+<body>
+<div style="max-width:804px;margin:auto;">
+<!--Page content goes here-->
+<p><strong>General Guides</strong> ::: <a href="#topic1">Headings</a> ::: <a href="#topic2">Body Text</a> ::: <a href="#topic3">Tables & Lists</a></p>
+<p><strong>Specific Pages</strong> ::: <a href="#info">General Info</a> ::: <a href="#started">Getting Started</a> ::: <a href="#remainder">Buildings, Items, Materials & Pets</a></p>
+<!--You can have multiple index lines for, say, workshops vs furnaces vs rituals, things like that, but for most pages you'll only need the one-->
+<hr> <!--Horizontal rules should be placed between separate sections, of course.-->
+<h1 id="topic1">Headings</h1>
+<!--Headings take the form of primarily <h1> tags, but if for some reason you feel the need for subheadings in your page, <h2> tags are acceptable. You should avoid using <h3> and beyond, since they're not formatted for by the CSS and you honestly shouldn't have any reason to use them.
+H1 headings are, by default, formatted to be centered on the page, bold, and are nice and big. H2 headings are left-aligned, and slightly smaller. 
+So that's all for headings.-->
+<p>Headings take the form of primarily &lt;h1&gt; tags, but if for some reason you feel the need for subheadings in your page, &lt;h2&gt; tags are acceptable. You should avoid using &lt;h3&gt; and beyond, since they're not formatted for by the CSS and you honestly shouldn't have any reason to use them.</p>
+<p>H1 headings are, by default, formatted to be centered on the page, bold, and are nice and big. H2 headings are left-aligned, and slightly smaller.</p>
+<p>Notably, headings should almost always have an id, corresponding to an internal link in the page index up top.
+<p>If you want a more in-depth look at the basic header for files, open this document in a text-editor as opposed to a web browser. There's a blank one in comments at the bottom of this webpage.</p>
+<h2>That should be all for headers for now</h2>
+<hr>
+<h1 id="topic2">Body Text</h1>
+<!--Body text is, as always, one of the more complex parts of an HTML page. Not only for its content, which is of course important, but its formatting. Keeping in mind how HTML works will be important if you want to use certain characters, for example, < cannot be directly written into an HTML page. It has to be represented by &lt;, and yes, I just had to write &amp;lt; to write that. You may want to avoid certain kinds of punctuation altogether with HTML.
+Plaintext can be formatted in several ways with HTML, of course. Everything is in <p> tags, of course, but you can use <span> tags to select small sections of text to style via inline CSS, if you're daring, or, if you prefer to just edit in HTML, use any of the following tags.
+<strong> ::: <em> ::: <s> ::: <sub> ::: <sup>
+For the most part you probably won't need to use these all that much; just be aware that <strong> should always be used instead of <b>, and <em> should always be used instead of <i>. They do the same thing visually, but it's just good practice. Most of your formatting should be in the form of page layout, though.-->
+<p>Body text is, as always, one of the more complex parts of an HTML page. Not only for its content, which is of course important, but its formatting. Keeping in mind how HTML works will be important if you want to use certain characters, for example, &lt; cannot be directly written into an HTML page. It has to be represented by &amp;lt;, and yes, I just had to write &amp;amp;lt; to write that. You may want to avoid certain kinds of punctuation altogether with HTML.</p>
+<p>Plaintext can be formatted in several ways with HTML, of course. Everything is in &lt;p&gt; tags, of course, but you can use &lt;span&gt; tags to select small sections of text to style via inline CSS, if you're daring, or, if you prefer to just edit in HTML, use any of the following tags.</p>
+<p><strong>&lt;strong&gt;</strong> ::: <em>&lt;em&gt;</em> ::: <s>&lt;s&gt;</s> ::: <sub>&lt;sub&gt;</sub> ::: <sup>&lt;sup&gt;</sup></p>
+<p>For the most part you probably won't need to use these all that much; just be aware that &lt;strong&gt; should always be used instead of &lt;b&gt;, and &lt;em&gt; should always be used instead of &lt;i&gt;. They do the same thing visually, but it's just good practice. Most of your formatting should be in the form of page layout, though.
+<hr>
+<h1 id="topic3">Tables & Lists</h1>
+<table border="1" align="center">
+<tr>
+<th>
+Tables are the worst
+</th>
+<th>
+But sometimes
+</th>
+</tr>
+<tr>
+<td>
+Like seriously the worst.
+</td>
+<td>
+You just need them.
+</td>
+</tr>
+<tr>
+<td>
+This is most certainly
+</td>
+<td>
+Not one of those times.
+</td>
+</tr>
+<tr>
+<td colspan="2">
+If you do this I will slap you.
+</td>
+</tr>
+</table>
+<p>As you can see above, tables can be abused. And people abuse them a <em>lot</em>. Don't do that. It's already hard enough to read HTML without someone making a monstrosity like that in the middle of the page.</p>
+<p>Tables should not be used for page layout, you have &lt;div&gt; tags for that, use them if you need to. Table should be used to format tabular information, connecting one topic in the first column to several topics in the following columns. Tables should always have a header line with &lt;th&gt; tags, and they should be actual headers, not just description text. In terms of formatting, those of you reading the page just need to look below</p>
+<table border="1" align="center"><tr>
+<th>Tables
+<th>But only
+<th>This is
+<tr>
+<td>Are seriously the best.
+<td>If you're nice to them.
+<td>What a happy table looks like
+<tr>
+<td colspan="3">Now isn't it nice with all that whitespace gone, HTML people?
+</table>
+<p>Lists are pretty simple, and you should know how to use them pretty well, honestly. You should really only need to use &lt;ul&gt;, or an unordered list, with &lt;ui&gt; for the unordered items in the list.
+</div>
+<hr><hr>
+<div style="max-width:804px;margin:auto;">
+<h1 id="info">General Info</h1>
+<dl>General Info should introduce the player to the concept of the race, but should not provide explicit advice on how to play. It should be purely informative. Topics should be organized in the following order:
+<dt>Race</dt>
+<dd>The race itself should be described, with any anatomical quirks disclosed, such as the fact that succubi bleed fire, and kobolds are small and carnivorous. Basic personalities should also be glanced over here, such as orcs favoring warfare and traditions. Most of the current ones are okay as-is, content wise. If it's weird, then it should go here. The race description should be made in the form of paragraphs, and should be headered merely by the name of the race, plural.</dd>
+<dt>Castes</dt>
+<dd>Castes that do anything other than set gender should be assembled into a list, with information about the attribute and skill modifiers of the caste and a description of what they are included. If they are acquired by some nonstandard means, the method of acquisition should be noted as well.</dd>
+<dt>Nobles</dt>
+<dd>Nobles should be listed, of course, and their duties made clear. Comparing them to vanilla nobles is perfectly okay</dd>
+<dt>Basic Necessities</dt>
+<dd>General gameplay quirks should be noted here. Kobolds require a source of meat, most succubi-specific workshops require lava beneath them, etc. Also, note "optional" needs too; dwarves need alcohol, orcs practically need to practice martial skills, things that average members of the race would rather die than not have, really.</dd>
+<dt>Other</dt>
+<dd>If there's something else, put it after everything else on the page.</dd>
+</dl>
+<hr>
+<h1 id="started">Getting Started</h1>
+<dl>Getting Started should be a basic guide to the race for players, both new and old. You can largely assume proficiency with vanilla features, but mod features should never be assumed. Topics should be organized in the following order:
+<dt>World Generation (optional)</dt>
+<dd>Any notes as to how world gen might affect game difficulty should go here, if any. Orcs are likely to eventually care a lot about worldgen once someone figures out a way to permit/unpermit reactions based on what races actually exist and are nearby, as are humans. Invaders are also important, of course, especially for succubi and kobolds. Things like that.</dd>
+<dt>Before Embarking</dt>
+<dd>What should the player consider before embarking; basic equipment, skills, and location. Playing kobolds on a glacier, for example, is typically suicidal. Playing kobolds and taking 0 animals or meat is also bad.</dd>
+<dt>Early Game</dt>
+<dd>Basic industries can be described here, but an emphasis should be made on ones required for survival. Food, drink, and setting up potential trade goods or low-grade military equipment.</dd>
+<dt>Midgame</dt>
+<dd>This section is for after a fortress is sustainable, after food and basic furniture is available in decent amounts. How to acquire decent military equipment and get your citizens happy should be emphasized here.</dd>
+<dt>Late Game</dt>
+<dd>Capstone workshops and industries should be described here. Workshops with significant requirements to build, or industries with long production chains belong in this section.</dd>
+</dl>
+<hr>
+<h1 id="remainder">Buildings, Items, Materials & Pets</h1>
+<p>All of these should list their contents and provide basic descriptions of them. Buildings should have each workshop prepended by an image of the workshop, and race-specific pages should only include workshops that have race-specific reactions or that are wholly race-specific; multi-race buildings and reactions should not be described on race pages, and such should instead be placed in a dedicated multi-race page.</p>
+</div>
+</body>
+</html>
+
+<!-- Blank file header for use in making new files
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="css/style_default.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Last-Edited" content="6/21/2017" /> 
+<title>General - Specifics</title>
+<style></style>
+</head>
+
+<body>
+<div style="max-width:804px;margin:auto;">
+
+
+
+</div>
+</body>
+</html>
+
+-->

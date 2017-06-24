@@ -1,155 +1,83 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><link rel="stylesheet" type="text/css" href="style.css" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="css/style_default.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<style type="text/css">
-body,td,th {
-	color: #FFF;
-	font-size: 16px;
+<meta name="Last-Edited" content="6/21/2017" /> 
+<title>General - Bugs</title>
+<style>
+.Rot {
+	color:#F44;
 }
-body {
-	background-color: #000;
-}
-a:link {
-	color: #FFF;
-}
-a:visited {
-	color: #CCC;
-}
-.Rot {	color: #F00;
-}
-.Rot {	color: #F00;
+table {
+	margin:auto;
 }
 </style>
 </head>
 
 <body>
-<em>
-</em>
-<em>
-<div align="center">
-  <div align="center">
-    <table width="771" border="0">
-      <tr>
-        <td width="765"><h1><em>Known Bugs</em></h1>
-          <script type="text/javascript">
-function toggle(element) {
-if (document.getElementById(element).style.display == "none") {
-document.getElementById(element).style.display = "";
-} else {
-document.getElementById(element).style.display = "none";
-}
-}
-  </script>
-          <p><em>Some things cant be fixed or avoided in modding a game with a closed source code. If you experience wonky gameplay and general oddities have a look here, maybe its a known and already reported problem. There are usually workarounds available for you to fix it.</em></p>
-          <p><em>If you cant find the source of your problems on the list, please come by bay12 and share. In almost all cases it is a typo or simple error in the raws that can be fixed in a future release.</em></p>
-          <hr align="center" />
-          <div align="center">
-            <div align="center">
-              <table width="556" border="0">
-                <tr>
-                  <td width="550"><table width="700" border="1">
-                      <tr>
-                        <td><div align="center"></div></td>
-                        <td><div align="center"><strong class="Rot">Workshop reactions are red, even with all the materials available.</strong><br />
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Bug:</div></td>
-                        <td><div align="center">If a workshop is in a burrow, even if the burrow is inactive, then it accepts only materials within the same burrow. </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Solution: </div></td>
-                        <td><div align="center">Make a bigger burrow including the materials, or keep the material stockpiles within the same burrow. Or delete the burrow.</div></td>
-                      </tr>
-                    </table>
-                    <p>&nbsp;</p>
-                    <table width="700" border="1">
-                      <tr>
-                        <td><div align="center"></div></td>
-                        <td><div align="center"><strong class="Rot">I have many weird boulders lying around, named sparks, <em>knowledge, etc</em>...</strong><br />
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Bug:</div></td>
-                        <td><div align="center">Many things in the mod depend on temperature. Things that should melt or boil away don't without it.</div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Solution: </div></td>
-                        <td><div align="center">Open the GUI or Init.txt and set Temperature to ON. This can be done in a running fortress, you only have to restart DF. You do not need to gen a new world. You can also turn off &quot;smoke effects&quot; in the misc features section. This will decrease the amount of these boulders significantly.</div></td>
-                      </tr>
-                    </table>
-                    <p>&nbsp;</p>
-                    <table width="700" border="1">
-                      <tr>
-                        <td><div align="center"></div></td>
-                        <td><div align="center"><strong class="Rot">Worldgen crashes.</strong><br />
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Bug:</div></td>
-                        <td><div align="center">Dwarf Fortress crashes to desktop while creating a world.</div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Solution: </div></td>
-                        <td><div align="center">I have never been able to replicate this. It appears to be at random, with major differences in the PC system people use. Try shorter histories, &lt;100 years. If the problem persists, please leave a detailed report in the forum. Please mention the mod version, tileset used, if settings have been changed, and how much virtual memory/ram you have.</div></td>
-                      </tr>
-                    </table>
-                    <p>&nbsp;</p>
-                    <table width="700" border="1">
-                      <tr>
-                        <td><div align="center"></div></td>
-                        <td><div align="center"><strong class="Rot">I have an error log.</strong><br />
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Bug:</div></td>
-                        <td><div align="center">
-                          <p>The Dwarf Fortress main folder shows a errorlog.txt. This is created when certain entry in the raws are missing. In 90% of the cases this is completely harmless. It is caused by enabling some settings, and disabling other. </p>
-                          <p>For example you remove warpstone. The error log will tell you that warpstone is missing in the reactions for warpstone landmines and turrets.</p>
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Solution: </div></td>
-                        <td><div align="center">The default setting has no error log. If your setting has a very big error log, please leave me a message in the forum. Otherwise just ignore it, it will do no harm.</div></td>
-                      </tr>
-                    </table>
-                    <p>&nbsp;</p>
-                    <table width="700" border="1">
-                      <tr>
-                        <td><div align="center"></div></td>
-                        <td><div align="center"><strong class="Rot">Something else is wrong.</strong><br />
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Bug:</div></td>
-                        <td><div align="center">
-                          <p>???</p>
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td><div align="center">Solution: </div></td>
-                        <td><div align="center">
-                          <p>Please report at the forum thread, or write me a PM. Please mention the mod version, tileset used, if settings have been changed, and what exactly is it that is wrong.</p>
-                          <p>Please keep in mind that some issues are Vanilla DF or dfhack related. If you think this is the case, give me a quick heads up, but post the report in the fitting thread. Do mention that you play Masterwork DF though, otherwise people will get confused. Thank you.</p>
-                        </div></td>
-                      </tr>
-                    </table></td>
-                </tr>
-              </table>
-              <p>&nbsp;</p>
-            </div>
-          </div>
-<div id="hidden7" style="display:none;">
-            <h1 align="center"><a name="DWARF" id="DWARF">Human Issues</a></h1>
-            </p>
-            None reported yet, as this race is brand new.
-            </p>
-          </div></td>
-      </tr>
-    </table>
-  </div>
+<div style="max-width:804px;margin:auto;">
+	<h1>Known Bugs</h1>
+    <p>Some things cant be fixed or avoided in modding a game with a closed source code. If you experience wonky gameplay and general oddities have a look here, maybe its a known and already reported problem. There are usually workarounds available for you to fix it.</p>
+    <p>If you cant find the source of your problems on the list, please come by bay12 and share. In almost all cases it is a typo or simple error in the raws that can be fixed in a future release.</p>
+    <hr>
+	<table width="700" border="1"><tr>
+		<th class="Rot" colspan="2">Workshop reactions are red, even with all the materials available.</th>
+		</tr><tr>
+		<td>Bug:</td>
+		<td>If a workshop is in a burrow, even if the burrow is inactive, then it accepts only materials within the same burrow.</td>
+		</tr><tr>
+		<td>Solution: </td>
+		<td>Make a bigger burrow including the materials, or keep the material stockpiles within the same burrow. Or delete the burrow.</td>
+		</tr>
+	</table>
+	<br><br><br>
+	<table width="700" border="1"><tr>
+		<th class="Rot" colspan="2">I have many weird boulders lying around, named sparks, <em>knowledge, etc</em>...</th>
+		</tr><tr>
+		<td>Bug:</td>
+		<td>Many things in the mod depend on temperature. Things that should melt or boil away don't without it.</td>
+		</tr><tr>
+		<td>Solution: </td>
+		<td>Open the GUI or Init.txt and set Temperature to ON. This can be done in a running fortress, you only have to restart DF. You do not need to gen a new world. You can also turn off &quot;smoke effects&quot; in the misc features section. This will decrease the amount of these boulders significantly.</td>
+		</tr>
+	</table>
+	<br><br><br>
+	<table width="700" border="1"><tr>
+		<th class="Rot" colspan="2">Worldgen crashes.</th>
+		</tr><tr>
+		<td>Bug:</td>
+		<td>Dwarf Fortress crashes to desktop while creating a world.</td>
+		</tr><tr>
+		<td>Solution: </td>
+		<td>I have never been able to replicate this. It appears to be at random, with major differences in the PC system people use. Try shorter histories, &lt;100 years. If the problem persists, please leave a detailed report in the forum. Please mention the mod version, tileset used, if settings have been changed, and how much virtual memory/ram you have.</td>
+		</tr>
+	</table>
+	<br><br><br>
+	<table width="700" border="1">
+		<tr>
+		<th class="Rot" colspan="2">I have an error log.</th>
+		</tr><tr>
+		<td>Bug:</td>
+		<td>The Dwarf Fortress main folder shows a errorlog.txt. This is created when certain entry in the raws are missing. In 90% of the cases this is completely harmless. It is caused by enabling some settings, and disabling other.<br>
+		For example you remove warpstone. The error log will tell you that warpstone is missing in the reactions for warpstone landmines and turrets.</td>
+		</tr><tr>
+		<td>Solution: </td>
+		<td>The default setting has no error log. If your setting has a very big error log, please leave me a message in the forum. Otherwise just ignore it, it will do no harm.</td>
+		</tr>
+	</table>
+	<br><br><br>
+	<table width="700" border="1">
+		<tr>
+		<th class="Rot" colspan="2">Something else is wrong.</th>
+		</tr><tr>
+		<td>Bug:</td>
+		<td>???</td>
+		</tr><tr>
+		<td>Solution: </td>
+		<td>Please report at the forum thread, or write me a PM. Please mention the mod version, tileset used, if settings have been changed, and what exactly is it that is wrong.<br>
+		Please keep in mind that some issues are Vanilla DF or dfhack related. If you think this is the case, give me a quick heads up, but post the report in the fitting thread. Do mention that you play Masterwork DF though, otherwise people will get confused. Thank you.</td>
+		</tr>
+	</table>
 </div>
-</em>
+</body>
 </html>

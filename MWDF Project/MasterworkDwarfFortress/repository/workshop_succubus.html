@@ -1,1280 +1,398 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Succubus Workshops</title>
+<link rel="stylesheet" type="text/css" href="css/style_default.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Last-Edited" content="6/21/2017" /> 
+<title>Succubi - Workshops</title>
+<style></style>
+</head>
 
-<style type="text/css">
-body,td,th {
-color: #FFF;
-font-size: 18px;
-}
-body {
-background-color: #000;
-}
-a:link {
-color: #FFF;
-}
-a:visited {
-color: #CCC;
-}
-</style></head>
 <body>
-<div align="center">
-<table border="0" width="804">
-<tbody>
-<tr>
-<td width="724">
-<p align="center">::: <a href="#title">Category
-Titles</a> ::: </p>
-<p align="center"><strong>Vanilla Buildings</strong>:
-::: <a href="#16"> Craftsdwarf</a> ::: <a href="#31">Kitchen </a> ::: <a href="#41">
-Screw Press</a> ::: <a href="#46"> Distillery</a>
-::: <a href="#49"> Tanner </a>::: <a href="#quern">Quern</a> ::: <a href="#mill">Millstone</a>
-::: <a href="#soapmaker">Soapmaker</a> </p>
-<p align="center"><strong>Misc</strong>:
-::: <a href="#10">Slaughterhouse</a></p>
-<p align="center"><span style="font-weight: bold;">Workshops</span>
-::: <a href="#gemcutter">Gemcutter's</a> ::: <a href="#pottery">Pottery</a> ::: <a href="#sawmill">Sawmill</a>
-::: <a href="#soulforge">Soul forge</a></p>
-<p align="center"><strong>Rituals</strong>
-::: <a href="#rituals">Themes</a> ::: <a href="#templesin">Temple of sin</a> ::: <a href="#templeesoteric">Esoteric order</a> ::: <a href="#templeabyss">Abyssal temple</a> ::: <a href="#templenightmare">Altar of nightmares</a> ::: <a href="#templefire">Temple of fire</a> :: <a href="#denofiniquity">Den of iniquity</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+<div style="max-width:804px;margin:auto;">
+	<p>::: <a href="#title">Category Titles</a> ::: </p>
+	<p><span style="font-weight: bold;">Workshops</span> ::: <a href="#gemcutter">Gemcutter's</a> ::: <a href="#pottery">Pottery</a> ::: <a href="#sawmill">Sawmill</a> ::: <a href="#soulforge">Soul forge</a></p>
+	<p><strong>Rituals</strong> ::: <a href="#rituals">Themes</a> ::: <a href="#templesin">Temple of sin</a> ::: <a href="#templeesoteric">Esoteric order</a> ::: <a href="#templeabyss">Abyssal temple</a> ::: <a href="#templenightmare">Altar of nightmares</a> ::: <a href="#templefire">Temple of fire</a> :: <a href="#denofiniquity">Den of iniquity</a></p>
+	<hr>
+	<h1>WORKSHOPS</h1>
+	<hr>
+	<h1><a name="gemcutter" id="26">Gemcutter</a>'s Workshop -<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 51px; height: 51px;" src="icons/buildings/gemcutter.png" alt="Alchemist" /></p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Architect &amp; Gemcutter</td>
+	<td>Gem Cutting</td>
+	<td>2 Blocks</td>
+	<td>5x3</td>
+	<td>Mason or Carpenter</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>You can make furniture from gems here. Just treat this as a mason that uses gems instead of boulders. All reactions need one gem, except the gem anvil, which needs three. </p>
+	<hr>
+	<h1><a name="pottery" id="pottery"> Pottery</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 84px; height: 54px;" src="icons/buildings/pottery.png" alt="Alchemist" /></p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Architect &amp; Mason</td>
+	<td>Stonecrafting &amp; Pottery</td>
+	<td>2 Blocks</td>
+	<td>5x3</td>
+	<td>Mason or Carpenter</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The Pottery shapes and dries clay items. You can make clay, fire clay and kaolinite items from the collected raw materials, resulting in greenware items. Greenware is a special name for wet clay. The workshop will automatically queue two drying reactions, from greenware to leather-hard, from leather-hard to bone-dry. The items can not be used until they are fired in the Clay Oven.</p>
+	<p>To make it simpler: Shape Item =&gt; Dry =&gt; Dry =&gt; Fire Item.</p>
+	<p>The material progression is: Clay =&gt; Greenware =&gt; Leather-Hard =&gt; Bone-Dry =&gt; Ceramic</p>
+	<p>Each reaction has a 5% chance to fail, simulating impurities in the clay.
+	</p>
+	<hr>
+	<h1><a name="sawmill" id="sawmill">Sawmill</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 80px; height: 48px;" src="icons/buildings/sawmill.png" alt="Alchemist" /></p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Architect &amp; Lumberjack</td>
+	<td>Woodcutting</td>
+	<td>2 Blocks, 2 Mechanisms, 1 Saw Blade</td>
+	<td>5x3</td>
+	<td>Mason &amp; Mechanic &amp; Forge</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>&nbsp;Each kind of tree in the mod can be planted in farm plots, if you are in the correct biome and have the acorns or spores. Trees, Ironbark, Steeloak, Fungiwood, Sporetrees, Crystal Wood, Glassthorns, Nethercaps, Shadethorn, Feather and Glumprong can be farmed. Seeds must be brought at embark, bought from caravans, or discovered from cutting collected tree saplings.</p>
+	<p>All trees grow all year and need at least one year to mature. The tree saplings are treated as plants and stored as such. Only the Sawmill can cut them into wood logs.</p>
+	<hr>
+	<h1><a name="soulforge"></a>Soul forge&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 64px; height: 48px;" alt="Soul forge" src="icons/buildings/soul%20forge.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Weaponsmith</td>
+	<td>Weaponsmith</td>
+	<td>2 Blocks, 2 Mechanisms, 1 Saw Blade</td>
+	<td>4x3</td>
+	<td>Well of souls &amp; Forge</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>Soul forges allow you to turn the soul of the dead into powerful weapons.&nbsp;</p>
+	<p>You can turn a pitchfork into a stygian pitchfork. Those upgraded weapons hit with a lot more weight and double as a long range weapon, firing spell shards.You can also make special shards that cause pain, explosion or necrosis on impact.</p>
+	<p>Some equipments taken from invaders can be defiled here. Clean, non decorated breastplates, greaves or shields can be improved at the cost of one soul. It will also be resized for your race's needs. The quality increase is linked to the worker's skill, a legendary +15 provides a garanteed masterwork. </p>
+	<hr>
+	<div style="text-align: center;">
+	<h1><span style="font-weight: bold;">STUDIES</span></h1>
+	</div>
+	<hr>
+	<h1><a name="archeologiststudy" id="7">Archeologist</a>'s Study&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 87px; height: 53px;" src="icons/buildings/archeologists%20study.png" alt="Alchemist" /></p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Architect &amp; Archeologist</td>
+	<td>Archeology</td>
+	<td>5 Blocks,1 Journal, 1 Abacus, 1 Hourglass</td>
+	<td>5x3</td>
+	<td>Mason or Carpenter, Craftsdwarf, Miners to find fossils</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The Archeologist uses found fossils, relics and treasures to create random rewards. Fossils are single tiles in rock. Ruined brick veins have a higher chance of containing any type of relics and treasure.</p>
+	<p>Fossils actually count as gems, but please do not cut them in the Jeweller, it makes them unusable to the Archeologist. All reactions are run automatically, your Archeologist will pick up the fossil and choose the right reaction for you.</p>
+	<hr>
+	<h1><a name="attorneystock" id="7">Attorney's stock</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 81px; height: 81px;" alt="Attorney's stock" src="icons/buildings/attorney%20stock.png" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>Architect</td>
+	<td>Negotiation</td>
+	<td>4&nbsp;Blocks</td>
+	<td>5x5</td>
+	<td>None</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The attorney's stock opens a link to the warlocks and allow to trade with them using souls as a currency. In this building, you can buy research breakthroughs and other items required by other workshops such as the gemforge and the glassforge.</p>
+	<p>You can also conjure slade anvils and boulders from copper bars to answer tricky situations involving nobles and hasty embarks.</p>
+	<p></p>
+	<hr>
+	<h1><a name="rituals"></a>RITUALS</h1>
+	<div style="text-align: center;">Temples provides many upgrades and rituals for your succubi, providing upgrades or affecting the site as a whole. Many of those jobs requires souls that are harvested from dead creatures (see the well of souls below).<br />
+	</div>
+	<br /> Rituals sharing a similar goals are attached to a theme:<br />
+	<ul>
+		<li>Lust: Increases attributes and drop enemies abilities.</li>
+		<li>Wrath: Enhances a warrior's damage, or directly hit enemies.</li>
+		<li>Pride: Raises the fort's happiness.</li>
+		<li>Greed: Increases productivity.</li>
+		<li>Sloth: Upgrade pets.</li>
+		<li>Gluttony: Consumes ressources to heal or boost a succubi's health.</li>
+		<li>Envy: Take control over enemies.</li>
+		<li>Fire: Burn enemies and causes a lot of damage everywhere.</li>
+	</ul>
+	<div style="text-align: center;">Those rituals may cause minor sides effects including irritability, personality alterations, increase in body fat, sudden thirst or learning of skills. You may notice that only if you look closely at your workers.<br /><br />Worker upgrades does not require any skills, those reactions are designed to affect a selected worker. You can use the workshop profile (shift + P with the temple selected) to select who will receive the bonus.</div>
+	<hr>
+	<h1><a name="templesin"></a>Temple of sin - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 176px; height: 176px;" alt="Temple of sin" src="icons/buildings/temple%20of%20sin.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Architecture + Sorcery</div>
+	</td>
+	<td>None</td>
+	<td>1 statue,<br /> 1 block</td>
+	<td>11x11</td>
+	<td>Craftsuccubi, butchers, well of soul</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The temple of sin provides upgrades to your succubi.</p>
+	<ul>
+		<li><span style="font-weight: bold;">Learn martial excitement (lust)</span>: Increases combat abilities based on happiness. Armok may have mercy of your enemies if they meet an ecstatic succubus.</li>
+		<li><span style="font-weight: bold;">Learn pheromones + entice</span>:&nbsp;The succubus becomes a courtesan and receive access to several interactions that affect intelligent creatures. Her enemies will have trouble raising a sword at her. At regular intervals she will see her speed multiplied.</li>
+		<li><span style="font-weight: bold;">Learn berserk rage (wrath)</span>: Increases combat abilities based on unhappiness. It will still provide a small boost if the succubus is happy. If she is miserable however...</li>
+		<li><span style="font-weight: bold;">Devour soul (gluttony)</span>: Eat a soul to receive a slight increase in physical abilities.</li>
+		<li><span style="font-weight: bold;">Learn abyssal gaze (lust)</span>: Render an enemy unable to think straight, they may even fall unconscious after a while.</li>
+		<li><span style="font-weight: bold;">Learn necrosis chant (wrath)</span>: An enemy is hit by nausea and necrosis. This interaction has a long recharge time.</li>
+	</ul>
+	<hr>
+	<h1><a name="templeesoteric"></a>Esoteric order - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 174px; height: 144px;" alt="Esoteric order" src="icons/buildings/esoteric%20order.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Architecture + Sorcery</div>
+	</td>
+	<td>Sorcery</td>
+	<td>1 table,<br /> 1 hourglass</td>
+	<td>11x9</td>
+	<td>Crafts, Souls</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>Here you can unleash spells that affect the entire site.<span style="font-weight: bold;"></span></p>
+	<ul> 
+		<li><span style="font-weight: bold;">Forget death (pride)</span>: Causes the succubi to forget recent tragedies. The more friendships the succubus casting this ritual has, the more thoughts are removed.</li>
+		<li><span style="font-weight: bold;">Protective tentacles (sloth)</span>: Tentacle monsters will increase the defense of nearby succubi for two months.</li>
+	</ul>
+	<hr>
+	<h1><a name="templeabyss"></a>Abyssal temple - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 112px; height: 112px;" alt="Abyssal temple" src="icons/buildings/abyssal%20temple.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Sorcery</div>
+	</td>
+	<td>Sorcery</td>
+	<td>1 statue,<br /> 1 grate</td>
+	<td>7x7</td>
+	<td>Souls</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The abyssal temple allow you to reach for the fools who dare to attack your fort to suggest them unwise actions. Failing that, you can also bind spells at them from the comfort of your dungeon.</p>
+	<ul>
+		<li><span style="font-weight: bold;">Lure invaders inside (envy)</span>: Siegers will break camp and all run into your&nbsp;fort. This is useful if your defenses are ready and you do not wish to wait further.</li>
+		<li><span style="font-weight: bold;">Sow discord (envy)</span>: Playing on internal grudges, you can cause invaders to fight each other to death. Invaders resume their siege after dealing with their traitors.</li>
+		<li><span style="font-weight: bold;">Dimension pull (wrath)</span>: Slam a few invaders on the ground, causing damage.</li>
+	</ul>
+	<hr>
+	<h1><a name="templenightmare"></a>Altar of nightmares - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 80px; height: 64px;" alt="Altar of nightmares" src="icons/buildings/altar%20of%20nightmares.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Diplomacy</div>
+	</td>
+	<td>Diplomacy</td>
+	<td>1 statue,<br /> 1 grate</td>
+	<td>5x4</td>
+	<td>Various items related to the targets</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The altar of nightmares allow the succubi to visit the mortals in their dreams and whisper them new desires. This can&nbsp;entice leaders into making bad decisions this way or lead important characters into revealing their secrets.</p>
+	<ul>
+		<li><span style="font-weight: bold;">Lure caravan</span>: Call down a caravan from hostile civs for you to butcher and loot.</li>
+		<li><span style="font-weight: bold;">Visit brokers/crafters/soldier dreams</span>: Learn a skill based on the target.</li>
+		<li><span style="font-weight: bold;">Provoke a siege:</span> Offend&nbsp; another civ&nbsp;and provoke an attack. The attack might occur from any hostile race outside their season. If no immediate effect is seen, you may also have an ambush incoming.</li>
+	</ul>
+	<hr>
+	<h1><a name="templefire"></a>Temple of fire - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 80px; height: 112px;" alt="Altar of fire" src="icons/buildings/temple%20of%20fire.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Sorcery</div>
+	</td>
+	<td>Sorcery</td>
+	<td>1 statue</td>
+	<td>5x7</td>
+	<td>Soul well, abyssal temple</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The temple of fire is great for those who wish to turn everything into ashes. You will find both upgrades and site wide effect here.</p>
+	<ul>
+		<li><span style="font-weight: bold;">Become fire immune</span>: Turn a succubus into a fireborn succubi, unaffected by fire.<span style="font-weight: bold;"></span></li>
+		<li><span style="font-weight: bold;">Learn gehenna fire</span>: The worker becomes a pyromancer and can throw fireballs at long range or breath fire at close quarters.</li>
+		<li><span style="font-weight: bold;">Learn torrid kiss</span>: Grants a melee fire attack. This attack is free and will not interupt combat.</li>
+		<li><span style="font-weight: bold;">Conjure fire storm</span>: Summons dozens of fireballs to strike the outside area. Twice.</li>
+	</ul>
+	<hr>
+	<h1><a name="denofiniquity"></a>Den of iniquity - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
+	<p><img style="width: 48px; height: 48px;" alt="Altar of fire" src="icons/buildings/den%20of%20inquiery.PNG" /><br />
+	</p>
+	<div align="center">
+	<table border="1" width="618">
+	<tbody>
+	<tr>
+	<th>Build labor</th>
+	<th>Skill</th>
+	<th>Buildmat</th>
+	<th>Dimension</th>
+	<th>Requirements</th>
+	</tr>
+	<tr>
+	<td>
+	<div align="center">Sorcery</div>
+	</td>
+	<td>Sorcery</td>
+	<td>1 bed,<br /> 1 whip</td>
+	<td>3x3</td>
+	<td>Cage traps, Still, Screw press</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p>The den of iniquity is where your succubi will charm their prisoners and convince them to join your fort. The effect is different depending of the target.</p>
+	<p>To charm a prisoner, you must first install him or her near your den of iniquity. The most simple is to build its cage nearby, assuming that it ran into a trap. Chain also work, but roaming enemieswill frighten the succubus.</p>
+	<ul>
+		<li><span style="font-weight: bold;">Corrupt prisoner</span>: Seduce a sentient character, to join your civilization. It does not stop there as the succubi infuse a part of her energy into the prisoner, transforming him or her into a hybrid.&nbsp;This affect civilized creatures not opposed to life.&nbsp;These hybrids are mostly not as good at sorcery and animal training as pure succubi.</li>
+	<ul>
+		<li>Humans turn into devils who are good traders.</li>
+		<li>Dwarves turn into fiends, good miners and fighters.</li>
+		<li>Elves and drows turn into cambions, good ambushers and archers.</li>
+		<li>Goblins turn into hellions, good lashers who do not need to eat.</li>
+		<li>Kobolds turn into imps, excellent dodgers and knife users.</li>
+		<li>Warlocks cannot be turned under normal conditions.</li>	<li>Other races default into one of the castes above.</li>
+	</ul>
+		<li><span style="font-weight: bold;">Charm minotaur</span>: Seduce a minotaur into joining your civilization. They do not follow orders and stay around the living areas, but will beat up any intruders.</li>
+	</ul>
 </div>
-<div align="center">
-<table border="0" width="804">
-<tbody>
-<tr>
-<td width="665">
-<h1 align="center"><a name="title" id="title">Category Titles</a></h1>
-<p align="center">All workshops are seperated into
-different categories in the build menu. These category titles can also
-be build, they will spell out their name. This can be used to label
-areas ingame, which is great for succession forts. They cost no
-buildmaterials. </p>
-<hr align="center" />
-<h1 align="center"><a name="16" id="16">Craftsdwarf</a>
-- <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/icon%20Craftsdwarf.PNG" alt="Alchemist" height="47" width="48" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Any Crafting</div>
-</td>
-<td>
-<div align="center">Any Crafting</div>
-</td>
-<td>
-<div align="center">1 Boulder</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center">None</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">A big amount of new reactions can
-be done here. You can extract new kinds of metal strands from metals
-bars, enabling silver, golden, mithril or orichalcum clothing. You can
-craft single instruments or crafts from boulders, make rope from
-leather. Illumination, like braziers, candelabras and fireplaces can be
-created.</p>
-<p align="center">The crafts section for bone and
-shell contain all armor items you can produce. </p>
-<hr align="center" />
-<h1 align="center"><a name="31" id="31">Kitchen</a>
-- <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/icon%20Kitchen.PNG" alt="Alchemist" height="47" width="47" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Cook</div>
-</td>
-<td>
-<div align="center">Cooking</div>
-</td>
-<td>
-<div align="center">1 Boulder</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center">None</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">Cook meals in the kitchen for your
-succubi to eat or for export.<br />
-</p>
-<hr align="center" />
-<h1 align="center"><a name="41" id="41">Screw
-Press</a> - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/screw%20press.PNG" alt="Alchemist" height="48" width="48" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Mechanic</div>
-</td>
-<td>
-<div align="center">Milling &amp; Pressing</div>
-</td>
-<td>
-<div align="center">2 Mechanisms</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mechanic</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">Press water from quarry bush
-leaves into buckets, oil from pig tails, shadowleaf bushes, quarry
-bushes or hide root into jugs. Press wooden logs into 2 pages of paper.</p>
-<p align="center">Press coal together so hard, that
-it becomes a diamond. ;)</p>
-<hr align="center" />
-<h1 align="center"><a name="46" id="46">Distillery</a>
-- <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/icon%20Still.PNG" alt="Alchemist" height="48" width="46" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Brewer</div>
-</td>
-<td>
-<div align="center">Brewing</div>
-</td>
-<td>
-<div align="center">1 Boulder</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center">None</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">Brew plants into drinks.
-The succubi are not alcohol dependant, but as usual they prefer to
-drink
-alcohol over water.</p>
-<hr align="center" />
-<h1 align="center"><a name="49" id="49">Tanner</a>
-- <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/icon%20Tanner.PNG" alt="Alchemist" height="47" width="47" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Tanner</div>
-</td>
-<td>
-<div align="center">Tanning</div>
-</td>
-<td>
-<div align="center">1 Boulder</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center">None</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center"><strong>TANNING</strong>:
-Adds specific tanning reactions for each animal skin type. You can tan
-skin, tough skin, chitin, shell and scales into an amount of leather
-based on the creatures size. Usually around 2-4 pieces, smaller
-creatures might give none, while massive monsters give dozens.</p>
-<p align="center"><strong>LEATHER</strong>:
-Normal leather can be used for suede(3) or vellum(3) from one piece.
-Suede is very thin leather, useless for combat, but good for backpacks
-or quivers. Vellum is used for the library system.</p>
-<p align="center"><strong>FUR/STOMACH/GUT/HORN</strong>:
-Tan stomachs directly into a waterskins, rope from guts/intestines and
-pelts into a furs. A fur is the very same as leather, but also protects
-from cold. Fur is needed for glacier embarks. If you dont want the fur,
-you can shave of the hairs to create a piece of leather and a unit of
-hair thread. Horns can be shaped into a small dagger, for eariest
-militias.</p>
-<p align="center"><strong>FEATHERS</strong>:
-Birds leave feathers upon being butchered.</p>
-<p align="center"><strong>Material strength:</strong></p>
-<p align="center">Leather = Vanilla Leather. :::
-Tough leather = Copper.</p>
-<p align="center">Studded leather = Bronze. :::
-Lamellar leather = Iron.</p>
-<p align="center">Chitinplate = Bronze. ::: Rigid
-Chitin = Iron, very light.</p>
-<p align="center">Scaleplate = Bronze. ::: Rigid
-Scale = Iron, fireproof.</p>
-<p align="center">Shellplate = Bronze. ::: Rigid
-Shellplate = Between iron and steel, heavy.</p>
-<hr align="center" />
-<h1 align="center"><a name="quern" id="quern">Quern </a> - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/quern.PNG" alt="Alchemist" height="32" width="32" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Miller &amp; Presser</div>
-</td>
-<td>
-<div align="center">Milling &amp; Pressing</div>
-</td>
-<td>
-<div align="center">1 Quern</div>
-</td>
-<td>
-<div align="center">1x1</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center"> You can specifically select which
-plant should be milled. This way you can produce only dye or flour or
-sugar, without using valuable plants. Several old plants have new
-powders in this mod, and hive-able cochineal insects give red dye. Keep
-in mind that the millstone has completely different reactions.</p>
-<p align="center">Plump Helmet =&gt; Purple :::
-Hide Root =&gt; Brown</p>
-<p align="center">Muck Root =&gt; White :::
-Sliver Barb =&gt; Black</p>
-<p align="center">Sun Berry =&gt; Yellow :::
-Cochineal =&gt; Red</p>
-<p align="center"> Blade Weed =&gt; Green :::
-Dimple Cup =&gt; Blue</p>
-<p align="center">Sweet Pot =&gt; Sugar ::: Whip
-Vine =&gt; Flour</p>
-<p align="center">Longland Grass =&gt; Flour :::
-Cave Wheat =&gt; Flour</p>
-<hr align="center" />
-<h1 align="center"><a name="mill" id="mill">Millstone
-</a> - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/quern.PNG" alt="Alchemist" height="32" width="32" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Miller &amp; Presser</div>
-</td>
-<td>
-<div align="center">Milling &amp; Pressing</div>
-</td>
-<td>
-<div align="center">1 Millstone</div>
-</td>
-<td>
-<div align="center">1x1</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason, Power</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The powered millstone can grind
-hard materials like rocks into base minerals and sand.</p>
-<hr align="center" />
-<h1 align="center"><a name="soapmaker" id="soapmaker">Soapmaker </a> - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/soapmaker.png" alt="Alchemist" height="48" width="48" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect</div>
-</td>
-<td>
-<div align="center">Chemistry</div>
-</td>
-<td>
-<div align="center">1 Bucket &amp; 1
-Boulder</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td rowspan="1">
-<div align="center"> Carpenter</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">You can make soap here
-from oil or tallow.</p>
-<p align="center">Milking tentacle monsters will
-yield slime that can be turned to soap with&nbsp;bar of ash. This
-is handy if you are short on lye.</p>
-<hr align="center" />
-<h1 align="center"><a name="slaughterhouse" id="slaughterhouse">Slaughterhouse</a> - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img src="icons/buildings/slaughterhouse.PNG" alt="Alchemist" height="48" width="96" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect</div>
-</td>
-<td>
-<div align="center">Beast Dissection</div>
-</td>
-<td>
-<div align="center">4 Blocks, 2 Mechanisms, 1
-Saw Blade</div>
-</td>
-<td>
-<div align="center">5x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason &amp; Mechanic
-&amp; Forge</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">Every megabeast will leave a
-special corpse in this mod and can be butchered in the slaughterhouse
-to receive 3 items. A trophy that can be kept in a display case or
-traded away, a special reward that is specific to the creature, and a
-megabeast soul. The soul can be used to revive the beast in the
-Necromantic Altar. Keep in mind that titans and forgotten beasts are
-not megabeasts and cant be affected by modding.</p>
-<p align="center">Megabeasts also give 60 meat, or
-50 boulders, or 25 metal bars upon being butchered, depending on the
-bodytype of the beast. You will always get 1 heart.</p>
-<p align="center">Example: Kill dragon, butcher
-dragon corpse, get 10 straps of dragonscale. A steel quality, fireproof
-leather type. You will also get the dragon skull, worth a lot, and the
-soul.</p>
-<p align="center"></p>
-<hr style="width: 100%; height: 2px;" />
-<h1 style="text-align: center;">WORKSHOPS</h1>
-<hr align="center" />
-<h1 align="center"><a name="gemcutter" id="26">Gemcutter</a>'s
-Workshop -<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 51px; height: 51px;" src="icons/buildings/gemcutter.png" alt="Alchemist" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect &amp;
-Gemcutter</div>
-</td>
-<td>
-<div align="center">Gem Cutting</div>
-</td>
-<td>
-<div align="center">2 Blocks</div>
-</td>
-<td>
-<div align="center">5x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason or Carpenter</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">You can make furniture from gems
-here. Just treat
-this as a mason that uses gems instead of boulders. All reactions need
-one gem, except the gem anvil, which needs three. </p>
-<hr align="center" />
-<h1 align="center"><a name="pottery" id="pottery"> Pottery</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 84px; height: 54px;" src="icons/buildings/pottery.png" alt="Alchemist" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect &amp; Mason</div>
-</td>
-<td>
-<div align="center">Stonecrafting &amp;
-Pottery</div>
-</td>
-<td>
-<div align="center">2 Blocks</div>
-</td>
-<td>
-<div align="center">5x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason or Carpenter</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The Pottery shapes and dries clay
-items. You can make
-clay, fire clay and kaolinite items from the collected raw materials,
-resulting in greenware items. Greenware is a special name for wet clay.
-The workshop will automatically queue two drying reactions, from
-greenware to leather-hard, from leather-hard to bone-dry. The items can
-not be used until they are fired in the Clay Oven.</p>
-<p align="center">To make it simpler: Shape Item
-=&gt; Dry =&gt; Dry =&gt; Fire Item.</p>
-<p align="center">The material progression is: Clay
-=&gt; Greenware =&gt; Leather-Hard =&gt; Bone-Dry =&gt;
-Ceramic</p>
-<p align="center">Each reaction has a 5% chance to
-fail, simulating impurities in the clay.
-</p>
-<hr align="center" />
-<h1 align="center"><a name="sawmill" id="sawmill">Sawmill</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 80px; height: 48px;" src="icons/buildings/sawmill.png" alt="Alchemist" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect &amp;
-Lumberjack</div>
-</td>
-<td>
-<div align="center">Woodcutting</div>
-</td>
-<td>
-<div align="center">2 Blocks, 2 Mechanisms, 1
-Saw Blade</div>
-</td>
-<td>
-<div align="center">5x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason &amp; Mechanic
-&amp; Forge</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">&nbsp;Each kind of tree in the
-mod
-can be planted in farm plots, if you are in the correct biome and have
-the acorns or spores. Trees, Ironbark, Steeloak, Fungiwood, Sporetrees,
-Crystal Wood, Glassthorns, Nethercaps, Shadethorn, Feather and
-Glumprong can be farmed. Seeds must be brought at embark, bought from
-caravans, or discovered from cutting collected tree saplings.</p>
-<p align="center">All
-trees grow all year and need at least one year to mature. The tree
-saplings are treated as plants and stored as such. Only the Sawmill can
-cut them into wood logs.</p>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="soulforge"></a>Soul
-forge&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 64px; height: 48px;" alt="Soul forge" src="icons/buildings/soul%20forge.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Weaponsmith</div>
-</td>
-<td>
-<div align="center">Weaponsmith</div>
-</td>
-<td>
-<div align="center">2 Blocks, 2 Mechanisms, 1
-Saw Blade</div>
-</td>
-<td>
-<div align="center">4x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Well of souls &amp;
-Forge</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p style="text-align: center;">Soul forges allow you
-to turn the soul of the dead into powerful
-weapons.&nbsp;</p>
-<p style="text-align: center;">You
-can turn a pitchfork into a stygian pitchfork. Those upgraded weapons
-hit with a lot more weight and double as a long range weapon,
-firing spell shards.You can also make special shards that cause pain,
-explosion or necrosis on impact.</p>
-<p style="text-align: center;">Some
-equipments taken from invaders can be defiled here. Clean, non
-decorated breastplates, greaves or shields can be improved at the cost
-of one soul. It will also be resized for your race's needs. The quality
-increase is linked to the worker's skill, a legendary +15 provides a
-garanteed masterwork. </p>
-<hr style="width: 100%; height: 2px;" />
-<div style="text-align: center;">
-<h1><span style="font-weight: bold;">STUDIES</span></h1>
-</div>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="archeologiststudy" id="7">Archeologist</a>'s
-Study&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 87px; height: 53px;" src="icons/buildings/archeologists%20study.png" alt="Alchemist" /></p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect &amp;
-Archeologist</div>
-</td>
-<td>
-<div align="center">Archeology</div>
-</td>
-<td>
-<div align="center">5 Blocks,1 Journal, 1
-Abacus, 1 Hourglass</div>
-</td>
-<td>
-<div align="center">5x3</div>
-</td>
-<td rowspan="1">
-<div align="center">Mason or Carpenter,
-Craftsdwarf, Miners to find fossils</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The Archeologist uses found
-fossils, relics and
-treasures to create random rewards. Fossils are single tiles in rock.
-Ruined brick veins have a higher chance of containing any type of
-relics and treasure.</p>
-<p align="center">Fossils actually count as gems,
-but please do not cut
-them in the Jeweller, it makes them unusable to the Archeologist. All
-reactions are run automatically, your Archeologist will pick up the
-fossil and choose the right reaction for you.</p>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="attorneystock" id="7">Attorney's stock</a>&nbsp;-<a href="buildings.html#top"> <img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 81px; height: 81px;" alt="Attorney's stock" src="icons/buildings/attorney%20stock.png" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td>
-<div align="center">Architect</div>
-</td>
-<td>
-<div align="center">Negotiation</div>
-</td>
-<td>
-<div align="center">4&nbsp;Blocks</div>
-</td>
-<td>
-<div align="center">5x5</div>
-</td>
-<td rowspan="1">
-<div align="center">None</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p style="text-align: center;">The attorney's stock
-opens a link
-to the warlocks and allow to trade with them using souls as a
-currency. In this building, you can buy research breakthroughs and
-other items required
-by other workshops such as the gemforge and the glassforge.</p>
-<p style="text-align: center;">You can also conjure
-slade anvils and boulders from copper bars to answer tricky situations
-involving nobles and hasty embarks.</p>
-<p></p>
-<hr style="width: 100%; height: 2px;" />
-<h1 style="text-align: center;"><a name="rituals"></a>RITUALS</h1>
-<div style="text-align: center;">Temples provides
-many
-upgrades and rituals for your succubi, providing upgrades or affecting
-the site as a whole. Many of those jobs requires souls that are
-harvested from dead creatures (see the well of souls below).<br />
-</div>
-<br />
-Rituals sharing a similar goals are attached to a theme:<br />
-<ul>
-<li>Lust: Increases attributes and drop enemies abilities.</li>
-<li>Wrath: Enhances a warrior's damage, or directly hit
-enemies.</li>
-<li>Pride: Raises the fort's happiness.</li>
-<li>Greed: Increases productivity.</li>
-<li>Sloth: Upgrade pets.</li>
-<li>Gluttony: Consumes ressources to heal or boost a
-succubi's health.</li>
-<li>Envy: Take control over enemies.</li>
-<li>Fire: Burn enemies and causes a lot of damage
-everywhere.</li>
-</ul>
-<div style="text-align: center;">Those rituals may
-cause minor sides effects including irritability, personality alterations, increase in body fat, sudden
-thirst or learning of skills. You may notice that only if you look closely at your workers.<br /><br />Worker
-upgrades does not require any skills, those reactions are designed to
-affect a selected worker. You can use the workshop profile (shift + P
-with the temple selected) to select who will receive the bonus.</div>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="templesin"></a>Temple
-of sin - <a href="#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 176px; height: 176px;" alt="Temple of sin" src="icons/buildings/temple%20of%20sin.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Architecture + Sorcery</div>
-</td>
-<td>
-<div align="center">None</div>
-</td>
-<td>
-<div align="center">1 statue,<br />
-1 block</div>
-</td>
-<td>
-<div align="center">11x11</div>
-</td>
-<td>
-<div align="center">Craftsuccubi, butchers,
-well of soul</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The temple of sin provides
-upgrades to your succubi.</p>
-<ul>
-<li><span style="font-weight: bold;">Learn
-martial excitement (lust)</span>: Increases combat abilities
-based on happiness. Armok may have mercy of your enemies if they meet
-an ecstatic succubus.</li>
-<li><span style="font-weight: bold;">Learn pheromones + entice</span>:&nbsp;The
-succubus becomes a courtesan and receive access to several interactions
-that affect intelligent creatures. Her enemies will have trouble
-raising a sword at her. At regular intervals she will see her speed multiplied.</li>
-<li><span style="font-weight: bold;">Learn
-berserk rage (wrath)</span>:
-Increases combat abilities based on unhappiness. It will still provide
-a small boost if the succubus is happy. If she is miserable however...</li>
-<li><span style="font-weight: bold;">Devour
-soul (gluttony)</span>: Eat a soul to receive a slight increase
-in physical abilities.</li>
-<li><span style="font-weight: bold;">Learn
-abyssal gaze (lust)</span>: Render an enemy unable to think
-straight, they may even fall unconscious after a while.</li>
-<li><span style="font-weight: bold;">Learn
-necrosis chant (wrath)</span>: An enemy is hit by nausea and
-necrosis. This interaction has a long recharge time.</li>
-</ul>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="templeesoteric"></a>Esoteric
-order - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 174px; height: 144px;" alt="Esoteric order" src="icons/buildings/esoteric%20order.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Architecture + Sorcery</div>
-</td>
-<td>
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">1 table,<br />
-1 hourglass</div>
-</td>
-<td>
-<div align="center">11x9</div>
-</td>
-<td>
-<div align="center">Crafts, Souls</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">Here you can unleash spells that
-affect the entire site.<span style="font-weight: bold;"></span></p>
-<ul>
-
-<li><span style="font-weight: bold;">Forget
-death (pride)</span>:
-Causes the succubi to forget recent tragedies. The more friendships the
-succubus casting this ritual has, the more thoughts are removed.</li>
-<li><span style="font-weight: bold;">Protective
-tentacles (sloth)</span>: Tentacle monsters will increase the
-defense of nearby succubi for two months.</li>
-</ul>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="templeabyss"></a>Abyssal
-temple - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 112px; height: 112px;" alt="Abyssal temple" src="icons/buildings/abyssal%20temple.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">1 statue,<br />
-1 grate</div>
-</td>
-<td>
-<div align="center">7x7</div>
-</td>
-<td>
-<div align="center">Souls</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The abyssal temple allow you to
-reach for the fools
-who dare to attack your fort to suggest them unwise actions.
-Failing that, you can also bind spells at them from the comfort of your
-dungeon.</p>
-<ul>
-<li><span style="font-weight: bold;">Lure
-invaders inside (envy)</span>:
-Siegers will break camp and all run into your&nbsp;fort. This is
-useful
-if your defenses are ready and you do not wish to wait further.</li>
-<li><span style="font-weight: bold;">Sow
-discord (envy)</span>:
-Playing on internal grudges, you can cause invaders to fight each other
-to death. Invaders resume their siege after dealing with their traitors.</li>
-<li><span style="font-weight: bold;">Dimension
-pull (wrath)</span>: Slam a few invaders on the ground, causing
-damage.</li>
-</ul>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="templenightmare"></a>Altar
-of nightmares - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 80px; height: 64px;" alt="Altar of nightmares" src="icons/buildings/altar%20of%20nightmares.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Diplomacy</div>
-</td>
-<td>
-<div align="center">Diplomacy</div>
-</td>
-<td>
-<div align="center">1 statue,<br />
-1 grate</div>
-</td>
-<td>
-<div align="center">5x4</div>
-</td>
-<td>
-<div align="center">Various items related to
-the targets</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The altar of nightmares allow the
-succubi to visit
-the mortals in their dreams and whisper them new desires. This
-can&nbsp;entice
-leaders into making bad decisions this way or lead important characters
-into revealing their secrets.</p>
-<ul>
-<li><span style="font-weight: bold;">Lure
-caravan</span>: Call down a caravan from hostile civs for you to
-butcher and loot.</li>
-<li><span style="font-weight: bold;">Visit
-brokers/crafters/soldier dreams</span>: Learn a skill based on
-the target.</li>
-<li><span style="font-weight: bold;">Provoke
-a siege:</span>
-Offend&nbsp; another civ&nbsp;and provoke
-an attack. The
-attack might occur from any hostile race outside their season. If no
-immediate effect is seen, you may also have an ambush incoming.</li>
-</ul>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="templefire"></a>Temple
-of fire - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 80px; height: 112px;" alt="Altar of fire" src="icons/buildings/temple%20of%20fire.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">1 statue</div>
-</td>
-<td>
-<div align="center">5x7</div>
-</td>
-<td>
-<div align="center">Soul well, abyssal temple</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The temple of fire is great for
-those who wish to
-turn everything into ashes. You will find both upgrades and site wide
-effect here.</p>
-<ul>
-<li><span style="font-weight: bold;">Become
-fire immune</span>: Turn a succubus into a fireborn succubi,
-unaffected by fire.<span style="font-weight: bold;"></span></li>
-<li><span style="font-weight: bold;">Learn
-gehenna fire</span>: The worker becomes a pyromancer and can
-throw fireballs at long range or breath fire at close quarters.</li>
-<li><span style="font-weight: bold;">Learn
-torrid kiss</span>: Grants a melee fire attack. This attack is free and will not interupt combat.</li>
-<li><span style="font-weight: bold;">Conjure
-fire storm</span>: Summons dozens of fireballs to strike the
-outside area. Twice.</li>
-</ul>
-<hr style="width: 100%; height: 2px;" />
-<h1 align="center"><a name="denofiniquity"></a>Den
-of iniquity - <a href="buildings.html#top"><img src="icons/buildings/top.png" alt="back to top" height="24" width="89" /></a></h1>
-<p align="center"><img style="width: 48px; height: 48px;" alt="Altar of fire" src="icons/buildings/den%20of%20inquiery.PNG" /><br />
-</p>
-<div align="center">
-<table border="1" width="618">
-<tbody>
-<tr>
-<th scope="col" width="120">
-<div align="center"><strong>Build labor</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Skill</strong></div>
-</th>
-<th scope="col" width="120">
-<div align="center"><strong>Buildmat</strong></div>
-</th>
-<th scope="col" width="104">
-<div align="center">Dimension</div>
-</th>
-<th scope="col" width="120">Requirements</th>
-</tr>
-<tr>
-<td height="48">
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">Sorcery</div>
-</td>
-<td>
-<div align="center">1 bed,<br />
-1 whip</div>
-</td>
-<td>
-<div align="center">3x3</div>
-</td>
-<td>
-<div align="center">Cage traps, Still, Screw
-press</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p align="center">The den of iniquity is where your
-succubi will charm
-their prisoners and convince them to join your fort. The effect is
-different depending of the target.</p>
-<p align="center">To charm a
-prisoner, you must first install him or her near your den of iniquity.
-The most simple is to build its cage nearby, assuming that it ran into a trap.
-Chain also work, but roaming enemieswill frighten the succubus.</p>
-<ul>
-<li><span style="font-weight: bold;">Corrupt
-prisoner</span>:
-Seduce a sentient character, to join your civilization. It does not
-stop
-there as the succubi infuse a part of her energy into the prisoner,
-transforming him or her into a hybrid.&nbsp;This affect civilized
-creatures not opposed to life.&nbsp;These hybrids are mostly not as
-good at sorcery and animal training as pure succubi.</li>
-<ul>
-<li>Humans turn into devils who are good traders.</li>
-<li>Dwarves turn into fiends, good miners and fighters.</li>
-<li>Elves and drows turn into cambions, good ambushers
-and archers.</li>
-<li>Goblins turn into hellions, good lashers who do not
-need to eat.</li>
-<li>Kobolds turn into imps, excellent dodgers and knife
-users.</li>
-<li>Warlocks cannot be turned under normal conditions.</li><li>Other races default into one of the castes above.</li>
-</ul>
-<li><span style="font-weight: bold;">Charm
-minotaur</span>:
-Seduce a minotaur into joining your civilization. They do not follow
-orders and
-stay around the living areas, but will beat up any intruders.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-</div>
-</body></html>
+</body>
+</html>

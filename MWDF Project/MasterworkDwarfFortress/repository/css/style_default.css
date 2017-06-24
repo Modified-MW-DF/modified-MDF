@@ -1,0 +1,24 @@
+body,td,th {
+	color: #FFF;
+	font-size: 16px;
+	background-color: #000;
+}
+a:link {
+	color: #FFF;
+}
+a:visited {
+	color: #CCC;
+}
+h1 {
+	text-align: center;
+}
+h1,h2,h3,h4,h5,h6,th,dt {
+	text-transform: capitalize;
+}
+li, p {
+	text-align: left;
+}
+dt {
+	font-weight: bold;
+	padding-top: 1em;
+}
