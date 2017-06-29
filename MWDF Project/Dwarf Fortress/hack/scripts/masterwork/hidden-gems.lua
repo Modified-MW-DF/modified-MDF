@@ -179,15 +179,21 @@ if config then
 	dfhack.println("Cannot read configiration from version "..config.value..".")
     return
   end  -- load the config or replace with variables if given.
+  dfhack.println("loading from config.")
+  -- split config.ints[3]
+  local value_1,value_2 = math.modf(config.ints[3]/10000)
+  value_1=value_1/10000
+  value_2=(math.floor(value_2*10000))/10000
   warpstone_prob_layer = tonumber(args.warpstone) or config.ints[1]/10000
   warpstone_prob_stable = tonumber(args.warpstoneVein) or config.ints[2]/10000
-  tears_prob_layer = tonumber(args.tears) or config.ints[1]/10000
-  blood_prob_layer = tonumber(args.blood) or config.ints[1]/10000
-  relic_prob_layer = tonumber(args.relic) or config.ints[1]/10000
-  fossil_prob_layer = tonumber(args.fossil) or config.ints[1]/10000
-  treasure_prob_layer = tonumber(args.treasure) or config.ints[1]/10000
-  treasure_prob_ruins = tonumber(args.ruinsVein) or config.ints[1]/10000
+  tears_prob_layer = tonumber(args.tears) or tonumber(value_1)
+  blood_prob_layer = tonumber(args.blood) or tonumber(value_2)
+  relic_prob_layer = tonumber(args.relic) or config.ints[4]/10000
+  fossil_prob_layer = tonumber(args.fossil) or config.ints[5]/10000
+  treasure_prob_layer = tonumber(args.treasure) or config.ints[6]/10000
+  treasure_prob_ruins = tonumber(args.ruinsVein) or config.ints[7]/10000
 else  -- no config so load variables given or set to 0.
+  dfhack.println("no config.")
   warpstone_prob_layer = tonumber(args.warpstone) or 0
   warpstone_prob_stable = tonumber(args.warpstoneVein) or 0
   tears_prob_layer = tonumber(args.tears) or 0
@@ -198,8 +204,21 @@ else  -- no config so load variables given or set to 0.
   treasure_prob_ruins = tonumber(args.ruinsVein) or 0
 end
 
+--[[ Persist tables can't have more than 7 entries in ints, so have to combine
+     2 of these to make it work correctly.
+--]]
+local toa_boa_combine = math.floor((math.floor(tears_prob_layer*10000)+blood_prob_layer)*10000)
+local variable_probabilites = {
+  math.floor(warpstone_prob_layer*10000),  --1
+  math.floor(warpstone_prob_stable*10000), --2
+  toa_boa_combine,                         --3
+  math.floor(relic_prob_layer*10000),      --4
+  math.floor(fossil_prob_layer*10000),     --5
+  math.floor(treasure_prob_layer*10000),   --6
+  math.floor(treasure_prob_ruins*10000) }  --7
+
 --save the config in the persistent tables.
-dfhack.persistent.save({key="HIDDENGEMS/config",value=hiddengems_version,ints={math.floor(warpstone_prob_layer*10000),math.floor(warpstone_prob_stable*10000),math.floor(tears_prob_layer*10000),math.floor(blood_prob_layer*10000),math.floor(relic_prob_layer*10000),math.floor(fossil_prob_layer*10000),math.floor(treasure_prob_layer*10000),math.floor(treasure_prob_ruins*10000)}})
+dfhack.persistent.save({key="HIDDENGEMS/config",value=hiddengems_version,ints=variable_probabilites})
 
 local rng = dfhack.random.new()
 
@@ -303,7 +322,7 @@ jobCheck.onJobCompleted.hiddengems=function(job)
   end
 end
 
-if not ... then
+--if not ... then
   print('hidden gems version: ', hiddengems_version)
   print('  chance of warpstone gem in layer stone: ', warpstone_prob_layer)
   print('  chance of blood of armok in layer stone: ', blood_prob_layer)
@@ -314,7 +333,7 @@ if not ... then
   print('  chance of warpstone gem in weak warpstone veins: ', warpstone_prob_stable)
   print('  chance of relics/treasures in collapsed brick: ', treasure_prob_ruins)
   print(" type 'hidden-gems -help' for additional mod info' ") 
-end
+--end
 
 
 

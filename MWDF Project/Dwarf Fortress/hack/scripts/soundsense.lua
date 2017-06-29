@@ -243,7 +243,7 @@ eventful.onReport.soundsense_coord=function(reportId)
         i=i+1
     end
     if report.pos.x then
-        print(report.pos.y,(df.global.window_y+df.global.gps.screeny)/2)
+        --print(report.pos.y,(df.global.window_y+df.global.gps.screeny)/2)
         reportText='['..report.pos.x-(df.global.window_x+df.global.gps.screenx/2) .. ','..report.pos.y-(df.global.window_y+df.global.gps.screeny/2) .. ','..report.pos.z-df.global.window_z..']'..reportText..'\n'
     end
     appendToSoundsenseLog(reportText)
