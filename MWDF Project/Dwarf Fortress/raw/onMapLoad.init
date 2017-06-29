@@ -31,8 +31,8 @@ modtools/projectile-trigger -material INORGANIC:WILDFIRE -command [ modtools/spa
 modtools/projectile-trigger -material INORGANIC:WEB_AMMO -command [ modtools/spawn-flow -material INORGANIC:WEB_AMMO -location [ \\LOCATION ] -flowType Web -flowSize 1250 ]
 modtools/projectile-trigger -material PLANT_MAT:CORAL -command [ modtools/spawn-flow -material INORGANIC:WEB_AMMO -location [ \\LOCATION ] -flowType Web -flowSize 1250 ]
 
-warpstone -layer .004 -stable 1
-
+#warpstone -layer .004 -stable 1
+hidden-gems -warpstone .001 -warpstoneVein 1 -tears .002 -blood .001 -relic .001 -fossil .004 -treasure .002 -ruinsVein .1
 
 
 #################### PATRON CONTENT ####################
