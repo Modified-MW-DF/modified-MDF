@@ -9,7 +9,7 @@ it doesn't care what args are called with it as it ignores them completely and
 announces the same message every time.
 --]]
 
-VersionString="1.28"
+VersionString="1.29"
 DFVersion="43.05 x64"
 
 MDFContributors={
